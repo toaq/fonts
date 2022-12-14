@@ -22,7 +22,7 @@ OS2Version: 2
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 0
 CreationTime: 1670694376
-ModificationTime: 1670886150
+ModificationTime: 1671051833
 PfmFamily: 81
 TTFWeight: 400
 TTFWidth: 5
@@ -109,7 +109,6 @@ ShortTable: maxp 16
 EndShort
 LangName: 1033 "Copyright Miles Forster 2022+AAogHAAA-derani" "" "" "" "" "1.0" "" "FontStruct is a trademark of FontStruct.com" "https://fontstruct.com" "Miles Forster" "+IBwA-derani+IB0A was built with FontStruct+AAogHAAA-derani" "https://fontstruct.com/fontstructions/show/2208618/derani-1" "https://fontstruct.com/fontstructors/show/1815854/n1004" "Creative Commons Attribution Non-commercial" "http://creativecommons.org/licenses/by-nc/3.0/" "" "" "" "" "Five big quacking zephyrs jolt my wax bed"
 Encoding: Custom
-Compacted: 1
 UnicodeInterp: none
 NameList: AGL For New Fonts
 DisplaySize: -48
@@ -120,7 +119,7 @@ BeginPrivate: 0
 EndPrivate
 TeXData: 1 0 0 440251 220125 146750 0 -235804 146750 783286 444596 497025 792723 393216 433062 380633 303038 157286 324010 404750 52429 2506097 1059062 262144
 AnchorClass2: "diphthong" "'mark' Mark Positioning in Latin lookup 1-1" "tone" "'mark' Mark Positioning in Latin lookup 1-1"
-BeginChars: 105 61
+BeginChars: 82 62
 
 StartChar: space
 Encoding: 0 32 0
@@ -128,6 +127,8 @@ Width: 1404
 GlyphClass: 1
 Flags: W
 LayerCount: 2
+Fore
+Validated: 1
 Substitution2: "WithCartouche" space_c
 EndChar
 
@@ -164,10 +165,11 @@ SplineSet
  1053 3443 1053 3443 1053 3120 c 1,27,-1
  702 3120 l 1,19,20
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: quote
-Encoding: 3 60885 2
+Encoding: 2 60885 2
 Width: 1404
 GlyphClass: 2
 Flags: W
@@ -185,11 +187,12 @@ SplineSet
  1053 1169 l 1,7,-1
  702 779 l 1,4,-1
 EndSplineSet
+Validated: 5
 Substitution2: "WithCartouche" quote_c
 EndChar
 
 StartChar: null
-Encoding: 4 60892 3
+Encoding: 3 60892 3
 Width: 2018
 GlyphClass: 2
 Flags: W
@@ -226,10 +229,11 @@ SplineSet
  1667 -1102 1667 -1102 1461 -1331 c 256,44,45
  1256 -1559 1256 -1559 965 -1559 c 1,18,19
 EndSplineSet
+Validated: 37
 EndChar
 
 StartChar: diphthong
-Encoding: 5 60880 4
+Encoding: 4 60880 4
 Width: 0
 GlyphClass: 4
 Flags: W
@@ -247,10 +251,11 @@ SplineSet
  2106 -1102 2106 -1102 1901 -1331 c 256,10,11
  1695 -1559 1695 -1559 1404 -1559 c 1,0,1
 EndSplineSet
+Validated: 1
 EndChar
 
 StartChar: subordination
-Encoding: 6 60886 5
+Encoding: 5 60886 5
 Width: 3510
 GlyphClass: 2
 Flags: W
@@ -287,10 +292,11 @@ SplineSet
  702 -323 702 -323 496 -552 c 0,46,47
  291 -779 291 -779 0 -779 c 1,0,1
 EndSplineSet
+Validated: 33
 EndChar
 
 StartChar: oaomo
-Encoding: 7 60868 6
+Encoding: 6 60868 6
 Width: 876
 GlyphClass: 2
 Flags: W
@@ -307,11 +313,12 @@ SplineSet
  648 683 648 683 586 614 c 0,14,15
  526 545 526 545 438 545 c 0,0,1
 EndSplineSet
+Validated: 1
 Substitution2: "WithCartouche" oaomo_c
 EndChar
 
 StartChar: declarative_stop
-Encoding: 8 60887 7
+Encoding: 7 60887 7
 Width: 1404
 GlyphClass: 2
 Flags: W
@@ -338,10 +345,11 @@ SplineSet
  1053 3443 1053 3443 1053 3120 c 1,23,-1
  702 3120 l 1,15,16
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: rising
-Encoding: 9 60881 8
+Encoding: 8 60881 8
 Width: 0
 GlyphClass: 4
 Flags: W
@@ -355,10 +363,11 @@ SplineSet
  1053 2536 l 1,3,-1
  175 2048 l 1,0,-1
 EndSplineSet
+Validated: 1
 EndChar
 
 StartChar: prefix
-Encoding: 10 60884 9
+Encoding: 9 60884 9
 Width: 876
 GlyphClass: 2
 Flags: W
@@ -384,11 +393,12 @@ SplineSet
  648 1073 648 1073 586 1004 c 0,30,31
  526 936 526 936 438 936 c 0,16,17
 EndSplineSet
+Validated: 33
 Substitution2: "WithCartouche" prefix_c
 EndChar
 
 StartChar: interrogative_stop
-Encoding: 13 60889 10
+Encoding: 10 60889 10
 Width: 1404
 GlyphClass: 2
 Flags: W
@@ -433,10 +443,11 @@ SplineSet
  1053 3443 1053 3443 1053 3120 c 1,39,-1
  702 3120 l 1,31,32
 EndSplineSet
+Validated: 5
 EndChar
 
 StartChar: cartouche_start
-Encoding: 14 60890 11
+Encoding: 11 60890 11
 Width: 0
 GlyphClass: 2
 Flags: W
@@ -453,10 +464,11 @@ SplineSet
  -202 3120 -202 3120 -408 3006 c 256,10,11
  -614 2892 -614 2892 -614 2730 c 1,0,1
 EndSplineSet
+Validated: 1
 EndChar
 
 StartChar: low_glottal
-Encoding: 15 60882 12
+Encoding: 12 60882 12
 Width: 0
 GlyphClass: 4
 Flags: W
@@ -480,10 +492,11 @@ SplineSet
  0 1823 0 1823 103 1594 c 0,24,25
  204 1365 204 1365 351 1365 c 1,0,1
 EndSplineSet
+Validated: 41
 EndChar
 
 StartChar: cartouche_end
-Encoding: 16 60891 13
+Encoding: 13 60891 13
 Width: 964
 GlyphClass: 2
 Flags: W
@@ -503,10 +516,11 @@ SplineSet
  702 -1102 702 -1102 496 -1331 c 256,17,18
  291 -1559 291 -1559 0 -1559 c 1,0,1
 EndSplineSet
+Validated: 1
 EndChar
 
 StartChar: bubue
-Encoding: 18 60849 14
+Encoding: 14 60849 14
 Width: 1404
 GlyphClass: 2
 Flags: W
@@ -530,11 +544,12 @@ SplineSet
  1404 456 1404 456 1198 227 c 0,23,24
  993 0 993 0 702 0 c 1,0,1
 EndSplineSet
+Validated: 33
 Substitution2: "WithCartouche" bubue_c
 EndChar
 
 StartChar: cecoa
-Encoding: 19 60856 15
+Encoding: 15 60856 15
 Width: 1404
 GlyphClass: 2
 Flags: W
@@ -558,11 +573,12 @@ SplineSet
  1404 456 1404 456 1198 229 c 0,23,24
  993 0 993 0 702 0 c 256,0,1
 EndSplineSet
+Validated: 33
 Substitution2: "WithCartouche" cecoa_c
 EndChar
 
 StartChar: dudeo
-Encoding: 20 60853 16
+Encoding: 16 60853 16
 Width: 1404
 GlyphClass: 2
 Flags: W
@@ -603,11 +619,12 @@ SplineSet
  1404 457 1404 457 1198 229 c 256,55,56
  993 0 993 0 702 0 c 0,20,21
 EndSplineSet
+Validated: 1
 Substitution2: "WithCartouche" dudeo_c
 EndChar
 
 StartChar: fofuaq
-Encoding: 21 60851 17
+Encoding: 17 60851 17
 Width: 1404
 GlyphClass: 2
 Flags: W
@@ -633,11 +650,12 @@ SplineSet
  1404 -1102 1404 -1102 1198 -1331 c 256,25,26
  993 -1559 993 -1559 702 -1559 c 1,0,1
 EndSplineSet
+Validated: 33
 Substitution2: "WithCartouche" fofuaq_c
 EndChar
 
 StartChar: gugui
-Encoding: 22 60866 18
+Encoding: 18 60866 18
 Width: 1841
 GlyphClass: 2
 Flags: W
@@ -674,11 +692,12 @@ SplineSet
  1213 245 1213 245 1198 229 c 0,45,46
  993 0 993 0 702 0 c 256,4,5
 EndSplineSet
+Validated: 33
 Substitution2: "WithCartouche" gugui_c
 EndChar
 
 StartChar: hehaq
-Encoding: 23 60869 19
+Encoding: 19 60869 19
 Width: 1404
 GlyphClass: 2
 Flags: W
@@ -714,11 +733,12 @@ SplineSet
  1404 -1102 1404 -1102 1198 -1331 c 256,40,41
  993 -1559 993 -1559 702 -1559 c 1,0,1
 EndSplineSet
+Validated: 41
 Substitution2: "WithCartouche" hehaq_c
 EndChar
 
 StartChar: jujuo
-Encoding: 24 60861 20
+Encoding: 20 60861 20
 Width: 2457
 GlyphClass: 2
 Flags: W
@@ -750,11 +770,12 @@ SplineSet
  2457 456 2457 456 2252 227 c 0,40,41
  2046 0 2046 0 1755 0 c 1,0,1
 EndSplineSet
+Validated: 33
 Substitution2: "WithCartouche" jujuo_c
 EndChar
 
 StartChar: kikue
-Encoding: 25 60867 21
+Encoding: 21 60867 21
 Width: 1404
 GlyphClass: 2
 Flags: W
@@ -786,11 +807,12 @@ SplineSet
  1404 456 1404 456 1198 229 c 0,39,40
  993 0 993 0 702 0 c 256,16,17
 EndSplineSet
+Validated: 33
 Substitution2: "WithCartouche" kikue_c
 EndChar
 
 StartChar: laoliq
-Encoding: 26 60859 22
+Encoding: 22 60859 22
 Width: 2808
 GlyphClass: 2
 Flags: W
@@ -835,11 +857,12 @@ SplineSet
  2808 0 l 1,60,-1
  702 0 l 1,16,-1
 EndSplineSet
+Validated: 37
 Substitution2: "WithCartouche" laoliq_c
 EndChar
 
 StartChar: mamei
-Encoding: 27 60848 23
+Encoding: 23 60848 23
 Width: 4212
 GlyphClass: 2
 Flags: W
@@ -892,11 +915,12 @@ SplineSet
  4213 -1102 4213 -1102 4007 -1331 c 256,72,73
  3802 -1559 3802 -1559 3511 -1559 c 1,0,1
 EndSplineSet
+Validated: 37
 Substitution2: "WithCartouche" mamei_c
 EndChar
 
 StartChar: nanaq
-Encoding: 28 60852 24
+Encoding: 24 60852 24
 Width: 1404
 GlyphClass: 2
 Flags: W
@@ -929,11 +953,12 @@ SplineSet
  1404 2017 1404 2017 1198 1788 c 256,39,40
  993 1559 993 1559 702 1559 c 1,32,-1
 EndSplineSet
+Validated: 37
 Substitution2: "WithCartouche" nanaq_c
 EndChar
 
 StartChar: pipoq
-Encoding: 29 60850 25
+Encoding: 25 60850 25
 Width: 1404
 GlyphClass: 2
 Flags: W
@@ -965,11 +990,12 @@ SplineSet
  1404 -1102 1404 -1102 1198 -1331 c 256,38,39
  993 -1559 993 -1559 702 -1559 c 1,16,17
 EndSplineSet
+Validated: 33
 Substitution2: "WithCartouche" pipoq_c
 EndChar
 
 StartChar: aqaq
-Encoding: 30 60865 26
+Encoding: 26 60865 26
 Width: 1404
 GlyphClass: 2
 Flags: W
@@ -998,11 +1024,12 @@ SplineSet
  1404 -1102 1404 -1102 1198 -1331 c 256,32,33
  993 -1559 993 -1559 702 -1559 c 1,0,1
 EndSplineSet
+Validated: 33
 Substitution2: "WithCartouche" aqaq_c
 EndChar
 
 StartChar: rairua
-Encoding: 31 60858 27
+Encoding: 27 60858 27
 Width: 2808
 GlyphClass: 2
 Flags: W
@@ -1043,11 +1070,12 @@ SplineSet
  2808 -1102 2808 -1102 2603 -1331 c 256,52,53
  2397 -1559 2397 -1559 2106 -1559 c 1,0,1
 EndSplineSet
+Validated: 37
 Substitution2: "WithCartouche" rairua_c
 EndChar
 
 StartChar: saqseoq
-Encoding: 32 60857 28
+Encoding: 28 60857 28
 Width: 1404
 GlyphClass: 2
 Flags: W
@@ -1070,16 +1098,17 @@ SplineSet
  0 458 0 458 0 779 c 0,20,21
  0 1102 0 1102 206 1331 c 256,22,23
  412 1560 412 1560 702 1559 c 256,24,25
- 993 1559 993 1559 1198 1331 c 256,26,27
+ 993 1559 993 1559 1198 1331 c 260,26,27
  1404 1102 1404 1102 1404 779 c 0,28,29
  1404 457 1404 457 1198 229 c 256,30,31
  993 0 993 0 702 0 c 256,16,17
 EndSplineSet
+Validated: 33
 Substitution2: "WithCartouche" saqseoq_c
 EndChar
 
 StartChar: titieq
-Encoding: 33 60854 29
+Encoding: 29 60854 29
 Width: 2457
 GlyphClass: 2
 Flags: W
@@ -1121,11 +1150,12 @@ SplineSet
  1404 457 1404 457 1198 229 c 256,56,57
  993 0 993 0 702 0 c 256,16,17
 EndSplineSet
+Validated: 33
 Substitution2: "WithCartouche" titieq_c
 EndChar
 
 StartChar: veva
-Encoding: 34 60864 30
+Encoding: 30 60864 30
 Width: 1404
 GlyphClass: 2
 Flags: W
@@ -1150,11 +1180,12 @@ SplineSet
  1404 456 1404 456 1198 227 c 0,25,26
  993 0 993 0 702 0 c 1,0,1
 EndSplineSet
+Validated: 1
 Substitution2: "WithCartouche" veva_c
 EndChar
 
 StartChar: nhanhoq
-Encoding: 35 60860 31
+Encoding: 31 60860 31
 Width: 1404
 GlyphClass: 2
 Flags: W
@@ -1194,11 +1225,12 @@ SplineSet
  702 10 l 1,54,55
  660 0 660 0 614 0 c 0,18,19
 EndSplineSet
+Validated: 33
 Substitution2: "WithCartouche" nhanhoq_c
 EndChar
 
 StartChar: shoshia
-Encoding: 36 60863 32
+Encoding: 32 60863 32
 Width: 1404
 GlyphClass: 2
 Flags: W
@@ -1230,11 +1262,12 @@ SplineSet
  1404 -1102 1404 -1102 1198 -1331 c 256,39,40
  993 -1559 993 -1559 702 -1559 c 1,0,1
 EndSplineSet
+Validated: 33
 Substitution2: "WithCartouche" shoshia_c
 EndChar
 
 StartChar: chichao
-Encoding: 37 60862 33
+Encoding: 33 60862 33
 Width: 1404
 GlyphClass: 2
 Flags: W
@@ -1260,11 +1293,12 @@ SplineSet
  1404 456 1404 456 1198 229 c 0,30,31
  993 0 993 0 702 0 c 256,0,1
 EndSplineSet
+Validated: 33
 Substitution2: "WithCartouche" chichao_c
 EndChar
 
 StartChar: zozeo
-Encoding: 38 60855 34
+Encoding: 34 60855 34
 Width: 1404
 GlyphClass: 2
 Flags: W
@@ -1318,11 +1352,12 @@ SplineSet
  768 -1559 768 -1559 745 -1558 c 0,70,71
  723 -1559 723 -1559 702 -1559 c 1,19,20
 EndSplineSet
+Validated: 37
 Substitution2: "WithCartouche" zozeo_c
 EndChar
 
 StartChar: rising_falling
-Encoding: 39 60883 35
+Encoding: 35 60883 35
 Width: 0
 GlyphClass: 4
 Flags: W
@@ -1345,10 +1380,11 @@ SplineSet
  1316 1823 1316 1823 1110 1594 c 256,23,24
  905 1365 905 1365 614 1365 c 1,0,1
 EndSplineSet
+Validated: 1
 EndChar
 
 StartChar: bubue_c
-Encoding: 40 -1 36
+Encoding: 36 -1 36
 Width: 1404
 GlyphClass: 2
 Flags: W
@@ -1377,10 +1413,11 @@ SplineSet
  1404 3120 l 1,28,-1
  0 3120 l 1,25,-1
 EndSplineSet
+Validated: 33
 EndChar
 
 StartChar: cecoa_c
-Encoding: 41 -1 37
+Encoding: 37 -1 37
 Width: 1404
 GlyphClass: 2
 Flags: W
@@ -1409,10 +1446,11 @@ SplineSet
  1404 3120 l 1,28,-1
  0 3120 l 5,25,-1
 EndSplineSet
+Validated: 33
 EndChar
 
 StartChar: dudeo_c
-Encoding: 42 -1 38
+Encoding: 38 -1 38
 Width: 1404
 GlyphClass: 2
 Flags: W
@@ -1458,10 +1496,11 @@ SplineSet
  1404 3120 l 1,60,-1
  0 3120 l 5,57,-1
 EndSplineSet
+Validated: 1
 EndChar
 
 StartChar: fofuaq_c
-Encoding: 43 -1 39
+Encoding: 39 -1 39
 Width: 1404
 GlyphClass: 2
 Flags: W
@@ -1492,10 +1531,11 @@ SplineSet
  1404 3120 l 1,30,-1
  0 3120 l 5,27,-1
 EndSplineSet
+Validated: 33
 EndChar
 
 StartChar: gugui_c
-Encoding: 44 -1 40
+Encoding: 40 -1 40
 Width: 1841
 GlyphClass: 2
 Flags: W
@@ -1537,10 +1577,11 @@ SplineSet
  1842 3120 l 1,50,-1
  0 3120 l 5,47,-1
 EndSplineSet
+Validated: 33
 EndChar
 
 StartChar: hehaq_c
-Encoding: 45 -1 41
+Encoding: 41 -1 41
 Width: 1404
 GlyphClass: 2
 Flags: W
@@ -1581,10 +1622,11 @@ SplineSet
  1404 3120 l 1,45,-1
  0 3120 l 5,42,-1
 EndSplineSet
+Validated: 41
 EndChar
 
 StartChar: jujuo_c
-Encoding: 46 -1 42
+Encoding: 42 -1 42
 Width: 2457
 GlyphClass: 2
 Flags: W
@@ -1621,10 +1663,11 @@ SplineSet
  2457 3120 l 1,45,-1
  0 3120 l 5,42,-1
 EndSplineSet
+Validated: 33
 EndChar
 
 StartChar: kikue_c
-Encoding: 47 -1 43
+Encoding: 43 -1 43
 Width: 1404
 GlyphClass: 2
 Flags: W
@@ -1661,10 +1704,11 @@ SplineSet
  1404 3120 l 1,44,-1
  0 3120 l 5,41,-1
 EndSplineSet
+Validated: 33
 EndChar
 
 StartChar: laoliq_c
-Encoding: 48 -1 44
+Encoding: 44 -1 44
 Width: 2808
 GlyphClass: 2
 Flags: W
@@ -1714,10 +1758,11 @@ SplineSet
  2808 3120 l 1,64,-1
  0 3120 l 5,61,-1
 EndSplineSet
+Validated: 37
 EndChar
 
 StartChar: mamei_c
-Encoding: 49 -1 45
+Encoding: 45 -1 45
 Width: 4212
 GlyphClass: 2
 Flags: W
@@ -1775,10 +1820,11 @@ SplineSet
  4213 3120 l 1,77,-1
  0 3120 l 5,74,-1
 EndSplineSet
+Validated: 37
 EndChar
 
 StartChar: nanaq_c
-Encoding: 50 -1 46
+Encoding: 46 -1 46
 Width: 1404
 GlyphClass: 2
 Flags: W
@@ -1816,10 +1862,11 @@ SplineSet
  1404 3120 l 1,44,-1
  0 3120 l 5,41,-1
 EndSplineSet
+Validated: 37
 EndChar
 
 StartChar: pipoq_c
-Encoding: 51 -1 47
+Encoding: 47 -1 47
 Width: 1404
 GlyphClass: 2
 Flags: W
@@ -1856,10 +1903,11 @@ SplineSet
  1404 3120 l 1,43,-1
  0 3120 l 5,40,-1
 EndSplineSet
+Validated: 33
 EndChar
 
 StartChar: aqaq_c
-Encoding: 52 -1 48
+Encoding: 48 -1 48
 Width: 1404
 GlyphClass: 2
 Flags: W
@@ -1893,10 +1941,11 @@ SplineSet
  1404 3120 l 1,37,-1
  0 3120 l 5,34,-1
 EndSplineSet
+Validated: 33
 EndChar
 
 StartChar: rairua_c
-Encoding: 53 -1 49
+Encoding: 49 -1 49
 Width: 2808
 GlyphClass: 2
 Flags: W
@@ -1942,10 +1991,11 @@ SplineSet
  2808 3120 l 1,57,-1
  0 3120 l 5,54,-1
 EndSplineSet
+Validated: 37
 EndChar
 
 StartChar: saqseoq_c
-Encoding: 54 -1 50
+Encoding: 50 -1 50
 Width: 1404
 GlyphClass: 2
 Flags: W
@@ -1978,10 +2028,11 @@ SplineSet
  1404 3120 l 1,35,-1
  0 3120 l 5,32,-1
 EndSplineSet
+Validated: 33
 EndChar
 
 StartChar: titieq_c
-Encoding: 55 -1 51
+Encoding: 51 -1 51
 Width: 2457
 GlyphClass: 2
 Flags: W
@@ -2028,10 +2079,11 @@ SplineSet
  2457 3120 l 1,61,-1
  0 3120 l 5,58,-1
 EndSplineSet
+Validated: 33
 EndChar
 
 StartChar: veva_c
-Encoding: 56 -1 52
+Encoding: 52 -1 52
 Width: 1404
 GlyphClass: 2
 Flags: W
@@ -2061,10 +2113,11 @@ SplineSet
  1404 3120 l 1,30,-1
  0 3120 l 5,27,-1
 EndSplineSet
+Validated: 1
 EndChar
 
 StartChar: nhanhoq_c
-Encoding: 57 -1 53
+Encoding: 53 -1 53
 Width: 1404
 GlyphClass: 2
 Flags: W
@@ -2109,10 +2162,11 @@ SplineSet
  1404 3120 l 1,59,-1
  0 3120 l 5,56,-1
 EndSplineSet
+Validated: 33
 EndChar
 
 StartChar: shoshia_c
-Encoding: 58 -1 54
+Encoding: 54 -1 54
 Width: 1404
 GlyphClass: 2
 Flags: W
@@ -2149,10 +2203,11 @@ SplineSet
  1404 3120 l 1,44,-1
  0 3120 l 5,41,-1
 EndSplineSet
+Validated: 33
 EndChar
 
 StartChar: chichao_c
-Encoding: 59 -1 55
+Encoding: 55 -1 55
 Width: 1404
 GlyphClass: 2
 Flags: W
@@ -2183,10 +2238,11 @@ SplineSet
  1404 3120 l 1,35,-1
  0 3120 l 5,32,-1
 EndSplineSet
+Validated: 33
 EndChar
 
 StartChar: zozeo_c
-Encoding: 60 -1 56
+Encoding: 56 -1 56
 Width: 1404
 GlyphClass: 2
 Flags: W
@@ -2245,10 +2301,11 @@ SplineSet
  1404 3120 l 1,75,-1
  0 3120 l 5,72,-1
 EndSplineSet
+Validated: 37
 EndChar
 
 StartChar: space_c
-Encoding: 61 -1 57
+Encoding: 57 -1 57
 Width: 1404
 GlyphClass: 1
 Flags: W
@@ -2261,10 +2318,11 @@ SplineSet
  1404 3120 l 1,3,-1
  0 3120 l 5,0,-1
 EndSplineSet
+Validated: 1
 EndChar
 
 StartChar: prefix_c
-Encoding: 62 -1 58
+Encoding: 58 -1 58
 Width: 876
 GlyphClass: 2
 Flags: W
@@ -2295,10 +2353,11 @@ SplineSet
  877 3120 l 1,35,-1
  0 3120 l 5,32,-1
 EndSplineSet
+Validated: 33
 EndChar
 
 StartChar: oaomo_c
-Encoding: 63 -1 59
+Encoding: 59 -1 59
 Width: 876
 GlyphClass: 2
 Flags: W
@@ -2320,10 +2379,11 @@ SplineSet
  877 3120 l 1,19,-1
  0 3120 l 5,16,-1
 EndSplineSet
+Validated: 1
 EndChar
 
 StartChar: quote_c
-Encoding: 64 -1 60
+Encoding: 60 -1 60
 Width: 1404
 GlyphClass: 2
 Flags: W
@@ -2345,6 +2405,84 @@ SplineSet
  1404 3511 l 1,10,-1
  1404 3120 l 1,11,-1
  0 3120 l 5,8,-1
+EndSplineSet
+Validated: 5
+EndChar
+
+StartChar: dotted_circle
+Encoding: 61 9676 61
+Width: 1404
+GlyphClass: 2
+Flags: W
+AnchorPoint: "diphthong" 1404 -490 basechar 0
+AnchorPoint: "tone" 702 1559 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+713.961914062 1497.35644531 m 0,0,1
+ 731.615734857 1497.0070818 731.615734857 1497.0070818 749.298828125 1495.62109375 c 2,2,-1
+ 835.688476562 1488.85253906 l 1,3,-1
+ 822.150390625 1316.08691406 l 1,4,-1
+ 735.767578125 1322.84863281 l 2,5,6
+ 685.007067683 1326.8242626 685.007067683 1326.8242626 635.108398438 1318.94335938 c 2,7,-1
+ 549.522460938 1305.41992188 l 1,8,-1
+ 522.490234375 1476.59863281 l 1,9,-1
+ 608.076171875 1490.11425781 l 2,10,11
+ 660.615647115 1498.41212188 660.615647115 1498.41212188 713.961914062 1497.35644531 c 0,0,1
+1125.62792969 1334.35644531 m 1,12,-1
+ 1181.75976562 1268.34765625 l 2,13,14
+ 1226.16324025 1216.13090025 1226.16324025 1216.13090025 1260.44335938 1155.44921875 c 2,15,-1
+ 1303.05859375 1080.00683594 l 1,16,-1
+ 1152.17285156 994.767578125 l 1,17,-1
+ 1109.54980469 1070.2109375 l 2,18,19
+ 1083.4073476 1116.48779236 1083.4073476 1116.48779236 1049.74121094 1156.07714844 c 2,20,-1
+ 993.609375 1222.09277344 l 1,21,-1
+ 1125.62792969 1334.35644531 l 1,12,-1
+245.543945312 1302.02441406 m 1,22,-1
+ 384.5078125 1198.47851562 l 1,23,-1
+ 332.73828125 1129 l 2,24,25
+ 301.545422054 1087.13766877 301.545422054 1087.13766877 278.252929688 1039.30957031 c 2,26,-1
+ 240.317382812 961.409179688 l 1,27,-1
+ 84.5078125 1037.28710938 l 1,28,-1
+ 122.451171875 1115.18847656 l 2,29,30
+ 152.87292612 1177.65546794 152.87292612 1177.65546794 193.774414062 1232.54589844 c 2,31,-1
+ 245.543945312 1302.02441406 l 1,22,-1
+1359.65527344 858.498046875 m 1,32,-1
+ 1359.65527344 771.849609375 l 2,33,34
+ 1359.65971091 703.314392141 1359.65971091 703.314392141 1348.23632812 636.501953125 c 2,35,-1
+ 1333.63476562 551.09375 l 1,36,-1
+ 1162.81738281 580.303710938 l 1,37,-1
+ 1177.41894531 665.712890625 l 2,38,39
+ 1186.3613494 718.017766577 1186.3613494 718.017766577 1186.35839844 771.841796875 c 2,40,-1
+ 1186.35058594 858.490234375 l 1,41,-1
+ 1359.65527344 858.498046875 l 1,32,-1
+211.93359375 754.590820312 m 1,42,-1
+ 226.047851562 669.100585938 l 2,43,44
+ 234.767728779 616.278366257 234.767728779 616.278366257 252.334960938 566.411132812 c 2,45,-1
+ 281.131835938 484.678710938 l 1,46,-1
+ 117.674804688 427.100585938 l 1,47,-1
+ 88.8857421875 508.825195312 l 2,48,49
+ 66.2566826303 573.056831971 66.2566826303 573.056831971 55.0615234375 640.872070312 c 2,50,-1
+ 40.947265625 726.362304688 l 1,51,-1
+ 211.93359375 754.590820312 l 1,42,-1
+1067.87890625 398.399414062 m 1,52,-1
+ 1184.58691406 270.287109375 l 1,53,-1
+ 1120.52636719 211.932617188 l 2,54,55
+ 1068.1160319 164.188607962 1068.1160319 164.188607962 1008.09277344 129.3515625 c 2,56,-1
+ 933.15234375 85.857421875 l 1,57,-1
+ 846.1640625 235.747070312 l 1,58,-1
+ 921.104492188 279.241210938 l 2,59,60
+ 965.099955921 304.774865871 965.099955921 304.774865871 1003.81933594 340.045898438 c 2,61,-1
+ 1067.87890625 398.399414062 l 1,52,-1
+405.47265625 324.950195312 m 1,62,-1
+ 480.095703125 280.90234375 l 2,63,64
+ 524.558232329 254.653005866 524.558232329 254.653005866 572.620117188 239.482421875 c 2,65,-1
+ 655.25390625 213.39453125 l 1,66,-1
+ 603.0859375 48.13671875 l 1,67,-1
+ 520.453125 74.216796875 l 2,68,69
+ 453.502553145 95.3498399441 453.502553145 95.3498399441 391.993164062 131.662109375 c 2,70,-1
+ 317.376953125 175.717773438 l 1,71,-1
+ 405.47265625 324.950195312 l 1,62,-1
 EndSplineSet
 EndChar
 EndChars
