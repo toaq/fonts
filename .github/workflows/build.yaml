@@ -1,0 +1,21 @@
+name: Build
+on:
+  push:
+    branches: [main]
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: nixbuild/nix-quick-install-action@v19
+        with:
+          nix_conf: experimental-features = nix-command flakes
+      - name: nix build
+        run: nix build
+      - uses: marvinpinto/action-automatic-releases@latest
+        with:
+          repo_token: '${{ secrets.GITHUB_TOKEN }}'
+          automatic_release_tag: latest
+          prerelease: false
+          files: result/*
