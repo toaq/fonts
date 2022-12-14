@@ -22,7 +22,7 @@ OS2Version: 2
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 0
 CreationTime: 1670694376
-ModificationTime: 1671053983
+ModificationTime: 1671056247
 PfmFamily: 81
 TTFWeight: 400
 TTFWidth: 5
@@ -58,7 +58,7 @@ OS2Vendor: 'FSTR'
 OS2CodePages: 200101ff.cdff0000
 OS2UnicodeRanges: 00000001.10000000.00000000.00000000
 Lookup: 1 0 0 "WithCartouche" { "WithCartouche"  } ['cart' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
-Lookup: 6 8 0 "Connect cartouches" { "Connect cartouche start"  "Connect cartouche medials"  } ['calt' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
+Lookup: 6 8 0 "Connect cartouches" { "Connect cartouche start"  "Connect cartouche medials"  } ['rclt' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
 Lookup: 260 0 0 "'mark' Mark Positioning in Latin lookup 1" { "'mark' Mark Positioning in Latin lookup 1-1"  } ['mark' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
 Lookup: 258 0 0 "'kern' Horizontal Kerning in Latin lookup 0" { "'kern' Horizontal Kerning in Latin lookup 0 subtable" [307,30,0] } ['kern' ('latn' <'dflt' > ) ]
 MarkAttachClasses: 1
