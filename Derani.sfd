@@ -22,7 +22,7 @@ OS2Version: 2
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 0
 CreationTime: 1670694376
-ModificationTime: 1671056247
+ModificationTime: 1671146174
 PfmFamily: 81
 TTFWeight: 400
 TTFWidth: 5
@@ -60,7 +60,7 @@ OS2UnicodeRanges: 00000001.10000000.00000000.00000000
 Lookup: 1 0 0 "WithCartouche" { "WithCartouche"  } ['cart' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
 Lookup: 6 8 0 "Connect cartouches" { "Connect cartouche start"  "Connect cartouche medials"  } ['rclt' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
 Lookup: 260 0 0 "'mark' Mark Positioning in Latin lookup 1" { "'mark' Mark Positioning in Latin lookup 1-1"  } ['mark' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
-Lookup: 258 0 0 "'kern' Horizontal Kerning in Latin lookup 0" { "'kern' Horizontal Kerning in Latin lookup 0 subtable" [307,30,0] } ['kern' ('latn' <'dflt' > ) ]
+Lookup: 258 0 0 "'kern' Horizontal Kerning in Latin lookup 0" { "'kern' Horizontal Kerning in Latin lookup 0 subtable" [307,30,0] } ['kern' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
 MarkAttachClasses: 1
 DEI: 91125
 ChainSub2: class "Connect cartouche medials" 2 2 1 1
@@ -824,7 +824,7 @@ StdVW 5 [352]
 EndPrivate
 TeXData: 1 0 0 440251 220125 146750 0 -235804 146750 783286 444596 497025 792723 393216 433062 380633 303038 157286 324010 404750 52429 2506097 1059062 262144
 AnchorClass2: "diphthong" "'mark' Mark Positioning in Latin lookup 1-1" "tone" "'mark' Mark Positioning in Latin lookup 1-1"
-BeginChars: 82 62
+BeginChars: 93 62
 
 StartChar: space
 Encoding: 0 32 0
@@ -834,6 +834,7 @@ Flags: W
 LayerCount: 2
 Fore
 Validated: 1
+Kerns2: 11 -320 "'kern' Horizontal Kerning in Latin lookup 0 subtable"
 Substitution2: "WithCartouche" space_c
 EndChar
 
@@ -1757,10 +1758,10 @@ EndChar
 
 StartChar: cartouche_start
 Encoding: 11 60890 11
-Width: 0
+Width: 614
 GlyphClass: 2
 Flags: W
-HStem: 3120 391<-211.863 702>
+HStem: 3120 391<402.137 1316>
 TtInstrs:
 SVTCA[y-axis]
 PUSHB_1
@@ -1781,17 +1782,16 @@ EndTTInstrs
 LayerCount: 2
 Fore
 SplineSet
--614 2730 m 1,0,1
- -614 3053 -614 3053 -408 3282 c 0,2,3
- -233 3475 -233 3475 0 3506 c 1,4,-1
- 0 3511 l 1,5,-1
- 702 3511 l 1,6,-1
- 702 3120 l 1,7,-1
- 87 3120 l 2,8,9
- -202 3120 -202 3120 -408 3006 c 256,10,11
- -614 2892 -614 2892 -614 2730 c 1,0,1
+0 2730 m 1,0,1
+ 0 3053 0 3053 206 3282 c 0,2,3
+ 381 3475 381 3475 614 3506 c 1,4,-1
+ 614 3511 l 1,5,-1
+ 1316 3511 l 1,6,-1
+ 1316 3120 l 1,7,-1
+ 701 3120 l 2,8,9
+ 412 3120 412 3120 206 3006 c 256,10,11
+ 0 2892 0 2892 0 2730 c 1,0,1
 EndSplineSet
-Validated: 1
 EndChar
 
 StartChar: low_glottal
@@ -4792,7 +4792,7 @@ StartChar: bubue_c
 Encoding: 36 -1 36
 Width: 1404
 GlyphClass: 2
-Flags: WO
+Flags: W
 HStem: 1169 390<497.577 900.049> 3120 391<0 1404>
 VStem: 0 351<779 1017> 1053 351<428.576 1015.7>
 TtInstrs:
