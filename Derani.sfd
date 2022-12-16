@@ -22,7 +22,7 @@ OS2Version: 2
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 0
 CreationTime: 1670694376
-ModificationTime: 1671150490
+ModificationTime: 1671150736
 PfmFamily: 81
 TTFWeight: 400
 TTFWidth: 5
@@ -59,13 +59,31 @@ OS2CodePages: 200101ff.cdff0000
 OS2UnicodeRanges: 00000001.10000000.00000000.00000000
 Lookup: 1 0 0 "WithCartouche" { "WithCartouche"  } ['cart' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
 Lookup: 1 0 0 "TrimCartouche" { "TrimCartouche" ("_end") } ['cart' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
-Lookup: 6 8 0 "Connect cartouches" { "Connect cartouche start"  "Connect cartouche medials"  } ['rclt' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
-Lookup: 5 8 0 "Trim cartouches" { "Trim cartouches"  } ['rclt' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
+Lookup: 5 8 0 "Connect cartouche start" { "Connect cartouche start"  } ['rclt' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
+Lookup: 6 8 0 "Connect cartouche medials" { "Connect cartouche medials"  } ['rclt' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
+Lookup: 5 8 0 "Trim cartouche end" { "Trim cartouche end"  } ['rclt' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
 Lookup: 260 0 0 "'mark' Mark Positioning in Latin lookup 1" { "'mark' Mark Positioning in Latin lookup 1-1"  } ['mark' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
 Lookup: 258 0 0 "'kern' Horizontal Kerning in Latin lookup 0" { "'kern' Horizontal Kerning in Latin lookup 0 subtable" [307,30,0] } ['kern' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
 MarkAttachClasses: 1
 DEI: 91125
-ContextSub2: class "Trim cartouches" 3 3 3 1
+ContextSub2: class "Connect cartouche start" 3 3 3 1
+  Class: 160 space quote oaomo prefix bubue cecoa dudeo fofuaq gugui hehaq jujuo kikue laoliq mamei nanaq pipoq aqaq rairua saqseoq titieq veva nhanhoq shoshia chichao zozeo
+  Class: 15 cartouche_start
+  BClass: 160 space quote oaomo prefix bubue cecoa dudeo fofuaq gugui hehaq jujuo kikue laoliq mamei nanaq pipoq aqaq rairua saqseoq titieq veva nhanhoq shoshia chichao zozeo
+  BClass: 15 cartouche_start
+  FClass: 160 space quote oaomo prefix bubue cecoa dudeo fofuaq gugui hehaq jujuo kikue laoliq mamei nanaq pipoq aqaq rairua saqseoq titieq veva nhanhoq shoshia chichao zozeo
+  FClass: 15 cartouche_start
+ 2 0 0
+  ClsList: 2 1
+  BClsList:
+  FClsList:
+ 1
+  SeqLookup: 1 "WithCartouche"
+  ClassNames: "All_Others" "base" "cartouche_start"
+  BClassNames: "All_Others" "base" "cartouche_start"
+  FClassNames: "All_Others" "base" "cartouche_start"
+EndFPST
+ContextSub2: class "Trim cartouche end" 3 3 3 1
   Class: 210 bubue_c cecoa_c dudeo_c fofuaq_c gugui_c hehaq_c jujuo_c kikue_c laoliq_c mamei_c nanaq_c pipoq_c aqaq_c rairua_c saqseoq_c titieq_c veva_c nhanhoq_c shoshia_c chichao_c zozeo_c space_c prefix_c oaomo_c quote_c
   Class: 13 cartouche_end
   BClass: 210 bubue_c cecoa_c dudeo_c fofuaq_c gugui_c hehaq_c jujuo_c kikue_c laoliq_c mamei_c nanaq_c pipoq_c aqaq_c rairua_c saqseoq_c titieq_c veva_c nhanhoq_c shoshia_c chichao_c zozeo_c space_c prefix_c oaomo_c quote_c
@@ -93,19 +111,6 @@ ChainSub2: class "Connect cartouche medials" 2 2 1 1
   SeqLookup: 0 "WithCartouche"
   ClassNames: "All_Others" "base"
   BClassNames: "All_Others" "base_c"
-  FClassNames: "All_Others"
-EndFPST
-ChainSub2: class "Connect cartouche start" 2 2 1 1
-  Class: 175 space quote oaomo prefix bubue cecoa dudeo fofuaq gugui hehaq jujuo kikue laoliq mamei nanaq pipoq aqaq rairua saqseoq titieq veva nhanhoq shoshia chichao zozeo rising_falling
-  BClass: 15 cartouche_start
- 1 1 0
-  ClsList: 1
-  BClsList: 1
-  FClsList:
- 1
-  SeqLookup: 0 "WithCartouche"
-  ClassNames: "All_Others" "base"
-  BClassNames: "All_Others" "cartouche_start"
   FClassNames: "All_Others"
 EndFPST
 TtTable: prep
