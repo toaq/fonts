@@ -12402,6 +12402,140 @@ Width: 924
 VWidth: 1100
 GlyphClass: 2
 Flags: W
+HStem: 0 128<431 757.125> 385 128<166.54 294.068 628.54 756.349>
+VStem: 0 116<256 331.281> 347 115<147.283 329.215> 462 115<256 330.944> 808 116<180.859 331.75>
+TtInstrs:
+SVTCA[y-axis]
+PUSHB_1
+ 0
+MDAP[rnd]
+PUSHB_2
+ 24
+ 0
+MIRP[min,black]
+PUSHB_1
+ 9
+MDAP[rnd]
+PUSHB_1
+ 33
+SHP[rp1]
+PUSHB_2
+ 18
+ 0
+MIRP[min,black]
+PUSHB_1
+ 42
+SHP[rp2]
+PUSHB_3
+ 9
+ 18
+ 10
+CALL
+PUSHB_4
+ 64
+ 9
+ 14
+ 9
+CALL
+PUSHB_1
+ 37
+SHP[rp2]
+SVTCA[x-axis]
+PUSHB_1
+ 51
+MDAP[rnd]
+PUSHB_1
+ 14
+MDRP[rp0,rnd,white]
+PUSHB_2
+ 13
+ 1
+MIRP[min,black]
+PUSHB_1
+ 13
+SRP0
+PUSHB_2
+ 5
+ 1
+CALL
+PUSHB_2
+ 22
+ 2
+MIRP[min,black]
+PUSHB_1
+ 22
+SRP0
+PUSHB_2
+ 38
+ 11
+CALL
+PUSHB_2
+ 37
+ 2
+MIRP[min,black]
+PUSHB_1
+ 37
+SRP0
+PUSHB_2
+ 29
+ 1
+CALL
+PUSHB_2
+ 46
+ 1
+MIRP[min,black]
+PUSHB_2
+ 52
+ 1
+CALL
+PUSHB_2
+ 5
+ 13
+SRP1
+SRP2
+PUSHB_3
+ 0
+ 9
+ 18
+IP
+IP
+IP
+PUSHB_1
+ 22
+SRP1
+PUSHB_1
+ 24
+IP
+PUSHB_2
+ 29
+ 37
+SRP1
+SRP2
+PUSHB_1
+ 42
+IP
+SVTCA[y-axis]
+PUSHB_2
+ 24
+ 0
+SRP1
+SRP2
+PUSHB_1
+ 1
+IP
+PUSHB_1
+ 9
+SRP1
+PUSHB_3
+ 5
+ 22
+ 46
+IP
+IP
+IP
+IUP[y]
+IUP[x]
+EndTTInstrs
 AnchorPoint: "tone" 231 513 basechar 0
 LayerCount: 2
 Fore
@@ -12445,6 +12579,32 @@ Width: 0
 VWidth: 851
 GlyphClass: 4
 Flags: W
+HStem: -537 128<380.915 537.566>
+TtInstrs:
+SVTCA[y-axis]
+PUSHB_1
+ 4
+MDAP[rnd]
+PUSHB_2
+ 13
+ 0
+MIRP[min,black]
+SVTCA[x-axis]
+PUSHB_1
+ 17
+MDAP[rnd]
+SVTCA[y-axis]
+PUSHB_2
+ 13
+ 4
+SRP1
+SRP2
+PUSHB_1
+ 9
+IP
+IUP[y]
+IUP[x]
+EndTTInstrs
 AnchorPoint: "vv" 462 -419 mark 0
 LayerCount: 2
 Fore
@@ -12468,6 +12628,161 @@ Width: 924
 VWidth: 1100
 GlyphClass: 2
 Flags: W
+HStem: 0 128<431 757.125> 385 128<166.54 294.068 628.54 756.349> 1026 129<0 1122>
+VStem: 0 116<256 331.281> 347 115<147.283 329.215> 462 115<256 330.944> 808 116<180.859 331.75>
+TtInstrs:
+SVTCA[y-axis]
+PUSHB_1
+ 4
+MDAP[rnd]
+PUSHB_2
+ 28
+ 0
+MIRP[min,black]
+PUSHB_1
+ 13
+MDAP[rnd]
+PUSHB_1
+ 37
+SHP[rp1]
+PUSHB_2
+ 22
+ 0
+MIRP[min,black]
+PUSHB_1
+ 46
+SHP[rp2]
+PUSHB_3
+ 13
+ 22
+ 10
+CALL
+PUSHB_4
+ 64
+ 13
+ 18
+ 9
+CALL
+PUSHB_1
+ 41
+SHP[rp2]
+PUSHB_1
+ 0
+MDAP[rnd]
+PUSHB_2
+ 1
+ 0
+MIRP[min,black]
+SVTCA[x-axis]
+PUSHB_1
+ 55
+MDAP[rnd]
+PUSHB_1
+ 18
+MDRP[rp0,rnd,white]
+PUSHB_1
+ 0
+SHP[rp2]
+PUSHB_2
+ 17
+ 1
+MIRP[min,black]
+PUSHB_3
+ 17
+ 18
+ 10
+CALL
+PUSHB_4
+ 64
+ 17
+ 3
+ 9
+CALL
+PUSHB_1
+ 17
+SRP0
+PUSHB_2
+ 9
+ 1
+CALL
+PUSHB_2
+ 26
+ 2
+MIRP[min,black]
+PUSHB_1
+ 26
+SRP0
+PUSHB_2
+ 42
+ 11
+CALL
+PUSHB_2
+ 41
+ 2
+MIRP[min,black]
+PUSHB_1
+ 41
+SRP0
+PUSHB_2
+ 33
+ 1
+CALL
+PUSHB_2
+ 50
+ 1
+MIRP[min,black]
+PUSHB_2
+ 56
+ 1
+CALL
+PUSHB_2
+ 9
+ 17
+SRP1
+SRP2
+PUSHB_3
+ 4
+ 13
+ 22
+IP
+IP
+IP
+PUSHB_1
+ 26
+SRP1
+PUSHB_1
+ 28
+IP
+PUSHB_2
+ 33
+ 41
+SRP1
+SRP2
+PUSHB_1
+ 46
+IP
+SVTCA[y-axis]
+PUSHB_2
+ 28
+ 4
+SRP1
+SRP2
+PUSHB_1
+ 5
+IP
+PUSHB_1
+ 13
+SRP1
+PUSHB_3
+ 9
+ 26
+ 50
+IP
+IP
+IP
+IUP[y]
+IUP[x]
+EndTTInstrs
 AnchorPoint: "tone" 231 513 basechar 0
 LayerCount: 2
 Fore
@@ -12516,6 +12831,153 @@ Width: 924
 VWidth: 1100
 GlyphClass: 2
 Flags: W
+HStem: 0 128<431 757.125> 385 128<166.54 294.068 628.54 756.349> 1026 129<0 924>
+VStem: 0 116<256 331.281> 347 115<147.283 329.215> 462 115<256 330.944> 808 116<180.859 331.75>
+TtInstrs:
+SVTCA[y-axis]
+PUSHB_1
+ 4
+MDAP[rnd]
+PUSHB_2
+ 28
+ 0
+MIRP[min,black]
+PUSHB_1
+ 13
+MDAP[rnd]
+PUSHB_1
+ 37
+SHP[rp1]
+PUSHB_2
+ 22
+ 0
+MIRP[min,black]
+PUSHB_1
+ 46
+SHP[rp2]
+PUSHB_3
+ 13
+ 22
+ 10
+CALL
+PUSHB_4
+ 64
+ 13
+ 18
+ 9
+CALL
+PUSHB_1
+ 41
+SHP[rp2]
+PUSHB_1
+ 0
+MDAP[rnd]
+PUSHB_2
+ 1
+ 0
+MIRP[min,black]
+SVTCA[x-axis]
+PUSHB_1
+ 55
+MDAP[rnd]
+PUSHB_1
+ 18
+MDRP[rp0,rnd,white]
+PUSHB_1
+ 0
+SHP[rp2]
+PUSHB_2
+ 17
+ 1
+MIRP[min,black]
+PUSHB_1
+ 17
+SRP0
+PUSHB_2
+ 9
+ 1
+CALL
+PUSHB_2
+ 26
+ 2
+MIRP[min,black]
+PUSHB_1
+ 26
+SRP0
+PUSHB_2
+ 42
+ 11
+CALL
+PUSHB_2
+ 41
+ 2
+MIRP[min,black]
+PUSHB_1
+ 41
+SRP0
+PUSHB_2
+ 33
+ 1
+CALL
+PUSHB_2
+ 50
+ 1
+MIRP[min,black]
+PUSHB_1
+ 2
+SHP[rp2]
+PUSHB_2
+ 56
+ 1
+CALL
+PUSHB_2
+ 9
+ 17
+SRP1
+SRP2
+PUSHB_3
+ 4
+ 13
+ 22
+IP
+IP
+IP
+PUSHB_1
+ 26
+SRP1
+PUSHB_1
+ 28
+IP
+PUSHB_2
+ 33
+ 41
+SRP1
+SRP2
+PUSHB_1
+ 46
+IP
+SVTCA[y-axis]
+PUSHB_2
+ 28
+ 4
+SRP1
+SRP2
+PUSHB_1
+ 5
+IP
+PUSHB_1
+ 13
+SRP1
+PUSHB_3
+ 9
+ 26
+ 50
+IP
+IP
+IP
+IUP[y]
+IUP[x]
+EndTTInstrs
 AnchorPoint: "tone" 231 513 basechar 0
 LayerCount: 2
 Fore
