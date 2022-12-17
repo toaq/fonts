@@ -22,7 +22,7 @@ OS2Version: 2
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1670694376
-ModificationTime: 1671223766
+ModificationTime: 1671235336
 PfmFamily: 81
 TTFWeight: 400
 TTFWidth: 5
@@ -67,11 +67,11 @@ Lookup: 258 0 0 "'kern' Horizontal Kerning in Latin lookup 0" { "'kern' Horizont
 MarkAttachClasses: 1
 DEI: 91125
 ContextSub2: class "Connect cartouche start" 3 3 3 1
-  Class: 160 space quote oaomo prefix bubue cecoa dudeo fofuaq gugui hehaq jujuo kikue laoliq mamei nanaq pipoq aqaq rairua saqseoq titieq veva nhanhoq shoshia chichao zozeo
+  Class: 171 space quote oaomo prefix bubue cecoa dudeo fofuaq gugui hehaq jujuo kikue laoliq mamei nanaq pipoq aqaq rairua saqseoq titieq veva nhanhoq shoshia chichao zozeo mamei_coda
   Class: 15 cartouche_start
-  BClass: 160 space quote oaomo prefix bubue cecoa dudeo fofuaq gugui hehaq jujuo kikue laoliq mamei nanaq pipoq aqaq rairua saqseoq titieq veva nhanhoq shoshia chichao zozeo
+  BClass: 171 space quote oaomo prefix bubue cecoa dudeo fofuaq gugui hehaq jujuo kikue laoliq mamei nanaq pipoq aqaq rairua saqseoq titieq veva nhanhoq shoshia chichao zozeo mamei_coda
   BClass: 15 cartouche_start
-  FClass: 160 space quote oaomo prefix bubue cecoa dudeo fofuaq gugui hehaq jujuo kikue laoliq mamei nanaq pipoq aqaq rairua saqseoq titieq veva nhanhoq shoshia chichao zozeo
+  FClass: 171 space quote oaomo prefix bubue cecoa dudeo fofuaq gugui hehaq jujuo kikue laoliq mamei nanaq pipoq aqaq rairua saqseoq titieq veva nhanhoq shoshia chichao zozeo mamei_coda
   FClass: 15 cartouche_start
  2 0 0
   ClsList: 2 1
@@ -84,11 +84,11 @@ ContextSub2: class "Connect cartouche start" 3 3 3 1
   FClassNames: "All_Others" "base" "cartouche_start"
 EndFPST
 ContextSub2: class "Trim cartouche end" 3 3 3 1
-  Class: 210 bubue_c cecoa_c dudeo_c fofuaq_c gugui_c hehaq_c jujuo_c kikue_c laoliq_c mamei_c nanaq_c pipoq_c aqaq_c rairua_c saqseoq_c titieq_c veva_c nhanhoq_c shoshia_c chichao_c zozeo_c space_c prefix_c oaomo_c quote_c
+  Class: 223 bubue_c cecoa_c dudeo_c fofuaq_c gugui_c hehaq_c jujuo_c kikue_c laoliq_c mamei_c nanaq_c pipoq_c aqaq_c rairua_c saqseoq_c titieq_c veva_c nhanhoq_c shoshia_c chichao_c zozeo_c space_c prefix_c oaomo_c quote_c mamei_coda_c
   Class: 13 cartouche_end
-  BClass: 210 bubue_c cecoa_c dudeo_c fofuaq_c gugui_c hehaq_c jujuo_c kikue_c laoliq_c mamei_c nanaq_c pipoq_c aqaq_c rairua_c saqseoq_c titieq_c veva_c nhanhoq_c shoshia_c chichao_c zozeo_c space_c prefix_c oaomo_c quote_c
+  BClass: 223 bubue_c cecoa_c dudeo_c fofuaq_c gugui_c hehaq_c jujuo_c kikue_c laoliq_c mamei_c nanaq_c pipoq_c aqaq_c rairua_c saqseoq_c titieq_c veva_c nhanhoq_c shoshia_c chichao_c zozeo_c space_c prefix_c oaomo_c quote_c mamei_coda_c
   BClass: 13 cartouche_end
-  FClass: 210 bubue_c cecoa_c dudeo_c fofuaq_c gugui_c hehaq_c jujuo_c kikue_c laoliq_c mamei_c nanaq_c pipoq_c aqaq_c rairua_c saqseoq_c titieq_c veva_c nhanhoq_c shoshia_c chichao_c zozeo_c space_c prefix_c oaomo_c quote_c
+  FClass: 223 bubue_c cecoa_c dudeo_c fofuaq_c gugui_c hehaq_c jujuo_c kikue_c laoliq_c mamei_c nanaq_c pipoq_c aqaq_c rairua_c saqseoq_c titieq_c veva_c nhanhoq_c shoshia_c chichao_c zozeo_c space_c prefix_c oaomo_c quote_c mamei_coda_c
   FClass: 13 cartouche_end
  2 0 0
   ClsList: 1 2
@@ -101,8 +101,8 @@ ContextSub2: class "Trim cartouche end" 3 3 3 1
   FClassNames: "All_Others" "base_c" "cartouche_end"
 EndFPST
 ChainSub2: class "Connect cartouche medials" 2 2 1 1
-  Class: 175 space quote oaomo prefix bubue cecoa dudeo fofuaq gugui hehaq jujuo kikue laoliq mamei nanaq pipoq aqaq rairua saqseoq titieq veva nhanhoq shoshia chichao zozeo rising_falling
-  BClass: 210 bubue_c cecoa_c dudeo_c fofuaq_c gugui_c hehaq_c jujuo_c kikue_c laoliq_c mamei_c nanaq_c pipoq_c aqaq_c rairua_c saqseoq_c titieq_c veva_c nhanhoq_c shoshia_c chichao_c zozeo_c space_c prefix_c oaomo_c quote_c
+  Class: 186 space quote oaomo prefix bubue cecoa dudeo fofuaq gugui hehaq jujuo kikue laoliq mamei nanaq pipoq aqaq rairua saqseoq titieq veva nhanhoq shoshia chichao zozeo rising_falling mamei_coda
+  BClass: 223 bubue_c cecoa_c dudeo_c fofuaq_c gugui_c hehaq_c jujuo_c kikue_c laoliq_c mamei_c nanaq_c pipoq_c aqaq_c rairua_c saqseoq_c titieq_c veva_c nhanhoq_c shoshia_c chichao_c zozeo_c space_c prefix_c oaomo_c quote_c mamei_coda_c
  1 1 0
   ClsList: 1
   BClsList: 1
@@ -847,8 +847,8 @@ StemSnapV 5 [115]
 StdVW 5 [116]
 EndPrivate
 TeXData: 1 0 0 440251 220125 146750 0 -235804 146750 783286 444596 497025 792723 393216 433062 380633 303038 157286 324010 404750 52429 2506097 1059062 262144
-AnchorClass2: "diphthong" "'mark' Mark Positioning in Latin lookup 1-1" "tone" "'mark' Mark Positioning in Latin lookup 1-1"
-BeginChars: 97 87
+AnchorClass2: "vv" "'mark' Mark Positioning in Latin lookup 1-1" "tone" "'mark' Mark Positioning in Latin lookup 1-1"
+BeginChars: 118 91
 
 StartChar: space
 Encoding: 0 32 0
@@ -1166,7 +1166,7 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "diphthong" 462 -161 mark 0
+AnchorPoint: "vv" 462 -161 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -1989,7 +1989,7 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "diphthong" 462 -161 basechar 0
+AnchorPoint: "vv" 462 -161 basechar 0
 AnchorPoint: "tone" 231 513 basechar 0
 LayerCount: 2
 Fore
@@ -2076,7 +2076,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "diphthong" 462 -161 basechar 0
+AnchorPoint: "vv" 462 -161 basechar 0
 AnchorPoint: "tone" 231 513 basechar 0
 LayerCount: 2
 Fore
@@ -2323,7 +2323,7 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "diphthong" 462 -161 basechar 0
+AnchorPoint: "vv" 462 -161 basechar 0
 AnchorPoint: "tone" 231 513 basechar 0
 LayerCount: 2
 Fore
@@ -2457,7 +2457,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "diphthong" 577 -161 basechar 0
+AnchorPoint: "vv" 577 -161 basechar 0
 AnchorPoint: "tone" 231 513 basechar 0
 LayerCount: 2
 Fore
@@ -3953,7 +3953,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "diphthong" 462 -161 basechar 0
+AnchorPoint: "vv" 462 -161 basechar 0
 AnchorPoint: "tone" 231 513 basechar 0
 LayerCount: 2
 Fore
@@ -4949,7 +4949,7 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "diphthong" 462 -161 basechar 0
+AnchorPoint: "vv" 462 -161 basechar 0
 AnchorPoint: "tone" 231 513 basechar 0
 LayerCount: 2
 Fore
@@ -5058,7 +5058,7 @@ IUP[y]
 IUP[x]
 EndTTInstrs
 AnchorPoint: "tone" 231 513 basechar 0
-AnchorPoint: "diphthong" 462 -161 basechar 0
+AnchorPoint: "vv" 462 -161 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -5343,7 +5343,7 @@ IUP[y]
 IUP[x]
 EndTTInstrs
 AnchorPoint: "tone" 231 513 basechar 0
-AnchorPoint: "diphthong" 462 -161 basechar 0
+AnchorPoint: "vv" 462 -161 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -5498,7 +5498,7 @@ IUP[y]
 IUP[x]
 EndTTInstrs
 AnchorPoint: "tone" 231 513 basechar 0
-AnchorPoint: "diphthong" 577 -161 basechar 0
+AnchorPoint: "vv" 577 -161 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -6244,7 +6244,7 @@ SplineSet
  231 0 l 1,16,-1
 0 1026 m 5,61,-1
  0 1155 l 5,62,-1
- 1122 1155 l 1,63,-1
+ 1122 1155 l 5,63,-1
  1122 1026 l 5,64,-1
  0 1026 l 5,61,-1
 EndSplineSet
@@ -7250,7 +7250,7 @@ IUP[y]
 IUP[x]
 EndTTInstrs
 AnchorPoint: "tone" 231 513 basechar 0
-AnchorPoint: "diphthong" 462 -161 basechar 0
+AnchorPoint: "vv" 462 -161 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -8771,7 +8771,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "diphthong" 462 -161 basechar 0
+AnchorPoint: "vv" 462 -161 basechar 0
 AnchorPoint: "tone" 231 513 basechar 0
 LayerCount: 2
 Fore
@@ -8924,7 +8924,7 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "diphthong" 462 -161 basechar 0
+AnchorPoint: "vv" 462 -161 basechar 0
 AnchorPoint: "tone" 231 513 basechar 0
 LayerCount: 2
 Fore
@@ -9035,7 +9035,7 @@ IUP[y]
 IUP[x]
 EndTTInstrs
 AnchorPoint: "tone" 231 513 basechar 0
-AnchorPoint: "diphthong" 462 -161 basechar 0
+AnchorPoint: "vv" 462 -161 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -9327,7 +9327,7 @@ IUP[y]
 IUP[x]
 EndTTInstrs
 AnchorPoint: "tone" 231 513 basechar 0
-AnchorPoint: "diphthong" 462 -161 basechar 0
+AnchorPoint: "vv" 462 -161 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -9481,7 +9481,7 @@ IUP[y]
 IUP[x]
 EndTTInstrs
 AnchorPoint: "tone" 231 513 basechar 0
-AnchorPoint: "diphthong" 577 -161 basechar 0
+AnchorPoint: "vv" 577 -161 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -10201,8 +10201,8 @@ SplineSet
  231 0 l 1,16,-1
 0 1026 m 5,61,-1
  0 1155 l 5,62,-1
- 924 1155 l 1,63,-1
- 924 1026 l 1,64,-1
+ 924 1155 l 5,63,-1
+ 924 1026 l 5,64,-1
  0 1026 l 5,61,-1
 EndSplineSet
 EndChar
@@ -11156,7 +11156,7 @@ IUP[y]
 IUP[x]
 EndTTInstrs
 AnchorPoint: "tone" 231 513 basechar 0
-AnchorPoint: "diphthong" 462 -161 basechar 0
+AnchorPoint: "vv" 462 -161 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -12393,6 +12393,167 @@ SplineSet
  462 1155 l 1,10,-1
  462 1026 l 1,11,-1
  0 1026 l 5,8,-1
+EndSplineSet
+EndChar
+
+StartChar: mamei_coda
+Encoding: 87 60849 87
+Width: 924
+VWidth: 1100
+GlyphClass: 2
+Flags: W
+AnchorPoint: "tone" 231 513 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+231 0 m 1,0,-1
+ 286 31 l 1,1,2
+ 300 48 300 48 313 75 c 0,3,4
+ 347 150 347 150 347 256 c 0,5,6
+ 347 309 347 309 312 347 c 0,7,8
+ 279 385 279 385 231 385 c 256,9,10
+ 183 385 183 385 149 347 c 256,11,12
+ 115 309 115 309 116 256 c 1,13,-1
+ 0 256 l 1,14,15
+ 0 362 0 362 68 438 c 256,16,17
+ 136 513 136 513 231 513 c 256,18,19
+ 327 513 327 513 394 438 c 256,20,21
+ 462 363 462 363 462 256 c 0,22,23
+ 462 185 462 185 431 128 c 1,24,-1
+ 693 128 l 2,25,26
+ 741 128 741 128 775 166 c 0,27,28
+ 809 203 809 203 808 256 c 256,29,30
+ 808 309 808 309 775 347 c 256,31,32
+ 741 385 741 385 693 385 c 256,33,34
+ 645 385 645 385 611 347 c 256,35,36
+ 577 309 577 309 577 256 c 1,37,-1
+ 462 256 l 1,38,39
+ 462 362 462 362 530 438 c 256,40,41
+ 598 513 598 513 693 513 c 256,42,43
+ 789 513 789 513 856 438 c 256,44,45
+ 924 363 924 363 924 256 c 0,46,47
+ 924 150 924 150 856 75 c 256,48,49
+ 788 0 788 0 693 0 c 2,50,-1
+ 231 0 l 1,0,-1
+EndSplineSet
+Substitution2: "WithCartouche" mamei_coda_c
+EndChar
+
+StartChar: hiatus
+Encoding: 90 60883 88
+Width: 0
+VWidth: 851
+GlyphClass: 4
+Flags: W
+AnchorPoint: "vv" 462 -419 mark 0
+LayerCount: 2
+Fore
+SplineSet
+675 -665 m 1,0,1
+ 675 -612 675 -612 607 -575 c 256,2,3
+ 539 -537 539 -537 444 -537 c 0,4,5
+ 420 -537 420 -537 399 -547 c 0,6,7
+ 379 -557 379 -557 363 -575 c 1,8,-1
+ 281 -484 l 1,9,10
+ 313 -449 313 -449 354 -429 c 0,11,12
+ 397 -409 397 -409 444 -409 c 0,13,14
+ 540 -409 540 -409 607 -484 c 256,15,16
+ 675 -559 675 -559 675 -665 c 1,0,1
+EndSplineSet
+EndChar
+
+StartChar: mamei_coda_c
+Encoding: 88 -1 89
+Width: 924
+VWidth: 1100
+GlyphClass: 2
+Flags: W
+AnchorPoint: "tone" 231 513 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+0 1026 m 1,0,-1
+ 0 1155 l 1,1,-1
+ 1122 1155 l 1,2,-1
+ 1122 1026 l 1,3,-1
+ 0 1026 l 1,0,-1
+231 0 m 1,4,-1
+ 286 31 l 1,5,6
+ 300 48 300 48 313 75 c 0,7,8
+ 347 150 347 150 347 256 c 0,9,10
+ 347 309 347 309 312 347 c 0,11,12
+ 279 385 279 385 231 385 c 256,13,14
+ 183 385 183 385 149 347 c 256,15,16
+ 115 309 115 309 116 256 c 1,17,-1
+ 0 256 l 1,18,19
+ 0 362 0 362 68 438 c 256,20,21
+ 136 513 136 513 231 513 c 256,22,23
+ 327 513 327 513 394 438 c 256,24,25
+ 462 363 462 363 462 256 c 0,26,27
+ 462 185 462 185 431 128 c 1,28,-1
+ 693 128 l 2,29,30
+ 741 128 741 128 775 166 c 0,31,32
+ 809 203 809 203 808 256 c 256,33,34
+ 808 309 808 309 775 347 c 256,35,36
+ 741 385 741 385 693 385 c 256,37,38
+ 645 385 645 385 611 347 c 256,39,40
+ 577 309 577 309 577 256 c 1,41,-1
+ 462 256 l 1,42,43
+ 462 362 462 362 530 438 c 256,44,45
+ 598 513 598 513 693 513 c 256,46,47
+ 789 513 789 513 856 438 c 256,48,49
+ 924 363 924 363 924 256 c 0,50,51
+ 924 150 924 150 856 75 c 256,52,53
+ 788 0 788 0 693 0 c 2,54,-1
+ 231 0 l 1,4,-1
+EndSplineSet
+Substitution2: "TrimCartouche" mamei_coda_c_end
+EndChar
+
+StartChar: mamei_coda_c_end
+Encoding: 89 -1 90
+Width: 924
+VWidth: 1100
+GlyphClass: 2
+Flags: W
+AnchorPoint: "tone" 231 513 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+0 1026 m 5,0,-1
+ 0 1155 l 5,1,-1
+ 924 1155 l 5,2,-1
+ 924 1026 l 5,3,-1
+ 0 1026 l 5,0,-1
+231 0 m 1,4,-1
+ 286 31 l 1,5,6
+ 300 48 300 48 313 75 c 0,7,8
+ 347 150 347 150 347 256 c 0,9,10
+ 347 309 347 309 312 347 c 0,11,12
+ 279 385 279 385 231 385 c 256,13,14
+ 183 385 183 385 149 347 c 256,15,16
+ 115 309 115 309 116 256 c 1,17,-1
+ 0 256 l 1,18,19
+ 0 362 0 362 68 438 c 256,20,21
+ 136 513 136 513 231 513 c 256,22,23
+ 327 513 327 513 394 438 c 256,24,25
+ 462 363 462 363 462 256 c 0,26,27
+ 462 185 462 185 431 128 c 1,28,-1
+ 693 128 l 2,29,30
+ 741 128 741 128 775 166 c 0,31,32
+ 809 203 809 203 808 256 c 256,33,34
+ 808 309 808 309 775 347 c 256,35,36
+ 741 385 741 385 693 385 c 256,37,38
+ 645 385 645 385 611 347 c 256,39,40
+ 577 309 577 309 577 256 c 1,41,-1
+ 462 256 l 1,42,43
+ 462 362 462 362 530 438 c 256,44,45
+ 598 513 598 513 693 513 c 256,46,47
+ 789 513 789 513 856 438 c 256,48,49
+ 924 363 924 363 924 256 c 0,50,51
+ 924 150 924 150 856 75 c 256,52,53
+ 788 0 788 0 693 0 c 2,54,-1
+ 231 0 l 1,4,-1
 EndSplineSet
 EndChar
 EndChars
