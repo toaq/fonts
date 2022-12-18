@@ -11,10 +11,11 @@
           name = "derani-fonts";
           src = self;
           buildInputs = [ pkgs.fontforge-fonttools ];
-          buildPhase = "fontforge -lang=ff -c 'Open($1); Generate($2); Generate($3)' Derani.sfd Derani.otf Derani.woff2";
+          buildPhase = "fontforge -lang=ff -c 'Open($1); Generate($2); Generate($3); Generate($4)' Derani.sfd Derani.otf Derani.ttf Derani.woff2";
           installPhase = ''
-            mkdir -p $out/share/fonts/{opentype,woff2}
-            mv Derani.otf   $out/share/fonts/opentype
+            mkdir -p $out/share/fonts/{opentype,truetype,woff2}
+            mv Derani.otf $out/share/fonts/opentype
+            mv Derani.ttf $out/share/fonts/truetype
             mv Derani.woff2 $out/share/fonts/woff2
           '';
         };
