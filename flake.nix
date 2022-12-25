@@ -1,5 +1,5 @@
 {
-  description = "Fonts for the Derani alphabet";
+  description = "Fonts for the Toaq language";
 
   inputs.flake-utils.url = github:numtide/flake-utils;
 
@@ -7,8 +7,8 @@
     flake-utils.lib.eachDefaultSystem (system:
       let
         pkgs = nixpkgs.legacyPackages.${system};
-        derani-fonts = pkgs.stdenv.mkDerivation {
-          name = "derani-fonts";
+        derani = pkgs.stdenv.mkDerivation {
+          name = "derani";
           src = self;
           buildInputs = [ pkgs.fontforge-fonttools ];
           buildPhase = "fontforge -lang=ff -c 'Open($1); Generate($2); Generate($3); Generate($4)' Derani.sfd Derani.otf Derani.ttf Derani.woff2";
@@ -19,8 +19,8 @@
             mv *.woff2 $out/share/fonts/woff2
           '';
         };
-        latin-fonts = pkgs.stdenv.mkDerivation {
-          name = "latin-fonts";
+        latin = pkgs.stdenv.mkDerivation {
+          name = "latin";
           src = self;
           buildInputs = [ pkgs.fontforge-fonttools ];
           buildPhase = "fontforge -lang=ff -c 'Open($1); Generate($2); Generate($3); Generate($4); Open($5); Generate($6); Generate($7); Generate($8)' \"Commissioner Medium.sfd\" \"Commissioner Medium.otf\" \"Commissioner Medium.ttf\" \"Commissioner Medium.woff2\" \"Commissioner Bold.sfd\" \"Commissioner Bold.otf\" \"Commissioner Bold.ttf\" \"Commissioner Bold.woff2\"";
@@ -31,6 +31,6 @@
             mv *.woff2 $out/share/fonts/woff2
           '';
         };
-      in { packages = { inherit derani-fonts latin-fonts; }; }
+      in { packages = { inherit derani latin; }; }
     );
 }

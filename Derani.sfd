@@ -837,7 +837,7 @@ NameList: AGL For New Fonts
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 0 13 19
+WinInfo: 0 13 14
 BeginPrivate: 6
 BlueValues 3 [0]
 OtherBlues 2 []
@@ -848,7 +848,7 @@ StdVW 5 [116]
 EndPrivate
 TeXData: 1 0 0 440251 220125 146750 0 -235804 146750 783286 444596 497025 792723 393216 433062 380633 303038 157286 324010 404750 52429 2506097 1059062 262144
 AnchorClass2: "vv" "'mark' Mark Positioning in Latin lookup 1-1" "tone" "'mark' Mark Positioning in Latin lookup 1-1"
-BeginChars: 118 91
+BeginChars: 91 92
 
 StartChar: space
 Encoding: 0 32 0
@@ -857,12 +857,12 @@ VWidth: 1100
 GlyphClass: 1
 Flags: W
 LayerCount: 2
-Kerns2: 3 -144 "'kern' Horizontal Kerning in Latin lookup 0 subtable" 11 -105 "'kern' Horizontal Kerning in Latin lookup 0 subtable"
+Kerns2: 11 -105 "'kern' Horizontal Kerning in Latin lookup 0 subtable" 3 -144 "'kern' Horizontal Kerning in Latin lookup 0 subtable"
 Substitution2: "WithCartouche" space_c
 EndChar
 
 StartChar: other_stop
-Encoding: 1 60900 1
+Encoding: 1 988886 1
 Width: 590
 VWidth: 1100
 GlyphClass: 2
@@ -953,7 +953,7 @@ EndSplineSet
 EndChar
 
 StartChar: quote
-Encoding: 2 60897 2
+Encoding: 2 988883 2
 Width: 461
 VWidth: 1100
 GlyphClass: 2
@@ -1011,7 +1011,7 @@ Substitution2: "WithCartouche" quote_c
 EndChar
 
 StartChar: null
-Encoding: 3 60904 3
+Encoding: 3 988890 3
 Width: 807
 VWidth: 1100
 GlyphClass: 2
@@ -1124,7 +1124,7 @@ EndSplineSet
 EndChar
 
 StartChar: diphthong
-Encoding: 4 60884 4
+Encoding: 4 988878 4
 Width: 0
 VWidth: 1100
 GlyphClass: 4
@@ -1183,7 +1183,7 @@ EndSplineSet
 EndChar
 
 StartChar: subordination
-Encoding: 5 60898 5
+Encoding: 5 988884 5
 Width: 1154
 VWidth: 1100
 GlyphClass: 2
@@ -1349,7 +1349,7 @@ EndSplineSet
 EndChar
 
 StartChar: oaomo
-Encoding: 6 60869 6
+Encoding: 6 988869 6
 Width: 288
 VWidth: 1100
 GlyphClass: 2
@@ -1421,7 +1421,7 @@ Substitution2: "WithCartouche" oaomo_c
 EndChar
 
 StartChar: declarative_stop
-Encoding: 7 60899 7
+Encoding: 7 988885 7
 Width: 590
 VWidth: 1100
 GlyphClass: 2
@@ -1501,7 +1501,7 @@ EndSplineSet
 EndChar
 
 StartChar: rising
-Encoding: 8 60880 8
+Encoding: 8 988874 8
 Width: 0
 VWidth: 1100
 GlyphClass: 4
@@ -1559,7 +1559,7 @@ EndSplineSet
 EndChar
 
 StartChar: prefix
-Encoding: 9 60896 9
+Encoding: 9 988882 9
 Width: 288
 VWidth: 1100
 GlyphClass: 2
@@ -1657,7 +1657,7 @@ Substitution2: "WithCartouche" prefix_c
 EndChar
 
 StartChar: interrogative_stop
-Encoding: 10 60901 10
+Encoding: 10 988887 10
 Width: 590
 VWidth: 1100
 GlyphClass: 2
@@ -1760,7 +1760,7 @@ EndSplineSet
 EndChar
 
 StartChar: cartouche_start
-Encoding: 11 60902 11
+Encoding: 11 988888 11
 Width: 201
 VWidth: 1100
 GlyphClass: 2
@@ -1802,7 +1802,7 @@ EndSplineSet
 EndChar
 
 StartChar: low_glottal
-Encoding: 12 60881 12
+Encoding: 12 988875 12
 Width: 0
 VWidth: 1100
 GlyphClass: 4
@@ -1866,7 +1866,7 @@ EndSplineSet
 EndChar
 
 StartChar: cartouche_end
-Encoding: 13 60903 13
+Encoding: 13 988889 13
 Width: 317
 VWidth: 1100
 GlyphClass: 2
@@ -1922,7 +1922,7 @@ EndSplineSet
 EndChar
 
 StartChar: bubue
-Encoding: 14 60850 14
+Encoding: 14 988850 14
 Width: 461
 VWidth: 1100
 GlyphClass: 2
@@ -2013,7 +2013,7 @@ Substitution2: "WithCartouche" bubue_c
 EndChar
 
 StartChar: cecoa
-Encoding: 15 60857 15
+Encoding: 15 988857 15
 Width: 461
 VWidth: 1100
 GlyphClass: 2
@@ -2100,7 +2100,7 @@ Substitution2: "WithCartouche" cecoa_c
 EndChar
 
 StartChar: dudeo
-Encoding: 16 60854 16
+Encoding: 16 988854 16
 Width: 461
 VWidth: 1100
 GlyphClass: 2
@@ -2256,7 +2256,7 @@ Substitution2: "WithCartouche" dudeo_c
 EndChar
 
 StartChar: fofuaq
-Encoding: 17 60852 17
+Encoding: 17 988852 17
 Width: 461
 VWidth: 1100
 GlyphClass: 2
@@ -2349,7 +2349,7 @@ Substitution2: "WithCartouche" fofuaq_c
 EndChar
 
 StartChar: gugui
-Encoding: 18 60867 18
+Encoding: 18 988867 18
 Width: 605
 VWidth: 1100
 GlyphClass: 2
@@ -2493,7 +2493,7 @@ Substitution2: "WithCartouche" gugui_c
 EndChar
 
 StartChar: hehaq
-Encoding: 19 60870 19
+Encoding: 19 988870 19
 Width: 461
 VWidth: 1100
 GlyphClass: 2
@@ -2625,7 +2625,7 @@ Substitution2: "WithCartouche" hehaq_c
 EndChar
 
 StartChar: jujuo
-Encoding: 20 60862 20
+Encoding: 20 988862 20
 Width: 808
 VWidth: 1100
 GlyphClass: 2
@@ -2765,7 +2765,7 @@ Substitution2: "WithCartouche" jujuo_c
 EndChar
 
 StartChar: kikue
-Encoding: 21 60868 21
+Encoding: 21 988868 21
 Width: 461
 VWidth: 1100
 GlyphClass: 2
@@ -2894,7 +2894,7 @@ Substitution2: "WithCartouche" kikue_c
 EndChar
 
 StartChar: laoliq
-Encoding: 22 60860 22
+Encoding: 22 988860 22
 Width: 923
 VWidth: 1100
 GlyphClass: 2
@@ -3108,7 +3108,7 @@ Substitution2: "WithCartouche" laoliq_c
 EndChar
 
 StartChar: mamei
-Encoding: 23 60848 23
+Encoding: 23 988848 23
 Width: 1385
 VWidth: 1100
 GlyphClass: 2
@@ -3340,7 +3340,7 @@ Substitution2: "WithCartouche" mamei_c
 EndChar
 
 StartChar: nanaq
-Encoding: 24 60853 24
+Encoding: 24 988853 24
 Width: 461
 VWidth: 1100
 GlyphClass: 2
@@ -3459,7 +3459,7 @@ Substitution2: "WithCartouche" nanaq_c
 EndChar
 
 StartChar: pipoq
-Encoding: 25 60851 25
+Encoding: 25 988851 25
 Width: 461
 VWidth: 1100
 GlyphClass: 2
@@ -3573,7 +3573,7 @@ Substitution2: "WithCartouche" pipoq_c
 EndChar
 
 StartChar: aqaq
-Encoding: 26 60866 26
+Encoding: 26 988866 26
 Width: 461
 VWidth: 1100
 GlyphClass: 2
@@ -3697,7 +3697,7 @@ Substitution2: "WithCartouche" aqaq_c
 EndChar
 
 StartChar: rairua
-Encoding: 27 60859 27
+Encoding: 27 988859 27
 Width: 923
 VWidth: 1100
 GlyphClass: 2
@@ -3878,7 +3878,7 @@ Substitution2: "WithCartouche" rairua_c
 EndChar
 
 StartChar: saqseoq
-Encoding: 28 60858 28
+Encoding: 28 988858 28
 Width: 461
 VWidth: 1100
 GlyphClass: 2
@@ -3981,7 +3981,7 @@ Substitution2: "WithCartouche" saqseoq_c
 EndChar
 
 StartChar: titieq
-Encoding: 29 60855 29
+Encoding: 29 988855 29
 Width: 808
 VWidth: 1100
 GlyphClass: 2
@@ -4137,7 +4137,7 @@ Substitution2: "WithCartouche" titieq_c
 EndChar
 
 StartChar: veva
-Encoding: 30 60865 30
+Encoding: 30 988865 30
 Width: 461
 VWidth: 1100
 GlyphClass: 2
@@ -4218,7 +4218,7 @@ Substitution2: "WithCartouche" veva_c
 EndChar
 
 StartChar: nhanhoq
-Encoding: 31 60861 31
+Encoding: 31 988861 31
 Width: 461
 VWidth: 1100
 GlyphClass: 2
@@ -4383,7 +4383,7 @@ Substitution2: "WithCartouche" nhanhoq_c
 EndChar
 
 StartChar: shoshia
-Encoding: 32 60864 32
+Encoding: 32 988864 32
 Width: 461
 VWidth: 1100
 GlyphClass: 2
@@ -4505,7 +4505,7 @@ Substitution2: "WithCartouche" shoshia_c
 EndChar
 
 StartChar: chichao
-Encoding: 33 60863 33
+Encoding: 33 988863 33
 Width: 461
 VWidth: 1100
 GlyphClass: 2
@@ -4583,7 +4583,7 @@ Substitution2: "WithCartouche" chichao_c
 EndChar
 
 StartChar: zozeo
-Encoding: 34 60856 34
+Encoding: 34 988856 34
 Width: 461
 VWidth: 1100
 GlyphClass: 2
@@ -4774,7 +4774,7 @@ Substitution2: "WithCartouche" zozeo_c
 EndChar
 
 StartChar: rising_falling
-Encoding: 35 60882 35
+Encoding: 35 988876 35
 Width: 0
 VWidth: 1100
 GlyphClass: 4
@@ -12397,7 +12397,7 @@ EndSplineSet
 EndChar
 
 StartChar: mamei_coda
-Encoding: 87 60849 87
+Encoding: 87 988849 87
 Width: 924
 VWidth: 1100
 GlyphClass: 2
@@ -12574,7 +12574,7 @@ Substitution2: "WithCartouche" mamei_coda_c
 EndChar
 
 StartChar: hiatus
-Encoding: 90 60883 88
+Encoding: 90 988877 88
 Width: 0
 VWidth: 851
 GlyphClass: 4
@@ -13017,6 +13017,14 @@ SplineSet
  788 0 788 0 693 0 c 2,54,-1
  231 0 l 1,4,-1
 EndSplineSet
+EndChar
+
+StartChar: glyph91
+Encoding: -1 160 91
+Width: 461
+VWidth: 1100
+Flags: W
+LayerCount: 2
 EndChar
 EndChars
 EndSplineFont
