@@ -22,7 +22,7 @@ OS2Version: 2
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1670694376
-ModificationTime: 1672018697
+ModificationTime: 1672085205
 PfmFamily: 81
 TTFWeight: 400
 TTFWidth: 5
@@ -91,11 +91,11 @@ ContextSub2: class "Form hiatus-diphthong ligatures" 4 4 4 1
   FClassNames: "All_Others" "hiatus" "diphthong" "letter_short"
 EndFPST
 ContextSub2: class "Connect cartouche start" 3 3 3 1
-  Class: 171 space quote oaomo prefix bubue cecoa dudeo fofuaq gugui hehaq jujuo kikue laoliq mamei nanaq pipoq aqaq rairua saqseoq titieq veva nhanhoq shoshia chichao zozeo mamei_coda
+  Class: 176 space quote oaomo prefix bubue cecoa dudeo fofuaq gugui hehaq jujuo kikue laoliq mamei nanaq pipoq aqaq rairua saqseoq titieq veva nhanhoq shoshia chichao zozeo mamei_coda nbsp
   Class: 15 cartouche_start
-  BClass: 171 space quote oaomo prefix bubue cecoa dudeo fofuaq gugui hehaq jujuo kikue laoliq mamei nanaq pipoq aqaq rairua saqseoq titieq veva nhanhoq shoshia chichao zozeo mamei_coda
+  BClass: 176 space quote oaomo prefix bubue cecoa dudeo fofuaq gugui hehaq jujuo kikue laoliq mamei nanaq pipoq aqaq rairua saqseoq titieq veva nhanhoq shoshia chichao zozeo mamei_coda nbsp
   BClass: 15 cartouche_start
-  FClass: 171 space quote oaomo prefix bubue cecoa dudeo fofuaq gugui hehaq jujuo kikue laoliq mamei nanaq pipoq aqaq rairua saqseoq titieq veva nhanhoq shoshia chichao zozeo mamei_coda
+  FClass: 176 space quote oaomo prefix bubue cecoa dudeo fofuaq gugui hehaq jujuo kikue laoliq mamei nanaq pipoq aqaq rairua saqseoq titieq veva nhanhoq shoshia chichao zozeo mamei_coda nbsp
   FClass: 15 cartouche_start
  2 0 0
   ClsList: 2 1
@@ -125,7 +125,7 @@ ContextSub2: class "Trim cartouche end" 3 3 3 1
   FClassNames: "All_Others" "base_c" "cartouche_end"
 EndFPST
 ChainSub2: class "Connect cartouche medials" 2 2 1 1
-  Class: 186 space quote oaomo prefix bubue cecoa dudeo fofuaq gugui hehaq jujuo kikue laoliq mamei nanaq pipoq aqaq rairua saqseoq titieq veva nhanhoq shoshia chichao zozeo rising_falling mamei_coda
+  Class: 191 space quote oaomo prefix bubue cecoa dudeo fofuaq gugui hehaq jujuo kikue laoliq mamei nanaq pipoq aqaq rairua saqseoq titieq veva nhanhoq shoshia chichao zozeo rising_falling mamei_coda nbsp
   BClass: 223 bubue_c cecoa_c dudeo_c fofuaq_c gugui_c hehaq_c jujuo_c kikue_c laoliq_c mamei_c nanaq_c pipoq_c aqaq_c rairua_c saqseoq_c titieq_c veva_c nhanhoq_c shoshia_c chichao_c zozeo_c space_c prefix_c oaomo_c quote_c mamei_coda_c
  1 1 0
   ClsList: 1
@@ -872,7 +872,7 @@ StdVW 5 [116]
 EndPrivate
 TeXData: 1 0 0 440251 220125 146750 0 -235804 146750 783286 444596 497025 792723 393216 433062 380633 303038 157286 324010 404750 52429 2506097 1059062 262144
 AnchorClass2: "vv" "'mark' Mark Positioning in Latin lookup 1-1" "tone" "'mark' Mark Positioning in Latin lookup 1-1"
-BeginChars: 92 93
+BeginChars: 93 94
 
 StartChar: space
 Encoding: 0 32 0
@@ -881,7 +881,7 @@ VWidth: 1100
 GlyphClass: 1
 Flags: W
 LayerCount: 2
-Kerns2: 11 -105 "'kern' Horizontal Kerning in Latin lookup 0 subtable" 3 -144 "'kern' Horizontal Kerning in Latin lookup 0 subtable"
+Kerns2: 3 -144 "'kern' Horizontal Kerning in Latin lookup 0 subtable" 11 -105 "'kern' Horizontal Kerning in Latin lookup 0 subtable"
 Substitution2: "WithCartouche" space_c
 EndChar
 
@@ -13046,7 +13046,7 @@ EndSplineSet
 EndChar
 
 StartChar: glyph91
-Encoding: -1 160 91
+Encoding: -1 -1 91
 Width: 461
 VWidth: 1100
 Flags: W
@@ -13126,6 +13126,16 @@ SplineSet
  1086 -362 1086 -362 1018 -438 c 256,34,35
  951 -513 951 -513 855 -513 c 1,17,18
 EndSplineSet
+EndChar
+
+StartChar: nbsp
+Encoding: 92 160 93
+Width: 461
+VWidth: 1100
+Flags: W
+LayerCount: 2
+Kerns2: 3 -144 "'kern' Horizontal Kerning in Latin lookup 0 subtable" 11 -105 "'kern' Horizontal Kerning in Latin lookup 0 subtable"
+Substitution2: "WithCartouche" space_c
 EndChar
 EndChars
 EndSplineFont
