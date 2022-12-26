@@ -31,6 +31,15 @@
             mv *.woff2 $out/share/fonts/woff2
           '';
         };
-      in { packages = { inherit derani latin; }; }
+        allPkgs = { inherit derani latin; };
+      in {
+        packages = allPkgs // {
+          all = pkgs.symlinkJoin {
+            name = "all";
+            paths = builtins.attrValues allPkgs;
+          };
+        };
+        defaultPackage = self.packages.${system}.all;
+      }
     );
 }

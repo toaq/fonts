@@ -11,13 +11,11 @@ jobs:
       - uses: nixbuild/nix-quick-install-action@v19
         with:
           nix_conf: experimental-features = nix-command flakes
-      - name: Build derani
-        run: nix build .#derani -o derani
-      - name: Build latin
-        run: nix build .#latin -o latin
+      - name: Build all fonts
+        run: nix build .
       - uses: marvinpinto/action-automatic-releases@latest
         with:
           repo_token: '${{ secrets.GITHUB_TOKEN }}'
           automatic_release_tag: latest
           prerelease: false
-          files: '{derani,latin}-fonts/share/fonts/*/*'
+          files: 'result/share/fonts/*/*'
