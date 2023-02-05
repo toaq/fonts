@@ -7,29 +7,39 @@
     flake-utils.lib.eachDefaultSystem (system:
       let
         pkgs = nixpkgs.legacyPackages.${system};
+        mkBuildPhase = fontNames:
+          let
+            names = pkgs.lib.strings.concatMapStringsSep
+              " " (name: "\"${name}\"") fontNames;
+          in ''
+            for font in ${names}; do
+              fontforge -lang=ff -c \
+                'Open($1); Generate($2); Generate($3); Generate($4)' \
+                "$font.sfd" "$font.otf" "$font.ttf" "$font.woff2"
+            done
+          '';
+        installPhase = ''
+          mkdir -p $out/share/fonts/{opentype,truetype,woff2}
+          mv *.otf $out/share/fonts/opentype
+          mv *.ttf $out/share/fonts/truetype
+          mv *.woff2 $out/share/fonts/woff2
+        '';
         derani = pkgs.stdenv.mkDerivation {
           name = "derani";
           src = self;
           buildInputs = [ pkgs.fontforge-fonttools ];
-          buildPhase = "fontforge -lang=ff -c 'Open($1); Generate($2); Generate($3); Generate($4)' Derani.sfd Derani.otf Derani.ttf Derani.woff2";
-          installPhase = ''
-            mkdir -p $out/share/fonts/{opentype,truetype,woff2}
-            mv *.otf $out/share/fonts/opentype
-            mv *.ttf $out/share/fonts/truetype
-            mv *.woff2 $out/share/fonts/woff2
-          '';
+          buildPhase = mkBuildPhase [ "Derani" "Guezueq" ];
+          inherit installPhase;
         };
         latin = pkgs.stdenv.mkDerivation {
           name = "latin";
           src = self;
           buildInputs = [ pkgs.fontforge-fonttools ];
-          buildPhase = "fontforge -lang=ff -c 'Open($1); Generate($2); Generate($3); Generate($4); Open($5); Generate($6); Generate($7); Generate($8)' \"Commissioner Medium.sfd\" \"Commissioner Medium.otf\" \"Commissioner Medium.ttf\" \"Commissioner Medium.woff2\" \"Commissioner Bold.sfd\" \"Commissioner Bold.otf\" \"Commissioner Bold.ttf\" \"Commissioner Bold.woff2\"";
-          installPhase = ''
-            mkdir -p $out/share/fonts/{opentype,truetype,woff2}
-            mv *.otf $out/share/fonts/opentype
-            mv *.ttf $out/share/fonts/truetype
-            mv *.woff2 $out/share/fonts/woff2
-          '';
+          buildPhase = mkBuildPhase [
+            "Commissioner Medium"
+            "Commissioner Bold"
+          ];
+          inherit installPhase;
         };
         allPkgs = { inherit derani latin; };
       in {
