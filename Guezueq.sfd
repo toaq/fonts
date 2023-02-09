@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1675284542
-ModificationTime: 1675917236
+ModificationTime: 1675919532
 PfmFamily: 17
 TTFWeight: 400
 TTFWidth: 5
@@ -59,10 +59,10 @@ Lookup: 258 8 0 "Kern" { "Kern" [150,0,6] } ['kern' ('DFLT' <'dflt' > ) ]
 MarkAttachClasses: 1
 DEI: 91125
 KernClass2: 2+ 3 "Kern"
- 84 space nbsp cecoa aqaq gugui kikue compat_nbsp cecoa_c aqaq_c gugui_c kikue_c space_c
- 43 titieq oaomo quote titieq_c oaomo_c quote_c
- 194 space nbsp mamei mamei_coda bubue fofuaq dudeo rairua laoliq nhanhoq jujuo veva hehaq compat_nbsp mamei_c mamei_coda_c bubue_c fofuaq_c dudeo_c rairua_c laoliq_c nhanhoq_c jujuo_c veva_c hehaq_c
- 41 pipoq zozeo quote pipoq_c zozeo_c quote_c
+ 53 cecoa aqaq gugui kikue cecoa_c aqaq_c gugui_c kikue_c
+ 74 space nbsp titieq oaomo quote compat_nbsp titieq_c oaomo_c quote_c space_c
+ 187 mamei mamei_coda bubue fofuaq dudeo rairua laoliq nhanhoq jujuo veva hehaq cartouche_start mamei_c mamei_coda_c bubue_c fofuaq_c dudeo_c rairua_c laoliq_c nhanhoq_c jujuo_c veva_c hehaq_c
+ 72 space nbsp pipoq zozeo quote compat_nbsp pipoq_c zozeo_c quote_c space_c
  0 {} -167 {} -83 {} 0 {} -83 {} -83 {}
 ContextSub2: class "Move rising tone mark before word at start of cartouches" 4 4 4 1
   Class: 15 cartouche_start
@@ -163,7 +163,7 @@ WinInfo: 0 13 19
 BeginPrivate: 0
 EndPrivate
 AnchorClass2: "are"""  "top_center" "Attach diacritics" "bottom_right" "Attach diacritics" "top_left" "Attach diacritics"
-BeginChars: 72 72
+BeginChars: 79 72
 
 StartChar: space
 Encoding: 0 32 0
@@ -190,9 +190,9 @@ Encoding: 2 988848 2
 Width: 1166
 VWidth: 950
 GlyphClass: 2
-Flags: HW
-HStem: -166.662 83.332<916.664 999.998> 0.0039 166.666<333.334 416.666 666.666 749.998> 0.0039 83.332<250 333.334 416.666 666.666 749.998 999.998> 166.67 249.998<416.666 500 749.998 833.332> 333.336 83.332<83.334 166.668> 416.668 83.334<166.668 416.666 500 749.998 833.332 1083.33>
-VStem: 83.334 83.334<333.336 416.668> 333.334 83.332<83.336 166.67> 416.666 83.334<166.67 416.668> 666.666 83.332<83.336 166.67> 749.998 83.334<166.67 416.668> 916.664 83.334<-166.662 -83.3301> 999.998 83.332<-83.3301 0.0039> 1083.33 83.334<166.67 416.668>
+Flags: W
+HStem: -166.662 83.332<916.664 999.998> 0.00390625 166.666<333.334 416.666 666.666 749.998> 0.00390625 83.332<250 333.334 416.666 666.666 749.998 999.998> 166.67 249.998<416.666 500 749.998 833.332> 333.336 83.332<83.334 166.668> 416.668 83.334<166.668 416.666 500 749.998 833.332 1083.33>
+VStem: 83.334 83.334<333.336 416.668> 333.334 83.332<83.3359 166.67> 416.666 83.334<166.67 416.668> 666.666 83.332<83.3359 166.67> 749.998 83.334<166.67 416.668> 916.664 83.334<-166.662 -83.3301> 999.998 83.332<-83.3301 0.00390625> 1083.33 83.334<166.67 416.668>
 AnchorPoint: "top_center" 291.667 500 basechar 0
 AnchorPoint: "bottom_right" 1041.67 0 basechar 0
 AnchorPoint: "top_left" 208.333 500 basechar 0
@@ -688,9 +688,9 @@ Encoding: 11 988857 11
 Width: 500
 VWidth: 950
 GlyphClass: 2
-Flags: HW
-HStem: 0.0039 83.332<83.332 333.332> 83.336 83.334<333.332 416.664> 333.336 83.332<83.332 166.666> 416.668 83.334<166.666 333.332>
-VStem: 0 83.332<83.336 333.336> 83.332 83.334<333.336 416.668> 166.666 166.666<416.668 500.002> 333.332 83.332<83.336 166.67>
+Flags: W
+HStem: 0.00390625 83.332<83.332 333.332> 83.3359 83.334<333.332 416.664> 333.336 83.332<83.332 166.666> 416.668 83.334<166.666 333.332>
+VStem: 0 83.332<83.3359 333.336> 83.332 83.334<333.336 416.668> 166.666 166.666<416.668 500.002> 333.332 83.332<83.3359 166.67>
 AnchorPoint: "top_center" 291.667 500 basechar 0
 AnchorPoint: "top_left" 208.333 500 basechar 0
 AnchorPoint: "bottom_right" 291.667 0 basechar 0
@@ -1611,7 +1611,7 @@ EndChar
 
 StartChar: stop
 Encoding: 33 988885 33
-Width: 250
+Width: 333
 VWidth: 950
 GlyphClass: 1
 Flags: HW
@@ -1621,32 +1621,32 @@ CounterMasks: 1 e0
 LayerCount: 2
 Fore
 SplineSet
-83.33203125 750 m 5xe8
- 166.666015625 750 l 5
- 166.666015625 666.66796875 l 5
- 83.33203125 666.66796875 l 5
- 83.33203125 750 l 5xe8
-166.666015625 666.66796875 m 5
- 249.998046875 666.66796875 l 5
- 249.998046875 -83.330078125 l 5xe4
- 166.666015625 -83.330078125 l 5
- 166.666015625 666.66796875 l 5
-166.666015625 -83.330078125 m 5xe8
- 166.666015625 -166.662109375 l 5
- 83.33203125 -166.662109375 l 5
- 83.33203125 -83.330078125 l 5
- 166.666015625 -83.330078125 l 5xe8
-0 333.3359375 m 5xf0
- 83.33203125 333.3359375 l 5
- 83.33203125 250.001953125 l 5
- 0 250.001953125 l 5
- 0 333.3359375 l 5xf0
+83.33203125 750 m 1xe8
+ 166.666015625 750 l 1
+ 166.666015625 666.66796875 l 1
+ 83.33203125 666.66796875 l 1
+ 83.33203125 750 l 1xe8
+166.666015625 666.66796875 m 1
+ 249.998046875 666.66796875 l 1
+ 249.998046875 -83.330078125 l 1xe4
+ 166.666015625 -83.330078125 l 1
+ 166.666015625 666.66796875 l 1
+166.666015625 -83.330078125 m 1xe8
+ 166.666015625 -166.662109375 l 1
+ 83.33203125 -166.662109375 l 1
+ 83.33203125 -83.330078125 l 1
+ 166.666015625 -83.330078125 l 1xe8
+0 333.3359375 m 1xf0
+ 83.33203125 333.3359375 l 1
+ 83.33203125 250.001953125 l 1
+ 0 250.001953125 l 1
+ 0 333.3359375 l 1xf0
 EndSplineSet
 EndChar
 
 StartChar: other_stop
 Encoding: 34 988886 34
-Width: 250
+Width: 333
 VWidth: 950
 GlyphClass: 1
 Flags: HW
@@ -1685,7 +1685,7 @@ EndChar
 
 StartChar: interrogative_stop
 Encoding: 35 988887 35
-Width: 333
+Width: 417
 VWidth: 950
 GlyphClass: 1
 Flags: HW
@@ -2639,10 +2639,10 @@ EndChar
 
 StartChar: cartouche_start_long
 Encoding: 70 -1 70
-Width: 333
+Width: 250
 VWidth: 950
 GlyphClass: 1
-Flags: HW
+Flags: HWO
 HStem: 500.002 83.332<0 83.332> 583.334 83.334<83.332 166.666> 666.668 83.332<166.666 333.332>
 VStem: 0 83.332<500.002 583.334> 83.332 83.334<583.334 666.668>
 LayerCount: 2
