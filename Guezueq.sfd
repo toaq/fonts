@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1675284542
-ModificationTime: 1675570647
+ModificationTime: 1675916253
 PfmFamily: 17
 TTFWeight: 400
 TTFWidth: 5
@@ -157,10 +157,10 @@ NameList: AGL For New Fonts
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 0 13 14
+WinInfo: 0 13 19
 BeginPrivate: 0
 EndPrivate
-AnchorClass2: "top_center" "Attach diacritics" "bottom_right" "Attach diacritics" "top_right" "Attach diacritics" "top_left" "Attach diacritics"
+AnchorClass2: "are"""  "top_center" "Attach diacritics" "bottom_right" "Attach diacritics" "top_left" "Attach diacritics"
 BeginChars: 72 72
 
 StartChar: space
@@ -193,7 +193,6 @@ HStem: -166.662 83.332<916.664 999.998> 0.0039 166.666<333.334 416.666 666.666 7
 VStem: 83.334 83.334<333.336 416.668> 333.334 83.332<83.336 166.67> 416.666 83.334<166.67 416.668> 666.666 83.332<83.336 166.67> 749.998 83.334<166.67 416.668> 916.664 83.334<-166.662 -83.3301> 999.998 83.332<-83.3301 0.0039> 1083.33 83.334<166.67 416.668>
 AnchorPoint: "top_center" 291.667 500 basechar 0
 AnchorPoint: "bottom_right" 1041.67 0 basechar 0
-AnchorPoint: "top_right" 375 500 basechar 0
 AnchorPoint: "top_left" 208.333 500 basechar 0
 LayerCount: 2
 Fore
@@ -268,7 +267,6 @@ HStem: 0.0039 83.332<249.998 333.332 416.664 666.664> 83.336 83.334<666.664 749.
 VStem: 83.332 83.334<333.336 416.668> 333.332 83.332<83.336 166.67> 416.664 83.334<166.67 416.668> 666.664 83.332<83.336 166.67> 749.996 83.334<166.67 416.668>
 AnchorPoint: "top_center" 291.667 500 basechar 0
 AnchorPoint: "bottom_right" 625 0 basechar 0
-AnchorPoint: "top_right" 375 500 basechar 0
 AnchorPoint: "top_left" 208.333 500 basechar 0
 LayerCount: 2
 Fore
@@ -326,7 +324,6 @@ HStem: 0.0039 83.332<249.998 333.332> 83.336 83.334<333.332 416.664> 333.336 83.
 VStem: 83.332 83.334<333.336 416.668> 249.998 83.334<0.0039 83.336> 333.332 83.332<83.336 166.67> 416.664 83.334<166.67 416.668>
 AnchorPoint: "top_center" 291.667 500 basechar 0
 AnchorPoint: "bottom_right" 291.667 0 basechar 0
-AnchorPoint: "top_right" 375 500 basechar 0
 AnchorPoint: "top_left" 208.333 500 basechar 0
 LayerCount: 2
 Fore
@@ -370,7 +367,6 @@ HStem: -166.662 83.332<166.666 249.998> -83.3301 83.334<249.998 333.332> 83.336 
 VStem: 83.332 83.334<166.67 416.668> 166.666 83.332<-166.662 -83.3301 83.336 166.67> 249.998 83.334<-83.3301 0.0039> 333.332 83.332<0.0039 166.67> 416.664 83.334<166.67 416.668>
 AnchorPoint: "top_center" 291.667 500 basechar 0
 AnchorPoint: "bottom_right" 375 0 basechar 0
-AnchorPoint: "top_right" 375 500 basechar 0
 AnchorPoint: "top_left" 208.333 500 basechar 0
 LayerCount: 2
 Fore
@@ -424,7 +420,6 @@ HStem: -166.662 83.332<166.666 249.998> -83.3301 83.334<249.998 333.332> 333.336
 VStem: 83.332 83.334<333.336 416.668> 166.666 83.332<-166.662 -83.3301> 249.998 83.334<-83.3301 0.0039> 333.332 83.332<0.0039 166.67> 416.664 83.334<166.67 416.668>
 AnchorPoint: "top_center" 291.667 500 basechar 0
 AnchorPoint: "bottom_right" 375 0 basechar 0
-AnchorPoint: "top_right" 375 500 basechar 0
 AnchorPoint: "top_left" 208.333 500 basechar 0
 LayerCount: 2
 Fore
@@ -471,9 +466,8 @@ GlyphClass: 2
 Flags: HW
 HStem: 0.0039 83.332<83.332 333.332> 83.336 83.334<333.332 416.664> 333.336 83.332<83.332 166.666> 416.668 83.334<166.666 333.332> 500.002 83.332<416.664 499.998> 583.334 83.334<499.998 583.33>
 VStem: 0 83.332<83.336 333.336> 83.332 83.334<333.336 416.668> 333.332 83.332<83.336 166.67> 416.664 83.334<166.67 416.668> 499.998 83.332<583.334 666.668>
-AnchorPoint: "top_center" 291.667 500 basechar 0
+AnchorPoint: "top_center" 208.333 500 basechar 0
 AnchorPoint: "bottom_right" 291.667 0 basechar 0
-AnchorPoint: "top_right" 291.667 500 basechar 0
 AnchorPoint: "top_left" 208.333 500 basechar 0
 LayerCount: 2
 Fore
@@ -531,7 +525,6 @@ HStem: 0.0039 83.332<249.998 333.332> 83.336 83.334<333.332 416.664> 250.002 83.
 VStem: 83.332 83.334<333.336 416.668> 166.666 166.666<250.002 333.336> 249.998 83.334<0.0039 83.336> 333.332 83.332<83.336 166.67> 416.664 83.334<166.67 416.668>
 AnchorPoint: "top_center" 291.667 500 basechar 0
 AnchorPoint: "bottom_right" 291.667 0 basechar 0
-AnchorPoint: "top_right" 375 500 basechar 0
 AnchorPoint: "top_left" 208.333 500 basechar 0
 LayerCount: 2
 Fore
@@ -580,7 +573,6 @@ HStem: 0.0039 83.332<83.332 333.332> 83.336 83.334<333.332 416.664> 333.336 83.3
 VStem: 0 83.332<83.336 333.336> 83.332 83.334<333.336 416.668> 166.666 166.666<416.668 500.002> 333.332 83.332<83.336 166.67> 416.664 83.334<166.67 583.334> 499.998 166.666<583.334 666.668> 666.664 83.332<500.002 583.334>
 AnchorPoint: "top_center" 291.667 500 basechar 0
 AnchorPoint: "bottom_right" 291.667 0 basechar 0
-AnchorPoint: "top_right" 291.667 500 basechar 0
 AnchorPoint: "top_left" 208.333 500 basechar 0
 LayerCount: 2
 Fore
@@ -638,7 +630,6 @@ Flags: HW
 HStem: -166.662 83.332<166.666 249.998> -83.3301 83.334<249.998 333.332> 83.336 83.334<249.998 333.332> 166.67 83.332<166.666 249.998> 333.336 83.332<83.332 166.666> 416.668 83.334<166.666 416.664>
 VStem: 83.332 83.334<-83.3301 166.67 333.336 416.668> 166.666 83.332<-166.662 -83.3301 166.67 250.002> 249.998 83.334<-83.3301 0.0039> 333.332 83.332<0.0039 83.336> 416.664 83.334<166.67 416.668>
 AnchorPoint: "top_center" 291.667 500 basechar 0
-AnchorPoint: "top_right" 375 500 basechar 0
 AnchorPoint: "top_left" 208.333 500 basechar 0
 AnchorPoint: "bottom_right" 375 0 basechar 0
 LayerCount: 2
@@ -699,7 +690,6 @@ Flags: HW
 HStem: 0.0039 83.332<83.332 333.332> 83.336 83.334<333.332 416.664> 333.336 83.332<83.332 166.666> 416.668 83.334<166.666 333.332>
 VStem: 0 83.332<83.336 333.336> 83.332 83.334<333.336 416.668> 166.666 166.666<416.668 500.002> 333.332 83.332<83.336 166.67>
 AnchorPoint: "top_center" 291.667 500 basechar 0
-AnchorPoint: "top_right" 291.667 500 basechar 0
 AnchorPoint: "top_left" 208.333 500 basechar 0
 AnchorPoint: "bottom_right" 291.667 0 basechar 0
 LayerCount: 2
@@ -743,7 +733,6 @@ Flags: HW
 HStem: 0.0039 83.332<83.332 333.332> 83.336 83.333<333.332 416.665> 333.335 83.333<83.333 166.666> 416.668 83.334<166.666 416.664>
 VStem: 0 83.332<83.336 333.336> 83.333 83.333<333.335 416.668> 333.332 83.333<83.336 166.669> 416.664 83.334<166.67 416.668>
 AnchorPoint: "top_center" 291.667 500 basechar 0
-AnchorPoint: "top_right" 375 500 basechar 0
 AnchorPoint: "top_left" 208.333 500 basechar 0
 AnchorPoint: "bottom_right" 291.667 0 basechar 0
 LayerCount: 2
@@ -793,7 +782,6 @@ HStem: -166.662 83.332<583.33 666.664> 0.0039 83.332<249.998 333.332 416.664 666
 VStem: 83.332 83.334<333.336 416.668> 333.332 83.332<83.336 166.67> 416.664 83.334<166.67 416.668> 583.33 83.334<-166.662 -83.3301> 666.664 83.332<-83.3301 0.0039> 749.996 83.334<166.67 416.668>
 AnchorPoint: "top_center" 291.667 500 basechar 0
 AnchorPoint: "top_left" 208.333 500 basechar 0
-AnchorPoint: "top_right" 375 500 basechar 0
 AnchorPoint: "bottom_right" 708.333 0 basechar 0
 LayerCount: 2
 Fore
@@ -854,7 +842,6 @@ HStem: -166.662 83.332<416.664 499.998> 0.0039 166.666<333.332 416.664 666.664 7
 VStem: 83.332 83.334<333.336 416.668> 333.332 83.332<83.336 166.67> 416.664 83.334<-166.662 -83.3301 166.67 416.668> 666.664 166.666<83.336 166.67> 749.996 83.334<166.67 416.668>
 AnchorPoint: "top_center" 291.667 500 basechar 0
 AnchorPoint: "top_left" 208.333 500 basechar 0
-AnchorPoint: "top_right" 375 500 basechar 0
 AnchorPoint: "bottom_right" 708.333 0 basechar 0
 LayerCount: 2
 Fore
@@ -913,7 +900,6 @@ HStem: 0.0039 83.332<249.998 333.332> 83.336 83.334<166.666 249.998 333.332 416.
 VStem: 83.332 83.334<333.336 416.668> 166.666 83.332<83.336 166.67> 249.998 83.334<0.0039 83.336 166.67 250.002> 333.332 83.332<83.336 166.67> 416.664 83.334<166.67 416.668>
 AnchorPoint: "top_center" 291.667 500 basechar 0
 AnchorPoint: "top_left" 208.333 500 basechar 0
-AnchorPoint: "top_right" 375 500 basechar 0
 AnchorPoint: "bottom_right" 291.667 0 basechar 0
 LayerCount: 2
 Fore
@@ -966,7 +952,6 @@ Flags: HW
 HStem: 0.0039 83.332<416.664 499.998> 83.336 83.334<499.998 583.33> 333.336 83.332<83.332 166.666 333.332 416.664> 416.668 83.334<166.666 333.332 416.664 583.33>
 VStem: 83.332 83.334<333.336 416.668> 166.666 166.666<416.668 500.002> 333.332 83.332<333.336 416.668> 416.664 83.334<0.0039 83.336> 499.998 83.332<83.336 166.67> 583.33 83.334<166.67 416.668>
 AnchorPoint: "top_center" 291.667 500 basechar 0
-AnchorPoint: "top_right" 291.667 500 basechar 0
 AnchorPoint: "top_left" 208.333 500 basechar 0
 AnchorPoint: "bottom_right" 458.333 0 basechar 0
 LayerCount: 2
@@ -1020,7 +1005,6 @@ Flags: HW
 HStem: 0.0039 83.332<83.332 333.332> 83.336 83.334<333.332 416.664> 333.336 83.332<83.332 166.666> 416.668 83.334<166.666 416.664> 500.002 83.332<416.664 499.998>
 VStem: 0 83.332<83.336 333.336> 83.332 83.334<333.336 416.668> 333.332 83.332<83.336 166.67> 416.664 83.334<500.002 583.334>
 AnchorPoint: "top_center" 291.667 500 basechar 0
-AnchorPoint: "top_right" 375 500 basechar 0
 AnchorPoint: "top_left" 208.333 500 basechar 0
 AnchorPoint: "bottom_right" 291.667 0 basechar 0
 LayerCount: 2
@@ -1069,7 +1053,6 @@ Flags: HW
 HStem: -249.996 83.334<249.998 333.332> 0.0039 83.332<83.332 249.998> 83.336 83.334<249.998 333.332> 333.336 83.332<83.332 166.666> 416.668 83.334<166.666 416.664> 500.002 83.332<416.664 499.998>
 VStem: 0 83.332<83.336 333.336> 83.332 83.334<333.336 416.668> 249.998 83.334<-249.996 -166.662> 333.332 83.332<-166.662 83.336 166.67 250.002> 416.664 83.334<500.002 583.334>
 AnchorPoint: "top_center" 291.667 500 basechar 0
-AnchorPoint: "top_right" 375 500 basechar 0
 AnchorPoint: "top_left" 208.333 500 basechar 0
 AnchorPoint: "bottom_right" 375 0 basechar 0
 LayerCount: 2
@@ -1128,7 +1111,6 @@ HStem: 0.0039 83.332<166.666 249.998> 83.336 83.334<249.998 333.332> 416.668 166
 VStem: 83.332 83.334<500.002 583.334> 166.666 83.332<0.0039 83.336 583.334 666.668> 249.998 83.334<83.336 166.67> 333.332 83.332<166.67 416.668>
 AnchorPoint: "top_center" 291.667 500 basechar 0
 AnchorPoint: "top_left" 291.667 500 basechar 0
-AnchorPoint: "top_right" 291.667 500 basechar 0
 AnchorPoint: "bottom_right" 208.333 0 basechar 0
 LayerCount: 2
 Fore
@@ -1174,7 +1156,6 @@ HStem: -249.996 83.334<249.998 333.332> 0.0039 83.332<83.332 249.998> 83.336 83.
 VStem: 0 83.332<83.336 333.336> 83.332 83.334<333.336 416.668> 166.666 83.332<416.668 500.002> 249.998 83.334<-249.996 -166.662> 333.332 83.332<-166.662 83.336 166.67 250.002>
 AnchorPoint: "top_center" 208.333 500 basechar 0
 AnchorPoint: "top_left" 208.333 500 basechar 0
-AnchorPoint: "top_right" 208.333 500 basechar 0
 AnchorPoint: "bottom_right" 375 0 basechar 0
 LayerCount: 2
 Fore
@@ -1227,7 +1208,6 @@ HStem: 0.0039 83.332<83.332 249.998 333.332 499.998> 83.336 83.334<249.998 333.3
 VStem: 0 83.332<83.336 333.336> 83.332 83.334<333.336 416.668> 166.666 83.332<416.668 500.002> 249.998 83.334<83.336 166.67> 499.998 83.332<83.336 166.67>
 AnchorPoint: "top_center" 208.333 500 basechar 0
 AnchorPoint: "top_left" 208.333 500 basechar 0
-AnchorPoint: "top_right" 208.333 500 basechar 0
 AnchorPoint: "bottom_right" 458.333 0 basechar 0
 LayerCount: 2
 Fore
@@ -1280,7 +1260,6 @@ Flags: HW
 HStem: -166.662 83.332<166.666 249.998> 0.0039 83.332<83.332 333.332> 83.336 83.334<333.332 416.664> 333.336 83.332<83.332 166.666> 416.668 83.334<166.666 333.332>
 VStem: 0 83.332<83.336 333.336> 83.332 83.334<333.336 416.668> 166.666 166.666<416.668 500.002> 166.666 83.332<-166.662 -83.3301> 333.332 83.332<83.336 166.67>
 AnchorPoint: "top_center" 291.667 500 basechar 0
-AnchorPoint: "top_right" 291.667 500 basechar 0
 AnchorPoint: "top_left" 208.333 500 basechar 0
 AnchorPoint: "bottom_right" 291.667 0 basechar 0
 LayerCount: 2
@@ -1330,7 +1309,6 @@ HStem: 250.002 83.333<83.333 166.666>
 VStem: 83.333 83.333<250.002 333.335>
 AnchorPoint: "top_center" 125 333.333 basechar 0
 AnchorPoint: "top_left" 125 333.333 basechar 0
-AnchorPoint: "top_right" 125 333.333 basechar 0
 AnchorPoint: "bottom_right" 125 0 basechar 0
 LayerCount: 2
 Fore
@@ -1353,7 +1331,6 @@ HStem: -166.662 83.332<166.666 249.998> -83.3301 83.334<249.998 333.332> 83.336 
 VStem: 83.332 83.334<333.336 416.668> 166.666 83.332<-166.662 -83.3301 166.67 250.002> 249.998 83.334<-83.3301 0.0039> 333.332 83.332<0.0039 83.336> 416.664 83.334<166.67 416.668>
 AnchorPoint: "top_center" 291.667 500 basechar 0
 AnchorPoint: "top_left" 208.333 500 basechar 0
-AnchorPoint: "top_right" 375 500 basechar 0
 AnchorPoint: "bottom_right" 375 0 basechar 0
 LayerCount: 2
 Fore
@@ -1458,10 +1435,10 @@ Encoding: 27 988876 27
 Width: 0
 VWidth: 950
 GlyphClass: 4
-Flags: HW
+Flags: HWO
 HStem: 583.334 83.334<83.332 166.666> 666.668 83.332<166.666 333.332>
 VStem: 83.332 83.334<583.334 666.668> 333.332 83.332<500.002 666.668>
-AnchorPoint: "top_right" 375 500 mark 0
+AnchorPoint: "top_center" 375 500 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -1926,7 +1903,6 @@ Flags: H
 HStem: -166.662 83.332<916.664 999.998> 0.0039 83.332<250 333.334 416.666 666.666 749.998 999.998> 0.0039 166.666<333.334 416.666 666.666 749.998> 166.67 249.998<416.666 500 749.998 833.332> 333.336 83.332<83.334 166.668> 416.668 83.334<166.668 416.666 500 749.998 833.332 1083.33> 666.668 83.332<0 1166>
 VStem: 83.334 83.334<333.336 416.668> 333.334 83.332<83.336 166.67> 416.666 83.334<166.67 416.668> 666.666 83.332<83.336 166.67> 749.998 83.334<166.67 416.668> 916.664 83.334<-166.662 -83.3301> 999.998 83.332<-83.3301 0.0039> 1083.33 83.334<166.67 416.668>
 AnchorPoint: "top_left" 208.333 500 basechar 0
-AnchorPoint: "top_right" 375 500 basechar 0
 AnchorPoint: "bottom_right" 1041.67 0 basechar 0
 AnchorPoint: "top_center" 291.667 500 basechar 0
 LayerCount: 2
@@ -1951,7 +1927,6 @@ Flags: H
 HStem: 0.0039 83.332<249.998 333.332 416.664 666.664> 83.336 83.334<666.664 749.996> 166.67 249.998<416.664 499.998 749.996 833.33> 333.336 83.332<83.332 166.666> 416.668 83.334<166.666 416.664 499.998 749.996> 666.668 83.332<0 833>
 VStem: 83.332 83.334<333.336 416.668> 333.332 83.332<83.336 166.67> 416.664 83.334<166.67 416.668> 666.664 83.332<83.336 166.67> 749.996 83.334<166.67 416.668>
 AnchorPoint: "top_left" 208.333 500 basechar 0
-AnchorPoint: "top_right" 375 500 basechar 0
 AnchorPoint: "bottom_right" 625 0 basechar 0
 AnchorPoint: "top_center" 291.667 500 basechar 0
 LayerCount: 2
@@ -1976,7 +1951,6 @@ Flags: H
 HStem: 0.0039 83.332<249.998 333.332> 83.336 83.334<333.332 416.664> 333.336 83.332<83.332 166.666> 416.668 83.334<166.666 416.664> 666.668 83.332<0 499.998>
 VStem: 83.332 83.334<333.336 416.668> 249.998 83.334<0.0039 83.336> 333.332 83.332<83.336 166.67> 416.664 83.334<166.67 416.668>
 AnchorPoint: "top_left" 208.333 500 basechar 0
-AnchorPoint: "top_right" 375 500 basechar 0
 AnchorPoint: "bottom_right" 291.667 0 basechar 0
 AnchorPoint: "top_center" 291.667 500 basechar 0
 LayerCount: 2
@@ -2001,7 +1975,6 @@ Flags: H
 HStem: -166.662 83.332<166.666 249.998> -83.3301 83.334<249.998 333.332> 83.336 83.334<166.666 249.998> 166.67 249.998<83.332 166.666 416.664 499.998> 416.668 83.334<166.666 416.664> 666.668 83.332<0 499.998>
 VStem: 83.332 83.334<166.67 416.668> 166.666 83.332<-166.662 -83.3301 83.336 166.67> 249.998 83.334<-83.3301 0.0039> 333.332 83.332<0.0039 166.67> 416.664 83.334<166.67 416.668>
 AnchorPoint: "top_left" 208.333 500 basechar 0
-AnchorPoint: "top_right" 375 500 basechar 0
 AnchorPoint: "bottom_right" 375 0 basechar 0
 AnchorPoint: "top_center" 291.667 500 basechar 0
 LayerCount: 2
@@ -2027,7 +2000,6 @@ Flags: H
 HStem: -166.662 83.332<166.666 249.998> -83.3301 83.334<249.998 333.332> 333.336 83.332<83.332 166.666> 416.668 83.334<166.666 416.664> 666.668 83.332<0 499.998>
 VStem: 83.332 83.334<333.336 416.668> 166.666 83.332<-166.662 -83.3301> 249.998 83.334<-83.3301 0.0039> 333.332 83.332<0.0039 166.67> 416.664 83.334<166.67 416.668>
 AnchorPoint: "top_left" 208.333 500 basechar 0
-AnchorPoint: "top_right" 375 500 basechar 0
 AnchorPoint: "bottom_right" 375 0 basechar 0
 AnchorPoint: "top_center" 291.667 500 basechar 0
 LayerCount: 2
@@ -2052,9 +2024,8 @@ Flags: H
 HStem: 0.0039 83.332<83.332 333.332> 83.336 83.334<333.332 416.664> 333.336 83.332<83.332 166.666> 416.668 83.334<166.666 333.332> 500.002 83.332<416.664 499.998> 583.334 83.334<499.998 583.33> 666.668 83.332<0 499.998>
 VStem: 0 83.332<83.336 333.336> 83.332 83.334<333.336 416.668> 333.332 83.332<83.336 166.67> 416.664 83.334<166.67 416.668> 499.998 83.332<583.334 666.668>
 AnchorPoint: "top_left" 208.333 500 basechar 0
-AnchorPoint: "top_right" 291.667 500 basechar 0
 AnchorPoint: "bottom_right" 291.667 0 basechar 0
-AnchorPoint: "top_center" 291.667 500 basechar 0
+AnchorPoint: "top_center" 208.333 500 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -2077,7 +2048,6 @@ Flags: H
 HStem: 0.0039 83.332<249.998 333.332> 83.336 83.334<333.332 416.664> 250.002 83.334<166.666 333.332> 333.336 83.332<83.332 166.666> 416.668 83.334<166.666 416.664> 666.668 83.332<0 499.998>
 VStem: 83.332 83.334<333.336 416.668> 166.666 166.666<250.002 333.336> 249.998 83.334<0.0039 83.336> 333.332 83.332<83.336 166.67> 416.664 83.334<166.67 416.668>
 AnchorPoint: "top_left" 208.333 500 basechar 0
-AnchorPoint: "top_right" 375 500 basechar 0
 AnchorPoint: "bottom_right" 291.667 0 basechar 0
 AnchorPoint: "top_center" 291.667 500 basechar 0
 LayerCount: 2
@@ -2102,7 +2072,6 @@ Flags: H
 HStem: 0.0039 83.332<83.332 333.332> 83.336 83.334<333.332 416.664> 333.336 83.332<83.332 166.666> 416.668 83.334<166.666 333.332> 500.002 83.332<666.664 749.996> 583.334 83.334<499.998 666.664> 666.668 83.332<0 583>
 VStem: 0 83.332<83.336 333.336> 83.332 83.334<333.336 416.668> 166.666 166.666<416.668 500.002> 333.332 83.332<83.336 166.67> 416.664 83.334<166.67 583.334> 499.998 166.666<583.334 666.668> 666.664 83.332<500.002 583.334>
 AnchorPoint: "top_left" 208.333 500 basechar 0
-AnchorPoint: "top_right" 291.667 500 basechar 0
 AnchorPoint: "bottom_right" 291.667 0 basechar 0
 AnchorPoint: "top_center" 291.667 500 basechar 0
 LayerCount: 2
@@ -2128,7 +2097,6 @@ HStem: -166.662 83.332<166.666 249.998> -83.3301 83.334<249.998 333.332> 83.336 
 VStem: 83.332 83.334<-83.3301 166.67 333.336 416.668> 166.666 83.332<-166.662 -83.3301 166.67 250.002> 249.998 83.334<-83.3301 0.0039> 333.332 83.332<0.0039 83.336> 416.664 83.334<166.67 416.668>
 AnchorPoint: "bottom_right" 375 0 basechar 0
 AnchorPoint: "top_left" 208.333 500 basechar 0
-AnchorPoint: "top_right" 375 500 basechar 0
 AnchorPoint: "top_center" 291.667 500 basechar 0
 LayerCount: 2
 Fore
@@ -2153,7 +2121,6 @@ HStem: 0.0039 83.332<83.332 333.332> 83.336 83.334<333.332 416.664> 333.336 83.3
 VStem: 0 83.332<83.336 333.336> 83.332 83.334<333.336 416.668> 166.666 166.666<416.668 500.002> 333.332 83.332<83.336 166.67>
 AnchorPoint: "bottom_right" 291.667 0 basechar 0
 AnchorPoint: "top_left" 208.333 500 basechar 0
-AnchorPoint: "top_right" 291.667 500 basechar 0
 AnchorPoint: "top_center" 291.667 500 basechar 0
 LayerCount: 2
 Fore
@@ -2178,7 +2145,6 @@ HStem: 0.0039 83.332<83.332 333.332> 83.336 83.333<333.332 416.665> 333.335 83.3
 VStem: 0 83.332<83.336 333.336> 83.333 83.333<333.335 416.668> 333.332 83.333<83.336 166.669> 416.664 83.334<166.67 416.668>
 AnchorPoint: "bottom_right" 291.667 0 basechar 0
 AnchorPoint: "top_left" 208.333 500 basechar 0
-AnchorPoint: "top_right" 375 500 basechar 0
 AnchorPoint: "top_center" 291.667 500 basechar 0
 LayerCount: 2
 Fore
@@ -2202,7 +2168,6 @@ Flags: H
 HStem: -166.662 83.332<583.33 666.664> 0.0039 83.332<249.998 333.332 416.664 666.664> 333.336 83.332<83.332 166.666> 416.668 83.334<166.666 416.664 499.998 749.996> 666.668 83.332<0 833>
 VStem: 83.332 83.334<333.336 416.668> 333.332 83.332<83.336 166.67> 416.664 83.334<166.67 416.668> 583.33 83.334<-166.662 -83.3301> 666.664 83.332<-83.3301 0.0039> 749.996 83.334<166.67 416.668>
 AnchorPoint: "bottom_right" 708.333 0 basechar 0
-AnchorPoint: "top_right" 375 500 basechar 0
 AnchorPoint: "top_left" 208.333 500 basechar 0
 AnchorPoint: "top_center" 291.667 500 basechar 0
 LayerCount: 2
@@ -2227,7 +2192,6 @@ Flags: H
 HStem: -166.662 83.332<416.664 499.998> 0.0039 83.332<249.998 333.332 416.664 666.664> 0.0039 166.666<333.332 416.664 666.664 749.996> 333.336 83.332<83.332 166.666> 416.668 83.334<166.666 416.664 499.998 749.996> 666.668 83.332<0 833>
 VStem: 83.332 83.334<333.336 416.668> 333.332 83.332<83.336 166.67> 416.664 83.334<-166.662 -83.3301 166.67 416.668> 666.664 166.666<83.336 166.67> 749.996 83.334<166.67 416.668>
 AnchorPoint: "bottom_right" 708.333 0 basechar 0
-AnchorPoint: "top_right" 375 500 basechar 0
 AnchorPoint: "top_left" 208.333 500 basechar 0
 AnchorPoint: "top_center" 291.667 500 basechar 0
 LayerCount: 2
@@ -2252,7 +2216,6 @@ Flags: H
 HStem: 0.0039 83.332<249.998 333.332> 83.336 83.334<166.666 249.998 333.332 416.664> 166.67 83.332<249.998 333.332> 333.336 83.332<83.332 166.666> 416.668 83.334<166.666 416.664> 666.668 83.332<0 499.998>
 VStem: 83.332 83.334<333.336 416.668> 166.666 83.332<83.336 166.67> 249.998 83.334<0.0039 83.336 166.67 250.002> 333.332 83.332<83.336 166.67> 416.664 83.334<166.67 416.668>
 AnchorPoint: "bottom_right" 291.667 0 basechar 0
-AnchorPoint: "top_right" 375 500 basechar 0
 AnchorPoint: "top_left" 208.333 500 basechar 0
 AnchorPoint: "top_center" 291.667 500 basechar 0
 LayerCount: 2
@@ -2278,7 +2241,6 @@ HStem: 0.0039 83.332<416.664 499.998> 83.336 83.334<499.998 583.33> 333.336 83.3
 VStem: 83.332 83.334<333.336 416.668> 166.666 166.666<416.668 500.002> 333.332 83.332<333.336 416.668> 416.664 83.334<0.0039 83.336> 499.998 83.332<83.336 166.67> 583.33 83.334<166.67 416.668>
 AnchorPoint: "bottom_right" 458.333 0 basechar 0
 AnchorPoint: "top_left" 208.333 500 basechar 0
-AnchorPoint: "top_right" 291.667 500 basechar 0
 AnchorPoint: "top_center" 291.667 500 basechar 0
 LayerCount: 2
 Fore
@@ -2303,7 +2265,6 @@ HStem: 0.0039 83.332<83.332 333.332> 83.336 83.334<333.332 416.664> 333.336 83.3
 VStem: 0 83.332<83.336 333.336> 83.332 83.334<333.336 416.668> 333.332 83.332<83.336 166.67> 416.664 83.334<500.002 583.334>
 AnchorPoint: "bottom_right" 291.667 0 basechar 0
 AnchorPoint: "top_left" 208.333 500 basechar 0
-AnchorPoint: "top_right" 375 500 basechar 0
 AnchorPoint: "top_center" 291.667 500 basechar 0
 LayerCount: 2
 Fore
@@ -2328,7 +2289,6 @@ HStem: -249.996 83.334<249.998 333.332> 0.0039 83.332<83.332 249.998> 83.336 83.
 VStem: 0 83.332<83.336 333.336> 83.332 83.334<333.336 416.668> 249.998 83.334<-249.996 -166.662> 333.332 83.332<-166.662 83.336 166.67 250.002> 416.664 83.334<500.002 583.334>
 AnchorPoint: "bottom_right" 375 0 basechar 0
 AnchorPoint: "top_left" 208.333 500 basechar 0
-AnchorPoint: "top_right" 375 500 basechar 0
 AnchorPoint: "top_center" 291.667 500 basechar 0
 LayerCount: 2
 Fore
@@ -2352,7 +2312,6 @@ Flags: H
 HStem: 0.0039 83.332<166.666 249.998> 83.336 83.334<249.998 333.332> 416.668 83.334<166.666 333.332> 416.668 166.666<83.332 166.666> 583.334 83.334<166.666 249.998> 666.668 83.332<0 416>
 VStem: 83.332 83.334<500.002 583.334> 166.666 83.332<0.0039 83.336 583.334 666.668> 249.998 83.334<83.336 166.67> 333.332 83.332<166.67 416.668>
 AnchorPoint: "bottom_right" 208.333 0 basechar 0
-AnchorPoint: "top_right" 291.667 500 basechar 0
 AnchorPoint: "top_left" 291.667 500 basechar 0
 AnchorPoint: "top_center" 291.667 500 basechar 0
 LayerCount: 2
@@ -2377,7 +2336,6 @@ Flags: H
 HStem: -249.996 83.334<249.998 333.332> 0.0039 83.332<83.332 249.998> 83.336 83.334<249.998 333.332> 333.336 83.332<83.332 166.666> 416.668 83.334<166.666 249.998> 666.668 83.332<0 499.998>
 VStem: 0 83.332<83.336 333.336> 83.332 83.334<333.336 416.668> 166.666 83.332<416.668 500.002> 249.998 83.334<-249.996 -166.662> 333.332 83.332<-166.662 83.336 166.67 250.002>
 AnchorPoint: "bottom_right" 375 0 basechar 0
-AnchorPoint: "top_right" 208.333 500 basechar 0
 AnchorPoint: "top_left" 208.333 500 basechar 0
 AnchorPoint: "top_center" 208.333 500 basechar 0
 LayerCount: 2
@@ -2402,7 +2360,6 @@ Flags: HW
 HStem: 0.0039 83.332<83.332 249.998 333.332 499.998> 83.336 83.334<249.998 333.332 499.998 583.33> 333.336 83.332<83.332 166.666> 416.668 83.334<166.666 249.998> 666.668 83.332<0 666>
 VStem: 0 83.332<83.336 333.336> 83.332 83.334<333.336 416.668> 166.666 83.332<416.668 500.002> 249.998 83.334<83.336 166.67> 499.998 83.332<83.336 166.67>
 AnchorPoint: "bottom_right" 458.333 0 basechar 0
-AnchorPoint: "top_right" 208.333 500 basechar 0
 AnchorPoint: "top_left" 208.333 500 basechar 0
 AnchorPoint: "top_center" 208.333 500 basechar 0
 LayerCount: 2
@@ -2428,7 +2385,6 @@ HStem: -166.662 83.332<166.666 249.998> 0.0039 83.332<83.332 333.332> 83.336 83.
 VStem: 0 83.332<83.336 333.336> 83.332 83.334<333.336 416.668> 166.666 83.332<-166.662 -83.3301> 166.666 166.666<416.668 500.002> 333.332 83.332<83.336 166.67>
 AnchorPoint: "bottom_right" 291.667 0 basechar 0
 AnchorPoint: "top_left" 208.333 500 basechar 0
-AnchorPoint: "top_right" 291.667 500 basechar 0
 AnchorPoint: "top_center" 291.667 500 basechar 0
 LayerCount: 2
 Fore
@@ -2452,7 +2408,6 @@ Flags: H
 HStem: 250.002 83.333<83.333 166.666> 666.668 83.332<0 250>
 VStem: 0 250<666.668 750> 83.333 83.333<250.002 333.335>
 AnchorPoint: "bottom_right" 125 0 basechar 0
-AnchorPoint: "top_right" 125 333.333 basechar 0
 AnchorPoint: "top_left" 125 333.333 basechar 0
 AnchorPoint: "top_center" 125 333.333 basechar 0
 LayerCount: 2
@@ -2477,7 +2432,6 @@ Flags: H
 HStem: -166.662 83.332<166.666 249.998> -83.3301 83.334<249.998 333.332> 83.336 83.334<249.998 333.332> 166.67 83.332<166.666 249.998> 333.336 83.332<83.332 166.666> 416.668 83.334<166.666 416.664> 666.668 83.332<0 499.998>
 VStem: 83.332 83.334<333.336 416.668> 166.666 83.332<-166.662 -83.3301 166.67 250.002> 249.998 83.334<-83.3301 0.0039> 333.332 83.332<0.0039 83.336> 416.664 83.334<166.67 416.668>
 AnchorPoint: "bottom_right" 375 0 basechar 0
-AnchorPoint: "top_right" 375 500 basechar 0
 AnchorPoint: "top_left" 208.333 500 basechar 0
 AnchorPoint: "top_center" 291.667 500 basechar 0
 LayerCount: 2
