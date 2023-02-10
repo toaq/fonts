@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1675284542
-ModificationTime: 1676064898
+ModificationTime: 1676066164
 PfmFamily: 17
 TTFWeight: 400
 TTFWidth: 5
@@ -46,6 +46,7 @@ Lookup: 1 0 0 "Lengthen cartouche start" { "Lengthen cartouche start"  } []
 Lookup: 1 0 0 "Lower tone mark" { "Lower tone mark"  } []
 Lookup: 1 0 0 "Raise tone mark" { "Raise tone mark"  } []
 Lookup: 1 0 0 "Move rising tone mark to left" { "Move rising tone mark to left"  } []
+Lookup: 1 0 0 "Move hiatus mark to left" { "Move hiatus mark to left"  } []
 Lookup: 1 0 0 "Hiatus to hiatus-diphthong" { "Hiatus to hiatus-diphthong"  } []
 Lookup: 2 0 0 "Delete diphthong" { "Delete diphthong"  } []
 Lookup: 1 0 0 "Add cartouche line" { "Add cartouche line"  } []
@@ -55,6 +56,7 @@ Lookup: 6 8 0 "Connect cartouche medials" { "Connect cartouche medials"  } ['rcl
 Lookup: 5 0 0 "Move rising tone mark before word at start of cartouches" { "Move rising tone mark before word at start of cartouches"  } ['calt' ('DFLT' <'dflt' > ) ]
 Lookup: 5 0 0 "Lower tone marks inside cartouches" { "Lower tone marks inside cartouches"  } ['calt' ('DFLT' <'dflt' > ) ]
 Lookup: 5 0 0 "Raise tone marks on letters with ascenders" { "Raise tone marks on letters with ascenders"  } ['calt' ('DFLT' <'dflt' > ) ]
+Lookup: 5 0 0 "Move hiatus marks to left before descenders" { "Move hiatus marks to left before descenders"  } ['calt' ('DFLT' <'dflt' > ) ]
 Lookup: 260 0 0 "Attach diacritics" { "Attach diacritics"  } ['mark' ('DFLT' <'dflt' > ) ]
 Lookup: 258 8 0 "Kern" { "Kern" [150,0,6] } ['kern' ('DFLT' <'dflt' > ) ]
 MarkAttachClasses: 1
@@ -65,6 +67,23 @@ KernClass2: 2+ 3 "Kern"
  187 mamei mamei_coda bubue fofuaq dudeo rairua laoliq nhanhoq jujuo veva hehaq cartouche_start mamei_c mamei_coda_c bubue_c fofuaq_c dudeo_c rairua_c laoliq_c nhanhoq_c jujuo_c veva_c hehaq_c
  72 space nbsp pipoq zozeo quote compat_nbsp pipoq_c zozeo_c quote_c space_c
  0 {} -167 {} -83 {} 0 {} -83 {} -83 {}
+ContextSub2: class "Move hiatus marks to left before descenders" 3 3 3 1
+  Class: 57 pipoq fofuaq zozeo hehaq pipoq_c fofuaq_c zozeo_c hehaq_c
+  Class: 6 hiatus
+  BClass: 57 pipoq fofuaq zozeo hehaq pipoq_c fofuaq_c zozeo_c hehaq_c
+  BClass: 6 hiatus
+  FClass: 57 pipoq fofuaq zozeo hehaq pipoq_c fofuaq_c zozeo_c hehaq_c
+  FClass: 6 hiatus
+ 2 0 0
+  ClsList: 2 1
+  BClsList:
+  FClsList:
+ 1
+  SeqLookup: 0 "Move hiatus mark to left"
+  ClassNames: "All_Others" "base_descend" "hiatus"
+  BClassNames: "All_Others" "base_descend" "hiatus"
+  FClassNames: "All_Others" "base_descend" "hiatus"
+EndFPST
 ContextSub2: class "Raise tone marks on letters with ascenders" 3 3 3 1
   Class: 28 nanaq titieq chichao shoshia
   Class: 48 rising_tone low_glottal_tone rising_falling_tone
@@ -153,13 +172,13 @@ EndFPST
 ContextSub2: class "Form hiatus-diphthong ligatures" 4 4 4 1
   Class: 6 hiatus
   Class: 9 diphthong
-  Class: 253 bubue pipoq fofuaq nanaq dudeo titieq zozeo cecoa saqseoq nhanhoq chichao shoshia veva aqaq kikue oaomo hehaq bubue_c pipoq_c fofuaq_c nanaq_c dudeo_c titieq_c zozeo_c cecoa_c saqseoq_c nhanhoq_c chichao_c shoshia_c veva_c aqaq_c kikue_c oaomo_c hehaq_c
+  Class: 165 bubue nanaq dudeo titieq cecoa saqseoq nhanhoq chichao veva kikue oaomo bubue_c nanaq_c dudeo_c titieq_c cecoa_c saqseoq_c nhanhoq_c chichao_c veva_c kikue_c oaomo_c
   BClass: 6 hiatus
   BClass: 9 diphthong
-  BClass: 253 bubue pipoq fofuaq nanaq dudeo titieq zozeo cecoa saqseoq nhanhoq chichao shoshia veva aqaq kikue oaomo hehaq bubue_c pipoq_c fofuaq_c nanaq_c dudeo_c titieq_c zozeo_c cecoa_c saqseoq_c nhanhoq_c chichao_c shoshia_c veva_c aqaq_c kikue_c oaomo_c hehaq_c
+  BClass: 165 bubue nanaq dudeo titieq cecoa saqseoq nhanhoq chichao veva kikue oaomo bubue_c nanaq_c dudeo_c titieq_c cecoa_c saqseoq_c nhanhoq_c chichao_c veva_c kikue_c oaomo_c
   FClass: 6 hiatus
   FClass: 9 diphthong
-  FClass: 253 bubue pipoq fofuaq nanaq dudeo titieq zozeo cecoa saqseoq nhanhoq chichao shoshia veva aqaq kikue oaomo hehaq bubue_c pipoq_c fofuaq_c nanaq_c dudeo_c titieq_c zozeo_c cecoa_c saqseoq_c nhanhoq_c chichao_c shoshia_c veva_c aqaq_c kikue_c oaomo_c hehaq_c
+  FClass: 165 bubue nanaq dudeo titieq cecoa saqseoq nhanhoq chichao veva kikue oaomo bubue_c nanaq_c dudeo_c titieq_c cecoa_c saqseoq_c nhanhoq_c chichao_c veva_c kikue_c oaomo_c
  3 0 0
   ClsList: 1 3 2
   BClsList:
@@ -181,7 +200,7 @@ WinInfo: 0 13 19
 BeginPrivate: 0
 EndPrivate
 AnchorClass2: "are"""  "top_center" "Attach diacritics" "bottom_right" "Attach diacritics" "top_left" "Attach diacritics"
-BeginChars: 76 72
+BeginChars: 73 73
 
 StartChar: space
 Encoding: 0 32 0
@@ -386,7 +405,7 @@ Flags: W
 HStem: -166.662 83.332<166.666 249.998> -83.3301 83.334<249.998 333.332> 0.00390625 21G<333.332 416.664> 83.3359 83.334<166.666 249.998> 166.67 249.998<83.332 166.666 416.664 499.998> 416.668 83.334<166.666 416.664>
 VStem: 83.332 83.334<166.67 416.668> 166.666 83.332<-166.662 -83.3301 83.3359 166.67> 249.998 83.334<-83.3301 0.00390625> 333.332 83.332<0.00390625 166.67> 416.664 83.334<166.67 416.668>
 AnchorPoint: "top_center" 291.667 500 basechar 0
-AnchorPoint: "bottom_right" 375 0 basechar 0
+AnchorPoint: "bottom_right" 458.333 0 basechar 0
 AnchorPoint: "top_left" 208.333 500 basechar 0
 LayerCount: 2
 Fore
@@ -439,7 +458,7 @@ Flags: HW
 HStem: -166.662 83.332<166.666 249.998> -83.3301 83.334<249.998 333.332> 333.336 83.332<83.332 166.666> 416.668 83.334<166.666 416.664>
 VStem: 83.332 83.334<333.336 416.668> 166.666 83.332<-166.662 -83.3301> 249.998 83.334<-83.3301 0.0039> 333.332 83.332<0.0039 166.67> 416.664 83.334<166.67 416.668>
 AnchorPoint: "top_center" 291.667 500 basechar 0
-AnchorPoint: "bottom_right" 375 0 basechar 0
+AnchorPoint: "bottom_right" 458.333 0 basechar 0
 AnchorPoint: "top_left" 208.333 500 basechar 0
 LayerCount: 2
 Fore
@@ -651,7 +670,7 @@ HStem: -166.662 83.332<166.666 249.998> -83.3301 83.334<249.998 333.332> 83.336 
 VStem: 83.332 83.334<-83.3301 166.67 333.336 416.668> 166.666 83.332<-166.662 -83.3301 166.67 250.002> 249.998 83.334<-83.3301 0.0039> 333.332 83.332<0.0039 83.336> 416.664 83.334<166.67 416.668>
 AnchorPoint: "top_center" 291.667 500 basechar 0
 AnchorPoint: "top_left" 208.333 500 basechar 0
-AnchorPoint: "bottom_right" 375 0 basechar 0
+AnchorPoint: "bottom_right" 458.333 0 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -1351,7 +1370,7 @@ HStem: -166.662 83.332<166.666 249.998> -83.3301 83.334<249.998 333.332> 83.336 
 VStem: 83.332 83.334<333.336 416.668> 166.666 83.332<-166.662 -83.3301 166.67 250.002> 249.998 83.334<-83.3301 0.0039> 333.332 83.332<0.0039 83.336> 416.664 83.334<166.67 416.668>
 AnchorPoint: "top_center" 291.667 500 basechar 0
 AnchorPoint: "top_left" 208.333 500 basechar 0
-AnchorPoint: "bottom_right" 375 0 basechar 0
+AnchorPoint: "bottom_right" 458.333 0 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -1505,6 +1524,7 @@ SplineSet
  333.33203125 -249.99609375 l 1
  333.33203125 -166.662109375 l 1xa0
 EndSplineSet
+Substitution2: "Move hiatus mark to left" hiatus_left
 Substitution2: "Hiatus to hiatus-diphthong" hiatus_diphthong
 EndChar
 
@@ -2706,6 +2726,31 @@ SplineSet
  166.666015625 666.666992188 l 1
  166.666015625 583.333984375 l 1x50
  83.3330078125 583.333984375 l 1
+EndSplineSet
+EndChar
+
+StartChar: hiatus_left
+Encoding: 72 -1 72
+Width: 0
+VWidth: 950
+GlyphClass: 4
+Flags: HW
+HStem: -249.996 83.334<250.002 333.334> -166.662 83.332<0.002 250.002>
+VStem: 250.002 83.332<-249.996 -166.662>
+AnchorPoint: "bottom_right" 208.333 0 mark 0
+LayerCount: 2
+Fore
+SplineSet
+0.001953125 -83.330078125 m 1x60
+ 250.001953125 -83.330078125 l 1x60
+ 250.001953125 -166.662109375 l 1xa0
+ 0.001953125 -166.662109375 l 1
+ 0.001953125 -83.330078125 l 1x60
+250.001953125 -166.662109375 m 1xa0
+ 333.333984375 -166.662109375 l 1
+ 333.333984375 -249.99609375 l 1
+ 250.001953125 -249.99609375 l 1
+ 250.001953125 -166.662109375 l 1xa0
 EndSplineSet
 EndChar
 EndChars
