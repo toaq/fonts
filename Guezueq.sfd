@@ -54,6 +54,7 @@ Lookup: 5 8 0 "Connect cartouche starts" { "Connect cartouche starts"  } ['rclt'
 Lookup: 6 8 0 "Connect cartouche medials" { "Connect cartouche medials"  } ['rclt' ('DFLT' <'dflt' > ) ]
 Lookup: 5 0 0 "Move rising tone mark before word at start of cartouches" { "Move rising tone mark before word at start of cartouches"  } ['calt' ('DFLT' <'dflt' > ) ]
 Lookup: 5 0 0 "Lower tone marks inside cartouches" { "Lower tone marks inside cartouches"  } ['calt' ('DFLT' <'dflt' > ) ]
+Lookup: 5 0 0 "Raise tone marks on letters with ascenders" { "Raise tone marks on letters with ascenders"  } ['calt' ('DFLT' <'dflt' > ) ]
 Lookup: 260 0 0 "Attach diacritics" { "Attach diacritics"  } ['mark' ('DFLT' <'dflt' > ) ]
 Lookup: 258 8 0 "Kern" { "Kern" [150,0,6] } ['kern' ('DFLT' <'dflt' > ) ]
 MarkAttachClasses: 1
@@ -64,6 +65,23 @@ KernClass2: 2+ 3 "Kern"
  187 mamei mamei_coda bubue fofuaq dudeo rairua laoliq nhanhoq jujuo veva hehaq cartouche_start mamei_c mamei_coda_c bubue_c fofuaq_c dudeo_c rairua_c laoliq_c nhanhoq_c jujuo_c veva_c hehaq_c
  72 space nbsp pipoq zozeo quote compat_nbsp pipoq_c zozeo_c quote_c space_c
  0 {} -167 {} -83 {} 0 {} -83 {} -83 {}
+ContextSub2: class "Raise tone marks on letters with ascenders" 3 3 3 1
+  Class: 28 nanaq titieq chichao shoshia
+  Class: 48 rising_tone low_glottal_tone rising_falling_tone
+  BClass: 28 nanaq titieq chichao shoshia
+  BClass: 48 rising_tone low_glottal_tone rising_falling_tone
+  FClass: 28 nanaq titieq chichao shoshia
+  FClass: 48 rising_tone low_glottal_tone rising_falling_tone
+ 2 0 0
+  ClsList: 1 2
+  BClsList:
+  FClsList:
+ 1
+  SeqLookup: 1 "Raise tone mark"
+  ClassNames: "All_Others" "base_ascend" "tone"
+  BClassNames: "All_Others" "base_ascend" "tone"
+  FClassNames: "All_Others" "base_ascend" "tone"
+EndFPST
 ContextSub2: class "Move rising tone mark before word at start of cartouches" 4 4 4 1
   Class: 15 cartouche_start
   Class: 11 rising_tone
@@ -163,7 +181,7 @@ WinInfo: 0 13 19
 BeginPrivate: 0
 EndPrivate
 AnchorClass2: "are"""  "top_center" "Attach diacritics" "bottom_right" "Attach diacritics" "top_left" "Attach diacritics"
-BeginChars: 79 72
+BeginChars: 76 72
 
 StartChar: space
 Encoding: 0 32 0
@@ -2642,7 +2660,7 @@ Encoding: 70 -1 70
 Width: 250
 VWidth: 950
 GlyphClass: 1
-Flags: HWO
+Flags: HW
 HStem: 500.002 83.332<0 83.332> 583.334 83.334<83.332 166.666> 666.668 83.332<166.666 333.332>
 VStem: 0 83.332<500.002 583.334> 83.332 83.334<583.334 666.668>
 LayerCount: 2
