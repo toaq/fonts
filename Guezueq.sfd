@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1675284542
-ModificationTime: 1675919532
+ModificationTime: 1676064898
 PfmFamily: 17
 TTFWeight: 400
 TTFWidth: 5
@@ -61,7 +61,7 @@ MarkAttachClasses: 1
 DEI: 91125
 KernClass2: 2+ 3 "Kern"
  53 cecoa aqaq gugui kikue cecoa_c aqaq_c gugui_c kikue_c
- 74 space nbsp titieq oaomo quote compat_nbsp titieq_c oaomo_c quote_c space_c
+ 110 space nbsp titieq chichao shoshia oaomo quote compat_nbsp titieq_c chichao_c shoshia_c oaomo_c quote_c space_c
  187 mamei mamei_coda bubue fofuaq dudeo rairua laoliq nhanhoq jujuo veva hehaq cartouche_start mamei_c mamei_coda_c bubue_c fofuaq_c dudeo_c rairua_c laoliq_c nhanhoq_c jujuo_c veva_c hehaq_c
  72 space nbsp pipoq zozeo quote compat_nbsp pipoq_c zozeo_c quote_c space_c
  0 {} -167 {} -83 {} 0 {} -83 {} -83 {}
