@@ -28,7 +28,7 @@
           name = "derani";
           src = self;
           buildInputs = [ pkgs.fontforge-fonttools ];
-          buildPhase = mkBuildPhase [ "Derani" "Guezueq" ];
+          buildPhase = mkBuildPhase [ "Derani" "Guezueq" "Neajiaq" ];
           inherit installPhase;
         };
         latin = pkgs.stdenv.mkDerivation {
