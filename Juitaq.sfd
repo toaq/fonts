@@ -1,0 +1,2404 @@
+SplineFontDB: 3.2
+FontName: Juitaq
+FullName: Juitaq
+FamilyName: Juitaq
+Weight: Regular
+Copyright: CC0
+Version: 1.0
+ItalicAngle: 0
+UnderlinePosition: 81
+UnderlineWidth: 54
+Ascent: 800
+Descent: 200
+InvalidEm: 0
+sfntRevision: 0x00010000
+LayerCount: 2
+Layer: 0 0 "Back" 1
+Layer: 1 0 "Fore" 0
+XUID: [1021 73 1113128204 19491]
+StyleMap: 0x0040
+FSType: 4
+OS2Version: 4
+OS2_WeightWidthSlopeOnly: 0
+OS2_UseTypoMetrics: 1
+CreationTime: 1670694376
+ModificationTime: 1683303404
+PfmFamily: 81
+TTFWeight: 400
+TTFWidth: 5
+LineGap: 0
+VLineGap: 0
+Panose: 0 0 4 0 0 0 0 0 0 0
+OS2TypoAscent: 1283
+OS2TypoAOffset: 0
+OS2TypoDescent: -513
+OS2TypoDOffset: 0
+OS2TypoLinegap: 0
+OS2WinAscent: 1283
+OS2WinAOffset: 0
+OS2WinDescent: 513
+OS2WinDOffset: 0
+HheadAscent: 1283
+HheadAOffset: 0
+HheadDescent: -513
+HheadDOffset: 0
+OS2SubXSize: 550
+OS2SubYSize: 550
+OS2SubXOff: 0
+OS2SubYOff: -256
+OS2SupXSize: 550
+OS2SupYSize: 550
+OS2SupXOff: 0
+OS2SupYOff: 550
+OS2StrikeYSize: 55
+OS2StrikeYPos: 220
+OS2CapHeight: 770
+OS2XHeight: 513
+OS2Vendor: 'FSTR'
+OS2CodePages: 200101ff.cdff0000
+OS2UnicodeRanges: 00000001.10000000.00000000.00000000
+Lookup: 1 0 0 "Single Substitution in Latin lookup 0" { "Single Substitution in Latin lookup 0 subtable"  } ['vvfl' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
+Lookup: 2 0 0 "Multiple Substitution in Latin lookup 1" { "Multiple Substitution in Latin lookup 1 subtable"  } ['delt' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
+Lookup: 1 0 0 "Single Substitution in Latin lookup 2" { "Single Substitution in Latin lookup 2 subtable"  } ['cart' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
+Lookup: 5 0 0 "'calt' Contextual Alternates in Latin lookup 4" { "'calt' Contextual Alternates in Latin lookup 4 subtable"  } ['calt' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
+Lookup: 5 8 0 "'rclt' Required Contextual Alternates in Latin lookup 5" { "'rclt' Required Contextual Alternates in Latin lookup 5 subtable"  } ['rclt' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
+Lookup: 6 8 0 "'rclt' Required Contextual Alternates in Latin lookup 6" { "'rclt' Required Contextual Alternates in Latin lookup 6 subtable"  } ['rclt' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
+Lookup: 4 0 0 "'liga' Standard Ligatures lookup 0" { "'liga' Standard Ligatures lookup 0-1"  } ['liga' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
+Lookup: 260 0 0 "'mark' Mark Positioning in Latin lookup 0" { "'mark' Mark Positioning in Latin lookup 0 subtable"  } ['mark' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
+Lookup: 258 0 0 "'kern' Horizontal Kerning in Latin lookup 1" { "'kern' Horizontal Kerning in Latin lookup 1 subtable" [150,15,0] "'kern' Horizontal Kerning in Latin lookup 1-1" [150,15,0] } ['kern' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
+MarkAttachClasses: 1
+DEI: 91125
+KernClass2: 2 2 "'kern' Horizontal Kerning in Latin lookup 1-1"
+ 109 cecoa aqaq gugui kikue cecoa_c gugui_c kikue_c aqaq_c cecoa_hiatus cecoa_c_hiatus gugui_hiatus gugui_c_hiatus
+ 137 mamei mamei_coda bubue fofuaq rairua laoliq jujuo veva gugui hehaq fofuaq_c hehaq_c jujuo_c laoliq_c mamei_c rairua_c veva_c mamei_coda_c
+ 0 {} 0 {} 0 {} -100 {}
+ChainSub2: class "'rclt' Required Contextual Alternates in Latin lookup 6 subtable" 2 2 1 1
+  Class: 204 space nbsp mamei mamei_coda bubue pipoq fofuaq nanaq dudeo titieq zozeo cecoa saqseoq rairua laoliq nhanhoq jujuo chichao shoshia veva aqaq gugui kikue oaomo hehaq rising_falling prefix quote space_compat
+  BClass: 223 bubue_c cecoa_c dudeo_c fofuaq_c gugui_c hehaq_c jujuo_c kikue_c laoliq_c mamei_c nanaq_c pipoq_c aqaq_c rairua_c saqseoq_c titieq_c veva_c nhanhoq_c shoshia_c chichao_c zozeo_c space_c prefix_c oaomo_c quote_c mamei_coda_c
+ 1 1 0
+  ClsList: 1
+  BClsList: 1
+  FClsList:
+ 1
+  SeqLookup: 0 "Single Substitution in Latin lookup 2"
+  ClassNames: "All_Others" "1"
+  BClassNames: "All_Others" "1"
+  FClassNames: "All_Others"
+EndFPST
+ContextSub2: class "'rclt' Required Contextual Alternates in Latin lookup 5 subtable" 3 1 1 1
+  Class: 189 space nbsp mamei mamei_coda bubue pipoq fofuaq nanaq dudeo titieq zozeo cecoa saqseoq rairua laoliq nhanhoq jujuo chichao shoshia veva aqaq gugui kikue oaomo hehaq prefix quote space_compat
+  Class: 15 cartouche_start
+ 2 0 0
+  ClsList: 2 1
+  BClsList:
+  FClsList:
+ 1
+  SeqLookup: 1 "Single Substitution in Latin lookup 2"
+  ClassNames: "All_Others" "1" "2"
+  BClassNames: "All_Others"
+  FClassNames: "All_Others"
+EndFPST
+ContextSub2: class "'calt' Contextual Alternates in Latin lookup 4 subtable" 4 0 0 1
+  Class: 6 hiatus
+  Class: 9 diphthong
+  Class: 96 bubue cecoa dudeo fofuaq hehaq kikue nanaq pipoq aqaq saqseoq veva nhanhoq shoshia chichao zozeo
+ 3 0 0
+  ClsList: 1 3 2
+  BClsList:
+  FClsList:
+ 2
+  SeqLookup: 0 "Single Substitution in Latin lookup 0"
+  SeqLookup: 2 "Multiple Substitution in Latin lookup 1"
+  ClassNames: "0" "1" "2" "3"
+EndFPST
+LangName: 1033 "Copyright Miles Forster 2022+AAogHAAA-derani" "" "" "" "" "1.0" "" "FontStruct is a trademark of FontStruct.com" "https://fontstruct.com" "Miles Forster" "+IBwA-derani+IB0A was built with FontStruct+AAogHAAA-derani" "https://fontstruct.com/fontstructions/show/2208618/derani-1" "https://fontstruct.com/fontstructors/show/1815854/n1004" "Creative Commons Attribution Non-commercial" "http://creativecommons.org/licenses/by-nc/3.0/" "" "" "" "" "Five big quacking zephyrs jolt my wax bed"
+Encoding: Custom
+UnicodeInterp: none
+NameList: AGL For New Fonts
+DisplaySize: -128
+AntiAlias: 1
+FitToEm: 0
+WinInfo: 0 15 6
+BeginPrivate: 6
+OtherBlues 2 []
+BlueShift 1 1
+StdHW 5 [128]
+StdVW 5 [116]
+StemSnapH 5 [128]
+StemSnapV 5 [115]
+EndPrivate
+TeXData: 1 0 0 314572 157286 104857 0 1048576 104857 783286 444596 497025 792723 393216 433062 380633 303038 157286 324010 404750 52429 2506097 1059062 262144
+AnchorClass2: "1"""  "Anchor-0" "'mark' Mark Positioning in Latin lookup 0 subtable" "Anchor-1" "'mark' Mark Positioning in Latin lookup 0 subtable"
+BeginChars: 115 73
+
+StartChar: .notdef
+Encoding: 41 -1 0
+Width: 500
+GlyphClass: 1
+Flags: MW
+HStem: 0 50<100 400 100 450> 483 50<100 400 100 100>
+VStem: 50 50<50 50 50 483> 400 50<50 483 483 483>
+LayerCount: 2
+Fore
+SplineSet
+50 0 m 1
+ 50 533 l 1
+ 450 533 l 1
+ 450 0 l 1
+ 50 0 l 1
+100 50 m 1
+ 400 50 l 1
+ 400 483 l 1
+ 100 483 l 1
+ 100 50 l 1
+EndSplineSet
+Validated: 1
+EndChar
+
+StartChar: space
+Encoding: 0 32 1
+Width: 300
+GlyphClass: 1
+Flags: W
+LayerCount: 2
+Fore
+Validated: 1
+Kerns2: 4 0 "'kern' Horizontal Kerning in Latin lookup 1 subtable" 12 0 "'kern' Horizontal Kerning in Latin lookup 1 subtable"
+Substitution2: "Single Substitution in Latin lookup 2 subtable" space_c
+EndChar
+
+StartChar: other_stop
+Encoding: 35 988886 2
+Width: 451
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+350 850 m 25
+ 250 850 l 1
+ 250 933 317 1000 400 1000 c 1
+ 372 1000 350 934 350 851 c 1
+ 351 850 l 1
+ 450 850 l 1
+ 450 -250 l 2
+ 450 -333 383 -400 300 -400 c 1
+ 328 -400 350 -333 350 -250 c 2
+ 350 850 l 25
+149 250 m 1
+ 50 350 l 1
+ 150 450 l 1
+ 250 350 l 1
+ 151 250 l 1
+ 250 150 l 1
+ 150 50 l 1
+ 50 150 l 1
+ 149 250 l 1
+EndSplineSet
+Validated: 1
+EndChar
+
+StartChar: quote
+Encoding: 32 988883 3
+Width: 300
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+149 250 m 5
+ 50 350 l 5
+ 150 450 l 5
+ 250 350 l 5
+ 151 250 l 5
+ 250 150 l 5
+ 150 50 l 5
+ 50 150 l 5
+ 149 250 l 5
+EndSplineSet
+Validated: 1
+Substitution2: "Single Substitution in Latin lookup 2 subtable" quote_c
+EndChar
+
+StartChar: null
+Encoding: 39 988890 4
+Width: 807
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+150 900 m 2
+ 67 900 0 878 0 850 c 1
+ 0 933 67 1000 150 1000 c 2
+ 400 1000 l 2
+ 483 1000 550 933 550 850 c 2
+ 550 -250 l 2
+ 550 -333 483 -400 400 -400 c 1
+ 428 -400 450 -333 450 -250 c 2
+ 450 850 l 2
+ 450 878 428 900 400 900 c 2
+ 150 900 l 2
+251 250 m 1
+ 350 250 l 1
+ 350 167 283 100 200 100 c 1
+ 228 100 250 166 250 249 c 1
+ 249 250 l 1
+ 150 250 l 1
+ 150 333 217 400 300 400 c 1
+ 272 400 250 334 250 251 c 1
+ 251 250 l 1
+EndSplineSet
+Validated: 1
+EndChar
+
+StartChar: diphthong
+Encoding: 30 988878 5
+Width: 500
+GlyphClass: 4
+Flags: HMW
+AnchorPoint: "Anchor-0" 150 -50 mark 0
+LayerCount: 2
+Fore
+SplineSet
+200 -150 m 1
+ 0 -150 l 1
+ 0 -50 l 1
+ 300 -50 l 1
+ 300 -150 l 2
+ 300 -233 233 -300 150 -300 c 1
+ 178 -300 200 -233 200 -150 c 1
+EndSplineSet
+Validated: 1
+MultipleSubs2: "Multiple Substitution in Latin lookup 1 subtable" 
+EndChar
+
+StartChar: subordination
+Encoding: 33 988884 6
+Width: 750
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+50 0 m 1
+ 0 0 l 1
+ 0 100 l 1
+ 750 100 l 1
+ 750 0 l 2
+ 750 -83 683 -150 600 -150 c 1
+ 628 -150 650 -83 650 0 c 1
+ 600 0 l 1
+ 600 -83 533 -150 450 -150 c 1
+ 478 -150 500 -83 500 0 c 1
+ 450 0 l 1
+ 450 -83 383 -150 300 -150 c 1
+ 328 -150 350 -83 350 0 c 1
+ 300 0 l 1
+ 300 -83 233 -150 150 -150 c 1
+ 178 -150 200 -83 200 0 c 1
+ 150 0 l 1
+ 150 -83 83 -150 0 -150 c 1
+ 28 -150 50 -83 50 0 c 1
+EndSplineSet
+Validated: 1
+EndChar
+
+StartChar: oaomo
+Encoding: 24 988869 7
+Width: 300
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+100 250 m 0
+ 100 278 122 300 150 300 c 0
+ 178 300 200 278 200 250 c 0
+ 200 222 178 200 150 200 c 0
+ 122 200 100 222 100 250 c 0
+EndSplineSet
+Validated: 1
+Substitution2: "Single Substitution in Latin lookup 2 subtable" oaomo_c
+EndChar
+
+StartChar: declarative_stop
+Encoding: 34 988885 8
+Width: 451
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+350 850 m 25
+ 250 850 l 1
+ 250 933 317 1000 400 1000 c 1
+ 372 1000 350 934 350 851 c 1
+ 351 850 l 1
+ 450 850 l 1
+ 450 -250 l 2
+ 450 -333 383 -400 300 -400 c 1
+ 328 -400 350 -333 350 -250 c 2
+ 350 850 l 25
+150 350 m 1
+ 250 250 l 1
+ 150 150 l 1
+ 50 250 l 1
+ 150 350 l 1
+EndSplineSet
+Validated: 1
+EndChar
+
+StartChar: rising
+Encoding: 26 988874 9
+Width: 0
+GlyphClass: 4
+Flags: HMW
+AnchorPoint: "Anchor-1" 150 500 mark 0
+LayerCount: 2
+Fore
+SplineSet
+0 600 m 1
+ 0 700 l 1
+ 300 850 l 1
+ 300 750 l 1
+ 0 600 l 1
+EndSplineSet
+Validated: 1
+EndChar
+
+StartChar: prefix
+Encoding: 31 988882 10
+Width: 300
+GlyphClass: 2
+Flags: MW
+LayerCount: 2
+Fore
+SplineSet
+100 150 m 0
+ 100 178 122 200 150 200 c 0
+ 178 200 200 178 200 150 c 0
+ 200 122 178 100 150 100 c 0
+ 122 100 100 122 100 150 c 0
+100 350 m 0
+ 100 378 122 400 150 400 c 0
+ 178 400 200 378 200 350 c 0
+ 200 322 178 300 150 300 c 0
+ 122 300 100 322 100 350 c 0
+EndSplineSet
+Validated: 1
+Substitution2: "Single Substitution in Latin lookup 2 subtable" prefix_c
+EndChar
+
+StartChar: interrogative_stop
+Encoding: 36 988887 11
+Width: 451
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+350 850 m 25
+ 250 850 l 1
+ 250 933 317 1000 400 1000 c 1
+ 372 1000 350 934 350 851 c 1
+ 351 850 l 1
+ 450 850 l 1
+ 450 -250 l 2
+ 450 -333 383 -400 300 -400 c 1
+ 328 -400 350 -333 350 -250 c 2
+ 350 850 l 25
+151 150 m 1
+ 250 50 l 1
+ 150 -50 l 1
+ 50 50 l 1
+ 149 150 l 1
+ 50 250 l 1
+ 149 350 l 1
+ 50 450 l 1
+ 150 550 l 1
+ 250 450 l 1
+ 151 350 l 1
+ 250 250 l 1
+ 151 150 l 1
+EndSplineSet
+Validated: 1
+EndChar
+
+StartChar: cartouche_start
+Encoding: 37 988888 12
+Width: 150
+GlyphClass: 2
+Flags: HMWO
+LayerCount: 2
+Fore
+SplineSet
+150 900 m 2
+ 67 900 0 878 0 850 c 1
+ 0 933 67 1000 150 1000 c 2
+ 200 1000 l 1
+ 200 900 l 1
+ 150 900 l 2
+EndSplineSet
+EndChar
+
+StartChar: low_glottal
+Encoding: 27 988875 13
+Width: 0
+GlyphClass: 4
+Flags: HMW
+AnchorPoint: "Anchor-1" 150 500 mark 0
+LayerCount: 2
+Fore
+SplineSet
+150 800 m 3
+ 233 800 300 822 300 850 c 1
+ 300 767 233 700 150 700 c 3
+ 122 700 100 678 100 650 c 3
+ 100 567 122 500 150 500 c 1
+ 67 500 0 567 0 650 c 3
+ 0 733 67 800 150 800 c 3
+EndSplineSet
+Validated: 1
+EndChar
+
+StartChar: cartouche_end
+Encoding: 38 988889 14
+Width: 200
+GlyphClass: 2
+Flags: HMW
+HStem: 1026 129
+LayerCount: 2
+Fore
+SplineSet
+200 -250 m 2
+ 200 -333 133 -400 50 -400 c 1
+ 78 -400 100 -333 100 -250 c 2
+ 100 850 l 2
+ 100 878 78 900 50 900 c 2
+ -1 900 l 1
+ -1 1000 l 1
+ 50 1000 l 2
+ 133 1000 200 933 200 850 c 2
+ 200 -250 l 2
+EndSplineSet
+Validated: 1
+EndChar
+
+StartChar: bubue
+Encoding: 5 988850 15
+Width: 300
+GlyphClass: 2
+Flags: HMW
+AnchorPoint: "Anchor-0" 300 -50 basechar 0
+AnchorPoint: "Anchor-1" 150 500 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+300 150 m 6
+ 300 67 233 0 150 0 c 5
+ 178 0 200 67 200 150 c 6
+ 200 350 l 6
+ 200 378 178 400 150 400 c 4
+ 122 400 100 378 100 350 c 5
+ 0 350 l 5
+ 0 433 67 500 150 500 c 4
+ 233 500 300 433 300 350 c 6
+ 300 150 l 6
+EndSplineSet
+Validated: 1
+Substitution2: "Single Substitution in Latin lookup 2 subtable" bubue_c
+EndChar
+
+StartChar: cecoa
+Encoding: 12 988857 16
+Width: 300
+GlyphClass: 2
+Flags: HMW
+AnchorPoint: "Anchor-0" 300 -50 basechar 0
+AnchorPoint: "Anchor-1" 150 500 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+100 350 m 6
+ 100 150 l 6
+ 100 122 122 100 150 100 c 7
+ 233 100 300 122 300 150 c 5
+ 300 67 233 0 150 0 c 7
+ 67 0 0 67 0 150 c 6
+ 0 350 l 6
+ 0 433 67 500 150 500 c 5
+ 150 400 l 5
+ 122 400 100 378 100 350 c 6
+EndSplineSet
+Validated: 1
+Substitution2: "Single Substitution in Latin lookup 2 subtable" cecoa_c
+EndChar
+
+StartChar: dudeo
+Encoding: 9 988854 17
+Width: 300
+GlyphClass: 2
+Flags: HMW
+AnchorPoint: "Anchor-1" 150 500 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+150 100 m 20
+ 178 100 200 122 200 150 c 6
+ 200 208 l 5
+ 184 203 168 200 150 200 c 4
+ 67 200 0 267 0 350 c 4
+ 0 433 67 500 150 500 c 4
+ 233 500 300 433 300 350 c 6
+ 300 150 l 6
+ 300 67 233 0 150 0 c 7
+ 67 0 0 67 0 150 c 5
+ 0 122 88 100 150 100 c 20
+100 350 m 4
+ 100 322 122 300 150 300 c 4
+ 178 300 200 322 200 350 c 4
+ 200 378 178 400 150 400 c 4
+ 122 400 100 378 100 350 c 4
+EndSplineSet
+Validated: 1048577
+Substitution2: "Single Substitution in Latin lookup 2 subtable" dudeo_c
+EndChar
+
+StartChar: fofuaq
+Encoding: 7 988852 18
+Width: 300
+GlyphClass: 2
+Flags: HMW
+AnchorPoint: "Anchor-0" 300 -50 basechar 0
+AnchorPoint: "Anchor-1" 150 500 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+300 -250 m 6
+ 300 -333 233 -400 150 -400 c 5
+ 178 -400 200 -333 200 -250 c 6
+ 200 350 l 6
+ 200 378 178 400 150 400 c 7
+ 122 400 100 378 100 350 c 13
+ 0 350 l 21
+ 0 433 67 500 150 500 c 7
+ 233 500 300 433 300 350 c 6
+ 300 -250 l 6
+EndSplineSet
+Validated: 1
+Substitution2: "Single Substitution in Latin lookup 2 subtable" fofuaq_c
+EndChar
+
+StartChar: gugui
+Encoding: 22 988867 19
+Width: 500
+GlyphClass: 2
+Flags: HMW
+AnchorPoint: "Anchor-0" 500 -50 basechar 0
+AnchorPoint: "Anchor-1" 150 500 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+0 150 m 6
+ 0 350 l 6
+ -0 433 67 500 150 500 c 5
+ 150 400 l 5
+ 122 400 100 378 100 350 c 6
+ 100 150 l 6
+ 100 122 122 100 150 100 c 7
+ 178 100 200 122 200 150 c 5
+ 300 150 l 5
+ 300 122 322 100 350 100 c 7
+ 378 100 400 122 400 150 c 5
+ 500 150 l 5
+ 500 67 433 0 350 0 c 7
+ 312 0 277 14 250 38 c 5
+ 223 14 188 0 150 0 c 7
+ 67 0 0 67 0 150 c 6
+EndSplineSet
+Validated: 1
+Substitution2: "Single Substitution in Latin lookup 2 subtable" gugui_c
+EndChar
+
+StartChar: hehaq
+Encoding: 25 988870 20
+Width: 300
+GlyphClass: 2
+Flags: HMW
+AnchorPoint: "Anchor-1" 150 500 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+300 -0 m 1
+ 300 -250 l 2
+ 300 -333 233 -400 150 -400 c 1
+ 178 -400 200 -333 200 -250 c 2
+ 200 0 l 1
+ 100 0 l 25
+ 100 100 l 25
+ 200 100 l 1
+ 200 350 l 2
+ 200 378 178 400 150 400 c 0
+ 122 400 100 378 100 350 c 1
+ 0 350 l 1
+ 0 433 67 500 150 500 c 0
+ 233 500 300 433 300 350 c 2
+ 300 100 l 1
+ 450 100 l 2
+ 533 100 600 122 600 150 c 1
+ 600 67 533 0 450 0 c 2
+ 300 -0 l 1
+EndSplineSet
+Validated: 1048577
+Substitution2: "Single Substitution in Latin lookup 2 subtable" hehaq_c
+EndChar
+
+StartChar: jujuo
+Encoding: 17 988862 21
+Width: 500
+GlyphClass: 2
+Flags: HMW
+AnchorPoint: "Anchor-1" 150 500 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+400 150 m 6
+ 400 350 l 6
+ 400 378 378 400 350 400 c 7
+ 322 400 300 378 300 350 c 5
+ 200 350 l 5
+ 200 378 178 400 150 400 c 7
+ 122 400 100 378 100 350 c 5
+ 0 350 l 5
+ 0 433 67 500 150 500 c 7
+ 188 500 223 486 250 462 c 5
+ 277 486 312 500 350 500 c 7
+ 433 500 500 433 500 350 c 6
+ 500 150 l 6
+ 500 67 433 0 350 0 c 5
+ 378 0 400 67 400 150 c 6
+EndSplineSet
+Validated: 1048577
+Substitution2: "Single Substitution in Latin lookup 2 subtable" jujuo_c
+EndChar
+
+StartChar: kikue
+Encoding: 23 988868 22
+Width: 300
+GlyphClass: 2
+Flags: HMW
+AnchorPoint: "Anchor-1" 150 500 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+150 0 m 3
+ 67 0 -0 67 0 150 c 2
+ 0 350 l 2
+ 0 433 67 500 150 500 c 1
+ 150 400 l 1
+ 122 400 100 378 100 350 c 2
+ 100 150 l 2
+ 100 122 122 100 150 100 c 3
+ 233 100 300 122 300 150 c 1
+ 300 67 233 0 150 0 c 3
+100 -150 m 0
+ 100 -122 122 -100 150 -100 c 0
+ 178 -100 200 -122 200 -150 c 0
+ 200 -178 178 -200 150 -200 c 0
+ 122 -200 100 -178 100 -150 c 0
+EndSplineSet
+Validated: 1048577
+Substitution2: "Single Substitution in Latin lookup 2 subtable" kikue_c
+EndChar
+
+StartChar: laoliq
+Encoding: 15 988860 23
+Width: 600
+GlyphClass: 2
+Flags: HMW
+AnchorPoint: "Anchor-1" 150 500 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+300 350 m 5
+ 300 100 l 5
+ 500 100 l 5
+ 500 350 l 6
+ 500 378 478 400 450 400 c 4
+ 422 400 400 378 400 350 c 5
+ 300 350 l 5
+600 0 m 5
+ 200 0 l 5
+ 200 350 l 4
+ 200 378 178 400 150 400 c 4
+ 122 400 100 378 100 350 c 5
+ 0 350 l 5
+ 0 433 67 500 150 500 c 4
+ 233 500 300 434 300 351 c 5
+ 300 434 367 500 450 500 c 4
+ 533 500 600 433 600 350 c 5
+ 600 0 l 5
+350 -150 m 4
+ 350 -122 372 -100 400 -100 c 4
+ 428 -100 450 -122 450 -150 c 4
+ 450 -178 428 -200 400 -200 c 4
+ 372 -200 350 -178 350 -150 c 4
+EndSplineSet
+Validated: 1048577
+Substitution2: "Single Substitution in Latin lookup 2 subtable" laoliq_c
+EndChar
+
+StartChar: mamei
+Encoding: 3 988848 24
+Width: 900
+GlyphClass: 2
+Flags: HMW
+AnchorPoint: "Anchor-1" 150 500 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+300 351 m 1
+ 300 434 367 500 450 500 c 0
+ 533 500 600 434 600 351 c 1
+ 600 434 667 500 750 500 c 0
+ 833 500 900 433 900 350 c 2
+ 900 -250 l 2
+ 900 -333 833 -400 750 -400 c 1
+ 778 -400 800 -333 800 -250 c 2
+ 800 0 l 1
+ 200 0 l 1
+ 200 350 l 2
+ 200 378 178 400 150 400 c 0
+ 122 400 100 378 100 350 c 1
+ 0 350 l 1
+ 0 433 67 500 150 500 c 0
+ 233 500 300 434 300 351 c 1
+300 350 m 1
+ 300 100 l 1
+ 500 100 l 1
+ 500 350 l 2
+ 500 378 478 400 450 400 c 0
+ 422 400 400 378 400 350 c 1
+ 300 350 l 1
+600 350 m 1
+ 600 100 l 1
+ 800 100 l 1
+ 800 350 l 2
+ 800 378 778 400 750 400 c 0
+ 722 400 700 378 700 350 c 1
+ 600 350 l 1
+EndSplineSet
+Validated: 1048577
+Substitution2: "Single Substitution in Latin lookup 2 subtable" mamei_c
+EndChar
+
+StartChar: nanaq
+Encoding: 8 988853 25
+Width: 300
+GlyphClass: 2
+Flags: HMW
+AnchorPoint: "Anchor-1" 150 500 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+200 350 m 2
+ 200 378 178 400 150 400 c 0
+ 122 400 100 378 100 350 c 2
+ 100 150 l 2
+ 100 122 122 100 150 100 c 0
+ 178 100 200 122 200 150 c 2
+ 200 350 l 2
+151 500 m 1
+ 234 500 300 432 300 349 c 0
+ 300 271 300 150 300 150 c 2
+ 300 67 233 0 150 0 c 0
+ 67 0 0 67 0 150 c 2
+ 0 350 l 2
+ -0 433 67 500 150 500 c 1
+ 150 600 l 1
+ 233 600 300 622 300 650 c 1
+ 300 567 234 500 151 500 c 1
+EndSplineSet
+Validated: 1048577
+Substitution2: "Single Substitution in Latin lookup 2 subtable" nanaq_c
+EndChar
+
+StartChar: pipoq
+Encoding: 6 988851 26
+Width: 300
+GlyphClass: 2
+Flags: HMW
+AnchorPoint: "Anchor-1" 150 500 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+200 8 m 5
+ 184 2 168 0 150 0 c 4
+ 67 0 0 67 0 150 c 6
+ 0 350 l 6
+ 0 433 67 500 150 500 c 4
+ 233 500 300 433 300 350 c 6
+ 300 -250 l 6
+ 300 -333 233 -400 150 -400 c 5
+ 178 -400 200 -333 200 -250 c 6
+ 200 8 l 5
+200 350 m 6
+ 200 378 178 400 150 400 c 4
+ 122 400 100 378 100 350 c 6
+ 100 150 l 6
+ 100 122 122 100 150 100 c 4
+ 178 100 200 122 200 150 c 6
+ 200 350 l 6
+EndSplineSet
+Validated: 1048577
+Substitution2: "Single Substitution in Latin lookup 2 subtable" pipoq_c
+EndChar
+
+StartChar: aqaq
+Encoding: 21 988866 27
+Width: 300
+GlyphClass: 2
+Flags: HMW
+AnchorPoint: "Anchor-1" 150 500 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+300 -250 m 6
+ 300 -333 233 -400 150 -400 c 5
+ 178 -400 200 -333 200 -250 c 6
+ 201 9 l 5
+ 185 3 168 0 150 0 c 7
+ 67 0 0 67 0 150 c 6
+ 0 350 l 6
+ -0 433 67 500 150 500 c 13
+ 150 400 l 21
+ 122 400 100 378 100 350 c 6
+ 100 150 l 6
+ 100 122 122 100 150 100 c 7
+ 178 100 200 122 200 150 c 13
+ 300 150 l 5
+ 300 -250 l 6
+EndSplineSet
+Validated: 1048577
+Substitution2: "Single Substitution in Latin lookup 2 subtable" aqaq_c
+EndChar
+
+StartChar: rairua
+Encoding: 14 988859 28
+Width: 600
+GlyphClass: 2
+Flags: HMW
+AnchorPoint: "Anchor-1" 150 500 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+300 351 m 5
+ 300 434 367 500 450 500 c 4
+ 533 500 600 433 600 350 c 6
+ 600 -250 l 6
+ 600 -333 533 -400 450 -400 c 5
+ 478 -400 500 -333 500 -250 c 6
+ 500 0 l 5
+ 200 0 l 5
+ 200 350 l 6
+ 200 378 178 400 150 400 c 4
+ 122 400 100 378 100 350 c 5
+ 0 350 l 5
+ 0 433 67 500 150 500 c 4
+ 233 500 300 434 300 351 c 5
+300 350 m 5
+ 300 100 l 5
+ 500 100 l 5
+ 500 350 l 6
+ 500 378 478 400 450 400 c 4
+ 422 400 400 378 400 350 c 5
+ 300 350 l 5
+EndSplineSet
+Validated: 1048577
+Substitution2: "Single Substitution in Latin lookup 2 subtable" rairua_c
+EndChar
+
+StartChar: saqseoq
+Encoding: 13 988858 29
+Width: 300
+GlyphClass: 2
+Flags: HMW
+AnchorPoint: "Anchor-1" 150 500 basechar 0
+AnchorPoint: "Anchor-0" 300 -50 basechar 0
+LayerCount: 2
+Back
+SplineSet
+0 650 m 0
+ 0 678 67 700 150 700 c 0
+ 233 700 300 678 300 650 c 0
+ 300 622 233 600 150 600 c 0
+ 67 600 0 622 0 650 c 0
+-362 349 m 0
+ -362 432 -317 499 -262 499 c 0
+ -207 499 -162 432 -162 349 c 0
+ -162 266 -207 199 -262 199 c 0
+ -317 199 -362 266 -362 349 c 0
+50 350 m 0
+ 50 406 95 451 150 451 c 0
+ 205 451 250 406 250 350 c 0
+ 250 294 205 249 150 249 c 0
+ 95 249 50 294 50 350 c 0
+100 350 m 0
+ 100 378 122 400 150 400 c 0
+ 178 400 200 378 200 350 c 0
+ 200 322 178 300 150 300 c 0
+ 122 300 100 322 100 350 c 0
+0 350 m 0
+ 0 433 67 500 150 500 c 0
+ 233 500 300 433 300 350 c 0
+ 300 267 233 200 150 200 c 0
+ 67 200 0 267 0 350 c 0
+EndSplineSet
+Fore
+SplineSet
+200 350 m 2
+ 200 378 178 400 150 400 c 3
+ 122 400 100 378 100 350 c 2
+ 100 150 l 2
+ 100 122 122 100 150 100 c 3
+ 178 100 200 122 200 150 c 2
+ 200 350 l 2
+300 150 m 2
+ 300 67 233 0 150 0 c 3
+ 67 0 0 67 0 150 c 2
+ 0 350 l 2
+ 0 433 67 500 150 500 c 3
+ 233 500 300 433 300 350 c 2
+ 300 150 l 2
+EndSplineSet
+Validated: 1
+Substitution2: "Single Substitution in Latin lookup 2 subtable" saqseoq_c
+EndChar
+
+StartChar: titieq
+Encoding: 10 988855 30
+Width: 500
+GlyphClass: 2
+Flags: HMW
+AnchorPoint: "Anchor-1" 150 500 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+400 150 m 6
+ 400 550 l 6
+ 400 578 378 600 350 600 c 7
+ 322 600 300 578 300 550 c 6
+ 300 150 l 6
+ 300 67 233 0 150 0 c 7
+ 67 0 0 67 0 150 c 6
+ 0 350 l 6
+ 0 433 67 500 150 500 c 7
+ 168 500 184 497 200 492 c 5
+ 200 550 l 6
+ 200 633 267 700 350 700 c 7
+ 433 700 500 633 500 550 c 6
+ 500 150 l 6
+ 500 67 433 0 350 0 c 5
+ 378 0 400 67 400 150 c 6
+200 350 m 6
+ 200 378 178 400 150 400 c 7
+ 122 400 100 378 100 350 c 6
+ 100 150 l 6
+ 100 122 122 100 150 100 c 7
+ 178 100 200 122 200 150 c 6
+ 200 350 l 6
+EndSplineSet
+Validated: 1048577
+Substitution2: "Single Substitution in Latin lookup 2 subtable" titieq_c
+EndChar
+
+StartChar: veva
+Encoding: 20 988865 31
+Width: 300
+GlyphClass: 2
+Flags: HMW
+AnchorPoint: "Anchor-1" 300 500 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+100 500 m 5
+ 150 500 l 6
+ 233 500 300 433 300 350 c 6
+ 300 150 l 6
+ 300 67 233 0 150 0 c 5
+ 178 0 200 67 200 150 c 6
+ 200 350 l 6
+ 200 378 178 400 150 400 c 6
+ 0 400 l 5
+ 0 500 l 6
+ 0 583 67 650 150 650 c 5
+ 122 650 100 583 100 500 c 5
+EndSplineSet
+Validated: 1048577
+Substitution2: "Single Substitution in Latin lookup 2 subtable" veva_c
+EndChar
+
+StartChar: nhanhoq
+Encoding: 16 988861 32
+Width: 300
+GlyphClass: 2
+Flags: HMW
+AnchorPoint: "Anchor-1" 150 500 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+100 350 m 9
+ 0 350 l 17
+ 0 433 67 500 150 500 c 3
+ 233 500 300 433 300 350 c 2
+ 300 150 l 2
+ 300 67 233 0 150 0 c 0
+ 67 0 0 67 0 150 c 0
+ 0 233 67 300 150 300 c 0
+ 168 300 184 297 200 292 c 1
+ 200 350 l 2
+ 200 378 178 400 150 400 c 3
+ 122 400 100 378 100 350 c 9
+100 150 m 0
+ 100 122 122 100 150 100 c 0
+ 178 100 200 122 200 150 c 0
+ 200 178 178 200 150 200 c 0
+ 122 200 100 178 100 150 c 0
+EndSplineSet
+Validated: 1048577
+Substitution2: "Single Substitution in Latin lookup 2 subtable" nhanhoq_c
+EndChar
+
+StartChar: shoshia
+Encoding: 19 988864 33
+Width: 300
+GlyphClass: 2
+Flags: HMW
+AnchorPoint: "Anchor-1" 150 500 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+201 9 m 5
+ 185 3 168 0 150 0 c 7
+ 67 0 0 67 0 150 c 6
+ 0 350 l 6
+ -0 433 67 500 150 500 c 7
+ 233 500 300 522 300 550 c 5
+ 300 467 233 400 150 400 c 7
+ 122 400 100 378 100 350 c 6
+ 100 150 l 6
+ 100 122 122 100 150 100 c 7
+ 178 100 200 122 200 150 c 5
+ 300 150 l 5
+ 300 -250 l 6
+ 300 -333 233 -400 150 -400 c 5
+ 178 -400 200 -333 200 -250 c 6
+ 201 9 l 5
+EndSplineSet
+Validated: 1048577
+Substitution2: "Single Substitution in Latin lookup 2 subtable" shoshia_c
+EndChar
+
+StartChar: chichao
+Encoding: 18 988863 34
+Width: 300
+GlyphClass: 2
+Flags: HMW
+AnchorPoint: "Anchor-1" 150 500 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+150 400 m 3
+ 122 400 100 378 100 350 c 2
+ 100 150 l 2
+ 100 122 122 100 150 100 c 3
+ 233 100 300 122 300 150 c 1
+ 300 67 233 0 150 0 c 3
+ 67 0 -0 67 0 150 c 2
+ 0 350 l 2
+ -0 433 67 500 150 500 c 19
+ 233 500 300 522 300 550 c 1
+ 300 467 233 400 150 400 c 3
+EndSplineSet
+Validated: 1048577
+Substitution2: "Single Substitution in Latin lookup 2 subtable" chichao_c
+EndChar
+
+StartChar: zozeo
+Encoding: 11 988856 35
+Width: 300
+GlyphClass: 2
+Flags: HMW
+AnchorPoint: "Anchor-1" 150 500 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+150 -399 m 3
+ 178 -399 200 -333 200 -250 c 2
+ 200 0 l 1
+ 150 0 l 2
+ 122 0 100 -22 100 -50 c 2
+ 100 -250 l 2
+ 100 -333 122 -399 150 -399 c 3
+150 -400 m 3
+ 67 -400 -0 -333 0 -250 c 2
+ 0 -50 l 2
+ -0 33 67 100 150 100 c 2
+ 200 100 l 1
+ 200 350 l 2
+ 200 378 178 400 150 400 c 0
+ 122 400 100 378 100 350 c 1
+ 0 350 l 1
+ 0 433 67 500 150 500 c 0
+ 233 500 300 433 300 350 c 2
+ 300 100 l 1
+ 450 100 l 2
+ 533 100 600 122 600 150 c 1
+ 600 67 533 0 450 0 c 2
+ 300 -0 l 1
+ 300 -250 l 2
+ 300 -333 233 -400 150 -400 c 3
+EndSplineSet
+Validated: 1048577
+Substitution2: "Single Substitution in Latin lookup 2 subtable" zozeo_c
+EndChar
+
+StartChar: rising_falling
+Encoding: 28 988876 36
+Width: 300
+GlyphClass: 4
+Flags: HMW
+AnchorPoint: "Anchor-1" 150 500 mark 0
+LayerCount: 2
+Fore
+SplineSet
+150 500 m 1
+ 178 500 200 567 200 650 c 3
+ 200 678 178 700 150 700 c 3
+ 122 700 100 678 100 650 c 1
+ 0 650 l 1
+ 0 733 67 800 150 800 c 3
+ 233 800 300 733 300 650 c 3
+ 300 567 233 500 150 500 c 1
+EndSplineSet
+Validated: 1
+EndChar
+
+StartChar: bubue_c
+Encoding: 42 -1 37
+Width: 300
+GlyphClass: 2
+Flags: HMW
+AnchorPoint: "Anchor-1" 150 500 basechar 0
+AnchorPoint: "Anchor-0" 300 -50 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+300 150 m 2
+ 300 67 233 0 150 0 c 1
+ 178 0 200 67 200 150 c 2
+ 200 350 l 2
+ 200 378 178 400 150 400 c 0
+ 122 400 100 378 100 350 c 1
+ 0 350 l 1
+ 0 433 67 500 150 500 c 0
+ 233 500 300 433 300 350 c 2
+ 300 150 l 2
+0 900 m 5
+ 0 1000 l 5
+ 350 1000 l 5
+ 350 900 l 5
+ 0 900 l 5
+EndSplineSet
+Validated: 1
+EndChar
+
+StartChar: cecoa_c
+Encoding: 43 -1 38
+Width: 300
+GlyphClass: 2
+Flags: HMW
+AnchorPoint: "Anchor-1" 150 500 basechar 0
+AnchorPoint: "Anchor-0" 300 -50 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+0 900 m 5
+ 0 1000 l 5
+ 350 1000 l 5
+ 350 900 l 5
+ 0 900 l 5
+100 350 m 2
+ 100 150 l 2
+ 100 122 122 100 150 100 c 3
+ 233 100 300 122 300 150 c 1
+ 300 67 233 0 150 0 c 3
+ 67 0 0 67 0 150 c 2
+ 0 350 l 2
+ 0 433 67 500 150 500 c 1
+ 150 400 l 1
+ 122 400 100 378 100 350 c 2
+EndSplineSet
+Validated: 1
+EndChar
+
+StartChar: dudeo_c
+Encoding: 44 -1 39
+Width: 300
+GlyphClass: 2
+Flags: HMW
+AnchorPoint: "Anchor-1" 150 500 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+0 900 m 1
+ 0 1000 l 1
+ 350 1000 l 1
+ 350 900 l 1
+ 0 900 l 1
+150 100 m 16
+ 178 100 200 122 200 150 c 2
+ 200 208 l 1
+ 184 203 168 200 150 200 c 0
+ 67 200 0 267 0 350 c 0
+ 0 433 67 500 150 500 c 0
+ 233 500 300 433 300 350 c 2
+ 300 150 l 2
+ 300 67 233 0 150 0 c 3
+ 67 0 0 67 0 150 c 1
+ 0 122 88 100 150 100 c 16
+100 350 m 0
+ 100 322 122 300 150 300 c 0
+ 178 300 200 322 200 350 c 0
+ 200 378 178 400 150 400 c 0
+ 122 400 100 378 100 350 c 0
+EndSplineSet
+Validated: 1048577
+EndChar
+
+StartChar: fofuaq_c
+Encoding: 45 -1 40
+Width: 300
+GlyphClass: 2
+Flags: HMW
+AnchorPoint: "Anchor-1" 150 500 basechar 0
+AnchorPoint: "Anchor-0" 300 -50 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+0 900 m 5
+ 0 1000 l 5
+ 350 1000 l 5
+ 350 900 l 5
+ 0 900 l 5
+300 -250 m 2
+ 300 -333 233 -400 150 -400 c 1
+ 178 -400 200 -333 200 -250 c 2
+ 200 350 l 2
+ 200 378 178 400 150 400 c 3
+ 122 400 100 378 100 350 c 9
+ 0 350 l 17
+ 0 433 67 500 150 500 c 3
+ 233 500 300 433 300 350 c 2
+ 300 -250 l 2
+EndSplineSet
+Validated: 1
+EndChar
+
+StartChar: gugui_c
+Encoding: 46 -1 41
+Width: 500
+GlyphClass: 2
+Flags: HMW
+AnchorPoint: "Anchor-1" 150 500 basechar 0
+AnchorPoint: "Anchor-0" 500 -50 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+0 900 m 1
+ 0 1000 l 1
+ 550 1000 l 1
+ 550 900 l 1
+ 0 900 l 1
+0 150 m 2
+ 0 350 l 2
+ -0 433 67 500 150 500 c 1
+ 150 400 l 1
+ 122 400 100 378 100 350 c 2
+ 100 150 l 2
+ 100 122 122 100 150 100 c 3
+ 178 100 200 122 200 150 c 1
+ 300 150 l 1
+ 300 122 322 100 350 100 c 3
+ 378 100 400 122 400 150 c 1
+ 500 150 l 1
+ 500 67 433 0 350 0 c 3
+ 312 0 277 14 250 38 c 1
+ 223 14 188 0 150 0 c 3
+ 67 0 0 67 0 150 c 2
+EndSplineSet
+Validated: 1
+EndChar
+
+StartChar: hehaq_c
+Encoding: 47 -1 42
+Width: 300
+GlyphClass: 2
+Flags: HMW
+AnchorPoint: "Anchor-1" 150 500 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+0 900 m 1
+ 0 1000 l 1
+ 350 1000 l 1
+ 350 900 l 1
+ 0 900 l 1
+300 -0 m 1
+ 300 -250 l 2
+ 300 -333 233 -400 150 -400 c 1
+ 178 -400 200 -333 200 -250 c 2
+ 200 0 l 1
+ 100 0 l 25
+ 100 100 l 25
+ 200 100 l 1
+ 200 350 l 2
+ 200 378 178 400 150 400 c 0
+ 122 400 100 378 100 350 c 1
+ 0 350 l 1
+ 0 433 67 500 150 500 c 0
+ 233 500 300 433 300 350 c 2
+ 300 100 l 1
+ 450 100 l 2
+ 533 100 600 122 600 150 c 1
+ 600 67 533 0 450 0 c 2
+ 300 -0 l 1
+EndSplineSet
+Validated: 1048577
+EndChar
+
+StartChar: jujuo_c
+Encoding: 48 -1 43
+Width: 500
+GlyphClass: 2
+Flags: HMW
+CounterMasks: 1 38
+AnchorPoint: "Anchor-1" 150 500 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+0 900 m 1
+ 0 1000 l 1
+ 550 1000 l 1
+ 550 900 l 1
+ 0 900 l 1
+400 150 m 2
+ 400 350 l 2
+ 400 378 378 400 350 400 c 3
+ 322 400 300 378 300 350 c 1
+ 200 350 l 1
+ 200 378 178 400 150 400 c 3
+ 122 400 100 378 100 350 c 1
+ 0 350 l 1
+ 0 433 67 500 150 500 c 3
+ 188 500 223 486 250 462 c 1
+ 277 486 312 500 350 500 c 3
+ 433 500 500 433 500 350 c 2
+ 500 150 l 2
+ 500 67 433 0 350 0 c 1
+ 378 0 400 67 400 150 c 2
+EndSplineSet
+Validated: 1048577
+EndChar
+
+StartChar: kikue_c
+Encoding: 49 -1 44
+Width: 300
+GlyphClass: 2
+Flags: HMW
+AnchorPoint: "Anchor-1" 150 500 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+0 900 m 5
+ 0 1000 l 5
+ 350 1000 l 5
+ 350 900 l 5
+ 0 900 l 5
+150 0 m 3
+ 67 0 -0 67 0 150 c 2
+ 0 350 l 2
+ 0 433 67 500 150 500 c 1
+ 150 400 l 1
+ 122 400 100 378 100 350 c 2
+ 100 150 l 2
+ 100 122 122 100 150 100 c 3
+ 233 100 300 122 300 150 c 1
+ 300 67 233 0 150 0 c 3
+100 -150 m 0
+ 100 -122 122 -100 150 -100 c 0
+ 178 -100 200 -122 200 -150 c 0
+ 200 -178 178 -200 150 -200 c 0
+ 122 -200 100 -178 100 -150 c 0
+EndSplineSet
+Validated: 1048577
+EndChar
+
+StartChar: laoliq_c
+Encoding: 50 -1 45
+Width: 600
+GlyphClass: 2
+Flags: HMW
+AnchorPoint: "Anchor-1" 150 500 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+0 900 m 1
+ 0 1000 l 1
+ 650 1000 l 1
+ 650 900 l 1
+ 0 900 l 1
+300 350 m 1
+ 300 100 l 1
+ 500 100 l 1
+ 500 350 l 2
+ 500 378 478 400 450 400 c 0
+ 422 400 400 378 400 350 c 1
+ 300 350 l 1
+600 0 m 1
+ 200 0 l 1
+ 200 350 l 0
+ 200 378 178 400 150 400 c 0
+ 122 400 100 378 100 350 c 1
+ 0 350 l 1
+ 0 433 67 500 150 500 c 0
+ 233 500 300 434 300 351 c 1
+ 300 434 367 500 450 500 c 0
+ 533 500 600 433 600 350 c 1
+ 600 0 l 1
+350 -150 m 0
+ 350 -122 372 -100 400 -100 c 0
+ 428 -100 450 -122 450 -150 c 0
+ 450 -178 428 -200 400 -200 c 0
+ 372 -200 350 -178 350 -150 c 0
+EndSplineSet
+Validated: 1048577
+EndChar
+
+StartChar: mamei_c
+Encoding: 51 -1 46
+Width: 900
+GlyphClass: 2
+Flags: HMW
+AnchorPoint: "Anchor-1" 150 500 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+300 351 m 1
+ 300 434 367 500 450 500 c 0
+ 533 500 600 434 600 351 c 1
+ 600 434 667 500 750 500 c 0
+ 833 500 900 433 900 350 c 2
+ 900 -250 l 2
+ 900 -333 833 -400 750 -400 c 1
+ 778 -400 800 -333 800 -250 c 2
+ 800 0 l 1
+ 200 0 l 1
+ 200 350 l 2
+ 200 378 178 400 150 400 c 0
+ 122 400 100 378 100 350 c 1
+ 0 350 l 1
+ 0 433 67 500 150 500 c 0
+ 233 500 300 434 300 351 c 1
+300 350 m 1
+ 300 100 l 1
+ 500 100 l 1
+ 500 350 l 2
+ 500 378 478 400 450 400 c 0
+ 422 400 400 378 400 350 c 1
+ 300 350 l 1
+600 350 m 1
+ 600 100 l 1
+ 800 100 l 1
+ 800 350 l 2
+ 800 378 778 400 750 400 c 0
+ 722 400 700 378 700 350 c 1
+ 600 350 l 1
+0 900 m 1
+ 0 1000 l 1
+ 950 1000 l 1
+ 950 900 l 1
+ 0 900 l 1
+EndSplineSet
+Validated: 1048577
+EndChar
+
+StartChar: nanaq_c
+Encoding: 52 -1 47
+Width: 300
+GlyphClass: 2
+Flags: HMW
+AnchorPoint: "Anchor-1" 150 500 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+0 900 m 5
+ 0 1000 l 5
+ 350 1000 l 5
+ 350 900 l 5
+ 0 900 l 5
+200 350 m 2
+ 200 378 178 400 150 400 c 0
+ 122 400 100 378 100 350 c 2
+ 100 150 l 2
+ 100 122 122 100 150 100 c 0
+ 178 100 200 122 200 150 c 2
+ 200 350 l 2
+151 500 m 1
+ 234 500 300 432 300 349 c 0
+ 300 271 300 150 300 150 c 2
+ 300 67 233 0 150 0 c 0
+ 67 0 0 67 0 150 c 2
+ 0 350 l 2
+ -0 433 67 500 150 500 c 1
+ 150 600 l 1
+ 233 600 300 622 300 650 c 1
+ 300 567 234 500 151 500 c 1
+EndSplineSet
+Validated: 1048577
+EndChar
+
+StartChar: pipoq_c
+Encoding: 53 -1 48
+Width: 300
+GlyphClass: 2
+Flags: HMW
+AnchorPoint: "Anchor-1" 150 500 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+200 8 m 1
+ 184 2 168 0 150 0 c 0
+ 67 0 0 67 0 150 c 2
+ 0 350 l 2
+ 0 433 67 500 150 500 c 0
+ 233 500 300 433 300 350 c 2
+ 300 -250 l 2
+ 300 -333 233 -400 150 -400 c 1
+ 178 -400 200 -333 200 -250 c 2
+ 200 8 l 1
+200 350 m 2
+ 200 378 178 400 150 400 c 0
+ 122 400 100 378 100 350 c 2
+ 100 150 l 2
+ 100 122 122 100 150 100 c 0
+ 178 100 200 122 200 150 c 2
+ 200 350 l 2
+0 900 m 1
+ 0 1000 l 1
+ 350 1000 l 1
+ 350 900 l 1
+ 0 900 l 1
+EndSplineSet
+Validated: 1048577
+EndChar
+
+StartChar: aqaq_c
+Encoding: 54 -1 49
+Width: 300
+GlyphClass: 2
+Flags: HMW
+AnchorPoint: "Anchor-1" 150 500 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+0 900 m 5
+ 0 1000 l 5
+ 350 1000 l 5
+ 350 900 l 5
+ 0 900 l 5
+300 -250 m 2
+ 300 -333 233 -400 150 -400 c 1
+ 178 -400 200 -333 200 -250 c 2
+ 201 9 l 1
+ 185 3 168 0 150 0 c 3
+ 67 0 0 67 0 150 c 2
+ 0 350 l 2
+ -0 433 67 500 150 500 c 9
+ 150 400 l 17
+ 122 400 100 378 100 350 c 2
+ 100 150 l 2
+ 100 122 122 100 150 100 c 3
+ 178 100 200 122 200 150 c 9
+ 300 150 l 1
+ 300 -250 l 2
+EndSplineSet
+Validated: 1048577
+EndChar
+
+StartChar: rairua_c
+Encoding: 55 -1 50
+Width: 600
+GlyphClass: 2
+InSpiro: 1
+Flags: HMW
+AnchorPoint: "Anchor-1" 150 500 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+0 900 m 1
+ 0 1000 l 1
+ 650 1000 l 1
+ 650 900 l 1
+ 0 900 l 1
+  Spiro
+    0 900 v
+    0 1000 v
+    650 1000 v
+    650 900 v
+    0 0 z
+  EndSpiro
+300 351 m 1
+ 300 434 367 500 450 500 c 0
+ 533 500 600 433 600 350 c 2
+ 600 -250 l 2
+ 600 -333 533 -400 450 -400 c 1
+ 478 -400 500 -333 500 -250 c 2
+ 500 0 l 1
+ 200 0 l 1
+ 200 350 l 2
+ 200 378 178 400 150 400 c 0
+ 122 400 100 378 100 350 c 1
+ 0 350 l 1
+ 0 433 67 500 150 500 c 0
+ 233 500 300 434 300 351 c 1
+  Spiro
+    300 351 v
+    320.405 426.452 o
+    374.289 479.853 o
+    450 500 o
+    525.711 479.595 o
+    579.595 425.711 o
+    600 350 [
+    600 -250 ]
+    579.595 -325.711 o
+    525.711 -379.595 o
+    450 -400 v
+    475.385 -379.595 o
+    493.272 -325.711 o
+    500 -250 [
+    500 0 v
+    200 0 v
+    200 350 ]
+    193.272 375.385 o
+    175.385 393.272 o
+    150 400 o
+    124.615 393.272 o
+    106.728 375.385 o
+    100 350 v
+    0 350 v
+    20.4055 425.711 o
+    74.2889 479.595 o
+    150 500 o
+    225.711 479.853 o
+    279.595 426.452 o
+    0 0 z
+  EndSpiro
+300 350 m 1
+ 300 100 l 1
+ 500 100 l 1
+ 500 350 l 2
+ 500 378 478 400 450 400 c 0
+ 422 400 400 378 400 350 c 1
+ 300 350 l 1
+  Spiro
+    300 350 v
+    300 100 v
+    500 100 v
+    500 350 ]
+    493.272 375.385 o
+    475.385 393.272 o
+    450 400 o
+    424.615 393.272 o
+    406.728 375.385 o
+    400 350 v
+    0 0 z
+  EndSpiro
+EndSplineSet
+Validated: 1048577
+EndChar
+
+StartChar: saqseoq_c
+Encoding: 56 -1 51
+Width: 300
+GlyphClass: 2
+Flags: HMW
+AnchorPoint: "Anchor-0" 300 -50 basechar 0
+AnchorPoint: "Anchor-1" 150 500 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+0 900 m 5
+ 0 1000 l 5
+ 350 1000 l 5
+ 350 900 l 5
+ 0 900 l 5
+200 350 m 2
+ 200 378 178 400 150 400 c 3
+ 122 400 100 378 100 350 c 2
+ 100 150 l 2
+ 100 122 122 100 150 100 c 3
+ 178 100 200 122 200 150 c 2
+ 200 350 l 2
+300 150 m 2
+ 300 67 233 0 150 0 c 3
+ 67 0 0 67 0 150 c 2
+ 0 350 l 2
+ 0 433 67 500 150 500 c 3
+ 233 500 300 433 300 350 c 2
+ 300 150 l 2
+EndSplineSet
+Validated: 1
+EndChar
+
+StartChar: titieq_c
+Encoding: 57 -1 52
+Width: 500
+GlyphClass: 2
+Flags: HMW
+CounterMasks: 1 0e
+AnchorPoint: "Anchor-1" 150 500 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+0 900 m 1
+ 0 1000 l 1
+ 550 1000 l 1
+ 550 900 l 1
+ 0 900 l 1
+400 150 m 2
+ 400 550 l 2
+ 400 578 378 600 350 600 c 3
+ 322 600 300 578 300 550 c 2
+ 300 150 l 2
+ 300 67 233 0 150 0 c 3
+ 67 0 0 67 0 150 c 2
+ 0 350 l 2
+ 0 433 67 500 150 500 c 3
+ 168 500 184 497 200 492 c 1
+ 200 550 l 2
+ 200 633 267 700 350 700 c 3
+ 433 700 500 633 500 550 c 2
+ 500 150 l 2
+ 500 67 433 0 350 0 c 1
+ 378 0 400 67 400 150 c 2
+200 350 m 2
+ 200 378 178 400 150 400 c 3
+ 122 400 100 378 100 350 c 2
+ 100 150 l 2
+ 100 122 122 100 150 100 c 3
+ 178 100 200 122 200 150 c 2
+ 200 350 l 2
+EndSplineSet
+Validated: 1048577
+EndChar
+
+StartChar: veva_c
+Encoding: 58 -1 53
+Width: 300
+GlyphClass: 2
+Flags: HMW
+AnchorPoint: "Anchor-1" 300 500 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+0 900 m 5
+ 0 1000 l 5
+ 350 1000 l 5
+ 350 900 l 5
+ 0 900 l 5
+100 500 m 1
+ 150 500 l 2
+ 233 500 300 433 300 350 c 2
+ 300 150 l 2
+ 300 67 233 0 150 0 c 1
+ 178 0 200 67 200 150 c 2
+ 200 350 l 2
+ 200 378 178 400 150 400 c 2
+ 0 400 l 1
+ 0 500 l 2
+ 0 583 67 650 150 650 c 1
+ 122 650 100 583 100 500 c 1
+EndSplineSet
+Validated: 1048577
+EndChar
+
+StartChar: nhanhoq_c
+Encoding: 59 -1 54
+Width: 300
+GlyphClass: 2
+Flags: HMW
+AnchorPoint: "Anchor-1" 150 500 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+0 900 m 5
+ 0 1000 l 5
+ 350 1000 l 5
+ 350 900 l 5
+ 0 900 l 5
+100 350 m 9
+ 0 350 l 17
+ 0 433 67 500 150 500 c 3
+ 233 500 300 433 300 350 c 2
+ 300 150 l 2
+ 300 67 233 0 150 0 c 0
+ 67 0 0 67 0 150 c 0
+ 0 233 67 300 150 300 c 0
+ 168 300 184 297 200 292 c 1
+ 200 350 l 2
+ 200 378 178 400 150 400 c 3
+ 122 400 100 378 100 350 c 9
+100 150 m 0
+ 100 122 122 100 150 100 c 0
+ 178 100 200 122 200 150 c 0
+ 200 178 178 200 150 200 c 0
+ 122 200 100 178 100 150 c 0
+EndSplineSet
+Validated: 1048577
+EndChar
+
+StartChar: shoshia_c
+Encoding: 60 -1 55
+Width: 300
+GlyphClass: 2
+Flags: HMW
+AnchorPoint: "Anchor-1" 150 500 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+0 900 m 5
+ 0 1000 l 5
+ 350 1000 l 5
+ 350 900 l 5
+ 0 900 l 5
+201 9 m 1
+ 185 3 168 0 150 0 c 3
+ 67 0 0 67 0 150 c 2
+ 0 350 l 2
+ -0 433 67 500 150 500 c 3
+ 233 500 300 522 300 550 c 1
+ 300 467 233 400 150 400 c 3
+ 122 400 100 378 100 350 c 2
+ 100 150 l 2
+ 100 122 122 100 150 100 c 3
+ 178 100 200 122 200 150 c 1
+ 300 150 l 1
+ 300 -250 l 2
+ 300 -333 233 -400 150 -400 c 1
+ 178 -400 200 -333 200 -250 c 2
+ 201 9 l 1
+EndSplineSet
+Validated: 1048577
+EndChar
+
+StartChar: chichao_c
+Encoding: 61 -1 56
+Width: 300
+GlyphClass: 2
+Flags: HMW
+AnchorPoint: "Anchor-1" 150 500 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+0 900 m 5
+ 0 1000 l 5
+ 350 1000 l 5
+ 350 900 l 5
+ 0 900 l 5
+150 400 m 3
+ 122 400 100 378 100 350 c 2
+ 100 150 l 2
+ 100 122 122 100 150 100 c 3
+ 233 100 300 122 300 150 c 1
+ 300 67 233 0 150 0 c 3
+ 67 0 -0 67 0 150 c 2
+ 0 350 l 2
+ -0 433 67 500 150 500 c 19
+ 233 500 300 522 300 550 c 1
+ 300 467 233 400 150 400 c 3
+EndSplineSet
+Validated: 1048577
+EndChar
+
+StartChar: zozeo_c
+Encoding: 62 -1 57
+Width: 300
+GlyphClass: 2
+Flags: HMW
+AnchorPoint: "Anchor-1" 150 500 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+0 900 m 5
+ 0 1000 l 5
+ 350 1000 l 5
+ 350 900 l 5
+ 0 900 l 5
+150 -399 m 3
+ 178 -399 200 -333 200 -250 c 2
+ 200 0 l 1
+ 150 0 l 2
+ 122 0 100 -22 100 -50 c 2
+ 100 -250 l 2
+ 100 -333 122 -399 150 -399 c 3
+150 -400 m 3
+ 67 -400 -0 -333 0 -250 c 2
+ 0 -50 l 2
+ -0 33 67 100 150 100 c 2
+ 200 100 l 1
+ 200 350 l 2
+ 200 378 178 400 150 400 c 0
+ 122 400 100 378 100 350 c 1
+ 0 350 l 1
+ 0 433 67 500 150 500 c 0
+ 233 500 300 433 300 350 c 2
+ 300 100 l 1
+ 450 100 l 2
+ 533 100 600 122 600 150 c 1
+ 600 67 533 0 450 0 c 2
+ 300 -0 l 1
+ 300 -250 l 2
+ 300 -333 233 -400 150 -400 c 3
+EndSplineSet
+Validated: 1048577
+EndChar
+
+StartChar: space_c
+Encoding: 63 -1 58
+Width: 300
+GlyphClass: 1
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+0 900 m 5
+ 0 1000 l 5
+ 350 1000 l 5
+ 350 900 l 5
+ 0 900 l 5
+EndSplineSet
+Validated: 1
+EndChar
+
+StartChar: prefix_c
+Encoding: 64 -1 59
+Width: 300
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+0 900 m 5
+ 0 1000 l 5
+ 350 1000 l 5
+ 350 900 l 5
+ 0 900 l 5
+100 150 m 0
+ 100 178 122 200 150 200 c 0
+ 178 200 200 178 200 150 c 0
+ 200 122 178 100 150 100 c 0
+ 122 100 100 122 100 150 c 0
+100 350 m 0
+ 100 378 122 400 150 400 c 0
+ 178 400 200 378 200 350 c 0
+ 200 322 178 300 150 300 c 0
+ 122 300 100 322 100 350 c 0
+EndSplineSet
+Validated: 1
+EndChar
+
+StartChar: oaomo_c
+Encoding: 65 -1 60
+Width: 300
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+0 900 m 5
+ 0 1000 l 5
+ 350 1000 l 5
+ 350 900 l 5
+ 0 900 l 5
+100 250 m 0
+ 100 278 122 300 150 300 c 0
+ 178 300 200 278 200 250 c 0
+ 200 222 178 200 150 200 c 0
+ 122 200 100 222 100 250 c 0
+EndSplineSet
+Validated: 1
+EndChar
+
+StartChar: quote_c
+Encoding: 66 -1 61
+Width: 300
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+0 900 m 5
+ 0 1000 l 5
+ 350 1000 l 5
+ 350 900 l 5
+ 0 900 l 5
+149 250 m 1
+ 50 350 l 1
+ 150 450 l 1
+ 250 350 l 1
+ 151 250 l 1
+ 250 150 l 1
+ 150 50 l 1
+ 50 150 l 1
+ 149 250 l 1
+EndSplineSet
+Validated: 1
+EndChar
+
+StartChar: dotted_circle
+Encoding: 2 9676 62
+Width: 300
+GlyphClass: 2
+Flags: HMW
+AnchorPoint: "Anchor-1" 150 500 basechar 0
+AnchorPoint: "Anchor-0" 300 -50 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+0 150 m 1
+ 0 250 l 1
+ 100 250 l 1
+ 100 150 l 1
+ 0 150 l 1
+0 350 m 1
+ 0 392 17 429 44 456 c 1
+ 115 386 l 1
+ 106 377 100 364 100 350 c 1
+ 0 350 l 1
+150 500 m 1
+ 192 500 229 483 256 456 c 1
+ 186 385 l 1
+ 177 394 164 400 150 400 c 1
+ 150 500 l 1
+300 350 m 1
+ 300 250 l 1
+ 200 250 l 1
+ 200 350 l 1
+ 300 350 l 1
+300 150 m 1
+ 300 108 283 71 256 44 c 1
+ 185 114 l 1
+ 194 123 200 136 200 150 c 1
+ 300 150 l 1
+150 0 m 1
+ 108 0 71 17 44 44 c 1
+ 114 115 l 1
+ 123 106 136 100 150 100 c 1
+ 150 0 l 1
+EndSplineSet
+Validated: 1
+EndChar
+
+StartChar: mamei_coda
+Encoding: 4 988849 63
+Width: 600
+GlyphClass: 2
+Flags: HMW
+AnchorPoint: "Anchor-1" 150 500 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+300 350 m 5
+ 300 100 l 5
+ 500 100 l 5
+ 500 350 l 6
+ 500 378 478 400 450 400 c 4
+ 422 400 400 378 400 350 c 5
+ 300 350 l 5
+600 0 m 5
+ 200 0 l 5
+ 200 350 l 4
+ 200 378 178 400 150 400 c 4
+ 122 400 100 378 100 350 c 5
+ 0 350 l 5
+ 0 433 67 500 150 500 c 4
+ 233 500 300 434 300 351 c 5
+ 300 434 367 500 450 500 c 4
+ 533 500 600 433 600 350 c 5
+ 600 0 l 5
+EndSplineSet
+Validated: 1048577
+Substitution2: "Single Substitution in Latin lookup 2 subtable" mamei_coda_c
+EndChar
+
+StartChar: mamei_coda_c
+Encoding: 67 -1 64
+Width: 600
+GlyphClass: 2
+Flags: HMW
+AnchorPoint: "Anchor-1" 150 500 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+0 900 m 1
+ 0 1000 l 1
+ 650 1000 l 1
+ 650 900 l 1
+ 0 900 l 1
+300 350 m 1
+ 300 100 l 1
+ 500 100 l 1
+ 500 350 l 2
+ 500 378 478 400 450 400 c 0
+ 422 400 400 378 400 350 c 1
+ 300 350 l 1
+600 0 m 1
+ 200 0 l 1
+ 200 350 l 0
+ 200 378 178 400 150 400 c 0
+ 122 400 100 378 100 350 c 1
+ 0 350 l 1
+ 0 433 67 500 150 500 c 0
+ 233 500 300 434 300 351 c 1
+ 300 434 367 500 450 500 c 0
+ 533 500 600 433 600 350 c 1
+ 600 0 l 1
+EndSplineSet
+Validated: 1048577
+EndChar
+
+StartChar: hiatus
+Encoding: 29 988877 65
+Width: 0
+GlyphClass: 4
+Flags: HMW
+AnchorPoint: "Anchor-0" 150 -50 mark 0
+LayerCount: 2
+Fore
+SplineSet
+114 -164 m 5
+ 50 -88 l 5
+ 77 -64 112 -50 150 -50 c 7
+ 233 -50 300 -117 300 -200 c 5
+ 300 -172 233 -150 150 -150 c 7
+ 136 -150 124 -156 114 -164 c 5
+EndSplineSet
+Validated: 1
+Substitution2: "Single Substitution in Latin lookup 0 subtable" hiatus_diphthong
+EndChar
+
+StartChar: hiatus_diphthong
+Encoding: 68 -1 66
+Width: 0
+GlyphClass: 4
+Flags: HMW
+AnchorPoint: "Anchor-0" 150 -50 mark 0
+LayerCount: 2
+Fore
+SplineSet
+300 -200 m 1
+ 300 -172 233 -150 150 -150 c 3
+ 136 -150 124 -156 114 -164 c 1
+ 50 -88 l 1
+ 77 -64 112 -50 150 -50 c 3
+ 233 -50 300 -116 300 -199 c 1
+ 300 -116 367 -50 450 -50 c 2
+ 600 -50 l 1
+ 600 -150 l 2
+ 600 -233 533 -300 450 -300 c 1
+ 478 -300 500 -233 500 -150 c 1
+ 450 -150 l 2
+ 367 -150 300 -172 300 -200 c 1
+EndSplineSet
+Validated: 1
+EndChar
+
+StartChar: nbsp
+Encoding: 1 160 67
+Width: 300
+GlyphClass: 2
+Flags: W
+LayerCount: 2
+Fore
+Validated: 1
+Kerns2: 4 0 "'kern' Horizontal Kerning in Latin lookup 1 subtable" 12 0 "'kern' Horizontal Kerning in Latin lookup 1 subtable"
+Substitution2: "Single Substitution in Latin lookup 2 subtable" space_c
+EndChar
+
+StartChar: space_compat
+Encoding: 40 988891 68
+Width: 300
+GlyphClass: 1
+Flags: W
+LayerCount: 2
+Fore
+Validated: 1
+Kerns2: 4 0 "'kern' Horizontal Kerning in Latin lookup 1 subtable" 12 0 "'kern' Horizontal Kerning in Latin lookup 1 subtable"
+Substitution2: "Single Substitution in Latin lookup 2 subtable" space_c
+EndChar
+
+StartChar: cecoa_hiatus
+Encoding: 69 -1 69
+Width: 300
+Flags: W
+HStem: -150 100<199.737 327.85> 0 100<108.659 227.85> 400 100<108.88 150>
+VStem: 0 100<108.88 391.12>
+AnchorPoint: "Anchor-1" 150 500 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+100 350 m 2
+ 100 150 l 2
+ 100 122 122 100 150 100 c 3
+ 233 100 300 122 300 150 c 1
+ 300 67 233 0 150 0 c 3
+ 67 0 0 67 0 150 c 2
+ 0 350 l 2
+ 0 433 67 500 150 500 c 1
+ 150 400 l 1
+ 122 400 100 378 100 350 c 2
+214 -164 m 5
+ 150 -88 l 5
+ 177 -64 212 -50 250 -50 c 7
+ 333 -50 400 -117 400 -200 c 5
+ 400 -172 333 -150 250 -150 c 7
+ 236 -150 224 -156 214 -164 c 5
+EndSplineSet
+Validated: 1048577
+Ligature2: "'liga' Standard Ligatures lookup 0-1" cecoa hiatus
+LCarets2: 1 0
+EndChar
+
+StartChar: cecoa_c_hiatus
+Encoding: 70 -1 70
+Width: 300
+Flags: W
+HStem: -150 100<199.737 327.85> 0 100<108.659 227.85> 400 100<108.88 150> 900 100<0 350>
+VStem: 0 100<108.88 391.12>
+AnchorPoint: "Anchor-1" 150 500 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+214 -164 m 1
+ 150 -88 l 1
+ 177 -64 212 -50 250 -50 c 3
+ 333 -50 400 -117 400 -200 c 1
+ 400 -172 333 -150 250 -150 c 3
+ 236 -150 224 -156 214 -164 c 1
+0 900 m 1
+ 0 1000 l 1
+ 350 1000 l 1
+ 350 900 l 1
+ 0 900 l 1
+100 350 m 2
+ 100 150 l 2
+ 100 122 122 100 150 100 c 3
+ 233 100 300 122 300 150 c 1
+ 300 67 233 0 150 0 c 3
+ 67 0 0 67 0 150 c 2
+ 0 350 l 2
+ 0 433 67 500 150 500 c 1
+ 150 400 l 1
+ 122 400 100 378 100 350 c 2
+EndSplineSet
+Validated: 1048577
+LCarets2: 1 0
+Ligature2: "'liga' Standard Ligatures lookup 0-1" cecoa_c hiatus
+EndChar
+
+StartChar: gugui_hiatus
+Encoding: 71 -1 71
+Width: 500
+Flags: W
+HStem: -150 100<399.737 527.85> 0 100<108.659 191.392 308.608 391.341> 400 100<108.88 150>
+VStem: 0 100<108.88 391.12> 200 100<108.438 150> 400 100<108.88 150>
+CounterMasks: 1 1c
+AnchorPoint: "Anchor-1" 150 500 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+414 -164 m 5
+ 350 -88 l 5
+ 377 -64 412 -50 450 -50 c 7
+ 533 -50 600 -117 600 -200 c 5
+ 600 -172 533 -150 450 -150 c 7
+ 436 -150 424 -156 414 -164 c 5
+0 150 m 2
+ 0 350 l 2
+ -0 433 67 500 150 500 c 1
+ 150 400 l 1
+ 122 400 100 378 100 350 c 2
+ 100 150 l 2
+ 100 122 122 100 150 100 c 3
+ 178 100 200 122 200 150 c 1
+ 300 150 l 1
+ 300 122 322 100 350 100 c 3
+ 378 100 400 122 400 150 c 1
+ 500 150 l 1
+ 500 67 433 0 350 0 c 3
+ 312 0 277 14 250 38 c 1
+ 223 14 188 0 150 0 c 3
+ 67 0 0 67 0 150 c 2
+EndSplineSet
+Validated: 1048577
+LCarets2: 1 0
+Ligature2: "'liga' Standard Ligatures lookup 0-1" gugui hiatus
+EndChar
+
+StartChar: gugui_c_hiatus
+Encoding: 72 -1 72
+Width: 500
+Flags: W
+HStem: -150 100<399.737 527.85> 0 100<108.659 191.392 308.608 391.341> 400 100<108.88 150> 900 100<0 550>
+VStem: 0 100<108.88 391.12> 200 100<108.438 150> 400 100<108.88 150>
+CounterMasks: 1 0e
+AnchorPoint: "Anchor-1" 150 500 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+414 -164 m 1
+ 350 -88 l 1
+ 377 -64 412 -50 450 -50 c 3
+ 533 -50 600 -117 600 -200 c 1
+ 600 -172 533 -150 450 -150 c 3
+ 436 -150 424 -156 414 -164 c 1
+0 900 m 1
+ 0 1000 l 1
+ 550 1000 l 1
+ 550 900 l 1
+ 0 900 l 1
+0 150 m 2
+ 0 350 l 2
+ -0 433 67 500 150 500 c 1
+ 150 400 l 1
+ 122 400 100 378 100 350 c 2
+ 100 150 l 2
+ 100 122 122 100 150 100 c 3
+ 178 100 200 122 200 150 c 1
+ 300 150 l 1
+ 300 122 322 100 350 100 c 3
+ 378 100 400 122 400 150 c 1
+ 500 150 l 1
+ 500 67 433 0 350 0 c 3
+ 312 0 277 14 250 38 c 1
+ 223 14 188 0 150 0 c 3
+ 67 0 0 67 0 150 c 2
+EndSplineSet
+Validated: 1048577
+LCarets2: 1 0
+Ligature2: "'liga' Standard Ligatures lookup 0-1" gugui_c hiatus
+EndChar
+EndChars
+EndSplineFont
