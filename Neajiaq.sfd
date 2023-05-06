@@ -22,7 +22,7 @@ OS2Version: 4
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1670694376
-ModificationTime: 1683131743
+ModificationTime: 1683387615
 PfmFamily: 81
 TTFWeight: 400
 TTFWidth: 5
@@ -57,14 +57,14 @@ OS2XHeight: 513
 OS2Vendor: 'FSTR'
 OS2CodePages: 200101ff.cdff0000
 OS2UnicodeRanges: 00000001.10000000.00000000.00000000
-Lookup: 1 0 0 "Single Substitution in Latin lookup 0" { "Single Substitution in Latin lookup 0 subtable"  } ['vvfl' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
-Lookup: 2 0 0 "Multiple Substitution in Latin lookup 1" { "Multiple Substitution in Latin lookup 1 subtable"  } ['delt' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
-Lookup: 1 0 0 "Single Substitution in Latin lookup 2" { "Single Substitution in Latin lookup 2 subtable"  } ['cart' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
-Lookup: 1 0 0 "Single Substitution in Latin lookup 3" { "Single Substitution in Latin lookup 3 subtable"  } ['cart' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
-Lookup: 5 0 0 "'calt' Contextual Alternates in Latin lookup 4" { "'calt' Contextual Alternates in Latin lookup 4 subtable"  } ['calt' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
-Lookup: 5 8 0 "'rclt' Required Contextual Alternates in Latin lookup 5" { "'rclt' Required Contextual Alternates in Latin lookup 5 subtable"  } ['rclt' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
-Lookup: 6 8 0 "'rclt' Required Contextual Alternates in Latin lookup 6" { "'rclt' Required Contextual Alternates in Latin lookup 6 subtable"  } ['rclt' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
-Lookup: 5 8 0 "'rclt' Required Contextual Alternates in Latin lookup 7" { "'rclt' Required Contextual Alternates in Latin lookup 7 subtable"  } ['rclt' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
+Lookup: 1 0 0 "Hiatus to hiatus diphthong" { "Hiatus to hiatus diphthong"  } ['vvfl' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
+Lookup: 2 0 0 "Remove diphthong" { "Remove diphthong"  } ['delt' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
+Lookup: 1 0 0 "Add cartouche" { "Add cartouche"  } ['cart' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
+Lookup: 1 0 0 "Switch to cartouche end variant" { "Switch to cartouche end variant"  } ['cart' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
+Lookup: 5 0 0 "Form hiatus-diphthong ligatures" { "Form hiatus-diphthong ligatures"  } ['calt' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
+Lookup: 5 8 0 "Start cartouches" { "Start cartouches"  } ['rclt' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
+Lookup: 6 8 0 "Extend cartouches" { "Extend cartouches"  } ['rclt' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
+Lookup: 5 8 0 "End cartouches" { "End cartouches"  } ['rclt' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
 Lookup: 260 0 0 "'mark' Mark Positioning in Latin lookup 0" { "'mark' Mark Positioning in Latin lookup 0 subtable"  } ['mark' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
 Lookup: 258 0 0 "'kern' Horizontal Kerning in Latin lookup 1" { "'kern' Horizontal Kerning in Latin lookup 1 subtable" [150,15,0] "'kern' Horizontal Kerning in Latin lookup 1-1" [150,15,0] } ['kern' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
 MarkAttachClasses: 1
@@ -77,7 +77,7 @@ KernClass2: 4+ 3 "'kern' Horizontal Kerning in Latin lookup 1-1"
  472 mamei mamei_coda bubue fofuaq rairua laoliq jujuo veva hehaq bubue_c fofuaq_c hehaq_c jujuo_c laoliq_c mamei_c rairua_c veva_c bubue_c_end fofuaq_c_end hehaq_c_end laoliq_c_end mamei_c_end rairua_c_end veva_c_end zozeo_c_end mamei_coda_c mamei_coda_c_end hehaq_conn hehaq_conn_c hehaq_c_nonn_end hiatus_bubue hiatus_bubue_c hiatus_bubue_c_end hiatus_fofuaq hiatus_fofuaq_c hiatus_fofuaq_c_end fofuaq_hiatus_diphthong fofuaq_hiatus_diphthong_c fofuaq_hiatus_diphthong_c_end
  336 gugui_c nanaq_c pipoq_c aqaq_c saqseoq_c titieq_c nhanhoq_c cecoa_c_end gugui_c_end nanaq_c_end pipoq_c_end aqaq_c_end saqseoq_c_end titieq_c_end nhanhoq_c_end shoshia_c_end chichao_c_end cecoa_dia cecoa_dia_c cecoa_dia_c_end aqaq_dia aqaq_dia_c aqaq_dia_c_end gugui_dia gugui_dia_c gugui_dia_c_end kikue_dia kikue_dia_c kikue_dia_c_end
  0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} -220 {} 0 {} 0 {} 0 {} 0 {}
-ContextSub2: class "'rclt' Required Contextual Alternates in Latin lookup 7 subtable" 3 0 0 1
+ContextSub2: class "End cartouches" 3 0 0 1
   Class: 223 bubue_c cecoa_c dudeo_c fofuaq_c gugui_c hehaq_c jujuo_c kikue_c laoliq_c mamei_c nanaq_c pipoq_c aqaq_c rairua_c saqseoq_c titieq_c veva_c nhanhoq_c shoshia_c chichao_c zozeo_c space_c prefix_c oaomo_c quote_c mamei_coda_c
   Class: 13 cartouche_end
  2 0 0
@@ -85,10 +85,10 @@ ContextSub2: class "'rclt' Required Contextual Alternates in Latin lookup 7 subt
   BClsList:
   FClsList:
  1
-  SeqLookup: 0 "Single Substitution in Latin lookup 3"
+  SeqLookup: 0 "Switch to cartouche end variant"
   ClassNames: "0" "1" "2"
 EndFPST
-ChainSub2: class "'rclt' Required Contextual Alternates in Latin lookup 6 subtable" 2 2 1 1
+ChainSub2: class "Extend cartouches" 2 2 1 1
   Class: 204 space quote oaomo prefix bubue cecoa dudeo fofuaq gugui hehaq jujuo kikue laoliq mamei nanaq pipoq aqaq rairua saqseoq titieq veva nhanhoq shoshia chichao zozeo rising_falling mamei_coda nbsp space_compat
   BClass: 223 bubue_c cecoa_c dudeo_c fofuaq_c gugui_c hehaq_c jujuo_c kikue_c laoliq_c mamei_c nanaq_c pipoq_c aqaq_c rairua_c saqseoq_c titieq_c veva_c nhanhoq_c shoshia_c chichao_c zozeo_c space_c prefix_c oaomo_c quote_c mamei_coda_c
  1 1 0
@@ -96,12 +96,12 @@ ChainSub2: class "'rclt' Required Contextual Alternates in Latin lookup 6 subtab
   BClsList: 1
   FClsList:
  1
-  SeqLookup: 0 "Single Substitution in Latin lookup 2"
+  SeqLookup: 0 "Add cartouche"
   ClassNames: "0" "1"
   BClassNames: "0" "1"
   FClassNames: "0"
 EndFPST
-ContextSub2: class "'rclt' Required Contextual Alternates in Latin lookup 5 subtable" 3 0 0 1
+ContextSub2: class "Start cartouches" 3 0 0 1
   Class: 189 space quote oaomo prefix bubue cecoa dudeo fofuaq gugui hehaq jujuo kikue laoliq mamei nanaq pipoq aqaq rairua saqseoq titieq veva nhanhoq shoshia chichao zozeo mamei_coda nbsp space_compat
   Class: 15 cartouche_start
  2 0 0
@@ -109,10 +109,10 @@ ContextSub2: class "'rclt' Required Contextual Alternates in Latin lookup 5 subt
   BClsList:
   FClsList:
  1
-  SeqLookup: 1 "Single Substitution in Latin lookup 2"
+  SeqLookup: 1 "Add cartouche"
   ClassNames: "0" "1" "2"
 EndFPST
-ContextSub2: class "'calt' Contextual Alternates in Latin lookup 4 subtable" 4 1 1 1
+ContextSub2: class "Form hiatus-diphthong ligatures" 4 1 1 1
   Class: 6 hiatus
   Class: 9 diphthong
   Class: 96 bubue cecoa dudeo fofuaq hehaq kikue nanaq pipoq aqaq saqseoq veva nhanhoq shoshia chichao zozeo
@@ -121,8 +121,8 @@ ContextSub2: class "'calt' Contextual Alternates in Latin lookup 4 subtable" 4 1
   BClsList:
   FClsList:
  2
-  SeqLookup: 0 "Single Substitution in Latin lookup 0"
-  SeqLookup: 2 "Multiple Substitution in Latin lookup 1"
+  SeqLookup: 0 "Hiatus to hiatus diphthong"
+  SeqLookup: 2 "Remove diphthong"
   ClassNames: "0" "1" "2" "3"
   BClassNames: "All_Others"
   FClassNames: "All_Others"
@@ -184,7 +184,7 @@ GlyphClass: 1
 Flags: W
 LayerCount: 2
 Kerns2: 4 -144 "'kern' Horizontal Kerning in Latin lookup 1 subtable" 12 -105 "'kern' Horizontal Kerning in Latin lookup 1 subtable"
-Substitution2: "Single Substitution in Latin lookup 2 subtable" space_c
+Substitution2: "Add cartouche" space_c
 EndChar
 
 StartChar: other_stop
@@ -270,7 +270,7 @@ SplineSet
  234 391 233.999023438 379 226 371 c 2
  159 304 l 2
 EndSplineSet
-Substitution2: "Single Substitution in Latin lookup 2 subtable" quote_c
+Substitution2: "Add cartouche" quote_c
 EndChar
 
 StartChar: null
@@ -348,7 +348,7 @@ SplineSet
  441 -279 456 -243 456 -197 c 7
  456 -186 447 -177 436 -177 c 4
 EndSplineSet
-MultipleSubs2: "Multiple Substitution in Latin lookup 1 subtable" 
+MultipleSubs2: "Remove diphthong" 
 EndChar
 
 StartChar: subordination
@@ -430,7 +430,7 @@ SplineSet
  234 261 233.999023438 249 226 241 c 6
  159 174 l 6
 EndSplineSet
-Substitution2: "Single Substitution in Latin lookup 2 subtable" oaomo_c
+Substitution2: "Add cartouche" oaomo_c
 EndChar
 
 StartChar: declarative_stop
@@ -524,7 +524,7 @@ SplineSet
  188 261 188 249 196 241 c 2
  236 201 l 2
 EndSplineSet
-Substitution2: "Single Substitution in Latin lookup 2 subtable" prefix_c
+Substitution2: "Add cartouche" prefix_c
 EndChar
 
 StartChar: interrogative_stop
@@ -681,7 +681,7 @@ SplineSet
  353 27 356 31 360 35 c 4
  403 84 408 146 408 188 c 7
 EndSplineSet
-Substitution2: "Single Substitution in Latin lookup 2 subtable" bubue_c
+Substitution2: "Add cartouche" bubue_c
 EndChar
 
 StartChar: cecoa
@@ -708,7 +708,7 @@ SplineSet
  489 163 485.251953125 159.731445312 481 156 c 4
  432 113 370 108 328 108 c 7
 EndSplineSet
-Substitution2: "Single Substitution in Latin lookup 2 subtable" cecoa_c
+Substitution2: "Add cartouche" cecoa_c
 EndChar
 
 StartChar: dudeo
@@ -749,7 +749,7 @@ SplineSet
     0 0 z
   EndSpiro
 EndSplineSet
-Substitution2: "Single Substitution in Latin lookup 2 subtable" dudeo_c
+Substitution2: "Add cartouche" dudeo_c
 EndChar
 
 StartChar: fofuaq
@@ -776,7 +776,7 @@ SplineSet
  4 375 7.09407933821 379.908083116 11 384 c 4
  95 472 135 512 260 512 c 4
 EndSplineSet
-Substitution2: "Single Substitution in Latin lookup 2 subtable" fofuaq_c
+Substitution2: "Add cartouche" fofuaq_c
 EndChar
 
 StartChar: gugui
@@ -809,7 +809,7 @@ SplineSet
  395.392578125 108 436.64453125 127.541015625 499 189 c 4
  504.940429688 194.85546875 518.870117188 197.77734375 528 186 c 4
 EndSplineSet
-Substitution2: "Single Substitution in Latin lookup 2 subtable" gugui_c
+Substitution2: "Add cartouche" gugui_c
 EndChar
 
 StartChar: hehaq
@@ -876,7 +876,7 @@ SplineSet
  408 -8.41139482108 399.65860709 1.72620551385 388 1.39500441445 c 4
  346.627247949 0.219675246996 301.900538821 -9.22940651855e-16 253 0 c 4
 EndSplineSet
-Substitution2: "Single Substitution in Latin lookup 2 subtable" hehaq_c
+Substitution2: "Add cartouche" hehaq_c
 EndChar
 
 StartChar: jujuo
@@ -908,7 +908,7 @@ SplineSet
  495 405 455 385 393 324 c 4
  387 318 373 315 364 327 c 4
 EndSplineSet
-Substitution2: "Single Substitution in Latin lookup 2 subtable" jujuo_c
+Substitution2: "Add cartouche" jujuo_c
 EndChar
 
 StartChar: kikue
@@ -943,7 +943,7 @@ SplineSet
  489 163 485 160 481 156 c 4
  432 113 370 108 328 108 c 7
 EndSplineSet
-Substitution2: "Single Substitution in Latin lookup 2 subtable" kikue_c
+Substitution2: "Add cartouche" kikue_c
 EndChar
 
 StartChar: laoliq
@@ -988,7 +988,7 @@ SplineSet
  872 107 l 6
  922 107 929 135 929 196 c 7
 EndSplineSet
-Substitution2: "Single Substitution in Latin lookup 2 subtable" laoliq_c
+Substitution2: "Add cartouche" laoliq_c
 EndChar
 
 StartChar: mamei
@@ -1039,7 +1039,7 @@ SplineSet
  1426 107 1444 118 1444 140 c 7
  1444 284 1338 412 1219 412 c 7
 EndSplineSet
-Substitution2: "Single Substitution in Latin lookup 2 subtable" mamei_c
+Substitution2: "Add cartouche" mamei_c
 EndChar
 
 StartChar: nanaq
@@ -1068,7 +1068,7 @@ SplineSet
  411.824969098 477.454679558 411.032762356 462.864294391 420.74504851 455.000002891 c 4
  478.787579728 408.001450988 516 336.207346916 516 256 c 4
 EndSplineSet
-Substitution2: "Single Substitution in Latin lookup 2 subtable" nanaq_c
+Substitution2: "Add cartouche" nanaq_c
 EndChar
 
 StartChar: pipoq
@@ -1097,7 +1097,7 @@ SplineSet
  407 288 310 405 194 405 c 7
  134 405 111 383 111 323 c 7
 EndSplineSet
-Substitution2: "Single Substitution in Latin lookup 2 subtable" pipoq_c
+Substitution2: "Add cartouche" pipoq_c
 EndChar
 
 StartChar: aqaq
@@ -1128,7 +1128,7 @@ SplineSet
  112 205.756835938 208.756835938 107 327 107 c 7
  391.09138682 107 424.226836143 122.178173561 482 178 c 4
 EndSplineSet
-Substitution2: "Single Substitution in Latin lookup 2 subtable" aqaq_c
+Substitution2: "Add cartouche" aqaq_c
 EndChar
 
 StartChar: rairua
@@ -1169,7 +1169,7 @@ SplineSet
  926 -11 916 0 888 0 c 6
  403 0 l 6
 EndSplineSet
-Substitution2: "Single Substitution in Latin lookup 2 subtable" rairua_c
+Substitution2: "Add cartouche" rairua_c
 EndChar
 
 StartChar: saqseoq
@@ -1206,7 +1206,7 @@ SplineSet
  516 115 401 0 260 0 c 4
  119 0 4 115 4 256 c 0
 EndSplineSet
-Substitution2: "Single Substitution in Latin lookup 2 subtable" saqseoq_c
+Substitution2: "Add cartouche" saqseoq_c
 EndChar
 
 StartChar: titieq
@@ -1240,7 +1240,7 @@ SplineSet
  111 203 207 107 327 107 c 3
  387 107 409 129 409 189 c 3
 EndSplineSet
-Substitution2: "Single Substitution in Latin lookup 2 subtable" titieq_c
+Substitution2: "Add cartouche" titieq_c
 EndChar
 
 StartChar: veva
@@ -1268,7 +1268,7 @@ SplineSet
  128.045955024 665.273537268 111 628.367519112 111 585.270702008 c 7
  111 527.756474656 141.358584932 513 260 513 c 7
 EndSplineSet
-Substitution2: "Single Substitution in Latin lookup 2 subtable" veva_c
+Substitution2: "Add cartouche" veva_c
 EndChar
 
 StartChar: nhanhoq
@@ -1299,7 +1299,7 @@ SplineSet
  268 324 305 317 327 307 c 4
  347 298 362 321 347 338 c 4
 EndSplineSet
-Substitution2: "Single Substitution in Latin lookup 2 subtable" nhanhoq_c
+Substitution2: "Add cartouche" nhanhoq_c
 EndChar
 
 StartChar: shoshia
@@ -1332,7 +1332,7 @@ SplineSet
  522 584 518.66796875 579.306640625 515 575 c 4
  442.537012578 489.919655343 353.690429688 403 193 403 c 7
 EndSplineSet
-Substitution2: "Single Substitution in Latin lookup 2 subtable" shoshia_c
+Substitution2: "Add cartouche" shoshia_c
 EndChar
 
 StartChar: chichao
@@ -1360,7 +1360,7 @@ SplineSet
  119 0 4 115 4 256 c 7
  4 396 119 510 260 510 c 7
 EndSplineSet
-Substitution2: "Single Substitution in Latin lookup 2 subtable" chichao_c
+Substitution2: "Add cartouche" chichao_c
 EndChar
 
 StartChar: zozeo
@@ -1425,7 +1425,7 @@ SplineSet
  309 -403 312 -400 320 -388 c 4
  397.468012618 -270.778665117 410.822452159 -219.444082456 409.966851431 -18.9999959291 c 4
 EndSplineSet
-Substitution2: "Single Substitution in Latin lookup 2 subtable" zozeo_c
+Substitution2: "Add cartouche" zozeo_c
 EndChar
 
 StartChar: rising_falling
@@ -1484,7 +1484,7 @@ SplineSet
  353 27 356 31 360 35 c 0
  403 84 408 146 408 188 c 3
 EndSplineSet
-Substitution2: "Single Substitution in Latin lookup 3 subtable" bubue_c_end
+Substitution2: "Switch to cartouche end variant" bubue_c_end
 EndChar
 
 StartChar: cecoa_c
@@ -1518,7 +1518,7 @@ SplineSet
  489 163 485.251953125 159.731445312 481 156 c 0
  432 113 370 108 328 108 c 3
 EndSplineSet
-Substitution2: "Single Substitution in Latin lookup 3 subtable" cecoa_c_end
+Substitution2: "Switch to cartouche end variant" cecoa_c_end
 EndChar
 
 StartChar: dudeo_c
@@ -1564,7 +1564,7 @@ SplineSet
     0 0 z
   EndSpiro
 EndSplineSet
-Substitution2: "Single Substitution in Latin lookup 3 subtable" dudeo_c_end
+Substitution2: "Switch to cartouche end variant" dudeo_c_end
 EndChar
 
 StartChar: fofuaq_c
@@ -1596,7 +1596,7 @@ SplineSet
  4 375 7.09407933821 379.908083116 11 384 c 0
  95 472 135 512 260 512 c 0
 EndSplineSet
-Substitution2: "Single Substitution in Latin lookup 3 subtable" fofuaq_c_end
+Substitution2: "Switch to cartouche end variant" fofuaq_c_end
 EndChar
 
 StartChar: gugui_c
@@ -1634,7 +1634,7 @@ SplineSet
  395.392578125 108 436.64453125 127.541015625 499 189 c 0
  504.940429688 194.85546875 518.870117188 197.77734375 528 186 c 0
 EndSplineSet
-Substitution2: "Single Substitution in Latin lookup 3 subtable" gugui_c_end
+Substitution2: "Switch to cartouche end variant" gugui_c_end
 EndChar
 
 StartChar: hehaq_c
@@ -1680,7 +1680,7 @@ SplineSet
  563 1050 l 1
  42 1050 l 1
 EndSplineSet
-Substitution2: "Single Substitution in Latin lookup 3 subtable" hehaq_c_end
+Substitution2: "Switch to cartouche end variant" hehaq_c_end
 EndChar
 
 StartChar: jujuo_c
@@ -1720,7 +1720,7 @@ SplineSet
  495 405 455 385 393 324 c 0
  387 318 373 315 364 327 c 0
 EndSplineSet
-Substitution2: "Single Substitution in Latin lookup 3 subtable" jujuo_c_end
+Substitution2: "Switch to cartouche end variant" jujuo_c_end
 EndChar
 
 StartChar: kikue_c
@@ -1760,7 +1760,7 @@ SplineSet
  489 163 485 160 481 156 c 0
  432 113 370 108 328 108 c 3
 EndSplineSet
-Substitution2: "Single Substitution in Latin lookup 3 subtable" kikue_c_end
+Substitution2: "Switch to cartouche end variant" kikue_c_end
 EndChar
 
 StartChar: laoliq_c
@@ -1810,7 +1810,7 @@ SplineSet
  872 107 l 2
  922 107 929 135 929 196 c 3
 EndSplineSet
-Substitution2: "Single Substitution in Latin lookup 3 subtable" laoliq_c_end
+Substitution2: "Switch to cartouche end variant" laoliq_c_end
 EndChar
 
 StartChar: mamei_c
@@ -1866,7 +1866,7 @@ SplineSet
  1426 107 1444 118 1444 140 c 3
  1444 284 1338 412 1219 412 c 3
 EndSplineSet
-Substitution2: "Single Substitution in Latin lookup 3 subtable" mamei_c_end
+Substitution2: "Switch to cartouche end variant" mamei_c_end
 EndChar
 
 StartChar: nanaq_c
@@ -1900,7 +1900,7 @@ SplineSet
  411.824969098 477.454679558 411.032762356 462.864294391 420.74504851 455.000002891 c 0
  478.787579728 408.001450988 516 336.207346916 516 256 c 0
 EndSplineSet
-Substitution2: "Single Substitution in Latin lookup 3 subtable" nanaq_c_end
+Substitution2: "Switch to cartouche end variant" nanaq_c_end
 EndChar
 
 StartChar: pipoq_c
@@ -1934,7 +1934,7 @@ SplineSet
  407 288 310 405 194 405 c 3
  134 405 111 383 111 323 c 3
 EndSplineSet
-Substitution2: "Single Substitution in Latin lookup 3 subtable" pipoq_c_end
+Substitution2: "Switch to cartouche end variant" pipoq_c_end
 EndChar
 
 StartChar: aqaq_c
@@ -1970,7 +1970,7 @@ SplineSet
  112 205.756835938 208.756835938 107 327 107 c 3
  391.09138682 107 424.226836143 122.178173561 482 178 c 0
 EndSplineSet
-Substitution2: "Single Substitution in Latin lookup 3 subtable" aqaq_c_end
+Substitution2: "Switch to cartouche end variant" aqaq_c_end
 EndChar
 
 StartChar: rairua_c
@@ -2016,7 +2016,7 @@ SplineSet
  926 -11 916 0 888 0 c 2
  403 0 l 2
 EndSplineSet
-Substitution2: "Single Substitution in Latin lookup 3 subtable" rairua_c_end
+Substitution2: "Switch to cartouche end variant" rairua_c_end
 EndChar
 
 StartChar: saqseoq_c
@@ -2045,7 +2045,7 @@ SplineSet
  516 115 401 0 260 0 c 0
  119 0 4 115 4 256 c 0
 EndSplineSet
-Substitution2: "Single Substitution in Latin lookup 3 subtable" saqseoq_c_end
+Substitution2: "Switch to cartouche end variant" saqseoq_c_end
 EndChar
 
 StartChar: titieq_c
@@ -2083,7 +2083,7 @@ SplineSet
  111 203 207 107 327 107 c 3
  387 107 409 129 409 189 c 3
 EndSplineSet
-Substitution2: "Single Substitution in Latin lookup 3 subtable" titieq_c_end
+Substitution2: "Switch to cartouche end variant" titieq_c_end
 EndChar
 
 StartChar: veva_c
@@ -2116,7 +2116,7 @@ SplineSet
  128.045955024 665.273537268 111 628.367519112 111 585.270702008 c 3
  111 527.756474656 141.358584932 513 260 513 c 3
 EndSplineSet
-Substitution2: "Single Substitution in Latin lookup 3 subtable" veva_c_end
+Substitution2: "Switch to cartouche end variant" veva_c_end
 EndChar
 
 StartChar: nhanhoq_c
@@ -2152,7 +2152,7 @@ SplineSet
  268 324 305 317 327 307 c 0
  347 298 362 321 347 338 c 0
 EndSplineSet
-Substitution2: "Single Substitution in Latin lookup 3 subtable" nhanhoq_c_end
+Substitution2: "Switch to cartouche end variant" nhanhoq_c_end
 EndChar
 
 StartChar: shoshia_c
@@ -2190,7 +2190,7 @@ SplineSet
  522 584 518.66796875 579.306640625 515 575 c 0
  442.537012578 489.919655343 353.690429688 403 193 403 c 3
 EndSplineSet
-Substitution2: "Single Substitution in Latin lookup 3 subtable" shoshia_c_end
+Substitution2: "Switch to cartouche end variant" shoshia_c_end
 EndChar
 
 StartChar: chichao_c
@@ -2223,7 +2223,7 @@ SplineSet
  119 0 4 115 4 256 c 3
  4 396 119 510 260 510 c 3
 EndSplineSet
-Substitution2: "Single Substitution in Latin lookup 3 subtable" chichao_c_end
+Substitution2: "Switch to cartouche end variant" chichao_c_end
 EndChar
 
 StartChar: zozeo_c
@@ -2268,7 +2268,7 @@ SplineSet
  563 1050 l 1
  42 1050 l 1
 EndSplineSet
-Substitution2: "Single Substitution in Latin lookup 3 subtable" zozeo_c_end
+Substitution2: "Switch to cartouche end variant" zozeo_c_end
 EndChar
 
 StartChar: space_c
@@ -2285,7 +2285,7 @@ SplineSet
  563 1050 l 1
  42 1050 l 1
 EndSplineSet
-Substitution2: "Single Substitution in Latin lookup 3 subtable" space_c_end
+Substitution2: "Switch to cartouche end variant" space_c_end
 EndChar
 
 StartChar: prefix_c
@@ -2319,7 +2319,7 @@ SplineSet
  188 261 188 249 196 241 c 2
  236 201 l 2
 EndSplineSet
-Substitution2: "Single Substitution in Latin lookup 3 subtable" prefix_c_end
+Substitution2: "Switch to cartouche end variant" prefix_c_end
 EndChar
 
 StartChar: oaomo_c
@@ -2345,7 +2345,7 @@ SplineSet
  234 261 233.999023438 249 226 241 c 2
  159 174 l 2
 EndSplineSet
-Substitution2: "Single Substitution in Latin lookup 3 subtable" oaomo_c_end
+Substitution2: "Switch to cartouche end variant" oaomo_c_end
 EndChar
 
 StartChar: quote_c
@@ -2380,7 +2380,7 @@ SplineSet
  234 391 233.999023438 379 226 371 c 2
  159 304 l 2
 EndSplineSet
-Substitution2: "Single Substitution in Latin lookup 3 subtable" quote_c_end
+Substitution2: "Switch to cartouche end variant" quote_c_end
 EndChar
 
 StartChar: dotted_circle
@@ -3393,7 +3393,7 @@ SplineSet
  872 107 l 2
  922 107 929 135 929 196 c 3
 EndSplineSet
-Substitution2: "Single Substitution in Latin lookup 2 subtable" mamei_coda_c
+Substitution2: "Add cartouche" mamei_coda_c
 EndChar
 
 StartChar: mamei_coda_c
@@ -3434,7 +3434,7 @@ SplineSet
  872 107 l 6
  922 107 929 135 929 196 c 7
 EndSplineSet
-Substitution2: "Single Substitution in Latin lookup 3 subtable" mamei_coda_c_end
+Substitution2: "Switch to cartouche end variant" mamei_coda_c_end
 EndChar
 
 StartChar: mamei_coda_c_end
@@ -3499,7 +3499,7 @@ SplineSet
  156 -96 203 -70 288 -70 c 7
  379 -70 442 -100 486 -148 c 4
 EndSplineSet
-Substitution2: "Single Substitution in Latin lookup 0 subtable" hiatus_diphthong
+Substitution2: "Hiatus to hiatus diphthong" hiatus_diphthong
 EndChar
 
 StartChar: hiatus_diphthong
@@ -3546,7 +3546,7 @@ GlyphClass: 2
 Flags: W
 LayerCount: 2
 Kerns2: 4 -144 "'kern' Horizontal Kerning in Latin lookup 1 subtable" 12 -105 "'kern' Horizontal Kerning in Latin lookup 1 subtable"
-Substitution2: "Single Substitution in Latin lookup 2 subtable" space_c
+Substitution2: "Add cartouche" space_c
 EndChar
 
 StartChar: space_compat
@@ -3556,7 +3556,7 @@ GlyphClass: 1
 Flags: W
 LayerCount: 2
 Kerns2: 4 -144 "'kern' Horizontal Kerning in Latin lookup 1 subtable" 12 -105 "'kern' Horizontal Kerning in Latin lookup 1 subtable"
-Substitution2: "Single Substitution in Latin lookup 2 subtable" space_c
+Substitution2: "Add cartouche" space_c
 EndChar
 
 StartChar: glyph91
@@ -5149,7 +5149,7 @@ EndChar
 StartChar: fofuaq_hiatus_c_end
 Encoding: 139 -1 139
 Width: 520
-Flags: HWO
+Flags: HW
 AnchorPoint: "Anchor-1" 260 510 basechar 0
 LayerCount: 2
 Fore
