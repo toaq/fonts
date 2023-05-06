@@ -22,7 +22,7 @@ OS2Version: 4
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1670694376
-ModificationTime: 1683387615
+ModificationTime: 1683388649
 PfmFamily: 81
 TTFWeight: 400
 TTFWidth: 5
@@ -134,7 +134,7 @@ NameList: AGL For New Fonts
 DisplaySize: -128
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 65 13 6
+WinInfo: 0 12 6
 BeginPrivate: 6
 OtherBlues 2 []
 BlueShift 1 1
@@ -242,15 +242,10 @@ StartChar: quote
 Encoding: 32 988883 3
 Width: 290
 GlyphClass: 2
-Flags: MW
+Flags: HMWO
 LayerCount: 2
 Fore
 SplineSet
-42 1050 m 1
- 108 1155 l 1
- 398 1155 l 1
- 332 1050 l 1
- 42 1050 l 1
 158 48 m 2
  150 40 138 40 130 48 c 2
  63 115 l 2
