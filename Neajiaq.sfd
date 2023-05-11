@@ -22,7 +22,7 @@ OS2Version: 4
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1670694376
-ModificationTime: 1683836269
+ModificationTime: 1683836821
 PfmFamily: 81
 TTFWeight: 400
 TTFWidth: 5
@@ -57,19 +57,19 @@ OS2XHeight: 513
 OS2Vendor: 'FSTR'
 OS2CodePages: 200101ff.cdff0000
 OS2UnicodeRanges: 00000001.10000000.00000000.00000000
-Lookup: 1 0 0 "Switch to dia variant" { "Switch to dia variant"  } ['xdia' ('DFLT' <'dflt' > ) ]
-Lookup: 1 0 0 "Switch to conn variant" { "Switch to conn variant"  } ['xcon' ('DFLT' <'dflt' > ) ]
-Lookup: 1 0 0 "Hiatus to hiatus diphthong" { "Hiatus to hiatus diphthong"  } ['vvfl' ('DFLT' <'dflt' > ) ]
-Lookup: 2 0 0 "Remove diphthong" { "Remove diphthong"  } ['delt' ('DFLT' <'dflt' > ) ]
-Lookup: 1 0 0 "Add cartouche" { "Add cartouche"  } ['cart' ('DFLT' <'dflt' > ) ]
-Lookup: 1 0 0 "Switch to cartouche end variant" { "Switch to cartouche end variant"  } ['cart' ('DFLT' <'dflt' > ) ]
-Lookup: 5 0 0 "Form hiatus-diphthong ligatures" { "Form hiatus-diphthong ligatures"  } ['calt' ('DFLT' <'dflt' > ) ]
-Lookup: 5 0 0 "Use dia variants" { "Use dia variants"  } ['calt' ('DFLT' <'dflt' > ) ]
-Lookup: 5 8 0 "Use conn variants" { "Use conn variants"  } ['calt' ('DFLT' <'dflt' > ) ]
-Lookup: 4 0 1 "Form mark +- base ligatures" { "Form mark +- base ligatures"  } ['liga' ('DFLT' <'dflt' > ) ]
-Lookup: 5 8 0 "Start cartouches" { "Start cartouches"  } ['rclt' ('DFLT' <'dflt' > ) ]
-Lookup: 6 8 0 "Extend cartouches" { "Extend cartouches"  } ['rclt' ('DFLT' <'dflt' > ) ]
-Lookup: 5 8 0 "End cartouches" { "End cartouches"  } ['rclt' ('DFLT' <'dflt' > ) ]
+Lookup: 1 0 0 "Switch to dia variant" { "Switch to dia variant"  } []
+Lookup: 1 0 0 "Switch to conn variant" { "Switch to conn variant"  } []
+Lookup: 1 0 0 "Hiatus to hiatus diphthong" { "Hiatus to hiatus diphthong"  } []
+Lookup: 2 0 0 "Remove diphthong" { "Remove diphthong"  } []
+Lookup: 1 0 0 "Add cartouche" { "Add cartouche"  } []
+Lookup: 1 0 0 "Switch to cartouche end variant" { "Switch to cartouche end variant"  } []
+Lookup: 5 0 0 "Form hiatus-diphthong ligatures" { "Form hiatus-diphthong ligatures"  } ['calt' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
+Lookup: 5 0 0 "Use dia variants" { "Use dia variants"  } ['calt' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
+Lookup: 5 8 0 "Use conn variants" { "Use conn variants"  } ['calt' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
+Lookup: 4 0 1 "Form mark +- base ligatures" { "Form mark +- base ligatures"  } ['liga' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
+Lookup: 5 8 0 "Start cartouches" { "Start cartouches"  } ['rclt' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
+Lookup: 6 8 0 "Extend cartouches" { "Extend cartouches"  } ['rclt' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
+Lookup: 5 8 0 "End cartouches" { "End cartouches"  } ['rclt' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
 Lookup: 260 0 0 "'mark' Mark Positioning in Latin lookup 0" { "'mark' Mark Positioning in Latin lookup 0 subtable"  } ['mark' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
 Lookup: 258 0 0 "'kern' Horizontal Kerning in Latin lookup 1" { "'kern' Horizontal Kerning in Latin lookup 1 subtable" [150,15,0] "'kern' Horizontal Kerning in Latin lookup 1-1" [150,15,0] } ['kern' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
 MarkAttachClasses: 1
