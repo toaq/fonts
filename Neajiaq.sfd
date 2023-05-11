@@ -22,7 +22,7 @@ OS2Version: 4
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1670694376
-ModificationTime: 1683388649
+ModificationTime: 1683825226
 PfmFamily: 81
 TTFWeight: 400
 TTFWidth: 5
@@ -57,14 +57,17 @@ OS2XHeight: 513
 OS2Vendor: 'FSTR'
 OS2CodePages: 200101ff.cdff0000
 OS2UnicodeRanges: 00000001.10000000.00000000.00000000
-Lookup: 1 0 0 "Hiatus to hiatus diphthong" { "Hiatus to hiatus diphthong"  } ['vvfl' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
-Lookup: 2 0 0 "Remove diphthong" { "Remove diphthong"  } ['delt' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
-Lookup: 1 0 0 "Add cartouche" { "Add cartouche"  } ['cart' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
-Lookup: 1 0 0 "Switch to cartouche end variant" { "Switch to cartouche end variant"  } ['cart' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
-Lookup: 5 0 0 "Form hiatus-diphthong ligatures" { "Form hiatus-diphthong ligatures"  } ['calt' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
-Lookup: 5 8 0 "Start cartouches" { "Start cartouches"  } ['rclt' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
-Lookup: 6 8 0 "Extend cartouches" { "Extend cartouches"  } ['rclt' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
-Lookup: 5 8 0 "End cartouches" { "End cartouches"  } ['rclt' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
+Lookup: 1 0 0 "Switch to dia variant" { "Switch to dia variant"  } ['xdia' ('DFLT' <'dflt' > ) ]
+Lookup: 1 0 0 "Switch to conn variant" { "Switch to conn variant"  } ['xcon' ('DFLT' <'dflt' > ) ]
+Lookup: 1 0 0 "Hiatus to hiatus diphthong" { "Hiatus to hiatus diphthong"  } ['vvfl' ('DFLT' <'dflt' > ) ]
+Lookup: 2 0 0 "Remove diphthong" { "Remove diphthong"  } ['delt' ('DFLT' <'dflt' > ) ]
+Lookup: 1 0 0 "Add cartouche" { "Add cartouche"  } ['cart' ('DFLT' <'dflt' > ) ]
+Lookup: 1 0 0 "Switch to cartouche end variant" { "Switch to cartouche end variant"  } ['cart' ('DFLT' <'dflt' > ) ]
+Lookup: 5 0 0 "Form hiatus-diphthong ligatures" { "Form hiatus-diphthong ligatures"  } ['calt' ('DFLT' <'dflt' > ) ]
+Lookup: 5 0 0 "Use conn variants" { "Use conn variants"  } ['calt' ('DFLT' <'dflt' > ) ]
+Lookup: 5 8 0 "Start cartouches" { "Start cartouches"  } ['rclt' ('DFLT' <'dflt' > ) ]
+Lookup: 6 8 0 "Extend cartouches" { "Extend cartouches"  } ['rclt' ('DFLT' <'dflt' > ) ]
+Lookup: 5 8 0 "End cartouches" { "End cartouches"  } ['rclt' ('DFLT' <'dflt' > ) ]
 Lookup: 260 0 0 "'mark' Mark Positioning in Latin lookup 0" { "'mark' Mark Positioning in Latin lookup 0 subtable"  } ['mark' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
 Lookup: 258 0 0 "'kern' Horizontal Kerning in Latin lookup 1" { "'kern' Horizontal Kerning in Latin lookup 1 subtable" [150,15,0] "'kern' Horizontal Kerning in Latin lookup 1-1" [150,15,0] } ['kern' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
 MarkAttachClasses: 1
@@ -77,8 +80,26 @@ KernClass2: 4+ 3 "'kern' Horizontal Kerning in Latin lookup 1-1"
  472 mamei mamei_coda bubue fofuaq rairua laoliq jujuo veva hehaq bubue_c fofuaq_c hehaq_c jujuo_c laoliq_c mamei_c rairua_c veva_c bubue_c_end fofuaq_c_end hehaq_c_end laoliq_c_end mamei_c_end rairua_c_end veva_c_end zozeo_c_end mamei_coda_c mamei_coda_c_end hehaq_conn hehaq_conn_c hehaq_c_nonn_end hiatus_bubue hiatus_bubue_c hiatus_bubue_c_end hiatus_fofuaq hiatus_fofuaq_c hiatus_fofuaq_c_end fofuaq_hiatus_diphthong fofuaq_hiatus_diphthong_c fofuaq_hiatus_diphthong_c_end
  336 gugui_c nanaq_c pipoq_c aqaq_c saqseoq_c titieq_c nhanhoq_c cecoa_c_end gugui_c_end nanaq_c_end pipoq_c_end aqaq_c_end saqseoq_c_end titieq_c_end nhanhoq_c_end shoshia_c_end chichao_c_end cecoa_dia cecoa_dia_c cecoa_dia_c_end aqaq_dia aqaq_dia_c aqaq_dia_c_end gugui_dia gugui_dia_c gugui_dia_c_end kikue_dia kikue_dia_c kikue_dia_c_end
  0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} -220 {} 0 {} 0 {} 0 {} 0 {}
-ContextSub2: class "End cartouches" 3 0 0 1
-  Class: 223 bubue_c cecoa_c dudeo_c fofuaq_c gugui_c hehaq_c jujuo_c kikue_c laoliq_c mamei_c nanaq_c pipoq_c aqaq_c rairua_c saqseoq_c titieq_c veva_c nhanhoq_c shoshia_c chichao_c zozeo_c space_c prefix_c oaomo_c quote_c mamei_coda_c
+ContextSub2: class "Use conn variants" 3 3 3 1
+  Class: 22 cecoa aqaq gugui kikue
+  Class: 33 rising low_glottal rising_falling
+  BClass: 22 cecoa aqaq gugui kikue
+  BClass: 33 rising low_glottal rising_falling
+  FClass: 22 cecoa aqaq gugui kikue
+  FClass: 33 rising low_glottal rising_falling
+ 2 0 0
+  ClsList: 1 2
+  BClsList:
+  FClsList:
+ 2
+  SeqLookup: 0 "Switch to dia variant"
+  SeqLookup: 1 "Switch to conn variant"
+  ClassNames: "All_Others" "base" "tone"
+  BClassNames: "All_Others" "base" "tone"
+  FClassNames: "All_Others" "base" "tone"
+EndFPST
+ContextSub2: class "End cartouches" 3 1 1 1
+  Class: 415 bubue_c cecoa_c dudeo_c fofuaq_c gugui_c hehaq_c jujuo_c kikue_c laoliq_c mamei_c nanaq_c pipoq_c aqaq_c rairua_c saqseoq_c titieq_c veva_c nhanhoq_c shoshia_c chichao_c zozeo_c space_c prefix_c oaomo_c quote_c mamei_coda_c bubue_conn_c hehaq_conn_c zozeo_conn_c fofuaq_conn_c cecoa_dia_c aqaq_dia_c gugui_dia_c kikue_dia_c hiatus_bubue_c hiatus_fofuaq_c fofuaq_hiatus_diphthong_c fofuaq_diphthong_c fofuaq_hiatus_c
   Class: 13 cartouche_end
  2 0 0
   ClsList: 1 2
@@ -87,10 +108,12 @@ ContextSub2: class "End cartouches" 3 0 0 1
  1
   SeqLookup: 0 "Switch to cartouche end variant"
   ClassNames: "0" "1" "2"
+  BClassNames: "All_Others"
+  FClassNames: "All_Others"
 EndFPST
 ChainSub2: class "Extend cartouches" 2 2 1 1
-  Class: 204 space quote oaomo prefix bubue cecoa dudeo fofuaq gugui hehaq jujuo kikue laoliq mamei nanaq pipoq aqaq rairua saqseoq titieq veva nhanhoq shoshia chichao zozeo rising_falling mamei_coda nbsp space_compat
-  BClass: 223 bubue_c cecoa_c dudeo_c fofuaq_c gugui_c hehaq_c jujuo_c kikue_c laoliq_c mamei_c nanaq_c pipoq_c aqaq_c rairua_c saqseoq_c titieq_c veva_c nhanhoq_c shoshia_c chichao_c zozeo_c space_c prefix_c oaomo_c quote_c mamei_coda_c
+  Class: 370 space nbsp mamei mamei_coda bubue pipoq fofuaq nanaq dudeo titieq zozeo cecoa saqseoq rairua laoliq nhanhoq jujuo chichao shoshia veva aqaq gugui kikue oaomo hehaq rising_falling prefix quote space_compat bubue_conn hehaq_conn zozeo_conn fofuaq_conn cecoa_dia aqaq_dia gugui_dia kikue_dia hiatus_bubue hiatus_fofuaq fofuaq_hiatus_diphthong fofuaq_diphthonq fofuaq_hiatus
+  BClass: 415 bubue_c cecoa_c dudeo_c fofuaq_c gugui_c hehaq_c jujuo_c kikue_c laoliq_c mamei_c nanaq_c pipoq_c aqaq_c rairua_c saqseoq_c titieq_c veva_c nhanhoq_c shoshia_c chichao_c zozeo_c space_c prefix_c oaomo_c quote_c mamei_coda_c bubue_conn_c hehaq_conn_c zozeo_conn_c fofuaq_conn_c cecoa_dia_c aqaq_dia_c gugui_dia_c kikue_dia_c hiatus_bubue_c hiatus_fofuaq_c fofuaq_hiatus_diphthong_c fofuaq_diphthong_c fofuaq_hiatus_c
  1 1 0
   ClsList: 1
   BClsList: 1
@@ -101,8 +124,8 @@ ChainSub2: class "Extend cartouches" 2 2 1 1
   BClassNames: "0" "1"
   FClassNames: "0"
 EndFPST
-ContextSub2: class "Start cartouches" 3 0 0 1
-  Class: 189 space quote oaomo prefix bubue cecoa dudeo fofuaq gugui hehaq jujuo kikue laoliq mamei nanaq pipoq aqaq rairua saqseoq titieq veva nhanhoq shoshia chichao zozeo mamei_coda nbsp space_compat
+ContextSub2: class "Start cartouches" 3 1 1 1
+  Class: 355 space nbsp mamei mamei_coda bubue pipoq fofuaq nanaq dudeo titieq zozeo cecoa saqseoq rairua laoliq nhanhoq jujuo chichao shoshia veva aqaq gugui kikue oaomo hehaq prefix quote space_compat bubue_conn hehaq_conn zozeo_conn fofuaq_conn cecoa_dia aqaq_dia gugui_dia kikue_dia hiatus_bubue hiatus_fofuaq fofuaq_hiatus_diphthong fofuaq_diphthonq fofuaq_hiatus
   Class: 15 cartouche_start
  2 0 0
   ClsList: 2 1
@@ -111,6 +134,8 @@ ContextSub2: class "Start cartouches" 3 0 0 1
  1
   SeqLookup: 1 "Add cartouche"
   ClassNames: "0" "1" "2"
+  BClassNames: "All_Others"
+  FClassNames: "All_Others"
 EndFPST
 ContextSub2: class "Form hiatus-diphthong ligatures" 4 1 1 1
   Class: 6 hiatus
@@ -134,7 +159,7 @@ NameList: AGL For New Fonts
 DisplaySize: -128
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 0 12 6
+WinInfo: 72 12 6
 BeginPrivate: 6
 OtherBlues 2 []
 BlueShift 1 1
@@ -152,7 +177,7 @@ Grid
  260 -701 l 1024
 EndSplineSet
 AnchorClass2: "1"""  "Anchor-0" "'mark' Mark Positioning in Latin lookup 0 subtable" "Anchor-1" "'mark' Mark Positioning in Latin lookup 0 subtable"
-BeginChars: 140 140
+BeginChars: 152 140
 
 StartChar: .notdef
 Encoding: 41 -1 0
@@ -242,7 +267,7 @@ StartChar: quote
 Encoding: 32 988883 3
 Width: 290
 GlyphClass: 2
-Flags: HMWO
+Flags: HMW
 LayerCount: 2
 Fore
 SplineSet
@@ -491,6 +516,7 @@ SplineSet
  430 827.5 427.75 822.5 424.125 818.875 c 1
 356.973632812 751.725585938 m 1025
 EndSplineSet
+Substitution2: "Switch to conn variant" rising_conn
 EndChar
 
 StartChar: prefix
@@ -628,6 +654,7 @@ SplineSet
  137.432960141 510.833789387 0 575.075177414 0 739.828250126 c 3
  0 847.047966578 83.3684999361 934 260 934 c 3
 EndSplineSet
+Substitution2: "Switch to conn variant" low_glottal_conn
 EndChar
 
 StartChar: cartouche_end
@@ -676,6 +703,7 @@ SplineSet
  353 27 356 31 360 35 c 4
  403 84 408 146 408 188 c 7
 EndSplineSet
+Substitution2: "Switch to conn variant" bubue_conn
 Substitution2: "Add cartouche" bubue_c
 EndChar
 
@@ -703,6 +731,7 @@ SplineSet
  489 163 485.251953125 159.731445312 481 156 c 4
  432 113 370 108 328 108 c 7
 EndSplineSet
+Substitution2: "Switch to dia variant" cecoa_dia
 Substitution2: "Add cartouche" cecoa_c
 EndChar
 
@@ -771,6 +800,7 @@ SplineSet
  4 375 7.09407933821 379.908083116 11 384 c 4
  95 472 135 512 260 512 c 4
 EndSplineSet
+Substitution2: "Switch to conn variant" fofuaq_conn
 Substitution2: "Add cartouche" fofuaq_c
 EndChar
 
@@ -804,6 +834,7 @@ SplineSet
  395.392578125 108 436.64453125 127.541015625 499 189 c 4
  504.940429688 194.85546875 518.870117188 197.77734375 528 186 c 4
 EndSplineSet
+Substitution2: "Switch to dia variant" gugui_dia
 Substitution2: "Add cartouche" gugui_c
 EndChar
 
@@ -871,6 +902,7 @@ SplineSet
  408 -8.41139482108 399.65860709 1.72620551385 388 1.39500441445 c 4
  346.627247949 0.219675246996 301.900538821 -9.22940651855e-16 253 0 c 4
 EndSplineSet
+Substitution2: "Switch to conn variant" hehaq_conn
 Substitution2: "Add cartouche" hehaq_c
 EndChar
 
@@ -938,6 +970,7 @@ SplineSet
  489 163 485 160 481 156 c 4
  432 113 370 108 328 108 c 7
 EndSplineSet
+Substitution2: "Switch to dia variant" kikue_dia
 Substitution2: "Add cartouche" kikue_c
 EndChar
 
@@ -1123,6 +1156,7 @@ SplineSet
  112 205.756835938 208.756835938 107 327 107 c 7
  391.09138682 107 424.226836143 122.178173561 482 178 c 4
 EndSplineSet
+Substitution2: "Switch to dia variant" aqaq_dia
 Substitution2: "Add cartouche" aqaq_c
 EndChar
 
@@ -1420,6 +1454,7 @@ SplineSet
  309 -403 312 -400 320 -388 c 4
  397.468012618 -270.778665117 410.822452159 -219.444082456 409.966851431 -18.9999959291 c 4
 EndSplineSet
+Substitution2: "Switch to conn variant" zozeo_conn
 Substitution2: "Add cartouche" zozeo_c
 EndChar
 
@@ -1448,6 +1483,7 @@ SplineSet
  9 804 0 813 0 824 c 0
  0 830 2.40815522083 834.629922185 6 839 c 0
 EndSplineSet
+Substitution2: "Switch to conn variant" rising_falling_conn
 EndChar
 
 StartChar: bubue_c
@@ -3585,6 +3621,7 @@ SplineSet
  409 129 387 107 327 107 c 3
  260 0 l 0
 EndSplineSet
+Substitution2: "Add cartouche" bubue_conn_c
 EndChar
 
 StartChar: bubue_conn_c
@@ -3613,6 +3650,7 @@ SplineSet
  409 129 387 107 327 107 c 3
  260 0 l 0
 EndSplineSet
+Substitution2: "Switch to cartouche end variant" bubue_conn_c_end
 EndChar
 
 StartChar: bubue_conn_c_end
@@ -3678,6 +3716,7 @@ SplineSet
  446.008919937 510 502.939099268 345.425797327 513.184855644 127.000009198 c 4
  513.73056798 115.3661539 522.437283206 107.000693823 534 107.000703537 c 6
 EndSplineSet
+Substitution2: "Add cartouche" hehaq_conn_c
 EndChar
 
 StartChar: hehaq_conn_c
@@ -3720,6 +3759,7 @@ SplineSet
  563 1050 l 1
  42 1050 l 1
 EndSplineSet
+Substitution2: "Switch to cartouche end variant" hehaq_c_nonn_end
 EndChar
 
 StartChar: hehaq_c_nonn_end
@@ -3800,6 +3840,7 @@ SplineSet
  309 -403 312 -400 320 -388 c 0
  401.80566758 -264.215108267 409.970968263 -212.678314874 409.970968263 -19.9999959354 c 3
 EndSplineSet
+Substitution2: "Add cartouche" zozeo_conn_c
 EndChar
 
 StartChar: zozeo_conn_c
@@ -3843,6 +3884,7 @@ SplineSet
  563 1050 l 1
  42 1050 l 1
 EndSplineSet
+Substitution2: "Switch to cartouche end variant" zozeo_conn_c_end
 EndChar
 
 StartChar: zozeo_conn_c_end
@@ -3916,6 +3958,7 @@ SplineSet
  4 375 7.09407933821 379.908083116 11 384 c 0
  95 472 135 512 260 512 c 0
 EndSplineSet
+Substitution2: "Add cartouche" fofuaq_conn_c
 EndChar
 
 StartChar: fofuaq_conn_c
@@ -3946,6 +3989,7 @@ SplineSet
  4 375 7.09407933821 379.908083116 11 384 c 0
  95 472 135 512 260 512 c 0
 EndSplineSet
+Substitution2: "Switch to cartouche end variant" fofuaq_conn_c_end
 EndChar
 
 StartChar: fofuaq_conn_c_end
@@ -4012,6 +4056,7 @@ SplineSet
  4 375 7.09407933821 379.908083116 11 384 c 0
  95 472 135 512 260 512 c 0
 EndSplineSet
+Substitution2: "Add cartouche" hiatus_fofuaq_c
 EndChar
 
 StartChar: cecoa_dia
@@ -4037,6 +4082,7 @@ SplineSet
  4 350.827578224 91.1762803717 433.333891295 172.770678077 510 c 1
  230.186819807 510 l 1
 EndSplineSet
+Substitution2: "Add cartouche" cecoa_dia_c
 EndChar
 
 StartChar: cecoa_dia_c
@@ -4067,6 +4113,7 @@ SplineSet
  563 1050 l 1
  42 1050 l 1
 EndSplineSet
+Substitution2: "Switch to cartouche end variant" cecoa_dia_c_end
 EndChar
 
 StartChar: cecoa_dia_c_end
@@ -4126,6 +4173,7 @@ SplineSet
  406 26 393.82421875 38.0498046875 367 25 c 0
  334.052107018 8.97106837356 295.655273438 0 260 0 c 3
 EndSplineSet
+Substitution2: "Add cartouche" aqaq_dia_c
 EndChar
 
 StartChar: aqaq_dia_c
@@ -4158,6 +4206,7 @@ SplineSet
  563 1050 l 1
  42 1050 l 1
 EndSplineSet
+Substitution2: "Switch to cartouche end variant" aqaq_dia_c_end
 EndChar
 
 StartChar: aqaq_dia_c_end
@@ -4219,6 +4268,7 @@ SplineSet
  166.387695312 446.729492188 111 381.76171875 111 305.693359375 c 3
  111 204.090820312 207.338867188 108 328 108 c 3
 EndSplineSet
+Substitution2: "Add cartouche" gugui_dia_c
 EndChar
 
 StartChar: gugui_dia_c
@@ -4253,6 +4303,7 @@ SplineSet
  933 1050 l 1
  42 1050 l 1
 EndSplineSet
+Substitution2: "Switch to cartouche end variant" gugui_dia_c_end
 EndChar
 
 StartChar: gugui_dia_c_end
@@ -4318,6 +4369,7 @@ SplineSet
  350 -172 350 -184 342 -192 c 2
  274 -260 l 2
 EndSplineSet
+Substitution2: "Add cartouche" kikue_dia_c
 EndChar
 
 StartChar: kikue_dia_c
@@ -4354,6 +4406,7 @@ SplineSet
  563 1050 l 1
  42 1050 l 1
 EndSplineSet
+Substitution2: "Switch to cartouche end variant" kikue_dia_c_end
 EndChar
 
 StartChar: kikue_dia_c_end
@@ -4392,7 +4445,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: low_glottal_conn
+StartChar: rising_falling_conn
 Encoding: 120 -1 121
 Width: 0
 Flags: W
@@ -4416,7 +4469,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: rising_falling_conn
+StartChar: low_glottal_conn
 Encoding: 121 -1 122
 Width: 0
 Flags: W
@@ -4574,6 +4627,7 @@ SplineSet
  353 27 356 31 360 35 c 0
  403 84 408 146 408 188 c 3
 EndSplineSet
+Substitution2: "Add cartouche" hiatus_bubue_c
 EndChar
 
 StartChar: hiatus_bubue_c
@@ -4615,6 +4669,7 @@ SplineSet
  353 27 356 31 360 35 c 0
  403 84 408 146 408 188 c 3
 EndSplineSet
+Substitution2: "Switch to cartouche end variant" hiatus_bubue_c_end
 EndChar
 
 StartChar: hiatus_bubue_c_end
@@ -4697,6 +4752,7 @@ SplineSet
  4 375 7.09407933821 379.908083116 11 384 c 0
  95 472 135 512 260 512 c 0
 EndSplineSet
+Substitution2: "Switch to cartouche end variant" hiatus_fofuaq_c_end
 EndChar
 
 StartChar: hiatus_fofuaq_c_end
@@ -4788,6 +4844,7 @@ SplineSet
  4 375 7.09407933821 379.908083116 11 384 c 4
  95 472 135 512 260 512 c 4
 EndSplineSet
+Substitution2: "Add cartouche" fofuaq_hiatus_diphthong_c
 EndChar
 
 StartChar: fofuaq_hiatus_diphthong_c
@@ -4843,6 +4900,7 @@ SplineSet
  563 1050 l 1
  42 1050 l 1
 EndSplineSet
+Substitution2: "Switch to cartouche end variant" fofuaq_hiatus_diphthong_c_end
 EndChar
 
 StartChar: fofuaq_hiatus_diphthong_c_end
@@ -4942,6 +5000,7 @@ SplineSet
  4 375 7.09407933821 379.908083116 11 384 c 4
  95 472 135 512 260 512 c 4
 EndSplineSet
+Substitution2: "Add cartouche" fofuaq_diphthong_c
 EndChar
 
 StartChar: fofuaq_diphthong_c
@@ -4991,6 +5050,7 @@ SplineSet
  563 1050 l 1
  42 1050 l 1
 EndSplineSet
+Substitution2: "Switch to cartouche end variant" fofuaq_diphthong_c_end
 EndChar
 
 StartChar: fofuaq_diphthong_c_end
@@ -5095,6 +5155,7 @@ SplineSet
  512.569806129 -57.3991712947 519.468365838 -70.8505590303 533 -70.2949254228 c 4
  623.322011417 -66.5861387054 695.511684877 -92.9218380475 746 -148 c 4
 EndSplineSet
+Substitution2: "Add cartouche" fofuaq_hiatus_c
 EndChar
 
 StartChar: fofuaq_hiatus_c
@@ -5139,6 +5200,7 @@ SplineSet
  563 1050 l 1
  42 1050 l 1
 EndSplineSet
+Substitution2: "Switch to cartouche end variant" fofuaq_hiatus_c_end
 EndChar
 
 StartChar: fofuaq_hiatus_c_end
