@@ -22,7 +22,7 @@ OS2Version: 4
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1670694376
-ModificationTime: 1683832830
+ModificationTime: 1683836269
 PfmFamily: 81
 TTFWeight: 400
 TTFWidth: 5
@@ -66,6 +66,7 @@ Lookup: 1 0 0 "Switch to cartouche end variant" { "Switch to cartouche end varia
 Lookup: 5 0 0 "Form hiatus-diphthong ligatures" { "Form hiatus-diphthong ligatures"  } ['calt' ('DFLT' <'dflt' > ) ]
 Lookup: 5 0 0 "Use dia variants" { "Use dia variants"  } ['calt' ('DFLT' <'dflt' > ) ]
 Lookup: 5 8 0 "Use conn variants" { "Use conn variants"  } ['calt' ('DFLT' <'dflt' > ) ]
+Lookup: 4 0 1 "Form mark +- base ligatures" { "Form mark +- base ligatures"  } ['liga' ('DFLT' <'dflt' > ) ]
 Lookup: 5 8 0 "Start cartouches" { "Start cartouches"  } ['rclt' ('DFLT' <'dflt' > ) ]
 Lookup: 6 8 0 "Extend cartouches" { "Extend cartouches"  } ['rclt' ('DFLT' <'dflt' > ) ]
 Lookup: 5 8 0 "End cartouches" { "End cartouches"  } ['rclt' ('DFLT' <'dflt' > ) ]
@@ -83,11 +84,11 @@ KernClass2: 4+ 3 "'kern' Horizontal Kerning in Latin lookup 1-1"
  0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} -220 {} 0 {} 0 {} 0 {} 0 {}
 ContextSub2: class "Use conn variants" 3 3 3 1
   Class: 11 zozeo hehaq
-  Class: 12 bubue fofuaq
+  Class: 32 bubue fofuaq cecoa saqseoq gugui
   BClass: 11 zozeo hehaq
-  BClass: 12 bubue fofuaq
+  BClass: 32 bubue fofuaq cecoa saqseoq gugui
   FClass: 11 zozeo hehaq
-  FClass: 12 bubue fofuaq
+  FClass: 32 bubue fofuaq cecoa saqseoq gugui
  2 0 0
   ClsList: 1 2
   BClsList:
@@ -178,7 +179,7 @@ NameList: AGL For New Fonts
 DisplaySize: -128
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 84 12 6
+WinInfo: 72 12 6
 BeginPrivate: 6
 OtherBlues 2 []
 BlueShift 1 1
@@ -196,7 +197,7 @@ Grid
  260 -701 l 1024
 EndSplineSet
 AnchorClass2: "1"""  "Anchor-0" "'mark' Mark Positioning in Latin lookup 0 subtable" "Anchor-1" "'mark' Mark Positioning in Latin lookup 0 subtable"
-BeginChars: 152 140
+BeginChars: 156 140
 
 StartChar: .notdef
 Encoding: 41 -1 0
@@ -3985,7 +3986,7 @@ EndChar
 StartChar: fofuaq_conn_c
 Encoding: 106 -1 106
 Width: 520
-Flags: HWO
+Flags: HW
 HStem: -2.44535e-16 107.001<339 399.98> 412 100<138.398 271.831>
 VStem: 407.937 107.063<-196.589 -1.66187>
 AnchorPoint: "Anchor-1" 260 510 basechar 0
@@ -4089,6 +4090,7 @@ SplineSet
  4 375 7.09407933821 379.908083116 11 384 c 0
  95 472 135 512 260 512 c 0
 EndSplineSet
+Ligature2: "Form mark +- base ligatures" hiatus fofuaq
 Substitution2: "Add cartouche" hiatus_fofuaq_c
 EndChar
 
@@ -4660,6 +4662,7 @@ SplineSet
  353 27 356 31 360 35 c 0
  403 84 408 146 408 188 c 3
 EndSplineSet
+Ligature2: "Form mark +- base ligatures" hiatus bubue
 Substitution2: "Add cartouche" hiatus_bubue_c
 EndChar
 
@@ -4877,6 +4880,7 @@ SplineSet
  4 375 7.09407933821 379.908083116 11 384 c 4
  95 472 135 512 260 512 c 4
 EndSplineSet
+Ligature2: "Form mark +- base ligatures" hiatus_diphthong fofuaq
 Substitution2: "Add cartouche" fofuaq_hiatus_diphthong_c
 EndChar
 
@@ -5033,6 +5037,7 @@ SplineSet
  4 375 7.09407933821 379.908083116 11 384 c 4
  95 472 135 512 260 512 c 4
 EndSplineSet
+Ligature2: "Form mark +- base ligatures" fofuaq diphthong
 Substitution2: "Add cartouche" fofuaq_diphthong_c
 EndChar
 
@@ -5188,6 +5193,7 @@ SplineSet
  512.569806129 -57.3991712947 519.468365838 -70.8505590303 533 -70.2949254228 c 4
  623.322011417 -66.5861387054 695.511684877 -92.9218380475 746 -148 c 4
 EndSplineSet
+Ligature2: "Form mark +- base ligatures" fofuaq hiatus
 Substitution2: "Add cartouche" fofuaq_hiatus_c
 EndChar
 
