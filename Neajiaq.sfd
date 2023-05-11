@@ -22,7 +22,7 @@ OS2Version: 4
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1670694376
-ModificationTime: 1683825226
+ModificationTime: 1683826138
 PfmFamily: 81
 TTFWeight: 400
 TTFWidth: 5
@@ -64,7 +64,8 @@ Lookup: 2 0 0 "Remove diphthong" { "Remove diphthong"  } ['delt' ('DFLT' <'dflt'
 Lookup: 1 0 0 "Add cartouche" { "Add cartouche"  } ['cart' ('DFLT' <'dflt' > ) ]
 Lookup: 1 0 0 "Switch to cartouche end variant" { "Switch to cartouche end variant"  } ['cart' ('DFLT' <'dflt' > ) ]
 Lookup: 5 0 0 "Form hiatus-diphthong ligatures" { "Form hiatus-diphthong ligatures"  } ['calt' ('DFLT' <'dflt' > ) ]
-Lookup: 5 0 0 "Use conn variants" { "Use conn variants"  } ['calt' ('DFLT' <'dflt' > ) ]
+Lookup: 5 0 0 "Use dia variants" { "Use dia variants"  } ['calt' ('DFLT' <'dflt' > ) ]
+Lookup: 5 8 0 "Use conn variants" { "Use conn variants"  } ['calt' ('DFLT' <'dflt' > ) ]
 Lookup: 5 8 0 "Start cartouches" { "Start cartouches"  } ['rclt' ('DFLT' <'dflt' > ) ]
 Lookup: 6 8 0 "Extend cartouches" { "Extend cartouches"  } ['rclt' ('DFLT' <'dflt' > ) ]
 Lookup: 5 8 0 "End cartouches" { "End cartouches"  } ['rclt' ('DFLT' <'dflt' > ) ]
@@ -81,6 +82,24 @@ KernClass2: 4+ 3 "'kern' Horizontal Kerning in Latin lookup 1-1"
  336 gugui_c nanaq_c pipoq_c aqaq_c saqseoq_c titieq_c nhanhoq_c cecoa_c_end gugui_c_end nanaq_c_end pipoq_c_end aqaq_c_end saqseoq_c_end titieq_c_end nhanhoq_c_end shoshia_c_end chichao_c_end cecoa_dia cecoa_dia_c cecoa_dia_c_end aqaq_dia aqaq_dia_c aqaq_dia_c_end gugui_dia gugui_dia_c gugui_dia_c_end kikue_dia kikue_dia_c kikue_dia_c_end
  0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} -220 {} 0 {} 0 {} 0 {} 0 {}
 ContextSub2: class "Use conn variants" 3 3 3 1
+  Class: 11 zozeo hehaq
+  Class: 12 bubue fofuaq
+  BClass: 11 zozeo hehaq
+  BClass: 12 bubue fofuaq
+  FClass: 11 zozeo hehaq
+  FClass: 12 bubue fofuaq
+ 2 0 0
+  ClsList: 1 2
+  BClsList:
+  FClsList:
+ 2
+  SeqLookup: 0 "Switch to conn variant"
+  SeqLookup: 1 "Switch to conn variant"
+  ClassNames: "All_Others" "conn_left" "conn_right"
+  BClassNames: "All_Others" "conn_left" "conn_right"
+  FClassNames: "All_Others" "conn_left" "conn_right"
+EndFPST
+ContextSub2: class "Use dia variants" 3 3 3 1
   Class: 22 cecoa aqaq gugui kikue
   Class: 33 rising low_glottal rising_falling
   BClass: 22 cecoa aqaq gugui kikue
@@ -159,7 +178,7 @@ NameList: AGL For New Fonts
 DisplaySize: -128
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 72 12 6
+WinInfo: 60 12 6
 BeginPrivate: 6
 OtherBlues 2 []
 BlueShift 1 1
@@ -3933,7 +3952,9 @@ EndChar
 StartChar: fofuaq_conn
 Encoding: 105 -1 105
 Width: 520
-Flags: HW
+Flags: W
+HStem: -2.44535e-16 107.001<339 399.98> 412 100<138.398 271.831>
+VStem: 407.937 107.063<-196.589 -1.66187>
 AnchorPoint: "Anchor-1" 260 510 basechar 0
 AnchorPoint: "Anchor-0" 520 -70 basechar 0
 LayerCount: 2
@@ -3964,7 +3985,9 @@ EndChar
 StartChar: fofuaq_conn_c
 Encoding: 106 -1 106
 Width: 520
-Flags: HW
+Flags: W
+HStem: -2.44535e-16 107.001<339 399.98> 412 100<138.398 271.831>
+VStem: 407.937 107.063<-196.589 -1.66187>
 AnchorPoint: "Anchor-1" 260 510 basechar 0
 AnchorPoint: "Anchor-0" 520 -70 basechar 0
 LayerCount: 2
@@ -3995,7 +4018,7 @@ EndChar
 StartChar: fofuaq_conn_c_end
 Encoding: 107 -1 107
 Width: 520
-Flags: HW
+Flags: HWO
 AnchorPoint: "Anchor-1" 260 510 basechar 0
 AnchorPoint: "Anchor-0" 520 -70 basechar 0
 LayerCount: 2
