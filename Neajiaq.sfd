@@ -22,7 +22,7 @@ OS2Version: 4
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1670694376
-ModificationTime: 1683826138
+ModificationTime: 1683832830
 PfmFamily: 81
 TTFWeight: 400
 TTFWidth: 5
@@ -178,7 +178,7 @@ NameList: AGL For New Fonts
 DisplaySize: -128
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 60 12 6
+WinInfo: 84 12 6
 BeginPrivate: 6
 OtherBlues 2 []
 BlueShift 1 1
@@ -1627,11 +1627,11 @@ AnchorPoint: "Anchor-1" 260 510 basechar 0
 LayerCount: 2
 Fore
 SplineSet
-42 1050 m 1
- 108 1155 l 1
- 629 1155 l 1
- 563 1050 l 1
- 42 1050 l 1
+42 1050 m 5
+ 108 1155 l 5
+ 629 1155 l 5
+ 563 1050 l 5
+ 42 1050 l 5
 260 512 m 0
  469 512 515 302 515 44 c 3
  515 -214 479 -337 295 -506 c 0
@@ -2629,11 +2629,11 @@ AnchorPoint: "Anchor-1" 260 510 basechar 0
 LayerCount: 2
 Fore
 SplineSet
-42 1050 m 1
- 108 1155 l 1
- 478 1155 l 1
- 412 1050 l 1
- 42 1050 l 1
+42 1050 m 5
+ 108 1155 l 5
+ 478 1155 l 5
+ 412 1050 l 5
+ 42 1050 l 5
 260 512 m 0
  469 512 515 302 515 44 c 3
  515 -214 479 -337 295 -506 c 0
@@ -3985,7 +3985,7 @@ EndChar
 StartChar: fofuaq_conn_c
 Encoding: 106 -1 106
 Width: 520
-Flags: W
+Flags: HWO
 HStem: -2.44535e-16 107.001<339 399.98> 412 100<138.398 271.831>
 VStem: 407.937 107.063<-196.589 -1.66187>
 AnchorPoint: "Anchor-1" 260 510 basechar 0
@@ -3993,6 +3993,11 @@ AnchorPoint: "Anchor-0" 520 -70 basechar 0
 LayerCount: 2
 Fore
 SplineSet
+42 1050 m 5
+ 108 1155 l 5
+ 629 1155 l 5
+ 563 1050 l 5
+ 42 1050 l 5
 260 512 m 0
  469 512 515 302 515 44 c 0
  515 -214 479 -337 295 -506 c 0
@@ -4018,12 +4023,17 @@ EndChar
 StartChar: fofuaq_conn_c_end
 Encoding: 107 -1 107
 Width: 520
-Flags: HWO
+Flags: HW
 AnchorPoint: "Anchor-1" 260 510 basechar 0
 AnchorPoint: "Anchor-0" 520 -70 basechar 0
 LayerCount: 2
 Fore
 SplineSet
+42 1050 m 5
+ 108 1155 l 5
+ 478 1155 l 5
+ 412 1050 l 5
+ 42 1050 l 5
 260 512 m 0
  469 512 515 302 515 44 c 0
  515 -214 479 -337 295 -506 c 0
