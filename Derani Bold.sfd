@@ -2,7 +2,7 @@ SplineFontDB: 3.2
 FontName: Derani
 FullName: Derani
 FamilyName: Derani
-Weight: Regular
+Weight: Bold
 Copyright: Copyright Miles Forster 2022
 Version: 1.0
 ItalicAngle: 0
@@ -22,7 +22,7 @@ OS2Version: 2
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1670694376
-ModificationTime: 1672616701
+ModificationTime: 1704245321
 PfmFamily: 81
 TTFWeight: 400
 TTFWidth: 5
