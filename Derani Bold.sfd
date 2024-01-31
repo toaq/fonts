@@ -4894,6 +4894,7 @@ Flags: W
 HStem: 385 128<166.54 294.068> 1026 129<0 660>
 VStem: 0 115<256 330.944> 346 116<146.559 329.859>
 AnchorPoint: "vv" 462 -161 basechar 0
+AnchorPoint: "tone" 231 513 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -4916,6 +4917,7 @@ Flags: W
 HStem: 0 128<167.651 324.815> 385 128<166.875 231> 1026 129<0 660>
 VStem: 0 115<182.754 331.112>
 AnchorPoint: "vv" 462 -161 basechar 0
+AnchorPoint: "tone" 231 513 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -4937,6 +4939,7 @@ GlyphClass: 2
 Flags: W
 HStem: 0 128<136.902 293.573> 256 97<174.61 229.446> 417 96<174.668 229.322> 1026 129<0 660>
 VStem: 87 86<354.853 415.059> 346 116<182.754 329.859>
+AnchorPoint: "tone" 231 513 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -4958,6 +4961,8 @@ GlyphClass: 2
 Flags: W
 HStem: 385 128<166.54 294.068> 1026 129<0 660>
 VStem: 0 115<256 330.944> 346 116<-365.758 328.773>
+AnchorPoint: "vv" 462 -161 basechar 0
+AnchorPoint: "tone" 231 513 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -4980,6 +4985,7 @@ Flags: W
 HStem: 0 128<167.651 294.068 514.12 641.183> 385 128<166.875 231> 1026 129<0 804>
 VStem: 0 115<182.754 331.112> 346 116<181.691 256>
 AnchorPoint: "vv" 577 -161 basechar 0
+AnchorPoint: "tone" 231 513 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -5001,6 +5007,7 @@ GlyphClass: 2
 Flags: W
 HStem: 0 128<231 346 462 786.317> 385 128<166.54 294.068> 1026 129<0 660>
 VStem: 0 115<256 330.944> 346 116<-365.758 0 128 328.773>
+AnchorPoint: "tone" 231 513 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -5023,6 +5030,7 @@ Flags: W
 HStem: 385 128<166.54 294.068 514.158 640.408> 1026 129<0 1006>
 VStem: 0 115<256 330.944> 346 116<256 330.944> 693 115<146.559 328.773>
 CounterMasks: 1 38
+AnchorPoint: "tone" 231 513 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -5044,6 +5052,7 @@ GlyphClass: 2
 Flags: W
 HStem: -334 155<183.259 278.741> 0 128<167.651 324.815> 385 128<166.875 231> 1026 129<0 660>
 VStem: 0 115<182.754 331.112> 162 138<-310.279 -202.721>
+AnchorPoint: "tone" 231 513 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -5065,6 +5074,7 @@ GlyphClass: 2
 Flags: W
 HStem: -334 155<530.258 624.741> 0 128<431 808> 385 128<166.54 294.068 628.54 756.349> 1026 129<0 1122>
 VStem: 0 115<256 330.944> 346 116<147.283 329.859> 462 115<256 330.944> 508 139<-311.713 -201.287> 808 116<128 331.75>
+AnchorPoint: "tone" 231 513 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -5086,6 +5096,7 @@ GlyphClass: 2
 Flags: W
 HStem: 0 128<431 808 924 1270> 385 128<166.54 294.068 628.54 756.349 1091.59 1218.35> 1026 129<0 1584>
 VStem: 0 115<256 330.944> 346 116<147.283 329.859> 462 115<256 330.944> 808 116<128 331.75> 924 115<256 330.944> 1270 116<-365.758 0 128 331.75>
+AnchorPoint: "tone" 231 513 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -5107,6 +5118,7 @@ GlyphClass: 2
 Flags: W
 HStem: 0 128<167.651 294.068> 385 128<166.54 294.068> 513 128<231 324.815> 1026 129<0 660>
 VStem: 0 115<182.754 331.112> 346 116<182.754 329.859>
+AnchorPoint: "tone" 231 513 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -5128,6 +5140,7 @@ GlyphClass: 2
 Flags: W
 HStem: 0 128<167.651 294.698> 385 128<166.54 294.068> 1026 129<0 660>
 VStem: 0 115<182.754 331.112> 346 116<-365.758 33 181.691 328.773>
+AnchorPoint: "tone" 231 513 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -5149,6 +5162,7 @@ GlyphClass: 2
 Flags: W
 HStem: 0 128<167.651 294.698> 385 128<166.875 231> 1026 129<0 660>
 VStem: 0 115<182.754 331.112> 346 116<-365.758 33 181.691 256>
+AnchorPoint: "tone" 231 513 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -5170,6 +5184,7 @@ GlyphClass: 2
 Flags: W
 HStem: 0 128<431 808> 385 128<166.54 294.068 628.54 756.349> 1026 129<0 1122>
 VStem: 0 115<256 330.944> 346 116<147.283 329.859> 462 115<256 330.944> 808 116<-365.758 0 128 331.75>
+AnchorPoint: "tone" 231 513 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -5191,6 +5206,8 @@ GlyphClass: 2
 Flags: W
 HStem: 0 128<167.651 294.068> 385 128<166.54 294.068> 1026 129<0 660>
 VStem: 0 115<182.754 331.112> 346 116<182.754 329.859>
+AnchorPoint: "vv" 462 -161 basechar 0
+AnchorPoint: "tone" 231 513 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -5213,6 +5230,7 @@ Flags: W
 HStem: 0 128<167.651 294.068> 385 128<166.54 294.947> 641 129<512.293 642.293> 1026 129<0 1006>
 VStem: 0 115<182.754 331.112> 346 116<183.816 330.944 480 587.944> 693 115<146.559 587.944>
 CounterMasks: 1 0e
+AnchorPoint: "tone" 231 513 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -5278,6 +5296,7 @@ GlyphClass: 2
 Flags: W
 HStem: 0 128<167.651 294.698> 385 128<166.875 324.317> 1026 129<0 660>
 VStem: 0 115<182.754 331.112> 346 116<-365.758 33 181.691 256>
+AnchorPoint: "tone" 231 513 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -5299,6 +5318,7 @@ GlyphClass: 2
 Flags: W
 HStem: 0 128<167.651 324.815> 385 128<166.875 324.317> 1026 129<0 660>
 VStem: 0 115<182.754 331.112>
+AnchorPoint: "tone" 231 513 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -5320,6 +5340,7 @@ GlyphClass: 2
 Flags: W
 HStem: -513 1<252.969 259.781> 0 128<195.95 346 462 786.317> 385 128<166.54 294.068> 1026 129<0 660>
 VStem: 0 115<256 330.944> 29 115<-368.536 -55.8162> 346 116<-365.758 0 128 328.773>
+AnchorPoint: "tone" 231 513 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -5751,6 +5772,7 @@ Flags: W
 HStem: 385 128<166.54 294.068> 1026 129<0 462>
 VStem: 0 115<256 330.944> 346 116<146.559 329.859>
 AnchorPoint: "vv" 462 -161 basechar 0
+AnchorPoint: "tone" 231 513 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -5772,6 +5794,7 @@ Flags: W
 HStem: 0 128<167.651 324.815> 385 128<166.875 231> 1026 129<0 462>
 VStem: 0 115<182.754 331.112>
 AnchorPoint: "vv" 462 -161 basechar 0
+AnchorPoint: "tone" 231 513 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -5792,6 +5815,7 @@ GlyphClass: 2
 Flags: W
 HStem: 0 128<136.902 293.573> 256 97<174.61 229.446> 417 96<174.668 229.322> 1026 129<0 462>
 VStem: 87 86<354.853 415.059> 346 116<182.754 329.859>
+AnchorPoint: "tone" 231 513 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -5812,6 +5836,8 @@ GlyphClass: 2
 Flags: W
 HStem: 385 128<166.54 294.068> 1026 129<0 462>
 VStem: 0 115<256 330.944> 346 116<-365.758 328.773>
+AnchorPoint: "vv" 462 -161 basechar 0
+AnchorPoint: "tone" 231 513 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -5833,6 +5859,7 @@ Flags: W
 HStem: 0 128<167.651 294.068 514.12 641.183> 385 128<166.875 231> 1026 129<0 606>
 VStem: 0 115<182.754 331.112> 346 116<181.691 256>
 AnchorPoint: "vv" 577 -161 basechar 0
+AnchorPoint: "tone" 231 513 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -5853,6 +5880,7 @@ GlyphClass: 2
 Flags: W
 HStem: 0 128<231 346 462 786.317> 385 128<166.54 294.068> 1026 129<0 462>
 VStem: 0 115<256 330.944> 346 116<-365.758 0 128 328.773>
+AnchorPoint: "tone" 231 513 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -5874,6 +5902,7 @@ Flags: W
 HStem: 385 128<166.54 294.068 514.158 640.408> 1026 129<0 808>
 VStem: 0 115<256 330.944> 346 116<256 330.944> 693 115<146.559 328.773>
 CounterMasks: 1 38
+AnchorPoint: "tone" 231 513 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -5894,6 +5923,7 @@ GlyphClass: 2
 Flags: W
 HStem: -334 155<183.259 278.741> 0 128<167.651 324.815> 385 128<166.875 231> 1026 129<0 462>
 VStem: 0 115<182.754 331.112> 162 138<-310.279 -202.721>
+AnchorPoint: "tone" 231 513 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -5914,6 +5944,7 @@ GlyphClass: 2
 Flags: W
 HStem: -334 155<530.258 624.741> 0 128<431 808> 385 128<166.54 294.068 628.54 756.349> 1026 129<0 924>
 VStem: 0 115<256 330.944> 346 116<147.283 329.859> 462 115<256 330.944> 508 139<-311.713 -201.287> 808 116<128 331.75>
+AnchorPoint: "tone" 231 513 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -5934,6 +5965,7 @@ GlyphClass: 2
 Flags: W
 HStem: 0 128<431 808 924 1270> 385 128<166.54 294.068 628.54 756.349 1091.59 1218.35> 1026 129<0 1386>
 VStem: 0 115<256 330.944> 346 116<147.283 329.859> 462 115<256 330.944> 808 116<128 331.75> 924 115<256 330.944> 1270 116<-365.758 0 128 331.75>
+AnchorPoint: "tone" 231 513 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -5954,6 +5986,7 @@ GlyphClass: 2
 Flags: W
 HStem: 0 128<167.651 294.068> 385 128<166.54 294.068> 513 128<231 324.815> 1026 129<0 462>
 VStem: 0 115<182.754 331.112> 346 116<182.754 329.859>
+AnchorPoint: "tone" 231 513 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -5974,6 +6007,7 @@ GlyphClass: 2
 Flags: W
 HStem: 0 128<167.651 294.698> 385 128<166.54 294.068> 1026 129<0 462>
 VStem: 0 115<182.754 331.112> 346 116<-365.758 33 181.691 328.773>
+AnchorPoint: "tone" 231 513 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -5994,6 +6028,7 @@ GlyphClass: 2
 Flags: W
 HStem: 0 128<167.651 294.698> 385 128<166.875 231> 1026 129<0 462>
 VStem: 0 115<182.754 331.112> 346 116<-365.758 33 181.691 256>
+AnchorPoint: "tone" 231 513 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -6013,6 +6048,7 @@ VWidth: 1100
 Flags: W
 HStem: 0 128<431 808> 385 128<166.54 294.068 628.54 756.349> 1026 129<0 924>
 VStem: 0 115<256 330.944> 346 116<147.283 329.859> 462 115<256 330.944> 808 116<-365.758 0 128 331.75>
+AnchorPoint: "tone" 231 513 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -6034,6 +6070,7 @@ Flags: W
 HStem: 0 128<167.651 294.068> 385 128<166.54 294.068> 1026 129<0 462>
 VStem: 0 115<182.754 331.112> 346 116<182.754 329.859>
 AnchorPoint: "vv" 462 -161 basechar 0
+AnchorPoint: "tone" 231 513 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -6055,6 +6092,7 @@ Flags: W
 HStem: 0 128<167.651 294.068> 385 128<166.54 294.947> 641 129<512.293 642.293> 1026 129<0 808>
 VStem: 0 115<182.754 331.112> 346 116<183.816 330.944 480 587.944> 693 115<146.559 587.944>
 CounterMasks: 1 0e
+AnchorPoint: "tone" 231 513 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -6075,6 +6113,7 @@ GlyphClass: 2
 Flags: W
 HStem: 385 128<115 293.573> 1026 129<0 462>
 VStem: 0 115<513 622.441> 346 116<146.559 329.859>
+AnchorPoint: "tone" 693 513 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -6095,6 +6134,7 @@ GlyphClass: 2
 Flags: W
 HStem: 0 96<174.61 229.38> 160 96<174.668 229.332> 385 128<166.54 294.068> 1026 129<0 462>
 VStem: 0 115<256 330.944> 87 86<97.8533 158.147> 346 116<182.916 329.859>
+AnchorPoint: "tone" 231 513 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -6115,6 +6155,7 @@ GlyphClass: 2
 Flags: W
 HStem: 0 128<167.651 294.698> 385 128<166.875 324.317> 1026 129<0 462>
 VStem: 0 115<182.754 331.112> 346 116<-365.758 33 181.691 256>
+AnchorPoint: "tone" 231 513 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -6135,6 +6176,7 @@ GlyphClass: 2
 Flags: W
 HStem: 0 128<167.651 324.815> 385 128<166.875 324.317> 1026 129<0 462>
 VStem: 0 115<182.754 331.112>
+AnchorPoint: "tone" 231 513 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -6155,6 +6197,7 @@ GlyphClass: 2
 Flags: W
 HStem: -513 1<252.969 259.781> 0 128<195.95 346 462 786.317> 385 128<166.54 294.068> 1026 129<0 462>
 VStem: 0 115<256 330.944> 29 115<-368.536 -55.8162> 346 116<-365.758 0 128 328.773>
+AnchorPoint: "tone" 231 513 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -6504,6 +6547,7 @@ GlyphClass: 2
 Flags: W
 HStem: 0 128<431 757.125> 385 128<166.54 294.068 628.54 756.349> 1026 129<0 1122>
 VStem: 0 116<256 331.281> 347 115<147.283 329.215> 462 115<256 330.944> 808 116<180.859 331.75>
+AnchorPoint: "tone" 231 513 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -6525,6 +6569,7 @@ GlyphClass: 2
 Flags: WO
 HStem: 0 128<431 757.125> 385 128<166.54 294.068 628.54 756.349> 1026 129<0 924>
 VStem: 0 116<256 331.281> 347 115<147.283 329.215> 462 115<256 330.944> 808 116<180.859 331.75>
+AnchorPoint: "tone" 231 513 basechar 0
 LayerCount: 2
 Fore
 SplineSet
