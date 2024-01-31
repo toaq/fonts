@@ -22,7 +22,7 @@ OS2Version: 2
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1670694376
-ModificationTime: 1706658484
+ModificationTime: 1706659401
 PfmFamily: 81
 TTFWeight: 400
 TTFWidth: 5
@@ -1204,7 +1204,7 @@ SplineSet
  693 -362 693 -362 625 -438 c 256,10,11
  558 -513 558 -513 462 -513 c 1,0,1
 EndSplineSet
-MultipleSubs2: "DeleteDiphthong"
+MultipleSubs2: "DeleteDiphthong" 
 EndChar
 
 StartChar: subordination
@@ -4247,162 +4247,42 @@ Encoding: 31 988861 31
 Width: 461
 VWidth: 1100
 GlyphClass: 2
-Flags: W
+Flags: WO
 HStem: 0 96<174.61 229.38> 160 96<174.668 229.332> 385 128<166.54 294.068>
 VStem: 0 115<256 330.944> 87 86<97.8533 158.147> 346 116<182.916 329.859>
-TtInstrs:
-SVTCA[y-axis]
-PUSHB_1
- 18
-MDAP[rnd]
-PUSHB_5
- 2
- 0
- 0
- 20
- 4
-CALL
-PUSHB_1
- 10
-MDAP[rnd]
-PUSHB_5
- 26
- 0
- 0
- 20
- 4
-CALL
-PUSHB_1
- 36
-MDAP[rnd]
-PUSHB_2
- 45
- 0
-MIRP[min,black]
-PUSHB_3
- 36
- 45
- 10
-CALL
-PUSHB_4
- 64
- 36
- 41
- 9
-CALL
-SVTCA[x-axis]
-PUSHB_1
- 56
-MDAP[rnd]
-PUSHB_1
- 41
-MDRP[rp0,rnd,white]
-PUSHB_2
- 40
- 2
-MIRP[min,black]
-PUSHB_4
- 22
- 40
- 41
- 8
-CALL
-PUSHB_5
- 14
- 2
- 0
- 22
- 4
-CALL
-PUSHB_1
- 40
-SRP0
-PUSHB_2
- 32
- 1
-CALL
-PUSHB_2
- 49
- 1
-MIRP[min,black]
-PUSHB_2
- 57
- 1
-CALL
-PUSHB_2
- 32
- 14
-SRP1
-SRP2
-PUSHB_6
- 6
- 18
- 26
- 36
- 45
- 53
-DEPTH
-SLOOP
-IP
-SVTCA[y-axis]
-PUSHB_2
- 2
- 18
-SRP1
-SRP2
-PUSHB_1
- 0
-IP
-PUSHB_2
- 26
- 10
-SRP1
-SRP2
-PUSHB_3
- 30
- 32
- 49
-IP
-IP
-IP
-IUP[y]
-IUP[x]
-EndTTInstrs
 AnchorPoint: "tone" 231 513 basechar 0
 LayerCount: 2
 Fore
 SplineSet
-231 3 m 1024,0,1
-202 96 m 256,2,3
- 214 96 214 96 222 105 c 0,4,5
- 231 115 231 115 231 128 c 256,6,7
- 231 141 231 141 222 150 c 0,8,9
- 213 160 213 160 202 160 c 0,10,11
- 190 160 190 160 182 150 c 0,12,13
- 173 141 173 141 173 128 c 256,14,15
- 173 115 173 115 182 105 c 0,16,17
- 190 96 190 96 202 96 c 256,2,3
-202 0 m 0,18,19
- 154 0 154 0 120 37 c 0,20,21
- 86 75 86 75 87 128 c 0,22,23
- 87 181 87 181 120 219 c 0,24,25
- 154 256 154 256 202 256 c 256,26,27
- 250 256 250 256 284 219 c 0,28,29
- 304 195 304 195 312 166 c 1,30,31
- 346 204 346 204 346 256 c 0,32,33
- 346 309 346 309 312 347 c 0,34,35
- 279 385 279 385 231 385 c 256,36,37
- 183 385 183 385 149 347 c 256,38,39
- 115 309 115 309 115 256 c 1,40,-1
- 0 256 l 1,41,42
- 0 362 0 362 68 438 c 256,43,44
- 136 513 136 513 231 513 c 256,45,46
- 327 513 327 513 394 438 c 256,47,48
- 462 363 462 363 462 256 c 0,49,50
- 462 150 462 150 394 75 c 256,51,52
- 326 0 326 0 231 0 c 1,53,-1
- 231 3 l 1,54,55
- 217 0 217 0 202 0 c 0,18,19
+202 96 m 256,0,1
+ 214 96 214 96 222 105 c 0,2,3
+ 231 115 231 115 231 128 c 256,4,5
+ 231 141 231 141 222 150 c 0,6,7
+ 213 160 213 160 202 160 c 0,8,9
+ 190 160 190 160 182 150 c 0,10,11
+ 173 141 173 141 173 128 c 256,12,13
+ 173 115 173 115 182 105 c 0,14,15
+ 190 96 190 96 202 96 c 256,0,1
+231 0 m 1,16,17
+ 153 2 153 2 119.5 38.5 c 128,-1,18
+ 86 75 86 75 86.5 129 c 128,-1,19
+ 87 183 87 183 120.5 219.5 c 128,-1,20
+ 154 256 154 256 202 256 c 256,21,22
+ 253 256 253 256 284 219 c 0,23,24
+ 304 195 304 195 312 166 c 1,25,26
+ 346 204 346 204 346 256.5 c 128,-1,27
+ 346 309 346 309 312.5 347 c 128,-1,28
+ 279 385 279 385 231 385 c 256,29,30
+ 183 385 183 385 149 347 c 256,31,32
+ 115 309 115 309 115 256 c 1,33,-1
+ 0 256 l 1,34,35
+ 0 362 0 362 68 438 c 256,36,37
+ 136 513 136 513 231 513 c 256,38,39
+ 327 513 327 513 394 438 c 256,40,41
+ 462 363 462 363 462 256.5 c 128,-1,42
+ 462 150 462 150 394 75 c 256,43,44
+ 326 0 326 0 231 0 c 1,45,-1
+ 231 0 l 1,16,17
 EndSplineSet
 Substitution2: "WithCartouche" nhanhoq_c
 EndChar
@@ -5819,11 +5699,11 @@ AnchorPoint: "tone" 231 513 basechar 0
 LayerCount: 2
 Fore
 SplineSet
-0 1026 m 1
- 0 1155 l 1
- 462 1155 l 1
- 462 1026 l 1
- 0 1026 l 1
+0 1026 m 1,0,-1
+ 0 1155 l 1,1,-1
+ 462 1155 l 1,2,-1
+ 462 1026 l 1,3,-1
+ 0 1026 l 1,0,-1
 EndSplineSet
 Refer: 16 988854 N 1 0 0 1 0 0 2
 EndChar
@@ -5841,11 +5721,11 @@ AnchorPoint: "tone" 231 513 basechar 0
 LayerCount: 2
 Fore
 SplineSet
-0 1026 m 1
- 0 1155 l 1
- 462 1155 l 1
- 462 1026 l 1
- 0 1026 l 1
+0 1026 m 1,0,-1
+ 0 1155 l 1,1,-1
+ 462 1155 l 1,2,-1
+ 462 1026 l 1,3,-1
+ 0 1026 l 1,0,-1
 EndSplineSet
 Refer: 17 988852 N 1 0 0 1 0 0 2
 EndChar
@@ -5863,11 +5743,11 @@ AnchorPoint: "tone" 231 513 basechar 0
 LayerCount: 2
 Fore
 SplineSet
-0 1026 m 1
- 0 1155 l 1
- 606 1155 l 1
- 606 1026 l 1
- 0 1026 l 1
+0 1026 m 1,0,-1
+ 0 1155 l 1,1,-1
+ 606 1155 l 1,2,-1
+ 606 1026 l 1,3,-1
+ 0 1026 l 1,0,-1
 EndSplineSet
 Refer: 18 988867 N 1 0 0 1 0 0 2
 EndChar
@@ -5884,11 +5764,11 @@ AnchorPoint: "tone" 231 513 basechar 0
 LayerCount: 2
 Fore
 SplineSet
-0 1026 m 1
- 0 1155 l 1
- 462 1155 l 1
- 462 1026 l 1
- 0 1026 l 1
+0 1026 m 1,0,-1
+ 0 1155 l 1,1,-1
+ 462 1155 l 1,2,-1
+ 462 1026 l 1,3,-1
+ 0 1026 l 1,0,-1
 EndSplineSet
 Refer: 19 988870 N 1 0 0 1 0 0 2
 EndChar
@@ -5906,11 +5786,11 @@ AnchorPoint: "tone" 231 513 basechar 0
 LayerCount: 2
 Fore
 SplineSet
-0 1026 m 1
- 0 1155 l 1
- 808 1155 l 1
- 808 1026 l 1
- 0 1026 l 1
+0 1026 m 1,0,-1
+ 0 1155 l 1,1,-1
+ 808 1155 l 1,2,-1
+ 808 1026 l 1,3,-1
+ 0 1026 l 1,0,-1
 EndSplineSet
 Refer: 20 988862 S 1 0 0 1 0 0 2
 EndChar
@@ -5927,11 +5807,11 @@ AnchorPoint: "tone" 231 513 basechar 0
 LayerCount: 2
 Fore
 SplineSet
-0 1026 m 1
- 0 1155 l 1
- 462 1155 l 1
- 462 1026 l 1
- 0 1026 l 1
+0 1026 m 1,0,-1
+ 0 1155 l 1,1,-1
+ 462 1155 l 1,2,-1
+ 462 1026 l 1,3,-1
+ 0 1026 l 1,0,-1
 EndSplineSet
 Refer: 21 988868 S 1 0 0 1 0 0 2
 EndChar
@@ -5948,11 +5828,11 @@ AnchorPoint: "tone" 231 513 basechar 0
 LayerCount: 2
 Fore
 SplineSet
-0 1026 m 1
- 0 1155 l 1
- 924 1155 l 1
- 924 1026 l 1
- 0 1026 l 1
+0 1026 m 1,0,-1
+ 0 1155 l 1,1,-1
+ 924 1155 l 1,2,-1
+ 924 1026 l 1,3,-1
+ 0 1026 l 1,0,-1
 EndSplineSet
 Refer: 22 988860 S 1 0 0 1 0 0 2
 EndChar
@@ -5969,11 +5849,11 @@ AnchorPoint: "tone" 231 513 basechar 0
 LayerCount: 2
 Fore
 SplineSet
-0 1026 m 1
- 0 1155 l 1
- 1386 1155 l 1
- 1386 1026 l 1
- 0 1026 l 1
+0 1026 m 1,0,-1
+ 0 1155 l 1,1,-1
+ 1386 1155 l 1,2,-1
+ 1386 1026 l 1,3,-1
+ 0 1026 l 1,0,-1
 EndSplineSet
 Refer: 23 988848 S 1 0 0 1 0 0 2
 EndChar
@@ -5990,11 +5870,11 @@ AnchorPoint: "tone" 231 513 basechar 0
 LayerCount: 2
 Fore
 SplineSet
-0 1026 m 1
- 0 1155 l 1
- 462 1155 l 1
- 462 1026 l 1
- 0 1026 l 1
+0 1026 m 1,0,-1
+ 0 1155 l 1,1,-1
+ 462 1155 l 1,2,-1
+ 462 1026 l 1,3,-1
+ 0 1026 l 1,0,-1
 EndSplineSet
 Refer: 24 988853 S 1 0 0 1 0 0 2
 EndChar
@@ -6011,11 +5891,11 @@ AnchorPoint: "tone" 231 513 basechar 0
 LayerCount: 2
 Fore
 SplineSet
-0 1026 m 1
- 0 1155 l 1
- 462 1155 l 1
- 462 1026 l 1
- 0 1026 l 1
+0 1026 m 1,0,-1
+ 0 1155 l 1,1,-1
+ 462 1155 l 1,2,-1
+ 462 1026 l 1,3,-1
+ 0 1026 l 1,0,-1
 EndSplineSet
 Refer: 25 988851 S 1 0 0 1 0 0 2
 EndChar
@@ -6032,11 +5912,11 @@ AnchorPoint: "tone" 231 513 basechar 0
 LayerCount: 2
 Fore
 SplineSet
-0 1026 m 1
- 0 1155 l 1
- 462 1155 l 1
- 462 1026 l 1
- 0 1026 l 1
+0 1026 m 1,0,-1
+ 0 1155 l 1,1,-1
+ 462 1155 l 1,2,-1
+ 462 1026 l 1,3,-1
+ 0 1026 l 1,0,-1
 EndSplineSet
 Refer: 26 988866 S 1 0 0 1 0 0 2
 EndChar
@@ -6052,11 +5932,11 @@ AnchorPoint: "tone" 231 513 basechar 0
 LayerCount: 2
 Fore
 SplineSet
-0 1026 m 1
- 0 1155 l 1
- 924 1155 l 1
- 924 1026 l 1
- 0 1026 l 1
+0 1026 m 1,0,-1
+ 0 1155 l 1,1,-1
+ 924 1155 l 1,2,-1
+ 924 1026 l 1,3,-1
+ 0 1026 l 1,0,-1
 EndSplineSet
 Refer: 27 988859 S 1 0 0 1 0 0 2
 EndChar
@@ -6074,11 +5954,11 @@ AnchorPoint: "tone" 231 513 basechar 0
 LayerCount: 2
 Fore
 SplineSet
-0 1026 m 1
- 0 1155 l 1
- 462 1155 l 1
- 462 1026 l 1
- 0 1026 l 1
+0 1026 m 1,0,-1
+ 0 1155 l 1,1,-1
+ 462 1155 l 1,2,-1
+ 462 1026 l 1,3,-1
+ 0 1026 l 1,0,-1
 EndSplineSet
 Refer: 28 988858 S 1 0 0 1 0 0 2
 EndChar
@@ -6096,11 +5976,11 @@ AnchorPoint: "tone" 231 513 basechar 0
 LayerCount: 2
 Fore
 SplineSet
-0 1026 m 1
- 0 1155 l 1
- 808 1155 l 1
- 808 1026 l 1
- 0 1026 l 1
+0 1026 m 1,0,-1
+ 0 1155 l 1,1,-1
+ 808 1155 l 1,2,-1
+ 808 1026 l 1,3,-1
+ 0 1026 l 1,0,-1
 EndSplineSet
 Refer: 29 988855 S 1 0 0 1 0 0 2
 EndChar
@@ -6117,11 +5997,11 @@ AnchorPoint: "tone" 693 513 basechar 0
 LayerCount: 2
 Fore
 SplineSet
-0 1026 m 1
- 0 1155 l 1
- 462 1155 l 1
- 462 1026 l 1
- 0 1026 l 1
+0 1026 m 1,0,-1
+ 0 1155 l 1,1,-1
+ 462 1155 l 1,2,-1
+ 462 1026 l 1,3,-1
+ 0 1026 l 1,0,-1
 EndSplineSet
 Refer: 30 988865 S 1 0 0 1 0 0 2
 EndChar
@@ -6138,11 +6018,11 @@ AnchorPoint: "tone" 231 513 basechar 0
 LayerCount: 2
 Fore
 SplineSet
-0 1026 m 1
- 0 1155 l 1
- 462 1155 l 1
- 462 1026 l 1
- 0 1026 l 1
+0 1026 m 1,0,-1
+ 0 1155 l 1,1,-1
+ 462 1155 l 1,2,-1
+ 462 1026 l 1,3,-1
+ 0 1026 l 1,0,-1
 EndSplineSet
 Refer: 31 988861 N 1 0 0 1 0 0 2
 EndChar
@@ -6159,11 +6039,11 @@ AnchorPoint: "tone" 231 513 basechar 0
 LayerCount: 2
 Fore
 SplineSet
-0 1026 m 1
- 0 1155 l 1
- 462 1155 l 1
- 462 1026 l 1
- 0 1026 l 1
+0 1026 m 1,0,-1
+ 0 1155 l 1,1,-1
+ 462 1155 l 1,2,-1
+ 462 1026 l 1,3,-1
+ 0 1026 l 1,0,-1
 EndSplineSet
 Refer: 32 988864 S 1 0 0 1 0 0 2
 EndChar
@@ -6180,11 +6060,11 @@ AnchorPoint: "tone" 231 513 basechar 0
 LayerCount: 2
 Fore
 SplineSet
-0 1026 m 1
- 0 1155 l 1
- 462 1155 l 1
- 462 1026 l 1
- 0 1026 l 1
+0 1026 m 1,0,-1
+ 0 1155 l 1,1,-1
+ 462 1155 l 1,2,-1
+ 462 1026 l 1,3,-1
+ 0 1026 l 1,0,-1
 EndSplineSet
 Refer: 33 988863 S 1 0 0 1 0 0 2
 EndChar
@@ -6201,11 +6081,11 @@ AnchorPoint: "tone" 231 513 basechar 0
 LayerCount: 2
 Fore
 SplineSet
-0 1026 m 1
- 0 1155 l 1
- 462 1155 l 1
- 462 1026 l 1
- 0 1026 l 1
+0 1026 m 1,0,-1
+ 0 1155 l 1,1,-1
+ 462 1155 l 1,2,-1
+ 462 1026 l 1,3,-1
+ 0 1026 l 1,0,-1
 EndSplineSet
 Refer: 34 988856 S 1 0 0 1 0 0 2
 EndChar
@@ -6264,11 +6144,11 @@ VStem: 75 138<74.7207 182.279 330.721 438.279>
 LayerCount: 2
 Fore
 SplineSet
-0 1026 m 1
- 0 1155 l 1
- 288 1155 l 1
- 288 1026 l 1
- 0 1026 l 1
+0 1026 m 1,0,-1
+ 0 1155 l 1,1,-1
+ 288 1155 l 1,2,-1
+ 288 1026 l 1,3,-1
+ 0 1026 l 1,0,-1
 EndSplineSet
 Refer: 9 988882 S 1 0 0 1 0 0 2
 EndChar
@@ -6284,11 +6164,11 @@ VStem: 75 138<202.721 310.279>
 LayerCount: 2
 Fore
 SplineSet
-0 1026 m 1
- 0 1155 l 1
- 288 1155 l 1
- 288 1026 l 1
- 0 1026 l 1
+0 1026 m 1,0,-1
+ 0 1155 l 1,1,-1
+ 288 1155 l 1,2,-1
+ 288 1026 l 1,3,-1
+ 0 1026 l 1,0,-1
 EndSplineSet
 Refer: 6 988869 S 1 0 0 1 0 0 2
 EndChar
@@ -6303,11 +6183,11 @@ HStem: 0 21G<212.875 248.969> 1026 129<0 462>
 LayerCount: 2
 Fore
 SplineSet
-0 1026 m 1
- 0 1155 l 1
- 462 1155 l 1
- 462 1026 l 1
- 0 1026 l 1
+0 1026 m 1,0,-1
+ 0 1155 l 1,1,-1
+ 462 1155 l 1,2,-1
+ 462 1026 l 1,3,-1
+ 0 1026 l 1,0,-1
 EndSplineSet
 Refer: 2 988883 S 1 0 0 1 0 0 2
 EndChar
@@ -6551,11 +6431,11 @@ AnchorPoint: "tone" 231 513 basechar 0
 LayerCount: 2
 Fore
 SplineSet
-0 1026 m 1
- 0 1155 l 1
- 1122 1155 l 1
- 1122 1026 l 1
- 0 1026 l 1
+0 1026 m 1,0,-1
+ 0 1155 l 1,1,-1
+ 1122 1155 l 1,2,-1
+ 1122 1026 l 1,3,-1
+ 0 1026 l 1,0,-1
 EndSplineSet
 Refer: 87 988849 S 1 0 0 1 0 0 2
 Substitution2: "TrimCartouche" mamei_coda_c_end
@@ -6566,18 +6446,18 @@ Encoding: 89 -1 90
 Width: 924
 VWidth: 1100
 GlyphClass: 2
-Flags: WO
+Flags: W
 HStem: 0 128<431 757.125> 385 128<166.54 294.068 628.54 756.349> 1026 129<0 924>
 VStem: 0 116<256 331.281> 347 115<147.283 329.215> 462 115<256 330.944> 808 116<180.859 331.75>
 AnchorPoint: "tone" 231 513 basechar 0
 LayerCount: 2
 Fore
 SplineSet
-0 1026 m 1
- 0 1155 l 1
- 924 1155 l 1
- 924 1026 l 1
- 0 1026 l 1
+0 1026 m 1,0,-1
+ 0 1155 l 1,1,-1
+ 924 1155 l 1,2,-1
+ 924 1026 l 1,3,-1
+ 0 1026 l 1,0,-1
 EndSplineSet
 Refer: 87 988849 S 1 0 0 1 0 0 2
 EndChar
