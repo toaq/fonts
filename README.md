@@ -13,6 +13,8 @@ For the Latin orthography, there is currently only one font:
 
 - A patched version of [**Commissioner**](https://fonts.google.com/specimen/Commissioner)
 
+See also [**IosevkaToaq**](https://github.com/toaq/Iosevka), an extension of Iosevka to include ꝡ and Derani glyphs.
+
 ## Generating Derani Regular
 
 The Derani Bold font is the original Derani font. The Regular weight is generated from it by following these steps in [FontForge](https://fontforge.org/en-US/):
