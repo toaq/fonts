@@ -1,3 +1,5 @@
 *.sfd
-*.ttf
 *.pdf
+
+# ignore non-Toaq fonts
+FiraSans-*.ttf

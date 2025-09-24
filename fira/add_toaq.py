@@ -1,11 +1,13 @@
-import fontforge
+import functools
 import os
 import random
 import sys
-from PIL import Image
 from enum import Enum, auto
 from math import atan2, radians
 from multiprocessing import Pool
+
+import fontforge
+from PIL import Image
 from psMat import translate, skew, scale, rotate
 
 def sample():
@@ -25,26 +27,37 @@ def ord_(x):
     return ord(x) if isinstance(x, str) and len(x) == 1 else x
 
 def toaqify(font):
-    def get(c):
+    slant = None
+    visited = set()
+
+    @functools.cache
+    def get_glyph(c):
         try:
             return font[ord_(c)]
         except:
             for g in font:
-                if font[g].unicode == c:
+                if font[g].unicode == c or font[g].glyphname == c:
                     return font[g]
+
+    def get(c):
+        glyph = get_glyph(c)
+        if slant is not None and glyph.unicode not in visited:
+            glyph.transform(skew(-slant))
+            visited.add(glyph.unicode)
+        return glyph
 
     def select(src):
         try: font.selection.select(ord_(src))
         except ValueError: font.selection.select(("unicode",), ord_(src))
 
     def copy(src, tgt):
+        get(src)
         select(src); font.copy()
         select(tgt); font.paste()
+        visited.add(tgt)
 
     def add(src, tgt):
         get(tgt).foreground += get(src).foreground
-        # select(src); font.copy()
-        # select(tgt); font.pasteInto()
 
     def sub(src, tgt):
         copy(src, 1)
@@ -52,7 +65,6 @@ def toaqify(font):
         copy(1, tgt)
 
     def rect(c, x1, y1, x2, y2):
-
         ct = fontforge.contour(1)
         ct.moveTo(x1,y1)
         ct.lineTo(x1,y2)
@@ -75,8 +87,12 @@ def toaqify(font):
         return [p for contour in get(c).layers[1] for p in contour]
 
     # baseline start and end
-    def bs(c): return min([p.x for p in points(c) if abs(p.y) < 1])
-    def be(c): return max([p.x for p in points(c) if abs(p.y) < 1])
+    def bs(c): return min([p.x for p in points(c) if abs(p.y) < 5])
+    def be(c): return max([p.x for p in points(c) if abs(p.y) < 5])
+
+    slant_dx = xmax("ı") - be("ı")
+    slant_dy = ymax("ı") - ymin("ı")
+    slant = atan2(slant_dx, slant_dy)
 
     def clip(cp, x1, y1, x2, y2):
         copy(32, 1)
@@ -90,20 +106,14 @@ def toaqify(font):
         dx = xctr(c)
         dy = yctr(c)
         fg = g.layers[1]
-        fg.transform(skew(-slant))
         fg.transform(translate(-dx, -dy))
         fg.transform(scale(fx, fy))
         fg.transform(translate(dx, dy))
-        fg.transform(skew(slant))
         g.layers[1] = fg
         g.correctDirection()
 
     def hflip(c): flip(c, -1, 1)
     def vflip(c): flip(c, 1, -1)
-
-    slant_dx = xmax("ı") - be("ı")
-    slant_dy = ymax("ı") - ymin("ı")
-    slant = atan2(slant_dx, slant_dy)
 
     # helper glyphs
     Y_TAIL = 2
@@ -174,6 +184,7 @@ def toaqify(font):
     get(RDESC).anchorPoints = []
 
     def add_rdesc(tgt):
+
         ymint = ymin(tgt)
         dy = -ymax(RDESC)
         dx = max([p.x for p in points(tgt) if abs(p.y-ymint) < 1]) - xmax(RDESC)
@@ -203,11 +214,8 @@ def toaqify(font):
     # nanaq
     # copy("´", 1)
     # get(1).anchorPoints = []
-    # dx = xctr("o") - xctr(1) + height("o") * slant_dx / slant_dy
-    # dy = -90
-    # get(1).transform(translate(dx, dy))
-    # copy(1, NANAQ)
-    # add("o", NANAQ)
+    # get(1).transform(translate(xctr("o")-xctr(1), -90))
+    # copy(1, NANAQ); add("o", NANAQ)
     copy("ohorn", NANAQ)
 
     # dudeo
@@ -217,10 +225,8 @@ def toaqify(font):
     copy("d", TITIEQ)
 
     # zozeo
-    try:
-        copy("jcrossedtaildotless", Z_TAIL)
-    except ValueError:
-        copy("jcrossedtail", Z_TAIL)
+    copy("ʝ", Z_TAIL)
+    get(Z_TAIL).unlinkRef()
     get(Z_TAIL).anchorPoints = []
     clip(Z_TAIL, -400, -400, 400, 50)
     get(Z_TAIL).transform(translate(0, -50))
@@ -245,14 +251,12 @@ def toaqify(font):
     # laoliq
     def dotbelow(c):
         g = get(c)
-        g.layers[1].transform(skew(-slant))
         ax = next(a[2] for a in get(c).anchorPoints if a[0] == "Anchor-14")
         copy("dotbelowcomb", 1)
         get(1).transform(skew(-slant))
         get(1).transform(translate(ax - xctr(1), 0))
         # add(1, c)
         g.layers[1] += get(1).layers[1]
-        g.layers[1].transform(skew(slant))
 
     copy("n", LAOLIQ)
     if bridge: rect(LAOLIQ, xmin("n")+SW/2, 0, be("n"), BW)
@@ -279,7 +283,6 @@ def toaqify(font):
     ct.lineTo(xs[-2],300)
     ct.closed = True
     get(1).layers[1] = ct
-    get(1).transform(skew(slant))
     add(1, JUJUO)
     get(JUJUO).intersect()
 
@@ -290,8 +293,6 @@ def toaqify(font):
 
     def long_rdesc(c):
         g = get(c)
-        g.transform(skew(-slant))
-        get(RDESC).transform(skew(-slant))
         otips = [p for p in points(c) if p.type == 0 and p.on_curve]
         otips.sort(key=lambda p: p.y)
         xon = sorted([p.x for p in points(c) if p.on_curve])
@@ -317,8 +318,6 @@ def toaqify(font):
                     break
             fg[j] = contour
         g.layers[1] = fg
-        get(RDESC).transform(skew(slant))
-        g.transform(skew(slant))
 
     # shoshia
     copy(CHICHAO, SHOSHIA)
@@ -343,9 +342,7 @@ def toaqify(font):
 
     # hehaq
     copy(FOFUAQ, HEHAQ)
-    get(HEHAQ).transform(skew(-slant))
     rect(HEHAQ, xmin(HEHAQ)+SW/2, 0, xmax(HEHAQ) + 80, BW)
-    get(HEHAQ).transform(skew(slant))
     get(HEHAQ).removeOverlap()
 
     def rot(c, deg):
@@ -371,22 +368,45 @@ def toaqify(font):
     # QMARK
     copy(":", QMARK)
     # SMARK
-    copy(",", SMARK)
-    get(SMARK).transform(translate(200, 0))
-    add(",", SMARK)
-    get(SMARK).transform(translate(200, 0))
-    add(",", SMARK)
+    copy("–", SMARK)
+    # copy(",", SMARK)
+    # get(SMARK).transform(translate(200, 0))
+    # add(",", SMARK)
+    # get(SMARK).transform(translate(200, 0))
+    # add(",", SMARK)
+
+    def stitch(head, legs, tgt):
+        LAB = 7
+        copy(head, tgt)
+        clip(tgt, 0, 0, 999, 999)
+        copy(legs, LAB)
+        clip(LAB, 0, -500, 999, 0)
+        w2 = be(tgt) - bs(tgt)
+        w1 = be(LAB) - bs(LAB)
+        get(LAB).transform(scale(w2 / w1, 1))
+        get(LAB).transform(translate(be(tgt) - be(LAB), 0))
+        add(LAB, tgt)
+        get(LAB).clear()
+        get(tgt).removeOverlap()
 
     # stops
-    copy("|", STOP1)
-    add_rdesc(STOP1)
+    stitch("]", "}", STOP1)
     get(STOP1).transform(translate(150, 0))
     copy(STOP1, STOP2)
     copy(STOP1, STOP3)
     add("·", STOP1)
-    add(":", STOP2)
-    add(":", STOP3)
-    add("·", STOP3)
+    S = 200
+    copy("·", 2)
+    if SW > 50: flip(2, 0.8, 0.8)
+    copy(2, 1)
+    get(1).transform(translate(0, S))
+    add(2, 1)
+    get(1).transform(translate(0, -S/2))
+    add(1, STOP2)
+    get(1).transform(translate(0, S + S/2))
+    add(2, 1)
+    get(1).transform(translate(0, -S))
+    add(1, STOP3)
 
     # cartouches (not rendered)
     copy("\u200b", START_CARTOUCHE)
@@ -398,9 +418,13 @@ def toaqify(font):
     # DCNBSP
     copy("\xa0", DCNBSP)
 
+    for k in list(visited):
+        get(k).transform(skew(slant))
+
     font.descent = 300
     fontforge.printSetup("pdf-file", "", 1300, 400)
     font.printSample("fontsample", 60, sample())
+    font.generate(font.fontname + ".ttf")
     print("Printed sample:", font.fontname)
 
 paths = [p for p in os.listdir() if p.endswith(".ttf")]
@@ -417,7 +441,7 @@ def convert(path):
     font = fontforge.open(path)
     font.fontname = font.fontname.replace("FiraSans", "FiraSansToaq")
     toaqify(font)
-    if font.fontname == "FiraSansToaq-Regular": font.save("q.sfd")
+    if font.fontname == "FiraSansToaq-ThinItalic": font.save("q.sfd")
 
 if __name__ == "__main__":
     with Pool(8) as p:
