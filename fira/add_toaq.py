@@ -1,10 +1,25 @@
 import fontforge
 import os
+import random
 import sys
-from math import atan2, radians
-from psMat import translate, skew, scale, rotate
-from enum import Enum, auto
 from PIL import Image
+from enum import Enum, auto
+from math import atan2, radians
+from multiprocessing import Pool
+from psMat import translate, skew, scale, rotate
+
+def sample():
+    return "󱚶󱚲󱛍󱚺 󱚾󱛊󱚹 󱛔 󱛁󱚺󱛋 󱚻󱚲󱛂󱛀󱚲󱛍󱚺 󱛕"
+    return "\n\nthe content clause 󱛁󱚺󱛋 󱚾󱚺󱛎󱚹 󱚽󱛊󱚺󱛎󱛃 (ꝡä jaı nháo)"
+    return "󱚻󱛌󱚺󱛎󱛃 󱛘󱛄󱛊󱛃󱛍󱚺󱚹󱚺󱛎󱛃󱛙 󱛄󱛋󱚹󱛍󱛃 󱚿󱛃 󱚾󱛊󱚹 󱚲󱛊󱚺󱛂 󱛘󱛄󱛃󱛍󱚺󱚹󱚺󱛎󱛃󱛙 󱛄󱚹 󱚵󱛋󱚺 󱚲󱚺󱛎󱚹 󱚾󱛊󱚹 󱚲󱛊󱚺󱛂 󱛘󱚵󱚹󱛍󱚺󱛎󱛃󱚳󱛃󱛂󱛙 󱛕\nRâo kóacao (kïo cho jí báq koacao kı) nä baı jí báq nıaopoq."
+    text = "Fira Sans "
+    for v1 in "󱚺󱚴󱚹󱛃󱚲":
+        for v2 in "󱚺󱚴󱚹󱛃󱚲":
+            if v1 == v2: continue
+            c = random.choice("󱚲󱚹󱚿󱚶󱚴󱛃󱛆󱚾󱛄󱚼󱚰󱚵󱚽󱚳󱚻󱚺󱚷󱛁󱚸")
+            tone = random.choice("󱛊󱛋󱛌") * random.randint(0,1)
+            text += c + tone + v1 + "󱛍" + v2 + random.choice(" 󱛂󱚱  ")
+    return text
 
 def ord_(x):
     return ord(x) if isinstance(x, str) and len(x) == 1 else x
@@ -27,8 +42,9 @@ def toaqify(font):
         select(tgt); font.paste()
 
     def add(src, tgt):
-        select(src); font.copy()
-        select(tgt); font.pasteInto()
+        get(tgt).foreground += get(src).foreground
+        # select(src); font.copy()
+        # select(tgt); font.pasteInto()
 
     def sub(src, tgt):
         copy(src, 1)
@@ -70,6 +86,7 @@ def toaqify(font):
 
     def flip(c, fx, fy):
         g = get(c)
+        g.unlinkRef()
         dx = xctr(c)
         dy = yctr(c)
         fg = g.layers[1]
@@ -95,34 +112,46 @@ def toaqify(font):
 
     VY = 0xa761
     CAP_VY = 0xa760
-    MAMEI = 0xf16b0; font.createChar(MAMEI, "mamei")
-    MAMEI_CODA = 0xf16b1; font.createChar(MAMEI_CODA, "mamei_coda")
-    BUBUE = 0xf16b2; font.createChar(BUBUE, "bubue")
-    PIPOQ = 0xf16b3; font.createChar(PIPOQ, "pipoq")
-    FOFUAQ = 0xf16b4; font.createChar(FOFUAQ, "fofuaq")
-    NANAQ = 0xf16b5; font.createChar(NANAQ, "nanaq")
-    DUDEO = 0xf16b6; font.createChar(DUDEO, "dudeo")
-    TITIEQ = 0xf16b7; font.createChar(TITIEQ, "titieq")
-    ZOZEO = 0xf16b8; font.createChar(ZOZEO, "zozeo")
-    CECOA = 0xf16b9; font.createChar(CECOA, "cecoa")
-    SAQSEOQ = 0xf16ba; font.createChar(SAQSEOQ, "saqseoq")
-    RAIRUA = 0xf16bb; font.createChar(RAIRUA, "rairua")
-    LAOLIQ = 0xf16bc; font.createChar(LAOLIQ, "laoliq")
-    NHANHOQ = 0xf16bd; font.createChar(NHANHOQ, "nhanhoq")
-    JUJUO = 0xf16be; font.createChar(JUJUO, "jujuo")
-    CHICHAO = 0xf16bf; font.createChar(CHICHAO, "chichao")
-    SHOSHIA = 0xf16c0; font.createChar(SHOSHIA, "shoshia")
-    WEWA = 0xf16c1; font.createChar(WEWA, "wewa")
-    AQAQ = 0xf16c2; font.createChar(AQAQ, "aqaq")
-    GUGUI = 0xf16c3; font.createChar(GUGUI, "gugui")
-    KIKUE = 0xf16c4; font.createChar(KIKUE, "kikue")
-    OAOMO = 0xf16c5; font.createChar(OAOMO, "oaomo")
-    HEHAQ = 0xf16c6; font.createChar(HEHAQ, "hehaq")
-    GULAQTEI = 0xf16ca; font.createChar(GULAQTEI, "gulaqtei")
-    SAQLAQTEI = 0xf16cb; font.createChar(SAQLAQTEI, "saqlaqtei")
-    JOLAQTEI = 0xf16cc; font.createChar(JOLAQTEI, "jolaqtei")
-    IULAI = 0xf16cd; font.createChar(IULAI, "iulai")
-    AILAI = 0xf16ce; font.createChar(AILAI, "ailai")
+    def make(n, name): font.createChar(n, name); return n
+
+    MAMEI = make(0xf16b0, "mamei")
+    MAMEI_CODA = make(0xf16b1, "mamei_coda")
+    BUBUE = make(0xf16b2, "bubue")
+    PIPOQ = make(0xf16b3, "pipoq")
+    FOFUAQ = make(0xf16b4, "fofuaq")
+    NANAQ = make(0xf16b5, "nanaq")
+    DUDEO = make(0xf16b6, "dudeo")
+    TITIEQ = make(0xf16b7, "titieq")
+    ZOZEO = make(0xf16b8, "zozeo")
+    CECOA = make(0xf16b9, "cecoa")
+    SAQSEOQ = make(0xf16ba, "saqseoq")
+    RAIRUA = make(0xf16bb, "rairua")
+    LAOLIQ = make(0xf16bc, "laoliq")
+    NHANHOQ = make(0xf16bd, "nhanhoq")
+    JUJUO = make(0xf16be, "jujuo")
+    CHICHAO = make(0xf16bf, "chichao")
+    SHOSHIA = make(0xf16c0, "shoshia")
+    WEWA = make(0xf16c1, "wewa")
+    AQAQ = make(0xf16c2, "aqaq")
+    GUGUI = make(0xf16c3, "gugui")
+    KIKUE = make(0xf16c4, "kikue")
+    OAOMO = make(0xf16c5, "oaomo")
+    HEHAQ = make(0xf16c6, "hehaq")
+    GULAQTEI = make(0xf16ca, "gulaqtei")
+    SAQLAQTEI = make(0xf16cb, "saqlaqtei")
+    JOLAQTEI = make(0xf16cc, "jolaqtei")
+    IULAI = make(0xf16cd, "iulai")
+    AILAI = make(0xf16ce, "ailai")
+    PMARK = make(0xf16d2, "deranipmark")
+    QMARK = make(0xf16d3, "deraniqmark")
+    SMARK = make(0xf16d4, "deranismark")
+    STOP1 = make(0xf16d5, "deranistop1")
+    STOP2 = make(0xf16d6, "deranistop2")
+    STOP3 = make(0xf16d7, "deranistop3")
+    START_CARTOUCHE = make(0xf16d8, "deranistartcartouche")
+    END_CARTOUCHE = make(0xf16d9, "deraniendcartouche")
+    RAILAI = make(0xf16da, "railai")
+    DCNBSP = make(0xf16db, "deraninbsp")
 
     bridge = True
 
@@ -145,8 +174,9 @@ def toaqify(font):
     get(RDESC).anchorPoints = []
 
     def add_rdesc(tgt):
+        ymint = ymin(tgt)
         dy = -ymax(RDESC)
-        dx = be(tgt) - xmax(RDESC)
+        dx = max([p.x for p in points(tgt) if abs(p.y-ymint) < 1]) - xmax(RDESC)
         get(RDESC).transform(translate(dx, dy))
         add(RDESC, tgt)
         get(tgt).removeOverlap()
@@ -157,7 +187,8 @@ def toaqify(font):
     copy("m", MAMEI)
     if bridge: rect(MAMEI, xmin("m")+SW/2, 0, be("m"), BW)
     add_rdesc(MAMEI)
-    copy("ɒ", MAMEI_CODA)
+    copy("ƿ", MAMEI_CODA)
+    clip(MAMEI_CODA, 0, 0, 999, 999)
 
     # bubue
     copy("ɔ", BUBUE)
@@ -328,17 +359,49 @@ def toaqify(font):
     # rot(SAQLAQTEI, -15)
     copy(0x0311, JOLAQTEI)
     # rot(JOLAQTEI, 15)
-    copy(0x0332, IULAI)
-    l = get(IULAI).layers[1]
-    l.transform(translate(200, 0))
-    get(IULAI).layers[1] = l
-    copy(0x0332, AILAI)
-    get(AILAI).layers[1].transform(translate(90, 0))
+    for tgt in (IULAI, AILAI):
+        copy(0x035c, tgt)
+        l = get(tgt).layers[1]
+        l.transform(translate(200, 0))
+        get(tgt).layers[1] = l
+        flip(tgt, 0.8, -0.8)
 
-    fontforge.printSetup("pdf-file")
-    font.printSample("fontsample", 44, "\n\nFira Sans (󱚰󱛊󱚹 :󱚴󱚹󱚻󱚺:)\n\n󱚵󱚲󱛍󱛃 󱚺󱛊󱚲󱛂 󱚶󱛌󱚴 󱚲󱚺 󱛕")
+    # PMARK
+    copy(":", PMARK)
+    # QMARK
+    copy(":", QMARK)
+    # SMARK
+    copy(",", SMARK)
+    get(SMARK).transform(translate(200, 0))
+    add(",", SMARK)
+    get(SMARK).transform(translate(200, 0))
+    add(",", SMARK)
 
-    print("kıosha!", font)
+    # stops
+    copy("|", STOP1)
+    add_rdesc(STOP1)
+    get(STOP1).transform(translate(150, 0))
+    copy(STOP1, STOP2)
+    copy(STOP1, STOP3)
+    add("·", STOP1)
+    add(":", STOP2)
+    add(":", STOP3)
+    add("·", STOP3)
+
+    # cartouches (not rendered)
+    copy("\u200b", START_CARTOUCHE)
+    copy("\u200b", END_CARTOUCHE)
+
+    # RAILAI
+    copy("*", RAILAI)
+
+    # DCNBSP
+    copy("\xa0", DCNBSP)
+
+    font.descent = 300
+    fontforge.printSetup("pdf-file", "", 1300, 400)
+    font.printSample("fontsample", 60, sample())
+    print("Printed sample:", font.fontname)
 
 paths = [p for p in os.listdir() if p.endswith(".ttf")]
 
@@ -350,8 +413,12 @@ elif not paths:
         zf.extractall(".")
     paths = [p for p in os.listdir() if p.endswith(".ttf")]
 
-for path in paths:
+def convert(path):
     font = fontforge.open(path)
     font.fontname = font.fontname.replace("FiraSans", "FiraSansToaq")
     toaqify(font)
-    font.save("q.sfd")
+    if font.fontname == "FiraSansToaq-Regular": font.save("q.sfd")
+
+if __name__ == "__main__":
+    with Pool(8) as p:
+        p.map(convert, paths)
