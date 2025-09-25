@@ -447,12 +447,12 @@ def patch_font(path):
             if font[g].glyphname == name:
                 return font[g]
 
-    for name in "dudeo", "nhanhoq":
+    for name in "dudeo", "nhanhoq", "pipoq":
         ng = find(normal, name)
         ig = find(italic, name)
         ng.foreground = ig.foreground
         ng.transform(skew(-0.14))
-        ng.width -= 100
+        ng.width -= 60
         normal.save(normal_path)
 
 def export_font(path):
