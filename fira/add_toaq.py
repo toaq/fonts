@@ -249,11 +249,13 @@ def toaqify(font):
     add_rdesc(FOFUAQ)
 
     # nanaq
-    # copy("´", 1)
-    # get(1).anchorPoints = []
-    # get(1).transform(translate(xctr("o")-xctr(1), -90))
-    # copy(1, NANAQ); add("o", NANAQ)
-    copy("ohorn", NANAQ)
+    copy("o", NANAQ)
+    copy("'", 1)
+    get(1).transform(translate(-xctr(1), -yctr(1)))
+    scaled(1, 0.8, 0.8)
+    get(1).transform(rotate(radians(-55)))
+    get(1).transform(translate(519 - 35*(slant>0.01), 500))
+    add(1, NANAQ)
 
     # dudeo
     copy("ɘ", DUDEO)
@@ -262,8 +264,8 @@ def toaqify(font):
     copy("U", TITIEQ)
     vflip(TITIEQ)
     def f(p):
-        if p.x < 320: p.x += 20
-        if p.x > 340: p.x -= 20
+        if p.x < 320: p.x += 30
+        if p.x > 340: p.x -= 30
         return p
     map_points(TITIEQ, f)
     get(TITIEQ).transform(translate(0, -ymin(TITIEQ)))
@@ -273,6 +275,7 @@ def toaqify(font):
     get(TITIEQ).transform(translate(xo[-2] - xU[0], 0))
     add("o", TITIEQ)
     get(TITIEQ).removeOverlap()
+    get(TITIEQ).anchorPoints = get("o").anchorPoints
 
     # zozeo
     copy("ʝ", Z_TAIL)
@@ -291,7 +294,6 @@ def toaqify(font):
 
     # saqseoq
     copy("o", SAQSEOQ)
-    get(SAQSEOQ).width -= 20
 
     # rairua
     copy("n", RAIRUA)
@@ -305,28 +307,13 @@ def toaqify(font):
     get(LAOLIQ).removeOverlap()
     dotbelow(LAOLIQ)
 
-    # TODO underdot
-
     # nhanhoq
     copy("ə", NHANHOQ)
 
     # jujuo
-    copy("ω", JUJUO)
+    copy("ɷ", JUJUO)
     vflip(JUJUO)
-    copy(32, 1)
-
-    ct = fontforge.contour(1)
-    xs = sorted({int(p.x) for p in points(JUJUO) if p.y <= 0})
-    ct.moveTo(0,300)
-    ct.lineTo(0,900)
-    ct.lineTo(900,900)
-    ct.lineTo(900,0)
-    ct.lineTo(xs[-2],0)
-    ct.lineTo(xs[-2],300)
-    ct.closed = True
-    get(1).layers[1] = ct
-    add(1, JUJUO)
-    get(JUJUO).intersect()
+    crop(JUJUO, 0, 190, 900, 900, xctr(JUJUO), -100)
 
     # chichao
     copy("s", CHICHAO)
