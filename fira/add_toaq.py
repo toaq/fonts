@@ -10,18 +10,7 @@ import fontforge
 from PIL import Image
 from psMat import translate, skew, scale, rotate
 
-def sample():
-    return "󱚶󱚲󱛍󱚺 󱚾󱛊󱚹 󱛔 󱛁󱚺󱛋 󱚻󱚲󱛂󱛀󱚲󱛍󱚺 󱛕"
-    return "\n\nThe sentence 󱚰󱚺 󱚷󱚺󱛎󱚹 󱚴󱚺 󱛆󱛌󱚲 󱛘󱚺󱛎󱚹󱚳󱚲󱚾󱚹󱛍󱛃󱛙 󱚺󱛊󱚲󱛂 󱛗 is an example of an object incorporating verb as the tail of a serial verb."
-    return "󱚻󱛌󱚺󱛎󱛃 󱛘󱛄󱛊󱛃󱛍󱚺󱚹󱚺󱛎󱛃󱛙 󱛄󱛋󱚹󱛍󱛃 󱚿󱛃 󱚾󱛊󱚹 󱚲󱛊󱚺󱛂 󱛘󱛄󱛃󱛍󱚺󱚹󱚺󱛎󱛃󱛙 󱛄󱚹 󱚵󱛋󱚺 󱚲󱚺󱛎󱚹 󱚾󱛊󱚹 󱚲󱛊󱚺󱛂 󱛘󱚵󱚹󱛍󱚺󱛎󱛃󱚳󱛃󱛂󱛙 󱛕\nRâo kóacao (kïo cho jí báq koacao kı) nä baı jí báq nıaopoq."
-    text = "Fira Sans "
-    for v1 in "󱚺󱚴󱚹󱛃󱚲":
-        for v2 in "󱚺󱚴󱚹󱛃󱚲":
-            if v1 == v2: continue
-            c = random.choice("󱚲󱚹󱚿󱚶󱚴󱛃󱛆󱚾󱛄󱚼󱚰󱚵󱚽󱚳󱚻󱚺󱚷󱛁󱚸")
-            tone = random.choice("󱛊󱛋󱛌") * random.randint(0,1)
-            text += c + tone + v1 + "󱛍" + v2 + random.choice(" 󱛂󱚱  ")
-    return text
+KERN_TABLE = "'kern' Horizontal Kerning lookup 2 per glyph data 2"
 
 def ord_(x):
     return ord(x) if isinstance(x, str) and len(x) == 1 else x
@@ -97,7 +86,7 @@ def toaqify(font):
         add(1, tgt=cp)
         get(cp).intersect()
 
-    def flip(c, fx, fy):
+    def scaled(c, fx, fy):
         g = get(c)
         g.unlinkRef()
         dx = xctr(c)
@@ -109,8 +98,8 @@ def toaqify(font):
         g.layers[1] = fg
         g.correctDirection()
 
-    def hflip(c): flip(c, -1, 1)
-    def vflip(c): flip(c, 1, -1)
+    def hflip(c): scaled(c, -1, 1)
+    def vflip(c): scaled(c, 1, -1)
 
     # helper glyphs
     Y_TAIL = 2
@@ -202,7 +191,7 @@ def toaqify(font):
         otips = [p for p in points(c) if p.type == 0 and p.on_curve]
         otips.sort(key=lambda p: p.y)
         xon = sorted([p.x for p in points(c) if p.on_curve])
-        crop(c, 0, -999, xon[-2], 999)
+        crop(c, -300, -999, xon[-2], 999)
         dx = xon[-2] - max([p.x for p in points(RDESC) if p.y == ymax(RDESC)])
         tips = [p for p in points(c) if p.type == 0 and p.on_curve]
         tips.sort(key=lambda p: p.y)
@@ -216,15 +205,6 @@ def toaqify(font):
         sharp_x = be(c)
         sharp_y = max([p.y for p in points(c) if abs(p.x-sharp_x)<1 and p.y < 200])
         map_points(c, lambda p: (p.x, otips[1].y) if (p.x,p.y) == (sharp_x,sharp_y) else p)
-        # fg = g.layers[1]
-        # for (j, contour) in enumerate(fg):  # oroooo
-        #     for (i, p) in enumerate(contour):
-        #         if (p.x,p.y) == (sharp_x,sharp_y):
-        #             p.y = otips[1].y
-        #             contour[i] = p
-        #             break
-        #     fg[j] = contour
-        # g.layers[1] = fg
 
     def stitch(head, legs, tgt):
         LAB = 7
@@ -311,6 +291,7 @@ def toaqify(font):
 
     # saqseoq
     copy("o", SAQSEOQ)
+    get(SAQSEOQ).width -= 20
 
     # rairua
     copy("n", RAIRUA)
@@ -389,17 +370,21 @@ def toaqify(font):
     # rot(SAQLAQTEI, -15)
     copy(0x0311, JOLAQTEI)
     # rot(JOLAQTEI, 15)
-    for tgt in (IULAI, AILAI):
+    for tgt, name in ((IULAI, "iulai"), (AILAI, "ailai")):
         copy(0x035c, tgt)
-        l = get(tgt).layers[1]
+        glyph = get(tgt)
+        l = glyph.layers[1]
         l.transform(translate(200, 0))
-        get(tgt).layers[1] = l
-        flip(tgt, 0.8, -0.8)
+        glyph.layers[1] = l
+        scaled(tgt, 0.8, -0.8)
+        glyph.addPosSub(KERN_TABLE, "fofuaq", -150, 0, 0, 0, 0, 0, 0, 0)
+        get(FOFUAQ).addPosSub(KERN_TABLE, name, 0, 0, 0, 0, 250, 0, 0, 0)
 
     # PMARK
     copy(":", PMARK)
+    scaled(PMARK, 0.8, 0.8)
     # QMARK
-    copy(":", QMARK)
+    copy(PMARK, QMARK)
     # SMARK
     # copy("–", SMARK)
     copy(",", SMARK)
@@ -416,7 +401,7 @@ def toaqify(font):
     add("·", STOP1)
     S = 200
     copy("·", 2)
-    if SW > 50: flip(2, 0.8, 0.8)
+    if SW > 50: scaled(2, 0.8, 0.8)
     copy(2, 1)
     get(1).transform(translate(0, S))
     add(2, 1)
