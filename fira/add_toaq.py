@@ -253,9 +253,10 @@ def toaqify(font):
     copy("'", 1)
     get(1).transform(translate(-xctr(1), -yctr(1)))
     scaled(1, 0.8, 0.8)
-    get(1).transform(rotate(radians(-55)))
+    get(1).transform(rotate(radians(-45)))
     get(1).transform(translate(519 - 35*(slant>0.01), 500))
     add(1, NANAQ)
+    get(NANAQ).width += 50
 
     # dudeo
     copy("ɘ", DUDEO)
@@ -275,7 +276,8 @@ def toaqify(font):
     get(TITIEQ).transform(translate(xo[-2] - xU[0], 0))
     add("o", TITIEQ)
     get(TITIEQ).removeOverlap()
-    get(TITIEQ).anchorPoints = get("o").anchorPoints
+    get(TITIEQ).anchorPoints = [(a,b,max(x-SW/2,0),y) for a,b,x,y in get("o").anchorPoints]
+    # print(get(TITIEQ).anchorPoints)
 
     # zozeo
     copy("ʝ", Z_TAIL)
@@ -356,7 +358,8 @@ def toaqify(font):
     copy(0x0303, SAQLAQTEI)
     # rot(SAQLAQTEI, -15)
     copy(0x0311, JOLAQTEI)
-    # rot(JOLAQTEI, 15)
+    rot(JOLAQTEI, -25)
+    get(JOLAQTEI).anchorPoints = [(a,b,x+110,y-70) for (a,b,x,y) in get(JOLAQTEI).anchorPoints]
     for tgt, name in ((IULAI, "iulai"), (AILAI, "ailai")):
         copy(0x035c, tgt)
         glyph = get(tgt)
