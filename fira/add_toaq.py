@@ -17,7 +17,7 @@ def ord_(x):
 
 def toaqify(font):
     slant = None
-    visited = set()
+    visited = {-1}
 
     @functools.cache
     def get_glyph(c):
@@ -110,44 +110,47 @@ def toaqify(font):
     CAP_VY = 0xa760
     def make(n, name): font.createChar(n, name); return n
 
-    MAMEI = make(0xf16b0, "mamei")
-    MAMEI_CODA = make(0xf16b1, "mamei_coda")
-    BUBUE = make(0xf16b2, "bubue")
-    PIPOQ = make(0xf16b3, "pipoq")
-    FOFUAQ = make(0xf16b4, "fofuaq")
-    NANAQ = make(0xf16b5, "nanaq")
-    DUDEO = make(0xf16b6, "dudeo")
-    TITIEQ = make(0xf16b7, "titieq")
-    ZOZEO = make(0xf16b8, "zozeo")
-    CECOA = make(0xf16b9, "cecoa")
-    SAQSEOQ = make(0xf16ba, "saqseoq")
-    RAIRUA = make(0xf16bb, "rairua")
-    LAOLIQ = make(0xf16bc, "laoliq")
-    NHANHOQ = make(0xf16bd, "nhanhoq")
-    JUJUO = make(0xf16be, "jujuo")
-    CHICHAO = make(0xf16bf, "chichao")
-    SHOSHIA = make(0xf16c0, "shoshia")
-    WEWA = make(0xf16c1, "wewa")
-    AQAQ = make(0xf16c2, "aqaq")
-    GUGUI = make(0xf16c3, "gugui")
-    KIKUE = make(0xf16c4, "kikue")
-    OAOMO = make(0xf16c5, "oaomo")
-    HEHAQ = make(0xf16c6, "hehaq")
+    cartouchable = [
+        MAMEI := make(0xf16b0, "mamei"),
+        MAMEI_CODA := make(0xf16b1, "mamei_coda"),
+        BUBUE := make(0xf16b2, "bubue"),
+        PIPOQ := make(0xf16b3, "pipoq"),
+        FOFUAQ := make(0xf16b4, "fofuaq"),
+        NANAQ := make(0xf16b5, "nanaq"),
+        DUDEO := make(0xf16b6, "dudeo"),
+        TITIEQ := make(0xf16b7, "titieq"),
+        ZOZEO := make(0xf16b8, "zozeo"),
+        CECOA := make(0xf16b9, "cecoa"),
+        SAQSEOQ := make(0xf16ba, "saqseoq"),
+        RAIRUA := make(0xf16bb, "rairua"),
+        LAOLIQ := make(0xf16bc, "laoliq"),
+        NHANHOQ := make(0xf16bd, "nhanhoq"),
+        JUJUO := make(0xf16be, "jujuo"),
+        CHICHAO := make(0xf16bf, "chichao"),
+        SHOSHIA := make(0xf16c0, "shoshia"),
+        WEWA := make(0xf16c1, "wewa"),
+        AQAQ := make(0xf16c2, "aqaq"),
+        GUGUI := make(0xf16c3, "gugui"),
+        KIKUE := make(0xf16c4, "kikue"),
+        OAOMO := make(0xf16c5, "oaomo"),
+        HEHAQ := make(0xf16c6, "hehaq"),
+        PMARK := make(0xf16d2, "deranipmark"),
+        QMARK := make(0xf16d3, "deraniqmark"),
+        SMARK := make(0xf16d4, "deranismark"),
+        RAILAI := make(0xf16da, "railai"),
+        DCNBSP := make(0xf16db, "deraninbsp"),
+        IULAI := make(0xf16cd, "iulai"),
+        AILAI := make(0xf16ce, "ailai"),
+    ]
+
     GULAQTEI = make(0xf16ca, "gulaqtei")
     SAQLAQTEI = make(0xf16cb, "saqlaqtei")
     JOLAQTEI = make(0xf16cc, "jolaqtei")
-    IULAI = make(0xf16cd, "iulai")
-    AILAI = make(0xf16ce, "ailai")
-    PMARK = make(0xf16d2, "deranipmark")
-    QMARK = make(0xf16d3, "deraniqmark")
-    SMARK = make(0xf16d4, "deranismark")
     STOP1 = make(0xf16d5, "deranistop1")
     STOP2 = make(0xf16d6, "deranistop2")
     STOP3 = make(0xf16d7, "deranistop3")
     START_CARTOUCHE = make(0xf16d8, "deranistartcartouche")
     END_CARTOUCHE = make(0xf16d9, "deraniendcartouche")
-    RAILAI = make(0xf16da, "railai")
-    DCNBSP = make(0xf16db, "deraninbsp")
 
     bridge = True
 
@@ -320,7 +323,6 @@ def toaqify(font):
     # chichao
     copy("s", CHICHAO)
     hflip(CHICHAO)
-    get(CHICHAO).transform(translate(0, 0))
 
     # shoshia
     copy(CHICHAO, SHOSHIA)
@@ -355,20 +357,21 @@ def toaqify(font):
         get(c).transform(translate(x, y))
 
     copy(0x0301, GULAQTEI)
+    get(GULAQTEI).glyphclass = "mark"
     copy(0x0303, SAQLAQTEI)
-    # rot(SAQLAQTEI, -15)
+    get(SAQLAQTEI).glyphclass = "mark"
     copy(0x0311, JOLAQTEI)
+    get(JOLAQTEI).glyphclass = "mark"
     rot(JOLAQTEI, -25)
     get(JOLAQTEI).anchorPoints = [(a,b,x+110,y-70) for (a,b,x,y) in get(JOLAQTEI).anchorPoints]
     for tgt, name in ((IULAI, "iulai"), (AILAI, "ailai")):
         copy(0x035c, tgt)
         glyph = get(tgt)
+        # glyph.glyphclass = "mark"
         l = glyph.layers[1]
         l.transform(translate(200, 0))
         glyph.layers[1] = l
-        scaled(tgt, 0.8, -0.8)
-        glyph.addPosSub(KERN_TABLE, "fofuaq", -150, 0, 0, 0, 0, 0, 0, 0)
-        get(FOFUAQ).addPosSub(KERN_TABLE, name, 0, 0, 0, 0, 250, 0, 0, 0)
+        scaled(tgt, 0.7, -0.8)
 
     # PMARK
     copy(":", PMARK)
@@ -402,15 +405,67 @@ def toaqify(font):
     get(1).transform(translate(0, -S))
     add(1, STOP3)
 
-    # cartouches (not rendered)
-    copy("\u200b", START_CARTOUCHE)
-    copy("\u200b", END_CARTOUCHE)
-
     # RAILAI
     copy("*", RAILAI)
 
     # DCNBSP
     copy("\xa0", DCNBSP)
+
+    # cartouche height
+    CH = 900
+
+    copy("\u200b", START_CARTOUCHE)
+    copy(" ", END_CARTOUCHE)
+    ec = get(END_CARTOUCHE)
+    ec.width = 240
+    ct = fontforge.contour(1)
+    ct.moveTo(0, CH+SW/2)
+    ct.quadraticTo(180, CH+SW/2, 180, CH+SW/2-100)
+    ct.lineTo(180, 0)
+    ec.foreground += ct
+    ec.stroke("circular", SW, cap="butt")
+
+    visited.add(END_CARTOUCHE)
+
+    langs = ("latn", "dflt"), ("DFLT", "dflt")
+    font.addLookup("AddCartouche", "gsub_single", ("ignore_marks",), (("cart", langs),))
+    font.addLookupSubtable("AddCartouche", "AddCartouche1")
+    for c in cartouchable:
+        base = get(c)
+        font.createChar(-1, cc := base.glyphname + "_c")
+        copy(c, cc)
+        rect(cc, 0, CH, base.width, CH+SW)
+        get(cc).unlinkRef()
+        base.addPosSub("AddCartouche1", cc)
+
+    # Cartouche spaces
+    get(0x20).addPosSub("AddCartouche1", "deraninbsp_c")
+    get(0xa0).addPosSub("AddCartouche1", "deraninbsp_c")
+
+    # Contextual substitution to start cartouches:
+    # Rule: cartouche_start cartouchable @<Cartouchify>
+
+    # Chaining rule:
+    # cartouched | cartouchable @<Cartouchify> |
+
+    names = ' '.join(get(c).glyphname for c in cartouchable)
+    names_c = ' '.join(get(c).glyphname + '_c' for c in cartouchable)
+    font.addLookup("ContinueCartouche", "gsub_contextchain", ("ignore_marks",), (("rclt", langs),))
+    font.addContextualSubtable("ContinueCartouche", "ContinueCartouche1", "class",
+        f"1 | 1 @<AddCartouche> |",
+            bclasses=(None, names_c),
+            mclasses=(None, names,),
+            fclasses=(None,))
+
+    font.addLookup("StartCartouche", "gsub_context", ("ignore_marks",), (("rclt", langs),))
+    font.addContextualSubtable("StartCartouche", "StartCartouche1", "coverage",
+        f"[deranistartcartouche] [{names}] @<AddCartouche>")
+
+    # Kerning
+    for mark in "iulai", "ailai", "iulai_c", "ailai_c":
+        for fofuaq in "fofuaq", "fofuaq_c":
+            get(mark).addPosSub(KERN_TABLE, fofuaq, -150, 0, 0, 0, 0, 0, 0, 0)
+            get(fofuaq).addPosSub(KERN_TABLE, mark, 0, 0, 0, 0, 250, 0, 0, 0)
 
     for k in list(visited):
         get(k).transform(skew(slant))
@@ -437,13 +492,15 @@ def patch_font(path):
             if font[g].glyphname == name:
                 return font[g]
 
-    for name in "dudeo", "nhanhoq", "pipoq":
-        ng = find(normal, name)
-        ig = find(italic, name)
-        ng.foreground = ig.foreground
-        ng.transform(skew(-0.14))
-        ng.width -= 60
-        normal.save(normal_path)
+    for base in "dudeo", "nhanhoq", "pipoq":
+        for suffix in ("", "_c"):
+            name = base + suffix
+            ng = find(normal, name)
+            ig = find(italic, name)
+            ng.foreground = ig.foreground
+            ng.transform(skew(-0.14))
+            ng.width -= 60
+            normal.save(normal_path)
 
 def export_font(path):
     font = fontforge.open(path)

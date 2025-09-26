@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FiraSansToaq Webfont Samples</title>
+  <style>
+    @font-face {
+      font-family: 'FiraSansToaq';
+      src: url('./FiraSansToaq-Thin.ttf') format('truetype');
+      font-weight: 100;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'FiraSansToaq';
+      src: url('./FiraSansToaq-ThinItalic.ttf') format('truetype');
+      font-weight: 100;
+      font-style: italic;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'FiraSansToaq';
+      src: url('./FiraSansToaq-ExtraLight.ttf') format('truetype');
+      font-weight: 200;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'FiraSansToaq';
+      src: url('./FiraSansToaq-ExtraLightItalic.ttf') format('truetype');
+      font-weight: 200;
+      font-style: italic;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'FiraSansToaq';
+      src: url('./FiraSansToaq-Light.ttf') format('truetype');
+      font-weight: 300;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'FiraSansToaq';
+      src: url('./FiraSansToaq-LightItalic.ttf') format('truetype');
+      font-weight: 300;
+      font-style: italic;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'FiraSansToaq';
+      src: url('./FiraSansToaq-Regular.ttf') format('truetype');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'FiraSansToaq';
+      src: url('./FiraSansToaq-Italic.ttf') format('truetype');
+      font-weight: 400;
+      font-style: italic;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'FiraSansToaq';
+      src: url('./FiraSansToaq-Medium.ttf') format('truetype');
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'FiraSansToaq';
+      src: url('./FiraSansToaq-MediumItalic.ttf') format('truetype');
+      font-weight: 500;
+      font-style: italic;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'FiraSansToaq';
+      src: url('./FiraSansToaq-SemiBold.ttf') format('truetype');
+      font-weight: 600;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'FiraSansToaq';
+      src: url('./FiraSansToaq-SemiBoldItalic.ttf') format('truetype');
+      font-weight: 600;
+      font-style: italic;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'FiraSansToaq';
+      src: url('./FiraSansToaq-Bold.ttf') format('truetype');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'FiraSansToaq';
+      src: url('./FiraSansToaq-BoldItalic.ttf') format('truetype');
+      font-weight: 700;
+      font-style: italic;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'FiraSansToaq';
+      src: url('./FiraSansToaq-ExtraBold.ttf') format('truetype');
+      font-weight: 800;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'FiraSansToaq';
+      src: url('./FiraSansToaq-ExtraBoldItalic.ttf') format('truetype');
+      font-weight: 800;
+      font-style: italic;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'FiraSansToaq';
+      src: url('./FiraSansToaq-Black.ttf') format('truetype');
+      font-weight: 900;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'FiraSansToaq';
+      src: url('./FiraSansToaq-BlackItalic.ttf') format('truetype');
+      font-weight: 900;
+      font-style: italic;
+      font-display: swap;
+    }
+
+    :root {
+      --bg: #c0f0ce;
+      --card: #f8f8fc;
+      --text: #303030;
+      --muted: #576071;
+      --accent: #80406b;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'FiraSansToaq', system-ui, sans-serif;
+    }
+
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 32px 20px 60px;
+    }
+
+    h1 {
+      font: 800 28px/1.2 'FiraSansToaq', system-ui, sans-serif;
+      letter-spacing: 0.2px;
+      margin: 0 0 8px;
+    }
+
+    .sub {
+      color: var(--muted);
+      margin-bottom: 28px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      background: var(--card);
+      color: var(--accent);
+      border-radius: 10px;
+      padding: 14px 16px;
+    }
+
+    .card:nth-child(even) {
+      background: var(--accent);
+      color: var(--card);
+      border-radius: 10px;
+      padding: 14px 16px;
+    }
+
+    .meta {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+
+    .name {
+      font: 600 13px/1.2 'FiraSansToaq', system-ui, sans-serif;
+      letter-spacing: 0.3px;
+    }
+
+    .sample {
+      font-size: 20px;
+      line-height: 1.25;
+    }
+
+    .w100 {
+      font-weight: 100;
+    }
+
+    .w200 {
+      font-weight: 200;
+    }
+
+    .w300 {
+      font-weight: 300;
+    }
+
+    .w400 {
+      font-weight: 400;
+    }
+
+    .w500 {
+      font-weight: 500;
+    }
+
+    .w600 {
+      font-weight: 600;
+    }
+
+    .w700 {
+      font-weight: 700;
+    }
+
+    .w800 {
+      font-weight: 800;
+    }
+
+    .w900 {
+      font-weight: 900;
+    }
+
+    .italic {
+      font-style: italic;
+    }
+
+    .toaq {
+      font-family: 'FiraSansToaq', system-ui, sans-serif;
+    }
+
+    .controls {
+      display: flex;
+      gap: 1em;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+
+    .controls input[type="text"] {
+      flex: 1;
+      background: var(--card);
+      border: 1px solid var(--border);
+      color: var(--text);
+      border-radius: 8px;
+      padding: 10px 12px;
+      font: 400 14px/1.3 'FiraSansToaq', system-ui, sans-serif;
+    }
+
+    .controls label {
+      font: 600 12px/1.2 'FiraSansToaq', system-ui, sans-serif;
+      color: var(--muted);
+    }
+  </style>
+  <script>
+    // Fallback indicator if fonts fail to load
+    document.addEventListener('DOMContentLoaded', function () {
+      if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(function () {
+          document.documentElement.classList.add('fonts-ready');
+        });
+      }
+    });
+  </script>
+  <link rel="preload" href="./FiraSansToaq-Regular.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="./FiraSansToaq-Bold.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="./FiraSansToaq-Italic.ttf" as="font" type="font/ttf" crossorigin>
+</head>
+
+<body>
+  <div class="wrap">
+    <h1>Fira Sans Toaq</h1>
+    <div class="controls">
+      <label for="sampleText">Sample text</label>
+      <input type="text" id="sampleText" value="">
+    </div>
+
+    <div id="grid" class="grid"></div>
+  </div>
+  <script>
+    (function () {
+      const variants = [
+        { name: 'Thin', weight: 100, italic: false },
+        { name: 'Thin Italic', weight: 100, italic: true },
+        { name: 'ExtraLight', weight: 200, italic: false },
+        { name: 'ExtraLight Italic', weight: 200, italic: true },
+        { name: 'Light', weight: 300, italic: false },
+        { name: 'Light Italic', weight: 300, italic: true },
+        { name: 'Regular', weight: 400, italic: false },
+        { name: 'Italic', weight: 400, italic: true },
+        { name: 'Medium', weight: 500, italic: false },
+        { name: 'Medium Italic', weight: 500, italic: true },
+        { name: 'SemiBold', weight: 600, italic: false },
+        { name: 'SemiBold Italic', weight: 600, italic: true },
+        { name: 'Bold', weight: 700, italic: false },
+        { name: 'Bold Italic', weight: 700, italic: true },
+        { name: 'ExtraBold', weight: 800, italic: false },
+        { name: 'ExtraBold Italic', weight: 800, italic: true },
+        { name: 'Black', weight: 900, italic: false },
+        { name: 'Black Italic', weight: 900, italic: true }
+      ];
+
+      const sampleInput = document.getElementById('sampleText');
+      const grid = document.getElementById('grid');
+
+      const defaultText = sampleInput.value;
+
+      function render() {
+
+        let text = sampleInput.value;
+        grid.innerHTML = variants.filter(v => !v.italic).map(v => {
+
+          const words = "jaq 󱚾󱚺󱛂 󱚰󱚹󱚾󱚺 󱚹󱚲󱚴 beapue 󱚲󱚴󱛍󱚺󱚳󱚲󱛍󱚴 cekoaı 󱚹󱚴󱛄󱛃󱛍󱚶 chîaqsho 󱚿󱛌󱚹󱛍󱚺󱛂󱛀󱛃 dıaqkua 󱚶󱚹󱛍󱚺󱛂󱛄󱚲󱛍󱚴 eloareo 󱛅󱚴󱚼󱛃󱛍󱚺󱚻󱚴󱛍󱛃 foıcem 󱚴󱚽󱚹󱚴󱚱 guaqteıdıu 󱛃󱚲󱛍󱚺󱛂󱚷󱚸󱚶󱚹󱛍󱚲 hoezaq 󱛆󱛃󱛍󱚴󱚸󱚺󱛂 ".split(" ");
+          if (!text) {
+            text = "";
+            let n = 0;
+            for (const word of words) {
+              const w = 300;
+              // const fs = ~~(n/2)%18 >= 9 ? "italic" : "normal";
+              const fs = ~~(n / 2) % 4 >= 2 ? "italic" : "normal";
+              text += `<span style="text-wrap:nowrap;font-style:${fs};">${word}</span> `;
+              n++;
+            }
+          }
+
+          return `<div class="card"><div class="sample" style="font-weight:${v.weight}">${text}</div>
+          <div class="sample" style="font-style:italic;font-weight:${v.weight}">${text}</div></div>`;
+
+        }).join('');
+      }
+
+      sampleInput.addEventListener('input', render);
+
+      render();
+    })();
+  </script>
+</body>
+
+</html>
