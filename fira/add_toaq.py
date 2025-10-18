@@ -10,12 +10,13 @@ import fontforge
 from PIL import Image
 from psMat import translate, skew, scale, rotate
 
-KERN_TABLE = "'kern' Horizontal Kerning lookup 2 per glyph data 2"
-
 def ord_(x):
     return ord(x) if isinstance(x, str) and len(x) == 1 else x
 
 def toaqify(font):
+    inter = "Iqteo" in font.fontname
+    KERN_TABLE = "'kern' Horizontal Kerning lookup 1 per glyph data 0" if inter else "'kern' Horizontal Kerning lookup 2 per glyph data 2"
+
     slant = None
     visited = {-1}
 
@@ -30,6 +31,7 @@ def toaqify(font):
 
     def get(c):
         glyph = get_glyph(c)
+        if not glyph: raise KeyError(f"get {c}")
         if slant is not None and glyph.unicode not in visited:
             glyph.transform(skew(-slant))
             visited.add(glyph.unicode)
@@ -73,8 +75,8 @@ def toaqify(font):
         return [p for contour in get(c).layers[1] for p in contour]
 
     # baseline start and end
-    def bs(c): return min([p.x for p in points(c) if abs(p.y) < 5])
-    def be(c): return max([p.x for p in points(c) if abs(p.y) < 5])
+    def bs(c): return min([p.x for p in points(c) if abs(p.y) < 5] or [0])
+    def be(c): return max([p.x for p in points(c) if abs(p.y) < 5] or [1000])
 
     slant_dx = xmax("ı") - be("ı")
     slant_dy = ymax("ı") - ymin("ı")
@@ -155,7 +157,7 @@ def toaqify(font):
     bridge = True
 
     copy("y", Y_TAIL)
-    crop(Y_TAIL, 0, -600, 600, 0)
+    crop(Y_TAIL, 0, -6000, 6000, 0)
     get(Y_TAIL).anchorPoints = []
 
     def make_vy(src, tgt):
@@ -169,7 +171,7 @@ def toaqify(font):
     make_vy("W", CAP_VY)
 
     copy("η", RDESC)
-    crop(RDESC, 0, -600, 600, 0)
+    crop(RDESC, 0, -6000, 6000, 0)
     get(RDESC).anchorPoints = []
 
     def add_rdesc(tgt):
@@ -194,8 +196,9 @@ def toaqify(font):
         otips = [p for p in points(c) if p.type == 0 and p.on_curve]
         otips.sort(key=lambda p: p.y)
         xon = sorted([p.x for p in points(c) if p.on_curve])
-        crop(c, -300, -999, xon[-2], 999)
-        dx = xon[-2] - max([p.x for p in points(RDESC) if p.y == ymax(RDESC)])
+        crop(c, -300, -3000, xon[-2], 3000)
+        eq_rdesc = [p.x for p in points(RDESC) if p.y == ymax(RDESC)]
+        dx = xon[-2] - max(eq_rdesc)  # ughghgh
         tips = [p for p in points(c) if p.type == 0 and p.on_curve]
         tips.sort(key=lambda p: p.y)
         dy = tips[0].y - ymax(RDESC)
@@ -205,16 +208,19 @@ def toaqify(font):
         add(RDESC, c)
         g.removeOverlap()
         g.simplify()
-        sharp_x = be(c)
-        sharp_y = max([p.y for p in points(c) if abs(p.x-sharp_x)<1 and p.y < 200])
-        map_points(c, lambda p: (p.x, otips[1].y) if (p.x,p.y) == (sharp_x,sharp_y) else p)
+        try:
+            sharp_x = be(c)
+            sharp_y = max([p.y for p in points(c) if abs(p.x-sharp_x)<1 and p.y < 200])
+            map_points(c, lambda p: (p.x, otips[1].y) if (p.x,p.y) == (sharp_x,sharp_y) else p)
+        except ValueError as e:
+            print(font, c, "long_rdesc failed", e)
 
     def stitch(head, legs, tgt):
         LAB = 7
         copy(head, tgt)
-        crop(tgt, 0, 0, 999, 999)
+        crop(tgt, 0, 0, 9999, 9999)
         copy(legs, LAB)
-        crop(LAB, 0, -500, 999, 0)
+        crop(LAB, 0, -5000, 9999, 0)
         w2 = be(tgt) - bs(tgt)
         w1 = be(LAB) - bs(LAB)
         get(LAB).transform(scale(w2 / w1, 1))
@@ -225,8 +231,9 @@ def toaqify(font):
 
     def dotbelow(c):
         g = get(c)
-        ax = next(a[2] for a in get(c).anchorPoints if a[0] == "Anchor-14")
-        copy("dotbelowcomb", 1)
+        ax = [a[2] for a in get(c).anchorPoints if a[0] == "Anchor-14"]
+        ax = ax[0] if ax else xctr(c)
+        copy(0x323, 1)
         get(1).transform(skew(-slant))
         get(1).transform(translate(ax - xctr(1), 0))
         # add(1, c)
@@ -234,12 +241,12 @@ def toaqify(font):
 
     # mamei
     SW = ymax("_") - ymin("_")
-    BW = SW if SW < 50 else 0.8 * SW
+    BW = SW if SW < 50 or inter else 0.8 * SW
     copy("m", MAMEI)
     if bridge: rect(MAMEI, xmin("m")+SW/2, 0, be("m"), BW)
     add_rdesc(MAMEI)
     copy("ƿ", MAMEI_CODA)
-    crop(MAMEI_CODA, 0, 0, 999, 999)
+    crop(MAMEI_CODA, 0, 0, 3999, 3999)
 
     # bubue
     copy("ɔ", BUBUE)
@@ -257,7 +264,10 @@ def toaqify(font):
     get(1).transform(translate(-xctr(1), -yctr(1)))
     scaled(1, 0.8, 0.8)
     get(1).transform(rotate(radians(-45)))
-    get(1).transform(translate(519 - 35*(slant>0.01), 500))
+    if inter:
+        get(1).transform(translate(1100 - 35*(slant>0.01), 1000))
+    else:
+        get(1).transform(translate(519 - 35*(slant>0.01), 500))
     add(1, NANAQ)
     get(NANAQ).width += 50
 
@@ -268,13 +278,16 @@ def toaqify(font):
     copy("U", TITIEQ)
     vflip(TITIEQ)
     def f(p):
-        if p.x < 320: p.x += 30
-        if p.x > 340: p.x -= 30
+        if inter:
+            pass
+        else:
+            if p.x < 320: p.x += 30
+            if p.x > 340: p.x -= 30
         return p
     map_points(TITIEQ, f)
     get(TITIEQ).transform(translate(0, -ymin(TITIEQ)))
-    crop(TITIEQ, 0, 300, 900, 900, 300, 0)
-    xo = sorted([p.x for p in points("o") if p.on_curve and abs(p.y - 260) < 80])
+    crop(TITIEQ, 0, 300, 9000, 9000, 300, 0)
+    xo = sorted([p.x for p in points("o") if p.on_curve and abs(p.y - font.xHeight/2) < 200])
     xU = sorted([p.x for p in points(TITIEQ) if p.on_curve])
     get(TITIEQ).transform(translate(xo[-2] - xU[0], 0))
     add("o", TITIEQ)
@@ -286,7 +299,7 @@ def toaqify(font):
     copy("ʝ", Z_TAIL)
     get(Z_TAIL).unlinkRef()
     get(Z_TAIL).anchorPoints = []
-    crop(Z_TAIL, -400, -400, 400, 50)
+    crop(Z_TAIL, -400, -400, 4000, 50)
     get(Z_TAIL).transform(translate(0, -50))
     dx = be("ɿ") - be(Z_TAIL)
     get(Z_TAIL).transform(translate(dx, 0))
@@ -299,6 +312,7 @@ def toaqify(font):
 
     # saqseoq
     copy("o", SAQSEOQ)
+
 
     # rairua
     copy("n", RAIRUA)
@@ -318,7 +332,7 @@ def toaqify(font):
     # jujuo
     copy("ɷ", JUJUO)
     vflip(JUJUO)
-    crop(JUJUO, 0, 190, 900, 900, xctr(JUJUO), -100)
+    crop(JUJUO, 0, 330 if inter else 190, 9000, 9000, xctr(JUJUO), -100)
 
     # chichao
     copy("s", CHICHAO)
@@ -360,7 +374,9 @@ def toaqify(font):
     get(GULAQTEI).glyphclass = "mark"
     copy(0x0303, SAQLAQTEI)
     get(SAQLAQTEI).glyphclass = "mark"
-    copy(0x0311, JOLAQTEI)
+    font.save(font.fontname + ".sfd")
+    try: copy(0x0311, JOLAQTEI)
+    except KeyError: copy(0x0304, JOLAQTEI)
     get(JOLAQTEI).glyphclass = "mark"
     rot(JOLAQTEI, -25)
     get(JOLAQTEI).anchorPoints = [(a,b,x+110,y-70) for (a,b,x,y) in get(JOLAQTEI).anchorPoints]
@@ -412,7 +428,8 @@ def toaqify(font):
     copy("\xa0", DCNBSP)
 
     # cartouche height
-    CH = 900
+    CH = 1600 if inter else 900
+    print(CH, font.xHeight)
 
     copy("\u200b", START_CARTOUCHE)
     copy(" ", END_CARTOUCHE)
@@ -478,7 +495,7 @@ def toaqify(font):
 
 def convert(path):
     font = fontforge.open(path)
-    font.fontname = font.fontname.replace("FiraSans", "FiraSansToaq")
+    font.fontname = font.fontname.replace("FiraSans", "FiraSansToaq").replace("Inter", "Iqteo")
     toaqify(font)
     return font.fontname + ".sfd"
 
@@ -497,20 +514,23 @@ def patch_font(path):
             name = base + suffix
             ng = find(normal, name)
             ig = find(italic, name)
-            ng.foreground = ig.foreground
-            ng.transform(skew(-0.14))
-            ng.width -= 60
-            normal.save(normal_path)
+            if not ng or not ig:
+                print(path, name, italic, ng, ig)
+            else:
+                ng.foreground = ig.foreground
+                ng.transform(skew(-0.14))
+                ng.width -= 60
+                normal.save(normal_path)
 
 def export_font(path):
     font = fontforge.open(path)
     font.generate(path.replace(".sfd", ".ttf"))
 
-raws = lambda: [p for p in os.listdir() if p.startswith("FiraSans-") and p.endswith(".ttf")]
+raws = lambda: [p for p in os.listdir() if (p.startswith("FiraSans-") or p.startswith("Inter-")) and p.endswith(".ttf")]
 paths = raws()
 
 if len(sys.argv) > 1:
-    paths = [sys.argv[1]]
+    paths = sys.argv[1:]
 elif not paths:
     import zipfile
     with zipfile.ZipFile("original.dat") as zf:
