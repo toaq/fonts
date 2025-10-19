@@ -1,0 +1,9 @@
+[project]
+name = "fira"
+version = "0.1.0"
+description = "Add your description here"
+requires-python = ">=3.12"
+dependencies = [
+    "black>=25.9.0",
+    "mypy>=1.18.2",
+]

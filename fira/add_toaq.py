@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 import functools
 import os
 import random
@@ -5,94 +7,125 @@ import sys
 from enum import Enum, auto
 from math import atan2, radians
 from multiprocessing import Pool
+from typing import Any, Callable, List, Optional, Set, Tuple, Union
 
-import fontforge
-from PIL import Image
-from psMat import translate, skew, scale, rotate
+import fontforge  # type: ignore
+from PIL import Image  # type: ignore
+from psMat import translate, skew, scale, rotate  # type: ignore
 
-def ord_(x):
+
+def ord_(x: Union[str, int]) -> Union[str, int]:
     return ord(x) if isinstance(x, str) and len(x) == 1 else x
 
-def toaqify(font):
-    inter = "Iqteo" in font.fontname
-    KERN_TABLE = "'kern' Horizontal Kerning lookup 1 per glyph data 0" if inter else "'kern' Horizontal Kerning lookup 2 per glyph data 2"
 
-    slant = None
-    visited = {-1}
+class Font:
+    def __init__(self, font: Any) -> None:
+        self.font: Any = font
+        self.slant: Optional[float] = None
+        self.visited: Set[Union[str, int]] = {-1}
+        self.inter: bool = "Iqteo" in font.fontname
+        self.KERN_TABLE: str = (
+            "'kern' Horizontal Kerning lookup 1 per glyph data 0"
+            if self.inter
+            else "'kern' Horizontal Kerning lookup 2 per glyph data 2"
+        )
+
+        # Calculate slant
+        slant_dx = self.xmax("ı") - self.be("ı")
+        slant_dy = self.ymax("ı") - self.ymin("ı")
+        self.slant = atan2(slant_dx, slant_dy)
 
     @functools.cache
-    def get_glyph(c):
+    def get_glyph(self, c: Union[str, int]) -> Optional[Any]:
         try:
-            return font[ord_(c)]
-        except:
-            for g in font:
-                if font[g].unicode == c or font[g].glyphname == c:
-                    return font[g]
+            return self.font[ord_(c)]
+        except TypeError:
+            for g in self.font:
+                if self.font[g].unicode == c or self.font[g].glyphname == c:
+                    return self.font[g]
+        return None
 
-    def get(c):
-        glyph = get_glyph(c)
-        if not glyph: raise KeyError(f"get {c}")
-        if slant is not None and glyph.unicode not in visited:
-            glyph.transform(skew(-slant))
-            visited.add(glyph.unicode)
+    def get(self, c: Union[str, int]) -> Any:
+        glyph = self.get_glyph(c)
+        if not glyph:
+            raise KeyError(f"get {c}")
+        if self.slant is not None and glyph.unicode not in self.visited:
+            glyph.transform(skew(-self.slant))
+            self.visited.add(glyph.unicode)
         return glyph
 
-    def select(src):
-        try: font.selection.select(ord_(src))
-        except ValueError: font.selection.select(("unicode",), ord_(src))
+    def select(self, src: Union[str, int]) -> None:
+        try:
+            self.font.selection.select(ord_(src))
+        except ValueError:
+            self.font.selection.select(("unicode",), ord_(src))
 
-    def copy(src, tgt):
-        get(src)
-        select(src); font.copy()
-        select(tgt); font.paste()
-        visited.add(tgt)
+    def copy(self, src: Union[str, int], tgt: Union[str, int]) -> None:
+        self.get(src)
+        self.select(src)
+        self.font.copy()
+        self.select(tgt)
+        self.font.paste()
+        self.visited.add(tgt)
 
-    def add(src, tgt):
-        get(tgt).foreground += get(src).foreground
+    def add(self, src: Union[str, int], tgt: Union[str, int]) -> None:
+        self.get(tgt).foreground += self.get(src).foreground
 
-    def rect(c, *path):
+    def rect(self, c: Union[str, int], *path: float) -> None:
         ct = fontforge.contour(1)
         x1, y1, x2, y2, *rest = path
-        rest += [x1, y1, None, None]
-        ct.moveTo(x1,y1)
+        rest += [x1, y1, 0.0, 0.0]
+        ct.moveTo(x1, y1)
         while len(rest):
-            ct.lineTo(x1,y2)
-            ct.lineTo(x2,y2)
-            x1,y1,x2,y2,*rest = x2,y2,*rest
+            ct.lineTo(x1, y2)
+            ct.lineTo(x2, y2)
+            x1, y1, x2, y2, *rest = x2, y2, *rest
         ct.closed = True
         # ct.lineTo(x1,y1)
-        get(c).layers[1] += ct
+        self.get(c).layers[1] += ct
 
-    def xmin(c): return get(c).boundingBox()[0]
-    def ymin(c): return get(c).boundingBox()[1]
-    def xmax(c): return get(c).boundingBox()[2]
-    def ymax(c): return get(c).boundingBox()[3]
-    def height(c): return ymax(c) - ymin(c)
-    def xctr(c): return (xmax(c) + xmin(c)) / 2
-    def yctr(c): return (ymax(c) + ymin(c)) / 2
+    def xmin(self, c: Union[str, int]) -> float:
+        return self.get(c).boundingBox()[0]
 
-    def points(c):
-        return [p for contour in get(c).layers[1] for p in contour]
+    def ymin(self, c: Union[str, int]) -> float:
+        return self.get(c).boundingBox()[1]
+
+    def xmax(self, c: Union[str, int]) -> float:
+        return self.get(c).boundingBox()[2]
+
+    def ymax(self, c: Union[str, int]) -> float:
+        return self.get(c).boundingBox()[3]
+
+    def height(self, c: Union[str, int]) -> float:
+        return self.ymax(c) - self.ymin(c)
+
+    def xctr(self, c: Union[str, int]) -> float:
+        return (self.xmax(c) + self.xmin(c)) / 2
+
+    def yctr(self, c: Union[str, int]) -> float:
+        return (self.ymax(c) + self.ymin(c)) / 2
+
+    def points(self, c: Union[str, int]) -> List[Any]:
+        return [p for contour in self.get(c).layers[1] for p in contour]
 
     # baseline start and end
-    def bs(c): return min([p.x for p in points(c) if abs(p.y) < 5] or [0])
-    def be(c): return max([p.x for p in points(c) if abs(p.y) < 5] or [1000])
+    def bs(self, c: Union[str, int]) -> float:
+        return min([p.x for p in self.points(c) if abs(p.y) < 5] or [0])
 
-    slant_dx = xmax("ı") - be("ı")
-    slant_dy = ymax("ı") - ymin("ı")
-    slant = atan2(slant_dx, slant_dy)
+    def be(self, c: Union[str, int]) -> float:
+        return max([p.x for p in self.points(c) if abs(p.y) < 5] or [1000])
 
-    def crop(cp, *path):
-        copy(32, 1)
-        rect(1, *path)
-        add(1, tgt=cp)
-        get(cp).intersect()
+    def crop(self, cp: Union[str, int], *path: float) -> None:
+        self.copy(32, 1)
+        self.rect(1, *path)
+        self.add(1, tgt=cp)
+        self.get(cp).intersect()
 
-    def scaled(c, fx, fy):
-        g = get(c)
+    def scaled(self, c: Union[str, int], fx: float, fy: float) -> None:
+        g = self.get(c)
         g.unlinkRef()
-        dx = xctr(c)
-        dy = yctr(c)
+        dx = self.xctr(c)
+        dy = self.yctr(c)
         fg = g.layers[1]
         fg.transform(translate(-dx, -dy))
         fg.transform(scale(fx, fy))
@@ -100,439 +133,541 @@ def toaqify(font):
         g.layers[1] = fg
         g.correctDirection()
 
-    def hflip(c): scaled(c, -1, 1)
-    def vflip(c): scaled(c, 1, -1)
+    def hflip(self, c: Union[str, int]) -> None:
+        self.scaled(c, -1, 1)
 
-    # helper glyphs
-    Y_TAIL = 2
-    RDESC = 3
-    Z_TAIL = 4
+    def vflip(self, c: Union[str, int]) -> None:
+        self.scaled(c, 1, -1)
 
-    VY = 0xa761
-    CAP_VY = 0xa760
-    def make(n, name): font.createChar(n, name); return n
+    def make_vy(self, src: Union[str, int], tgt: Union[str, int]) -> None:
+        dx = self.be(src) - self.be(2)  # Y_TAIL = 2
+        self.get(2).transform(translate(dx, 0))
+        self.copy(src, tgt)
+        self.add(2, tgt)
+        self.get(tgt).removeOverlap()
 
-    cartouchable = [
-        MAMEI := make(0xf16b0, "mamei"),
-        MAMEI_CODA := make(0xf16b1, "mamei_coda"),
-        BUBUE := make(0xf16b2, "bubue"),
-        PIPOQ := make(0xf16b3, "pipoq"),
-        FOFUAQ := make(0xf16b4, "fofuaq"),
-        NANAQ := make(0xf16b5, "nanaq"),
-        DUDEO := make(0xf16b6, "dudeo"),
-        TITIEQ := make(0xf16b7, "titieq"),
-        ZOZEO := make(0xf16b8, "zozeo"),
-        CECOA := make(0xf16b9, "cecoa"),
-        SAQSEOQ := make(0xf16ba, "saqseoq"),
-        RAIRUA := make(0xf16bb, "rairua"),
-        LAOLIQ := make(0xf16bc, "laoliq"),
-        NHANHOQ := make(0xf16bd, "nhanhoq"),
-        JUJUO := make(0xf16be, "jujuo"),
-        CHICHAO := make(0xf16bf, "chichao"),
-        SHOSHIA := make(0xf16c0, "shoshia"),
-        WEWA := make(0xf16c1, "wewa"),
-        AQAQ := make(0xf16c2, "aqaq"),
-        GUGUI := make(0xf16c3, "gugui"),
-        KIKUE := make(0xf16c4, "kikue"),
-        OAOMO := make(0xf16c5, "oaomo"),
-        HEHAQ := make(0xf16c6, "hehaq"),
-        PMARK := make(0xf16d2, "deranipmark"),
-        QMARK := make(0xf16d3, "deraniqmark"),
-        SMARK := make(0xf16d4, "deranismark"),
-        RAILAI := make(0xf16da, "railai"),
-        DCNBSP := make(0xf16db, "deraninbsp"),
-        IULAI := make(0xf16cd, "iulai"),
-        AILAI := make(0xf16ce, "ailai"),
-    ]
+    def add_rdesc(self, tgt: Union[str, int]) -> None:
+        ymint = self.ymin(tgt)
+        dy = -self.ymax(3)  # RDESC = 3
+        dx = max([p.x for p in self.points(tgt) if abs(p.y - ymint) < 1]) - self.xmax(3)
+        self.get(3).transform(translate(dx, dy))
+        self.add(3, tgt)
+        self.get(tgt).removeOverlap()
 
-    GULAQTEI = make(0xf16ca, "gulaqtei")
-    SAQLAQTEI = make(0xf16cb, "saqlaqtei")
-    JOLAQTEI = make(0xf16cc, "jolaqtei")
-    STOP1 = make(0xf16d5, "deranistop1")
-    STOP2 = make(0xf16d6, "deranistop2")
-    STOP3 = make(0xf16d7, "deranistop3")
-    START_CARTOUCHE = make(0xf16d8, "deranistartcartouche")
-    END_CARTOUCHE = make(0xf16d9, "deraniendcartouche")
-
-    bridge = True
-
-    copy("y", Y_TAIL)
-    crop(Y_TAIL, 0, -6000, 6000, 0)
-    get(Y_TAIL).anchorPoints = []
-
-    def make_vy(src, tgt):
-        dx = be(src) - be(Y_TAIL)
-        get(Y_TAIL).transform(translate(dx, 0))
-        copy(src, tgt)
-        add(Y_TAIL, tgt)
-        get(tgt).removeOverlap()
-
-    make_vy("w", VY)
-    make_vy("W", CAP_VY)
-
-    copy("η", RDESC)
-    crop(RDESC, 0, -6000, 6000, 0)
-    get(RDESC).anchorPoints = []
-
-    def add_rdesc(tgt):
-        ymint = ymin(tgt)
-        dy = -ymax(RDESC)
-        dx = max([p.x for p in points(tgt) if abs(p.y-ymint) < 1]) - xmax(RDESC)
-        get(RDESC).transform(translate(dx, dy))
-        add(RDESC, tgt)
-        get(tgt).removeOverlap()
-
-    def map_points(c, f):
-        glyph = get(c)
+    def map_points(self, c: Union[str, int], f: Callable[[Any], Any]) -> None:
+        glyph = self.get(c)
         fg = glyph.foreground
-        for (j, contour) in enumerate(fg):
-            for (i, p) in enumerate(contour):
+        for j, contour in enumerate(fg):
+            for i, p in enumerate(contour):
                 contour[i] = f(p)
             fg[j] = contour
         glyph.foreground = fg
 
-    def long_rdesc(c):
-        g = get(c)
-        otips = [p for p in points(c) if p.type == 0 and p.on_curve]
+    def long_rdesc(self, c: Union[str, int]) -> None:
+        g = self.get(c)
+        otips = [p for p in self.points(c) if p.type == 0 and p.on_curve]
         otips.sort(key=lambda p: p.y)
-        xon = sorted([p.x for p in points(c) if p.on_curve])
-        crop(c, -300, -3000, xon[-2], 3000)
-        eq_rdesc = [p.x for p in points(RDESC) if p.y == ymax(RDESC)]
+        xon = sorted([p.x for p in self.points(c) if p.on_curve])
+        self.crop(c, -300, -3000, xon[-2], 3000)
+        eq_rdesc = [p.x for p in self.points(3) if p.y == self.ymax(3)]  # RDESC = 3
         dx = xon[-2] - max(eq_rdesc)  # ughghgh
-        tips = [p for p in points(c) if p.type == 0 and p.on_curve]
+        tips = [p for p in self.points(c) if p.type == 0 and p.on_curve]
         tips.sort(key=lambda p: p.y)
-        dy = tips[0].y - ymax(RDESC)
-        get(RDESC).transform(translate(dx, dy))
-        add(RDESC, c)
-        get(RDESC).transform(translate(0, -tips[0].y))
-        add(RDESC, c)
+        dy = tips[0].y - self.ymax(3)
+        self.get(3).transform(translate(dx, dy))
+        self.add(3, c)
+        self.get(3).transform(translate(0, -tips[0].y))
+        self.add(3, c)
         g.removeOverlap()
         g.simplify()
         try:
-            sharp_x = be(c)
-            sharp_y = max([p.y for p in points(c) if abs(p.x-sharp_x)<1 and p.y < 200])
-            map_points(c, lambda p: (p.x, otips[1].y) if (p.x,p.y) == (sharp_x,sharp_y) else p)
+            sharp_x = self.be(c)
+            sharp_y = max(
+                [p.y for p in self.points(c) if abs(p.x - sharp_x) < 1 and p.y < 200]
+            )
+            self.map_points(
+                c,
+                lambda p: (p.x, otips[1].y) if (p.x, p.y) == (sharp_x, sharp_y) else p,
+            )
         except ValueError as e:
-            print(font, c, "long_rdesc failed", e)
+            print(self.font, c, "long_rdesc failed", e)
 
-    def stitch(head, legs, tgt):
+    def stitch(
+        self, head: Union[str, int], legs: Union[str, int], tgt: Union[str, int]
+    ) -> None:
         LAB = 7
-        copy(head, tgt)
-        crop(tgt, 0, 0, 9999, 9999)
-        copy(legs, LAB)
-        crop(LAB, 0, -5000, 9999, 0)
-        w2 = be(tgt) - bs(tgt)
-        w1 = be(LAB) - bs(LAB)
-        get(LAB).transform(scale(w2 / w1, 1))
-        get(LAB).transform(translate(be(tgt) - be(LAB), 0))
-        add(LAB, tgt)
-        get(LAB).clear()
-        get(tgt).removeOverlap()
+        self.copy(head, tgt)
+        self.crop(tgt, 0, 0, 9999, 9999)
+        self.copy(legs, LAB)
+        self.crop(LAB, 0, -5000, 9999, 0)
+        w2 = self.be(tgt) - self.bs(tgt)
+        w1 = self.be(LAB) - self.bs(LAB)
+        self.get(LAB).transform(scale(w2 / w1, 1))
+        self.get(LAB).transform(translate(self.be(tgt) - self.be(LAB), 0))
+        self.add(LAB, tgt)
+        self.get(LAB).clear()
+        self.get(tgt).removeOverlap()
 
-    def dotbelow(c):
-        g = get(c)
-        ax = [a[2] for a in get(c).anchorPoints if a[0] == "Anchor-14"]
-        ax = ax[0] if ax else xctr(c)
-        copy(0x323, 1)
-        get(1).transform(skew(-slant))
-        get(1).transform(translate(ax - xctr(1), 0))
-        # add(1, c)
-        g.layers[1] += get(1).layers[1]
+    def dotbelow(self, c: Union[str, int]) -> None:
+        g = self.get(c)
+        ax_list = [a[2] for a in self.get(c).anchorPoints if a[0] == "Anchor-14"]
+        ax = ax_list[0] if ax_list else self.xctr(c)
+        self.copy(0x323, 1)
+        if self.slant is not None:
+            self.get(1).transform(skew(-self.slant))
+        self.get(1).transform(translate(ax - self.xctr(1), 0))
+        # self.add(1, c)
+        g.layers[1] += self.get(1).layers[1]
 
-    # mamei
-    SW = ymax("_") - ymin("_")
-    BW = SW if SW < 50 or inter else 0.8 * SW
-    copy("m", MAMEI)
-    if bridge: rect(MAMEI, xmin("m")+SW/2, 0, be("m"), BW)
-    add_rdesc(MAMEI)
-    copy("ƿ", MAMEI_CODA)
-    crop(MAMEI_CODA, 0, 0, 3999, 3999)
+    def rot(self, c: Union[str, int], deg: float) -> None:
+        x, y = self.xctr(c), self.yctr(c)
+        self.get(c).transform(translate(-x, -y))
+        self.get(c).transform(rotate(radians(deg)))
+        self.get(c).transform(translate(x, y))
 
-    # bubue
-    copy("ɔ", BUBUE)
+    def toaqify(self) -> None:
+        # helper glyphs
+        Y_TAIL = 2
+        RDESC = 3
+        Z_TAIL = 4
 
-    # pipoq
-    copy("q", PIPOQ)
+        VY = 0xA761
+        CAP_VY = 0xA760
 
-    # fofuaq
-    copy("ɿ", FOFUAQ)
-    add_rdesc(FOFUAQ)
+        def make(n: int, name: str) -> int:
+            self.font.createChar(n, name)
+            return n
 
-    # nanaq
-    copy("o", NANAQ)
-    copy("'", 1)
-    get(1).transform(translate(-xctr(1), -yctr(1)))
-    scaled(1, 0.8, 0.8)
-    get(1).transform(rotate(radians(-45)))
-    if inter:
-        get(1).transform(translate(1100 - 35*(slant>0.01), 1000))
-    else:
-        get(1).transform(translate(519 - 35*(slant>0.01), 500))
-    add(1, NANAQ)
-    get(NANAQ).width += 50
+        cartouchable = [
+            MAMEI := make(0xF16B0, "mamei"),
+            MAMEI_CODA := make(0xF16B1, "mamei_coda"),
+            BUBUE := make(0xF16B2, "bubue"),
+            PIPOQ := make(0xF16B3, "pipoq"),
+            FOFUAQ := make(0xF16B4, "fofuaq"),
+            NANAQ := make(0xF16B5, "nanaq"),
+            DUDEO := make(0xF16B6, "dudeo"),
+            TITIEQ := make(0xF16B7, "titieq"),
+            ZOZEO := make(0xF16B8, "zozeo"),
+            CECOA := make(0xF16B9, "cecoa"),
+            SAQSEOQ := make(0xF16BA, "saqseoq"),
+            RAIRUA := make(0xF16BB, "rairua"),
+            LAOLIQ := make(0xF16BC, "laoliq"),
+            NHANHOQ := make(0xF16BD, "nhanhoq"),
+            JUJUO := make(0xF16BE, "jujuo"),
+            CHICHAO := make(0xF16BF, "chichao"),
+            SHOSHIA := make(0xF16C0, "shoshia"),
+            WEWA := make(0xF16C1, "wewa"),
+            AQAQ := make(0xF16C2, "aqaq"),
+            GUGUI := make(0xF16C3, "gugui"),
+            KIKUE := make(0xF16C4, "kikue"),
+            OAOMO := make(0xF16C5, "oaomo"),
+            HEHAQ := make(0xF16C6, "hehaq"),
+            PMARK := make(0xF16D2, "deranipmark"),
+            QMARK := make(0xF16D3, "deraniqmark"),
+            SMARK := make(0xF16D4, "deranismark"),
+            RAILAI := make(0xF16DA, "railai"),
+            DCNBSP := make(0xF16DB, "deraninbsp"),
+            IULAI := make(0xF16CD, "iulai"),
+            AILAI := make(0xF16CE, "ailai"),
+        ]
 
-    # dudeo
-    copy("ɘ", DUDEO)
+        GULAQTEI = make(0xF16CA, "gulaqtei")
+        SAQLAQTEI = make(0xF16CB, "saqlaqtei")
+        JOLAQTEI = make(0xF16CC, "jolaqtei")
+        STOP1 = make(0xF16D5, "deranistop1")
+        STOP2 = make(0xF16D6, "deranistop2")
+        STOP3 = make(0xF16D7, "deranistop3")
+        START_CARTOUCHE = make(0xF16D8, "deranistartcartouche")
+        END_CARTOUCHE = make(0xF16D9, "deraniendcartouche")
 
-    # titieq
-    copy("U", TITIEQ)
-    vflip(TITIEQ)
-    def f(p):
-        if inter:
-            pass
+        bridge = True
+
+        self.copy("y", Y_TAIL)
+        self.crop(Y_TAIL, 0, -6000, 6000, 0)
+        self.get(Y_TAIL).anchorPoints = []
+
+        self.make_vy("w", VY)
+        self.make_vy("W", CAP_VY)
+
+        self.copy("η", RDESC)
+        self.crop(RDESC, 0, -6000, 6000, 0)
+        self.get(RDESC).anchorPoints = []
+
+        # mamei
+        SW = self.ymax("_") - self.ymin("_")
+        BW = SW if SW < 50 or self.inter else 0.8 * SW
+        self.copy("m", MAMEI)
+        if bridge:
+            self.rect(MAMEI, self.xmin("m") + SW / 2, 0, self.be("m"), BW)
+        self.add_rdesc(MAMEI)
+        self.copy("ƿ", MAMEI_CODA)
+        self.crop(MAMEI_CODA, 0, 0, 3999, 3999)
+
+        # bubue
+        self.copy("ɔ", BUBUE)
+
+        # pipoq
+        self.copy("q", PIPOQ)
+
+        # fofuaq
+        self.copy("ɿ", FOFUAQ)
+        self.add_rdesc(FOFUAQ)
+
+        # nanaq
+        self.copy("o", NANAQ)
+        self.copy("'", 1)
+        self.get(1).transform(translate(-self.xctr(1), -self.yctr(1)))
+        self.scaled(1, 0.8, 0.8)
+        self.get(1).transform(rotate(radians(-45)))
+        if self.inter:
+            slant_factor = 35 if self.slant and self.slant > 0.01 else 0
+            self.get(1).transform(translate(1100 - slant_factor, 1000))
         else:
-            if p.x < 320: p.x += 30
-            if p.x > 340: p.x -= 30
-        return p
-    map_points(TITIEQ, f)
-    get(TITIEQ).transform(translate(0, -ymin(TITIEQ)))
-    crop(TITIEQ, 0, 300, 9000, 9000, 300, 0)
-    xo = sorted([p.x for p in points("o") if p.on_curve and abs(p.y - font.xHeight/2) < 200])
-    xU = sorted([p.x for p in points(TITIEQ) if p.on_curve])
-    get(TITIEQ).transform(translate(xo[-2] - xU[0], 0))
-    add("o", TITIEQ)
-    get(TITIEQ).removeOverlap()
-    get(TITIEQ).anchorPoints = [(a,b,max(x-SW/2,0),y) for a,b,x,y in get("o").anchorPoints]
-    # print(get(TITIEQ).anchorPoints)
+            slant_factor = 35 if self.slant and self.slant > 0.01 else 0
+            self.get(1).transform(translate(519 - slant_factor, 500))
+        self.add(1, NANAQ)
+        self.get(NANAQ).width += 50
 
-    # zozeo
-    copy("ʝ", Z_TAIL)
-    get(Z_TAIL).unlinkRef()
-    get(Z_TAIL).anchorPoints = []
-    crop(Z_TAIL, -400, -400, 4000, 50)
-    get(Z_TAIL).transform(translate(0, -50))
-    dx = be("ɿ") - be(Z_TAIL)
-    get(Z_TAIL).transform(translate(dx, 0))
-    copy("ɿ", ZOZEO)
-    add(Z_TAIL, ZOZEO)
-    get(ZOZEO).removeOverlap()
+        # dudeo
+        self.copy("ɘ", DUDEO)
 
-    # cecoa
-    copy("c", CECOA)
+        # titieq
+        self.copy("U", TITIEQ)
+        self.vflip(TITIEQ)
 
-    # saqseoq
-    copy("o", SAQSEOQ)
+        def f(p):
+            if self.inter:
+                pass
+            else:
+                if p.x < 320:
+                    p.x += 30
+                if p.x > 340:
+                    p.x -= 30
+            return p
 
+        self.map_points(TITIEQ, f)
+        self.get(TITIEQ).transform(translate(0, -self.ymin(TITIEQ)))
+        self.crop(TITIEQ, 0, 300, 9000, 9000, 300, 0)
+        xo = sorted(
+            [
+                p.x
+                for p in self.points("o")
+                if p.on_curve and abs(p.y - self.font.xHeight / 2) < 4 * SW
+            ]
+        )
+        xU = sorted([p.x for p in self.points(TITIEQ) if p.on_curve])
+        if len(xo) >= 2:
+            self.get(TITIEQ).transform(translate(xo[-2] - xU[0], 0))
+        else:
+            print(self.font, "titieq failed!")
+        self.add("o", TITIEQ)
+        self.get(TITIEQ).removeOverlap()
+        self.get(TITIEQ).anchorPoints = [
+            (a, b, max(x - SW / 2, 0), y) for a, b, x, y in self.get("o").anchorPoints
+        ]
+        # print(self.get(TITIEQ).anchorPoints)
 
-    # rairua
-    copy("n", RAIRUA)
-    if bridge: rect(RAIRUA, xmin("η")+SW/2, 0, be("n"), BW)
-    add_rdesc(RAIRUA)
-    get(RAIRUA).removeOverlap()
+        # zozeo
+        self.copy("ʝ", Z_TAIL)
+        self.get(Z_TAIL).unlinkRef()
+        self.get(Z_TAIL).anchorPoints = []
+        self.crop(Z_TAIL, -400, -400, 4000, 50)
+        self.get(Z_TAIL).transform(translate(0, -50))
+        dx = self.be("ɿ") - self.be(Z_TAIL)
+        self.get(Z_TAIL).transform(translate(dx, 0))
+        self.copy("ɿ", ZOZEO)
+        self.add(Z_TAIL, ZOZEO)
+        self.get(ZOZEO).removeOverlap()
 
-    # laoliq
-    copy("n", LAOLIQ)
-    if bridge: rect(LAOLIQ, xmin("n")+SW/2, 0, be("n"), BW)
-    get(LAOLIQ).removeOverlap()
-    dotbelow(LAOLIQ)
+        # cecoa
+        self.copy("c", CECOA)
 
-    # nhanhoq
-    copy("ə", NHANHOQ)
+        # saqseoq
+        self.copy("o", SAQSEOQ)
 
-    # jujuo
-    copy("ɷ", JUJUO)
-    vflip(JUJUO)
-    crop(JUJUO, 0, 330 if inter else 190, 9000, 9000, xctr(JUJUO), -100)
+        # rairua
+        self.copy("n", RAIRUA)
+        if bridge:
+            self.rect(RAIRUA, self.xmin("η") + SW / 2, 0, self.be("n"), BW)
+        self.add_rdesc(RAIRUA)
+        self.get(RAIRUA).removeOverlap()
 
-    # chichao
-    copy("s", CHICHAO)
-    hflip(CHICHAO)
+        # laoliq
+        self.copy("n", LAOLIQ)
+        if bridge:
+            self.rect(LAOLIQ, self.xmin("n") + SW / 2, 0, self.be("n"), BW)
+        self.get(LAOLIQ).removeOverlap()
+        self.dotbelow(LAOLIQ)
 
-    # shoshia
-    copy(CHICHAO, SHOSHIA)
-    long_rdesc(SHOSHIA)
+        # nhanhoq
+        self.copy("ə", NHANHOQ)
 
-    # wewa
-    copy("s", WEWA)
+        # jujuo
+        self.copy("ɷ", JUJUO)
+        self.vflip(JUJUO)
+        self.crop(
+            JUJUO, 0, 330 if self.inter else 190, 9000, 9000, self.xctr(JUJUO), -100
+        )
 
-    # aqaq
-    copy("c", AQAQ)
-    long_rdesc(AQAQ)
+        # chichao
+        self.copy("s", CHICHAO)
+        self.hflip(CHICHAO)
 
-    # gugui
-    copy("ε", GUGUI)
+        # shoshia
+        self.copy(CHICHAO, SHOSHIA)
+        self.long_rdesc(SHOSHIA)
 
-    # kikue
-    copy("c", KIKUE)
-    dotbelow(KIKUE)
+        # wewa
+        self.copy("s", WEWA)
 
-    # oaomo
-    copy("·", OAOMO)
+        # aqaq
+        self.copy("c", AQAQ)
+        self.long_rdesc(AQAQ)
 
-    # hehaq
-    copy(FOFUAQ, HEHAQ)
-    rect(HEHAQ, xmin(HEHAQ)+SW/2, 0, xmax(HEHAQ) + 80, BW)
-    get(HEHAQ).removeOverlap()
+        # gugui
+        self.copy("ε", GUGUI)
 
-    def rot(c, deg):
-        x, y = xctr(c), yctr(c)
-        get(c).transform(translate(-x, -y))
-        get(c).transform(rotate(radians(deg)))
-        get(c).transform(translate(x, y))
+        # kikue
+        self.copy("c", KIKUE)
+        self.dotbelow(KIKUE)
 
-    copy(0x0301, GULAQTEI)
-    get(GULAQTEI).glyphclass = "mark"
-    copy(0x0303, SAQLAQTEI)
-    get(SAQLAQTEI).glyphclass = "mark"
-    font.save(font.fontname + ".sfd")
-    try: copy(0x0311, JOLAQTEI)
-    except KeyError: copy(0x0304, JOLAQTEI)
-    get(JOLAQTEI).glyphclass = "mark"
-    rot(JOLAQTEI, -25)
-    get(JOLAQTEI).anchorPoints = [(a,b,x+110,y-70) for (a,b,x,y) in get(JOLAQTEI).anchorPoints]
-    for tgt, name in ((IULAI, "iulai"), (AILAI, "ailai")):
-        copy(0x035c, tgt)
-        glyph = get(tgt)
-        # glyph.glyphclass = "mark"
-        l = glyph.layers[1]
-        l.transform(translate(200, 0))
-        glyph.layers[1] = l
-        scaled(tgt, 0.7, -0.8)
+        # oaomo
+        self.copy("·", OAOMO)
 
-    # PMARK
-    copy(":", PMARK)
-    scaled(PMARK, 0.8, 0.8)
-    # QMARK
-    copy(PMARK, QMARK)
-    # SMARK
-    # copy("–", SMARK)
-    copy(",", SMARK)
-    get(SMARK).transform(translate(200, 0))
-    add(",", SMARK)
-    get(SMARK).transform(translate(200, 0))
-    add(",", SMARK)
+        # hehaq
+        self.copy(FOFUAQ, HEHAQ)
+        self.rect(HEHAQ, self.xmin(HEHAQ) + SW / 2, 0, self.xmax(HEHAQ) + 80, BW)
+        self.get(HEHAQ).removeOverlap()
 
-    # stops
-    stitch("]", "}", STOP1)
-    get(STOP1).transform(translate(150, 0))
-    copy(STOP1, STOP2)
-    copy(STOP1, STOP3)
-    add("·", STOP1)
-    S = 200
-    copy("·", 2)
-    if SW > 50: scaled(2, 0.8, 0.8)
-    copy(2, 1)
-    get(1).transform(translate(0, S))
-    add(2, 1)
-    get(1).transform(translate(0, -S/2))
-    add(1, STOP2)
-    get(1).transform(translate(0, S + S/2))
-    add(2, 1)
-    get(1).transform(translate(0, -S))
-    add(1, STOP3)
+        self.copy(0x0301, GULAQTEI)
+        self.get(GULAQTEI).glyphclass = "mark"
+        self.copy(0x0303, SAQLAQTEI)
+        self.get(SAQLAQTEI).glyphclass = "mark"
+        self.font.save(self.font.fontname + ".sfd")
+        try:
+            self.copy(0x0311, JOLAQTEI)
+        except KeyError:
+            self.copy(0x0304, JOLAQTEI)
+        self.get(JOLAQTEI).glyphclass = "mark"
+        self.rot(JOLAQTEI, -25)
+        self.get(JOLAQTEI).anchorPoints = [
+            (a, b, x + 110, y - 70) for (a, b, x, y) in self.get(JOLAQTEI).anchorPoints
+        ]
+        for tgt, name in ((IULAI, "iulai"), (AILAI, "ailai")):
+            self.copy(0x035C, tgt)
+            glyph = self.get(tgt)
+            # glyph.glyphclass = "mark"
+            l = glyph.layers[1]
+            l.transform(translate(200, 0))
+            glyph.layers[1] = l
+            self.scaled(tgt, 0.7, -0.8)
 
-    # RAILAI
-    copy("*", RAILAI)
+        # PMARK
+        self.copy(":", PMARK)
+        self.scaled(PMARK, 0.8, 0.8)
+        # QMARK
+        self.copy(PMARK, QMARK)
+        # SMARK
+        # self.copy("–", SMARK)
+        self.copy(",", SMARK)
+        self.get(SMARK).transform(translate(200, 0))
+        self.add(",", SMARK)
+        self.get(SMARK).transform(translate(200, 0))
+        self.add(",", SMARK)
 
-    # DCNBSP
-    copy("\xa0", DCNBSP)
+        # stops
+        self.stitch("]", "}", STOP1)
+        self.get(STOP1).transform(translate(150, 0))
+        self.copy(STOP1, STOP2)
+        self.copy(STOP1, STOP3)
+        self.add("·", STOP1)
+        S = 200
+        self.copy("·", 2)
+        if SW > 50:
+            self.scaled(2, 0.8, 0.8)
+        self.copy(2, 1)
+        self.get(1).transform(translate(0, S))
+        self.add(2, 1)
+        self.get(1).transform(translate(0, -S / 2))
+        self.add(1, STOP2)
+        self.get(1).transform(translate(0, S + S / 2))
+        self.add(2, 1)
+        self.get(1).transform(translate(0, -S))
+        self.add(1, STOP3)
 
-    # cartouche height
-    CH = 1600 if inter else 900
-    print(CH, font.xHeight)
+        # RAILAI
+        self.copy("*", RAILAI)
 
-    copy("\u200b", START_CARTOUCHE)
-    copy(" ", END_CARTOUCHE)
-    ec = get(END_CARTOUCHE)
-    ec.width = 240
-    ct = fontforge.contour(1)
-    ct.moveTo(0, CH+SW/2)
-    ct.quadraticTo(180, CH+SW/2, 180, CH+SW/2-100)
-    ct.lineTo(180, 0)
-    ec.foreground += ct
-    ec.stroke("circular", SW, cap="butt")
+        # DCNBSP
+        self.copy("\xa0", DCNBSP)
 
-    visited.add(END_CARTOUCHE)
+        # cartouche height
+        CH = 1600 if self.inter else 900
 
-    langs = ("latn", "dflt"), ("DFLT", "dflt")
-    font.addLookup("AddCartouche", "gsub_single", ("ignore_marks",), (("cart", langs),))
-    font.addLookupSubtable("AddCartouche", "AddCartouche1")
-    for c in cartouchable:
-        base = get(c)
-        font.createChar(-1, cc := base.glyphname + "_c")
-        copy(c, cc)
-        rect(cc, 0, CH, base.width, CH+SW)
-        get(cc).unlinkRef()
-        base.addPosSub("AddCartouche1", cc)
+        self.copy("\u200b", START_CARTOUCHE)
+        self.copy(" ", END_CARTOUCHE)
+        ec = self.get(END_CARTOUCHE)
+        ec.width = 240
+        ct = fontforge.contour(1)
+        ct.moveTo(0, CH + SW / 2)
+        ct.quadraticTo(180, CH + SW / 2, 180, CH + SW / 2 - 100)
+        ct.lineTo(180, 0)
+        ec.foreground += ct
+        ec.stroke("circular", SW, cap="butt")
 
-    # Cartouche spaces
-    get(0x20).addPosSub("AddCartouche1", "deraninbsp_c")
-    get(0xa0).addPosSub("AddCartouche1", "deraninbsp_c")
+        self.visited.add(END_CARTOUCHE)
 
-    # Contextual substitution to start cartouches:
-    # Rule: cartouche_start cartouchable @<Cartouchify>
+        langs = ("latn", "dflt"), ("DFLT", "dflt")
+        self.font.addLookup(
+            "AddCartouche", "gsub_single", ("ignore_marks",), (("cart", langs),)
+        )
+        self.font.addLookupSubtable("AddCartouche", "AddCartouche1")
+        for c in cartouchable:
+            base = self.get(c)
+            self.font.createChar(-1, cc := base.glyphname + "_c")
+            self.copy(c, cc)
+            self.rect(cc, 0, CH, base.width, CH + SW)
+            self.get(cc).unlinkRef()
+            base.addPosSub("AddCartouche1", cc)
 
-    # Chaining rule:
-    # cartouched | cartouchable @<Cartouchify> |
+        # Cartouche spaces
+        self.get(0x20).addPosSub("AddCartouche1", "deraninbsp_c")
+        self.get(0xA0).addPosSub("AddCartouche1", "deraninbsp_c")
 
-    names = ' '.join(get(c).glyphname for c in cartouchable)
-    names_c = ' '.join(get(c).glyphname + '_c' for c in cartouchable)
-    font.addLookup("ContinueCartouche", "gsub_contextchain", ("ignore_marks",), (("rclt", langs),))
-    font.addContextualSubtable("ContinueCartouche", "ContinueCartouche1", "class",
-        f"1 | 1 @<AddCartouche> |",
+        # Contextual substitution to start cartouches:
+        # Rule: cartouche_start cartouchable @<Cartouchify>
+
+        # Chaining rule:
+        # cartouched | cartouchable @<Cartouchify> |
+
+        names = " ".join(self.get(c).glyphname for c in cartouchable)
+        names_c = " ".join(self.get(c).glyphname + "_c" for c in cartouchable)
+        self.font.addLookup(
+            "ContinueCartouche",
+            "gsub_contextchain",
+            ("ignore_marks",),
+            (("rclt", langs),),
+        )
+        self.font.addContextualSubtable(
+            "ContinueCartouche",
+            "ContinueCartouche1",
+            "class",
+            f"1 | 1 @<AddCartouche> |",
             bclasses=(None, names_c),
-            mclasses=(None, names,),
-            fclasses=(None,))
+            mclasses=(
+                None,
+                names,
+            ),
+            fclasses=(None,),
+        )
 
-    font.addLookup("StartCartouche", "gsub_context", ("ignore_marks",), (("rclt", langs),))
-    font.addContextualSubtable("StartCartouche", "StartCartouche1", "coverage",
-        f"[deranistartcartouche] [{names}] @<AddCartouche>")
+        self.font.addLookup(
+            "StartCartouche", "gsub_context", ("ignore_marks",), (("rclt", langs),)
+        )
+        self.font.addContextualSubtable(
+            "StartCartouche",
+            "StartCartouche1",
+            "coverage",
+            f"[deranistartcartouche] [{names}] @<AddCartouche>",
+        )
 
-    # Kerning
-    for mark in "iulai", "ailai", "iulai_c", "ailai_c":
-        for fofuaq in "fofuaq", "fofuaq_c":
-            get(mark).addPosSub(KERN_TABLE, fofuaq, -150, 0, 0, 0, 0, 0, 0, 0)
-            get(fofuaq).addPosSub(KERN_TABLE, mark, 0, 0, 0, 0, 250, 0, 0, 0)
+        # Kerning
+        for mark in "iulai", "ailai", "iulai_c", "ailai_c":
+            for fofuaq in "fofuaq", "fofuaq_c":
+                self.get(mark).addPosSub(
+                    self.KERN_TABLE, fofuaq, -150, 0, 0, 0, 0, 0, 0, 0
+                )
+                self.get(fofuaq).addPosSub(
+                    self.KERN_TABLE, mark, 0, 0, 0, 0, 250, 0, 0, 0
+                )
 
-    for k in list(visited):
-        get(k).transform(skew(slant))
+        for k in list(self.visited):
+            self.get(k).transform(skew(self.slant))
 
-    font.descent = 300
-    # fontforge.printSetup("pdf-file", "", 1300, 400)
-    # font.printSample("fontsample", 60, sample())
-    # print("Printed sample:", font.fontname)
-    font.save(font.fontname + ".sfd")
+        self.font.descent = 300
+        # fontforge.printSetup("pdf-file", "", 1300, 400)
+        # self.font.printSample("fontsample", 60, sample())
+        # print("Printed sample:", self.font.fontname)
+        self.font.save(self.font.fontname + ".sfd")
 
-def convert(path):
+
+def toaqify(font: Any) -> None:
+    font_obj = Font(font)
+    font_obj.toaqify()
+
+
+def convert(path: str) -> str:
     font = fontforge.open(path)
-    font.fontname = font.fontname.replace("FiraSans", "FiraSansToaq").replace("Inter", "Iqteo")
+    font.fontname = font.fontname.replace("FiraSans", "FiraSansToaq").replace(
+        "Inter", "Iqteo"
+    )
     toaqify(font)
     return font.fontname + ".sfd"
 
-def patch_font(path):
-    if "Italic" not in path: return
+
+def patch_font(path: str) -> None:
+    if "Italic" not in path:
+        return
     normal_path = path.replace("Italic", "").replace("-.", "-Regular.")
     italic = fontforge.open(path)
     normal = fontforge.open(normal_path)
-    def find(font, name):
+
+    def find(font: Any, name: str) -> Optional[Any]:
         for g in font:
             if font[g].glyphname == name:
                 return font[g]
+        return None
 
     for base in "dudeo", "nhanhoq", "pipoq":
         for suffix in ("", "_c"):
             name = base + suffix
             ng = find(normal, name)
             ig = find(italic, name)
-            if not ng or not ig:
-                print(path, name, italic, ng, ig)
-            else:
+            if ng is not None and ig is not None:
                 ng.foreground = ig.foreground
                 ng.transform(skew(-0.14))
                 ng.width -= 60
                 normal.save(normal_path)
 
-def export_font(path):
+
+def export_font(path: str) -> None:
     font = fontforge.open(path)
     font.generate(path.replace(".sfd", ".ttf"))
 
-raws = lambda: [p for p in os.listdir() if (p.startswith("FiraSans-") or p.startswith("Inter-")) and p.endswith(".ttf")]
+
+def is_input_ttf(path: str) -> bool:
+    return (
+        path.startswith("FiraSans-") or path.startswith("Inter-")
+    ) and path.endswith(".ttf")
+
+
+def raws() -> List[str]:
+    return [p for p in os.listdir() if is_input_ttf(p)]
+
+
 paths = raws()
+
+if sys.argv[1:] == ["--compress"]:
+    import zipfile
+
+    # Bundle all the ttf files in "paths" into a zip file and save it as "original.dat".
+    with zipfile.ZipFile("original.dat", "w") as zf:
+        for path in paths:
+            zf.write(path, path)
+    # Verify that the zip file contains all the ttf files.
+    with zipfile.ZipFile("original.dat") as zf:
+        assert set(zf.namelist()) == set(paths)
+    # Remove the original files.
+    for path in paths:
+        os.remove(path)
+    print(f"moved {len(paths)} ttf files into original.dat")
+    exit()
 
 if len(sys.argv) > 1:
     paths = sys.argv[1:]
 elif not paths:
     import zipfile
+
     with zipfile.ZipFile("original.dat") as zf:
         zf.extractall(".")
     paths = raws()
