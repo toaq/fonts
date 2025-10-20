@@ -2,16 +2,23 @@ from __future__ import annotations
 
 import functools
 import os
-import random
 import sys
-from enum import Enum, auto
 from math import atan2, radians
 from multiprocessing import Pool
-from typing import Any, Callable, List, Optional, Set, Tuple, Union
+from typing import Any, Callable, List, Optional, Set, Union
 
 import fontforge  # type: ignore
-from PIL import Image  # type: ignore
+from PIL import Image, ImageDraw, ImageFont  # type: ignore
 from psMat import translate, skew, scale, rotate  # type: ignore
+
+
+# indices of helper glyphs
+Y_TAIL = 2
+RDESC = 3
+Z_TAIL = 4
+
+VY = 0xA761
+CAP_VY = 0xA760
 
 
 def ord_(x: Union[str, int]) -> Union[str, int]:
@@ -84,6 +91,17 @@ class Font:
         # ct.lineTo(x1,y1)
         self.get(c).layers[1] += ct
 
+    def polygon(self, c: Union[str, int], *path: float) -> None:
+        ct = fontforge.contour(1)
+        x1, y1, *rest = path
+        rest += [x1, y1]
+        ct.moveTo(x1, y1)
+        while len(rest):
+            ct.lineTo(x1, y1)
+            x1, y1, *rest = rest
+        ct.closed = True
+        self.get(c).layers[1] += ct
+
     def xmin(self, c: Union[str, int]) -> float:
         return self.get(c).boundingBox()[0]
 
@@ -118,6 +136,12 @@ class Font:
     def crop(self, cp: Union[str, int], *path: float) -> None:
         self.copy(32, 1)
         self.rect(1, *path)
+        self.add(1, tgt=cp)
+        self.get(cp).intersect()
+
+    def polycrop(self, cp: Union[str, int], *path: float) -> None:
+        self.copy(32, 1)
+        self.polygon(1, *path)
         self.add(1, tgt=cp)
         self.get(cp).intersect()
 
@@ -168,9 +192,10 @@ class Font:
         otips = [p for p in self.points(c) if p.type == 0 and p.on_curve]
         otips.sort(key=lambda p: p.y)
         xon = sorted([p.x for p in self.points(c) if p.on_curve])
-        self.crop(c, -300, -3000, xon[-2], 3000)
-        eq_rdesc = [p.x for p in self.points(3) if p.y == self.ymax(3)]  # RDESC = 3
-        dx = xon[-2] - max(eq_rdesc)  # ughghgh
+        ix = -1 if self.inter else -2  # stupid
+        self.crop(c, -300, -3000, xon[ix], 3000)
+        eq_rdesc = [p.x for p in self.points(3) if p.y == self.ymax(RDESC)]
+        dx = xon[ix] - max(eq_rdesc)  # ughghgh
         tips = [p for p in self.points(c) if p.type == 0 and p.on_curve]
         tips.sort(key=lambda p: p.y)
         dy = tips[0].y - self.ymax(3)
@@ -226,14 +251,6 @@ class Font:
         self.get(c).transform(translate(x, y))
 
     def toaqify(self) -> None:
-        # helper glyphs
-        Y_TAIL = 2
-        RDESC = 3
-        Z_TAIL = 4
-
-        VY = 0xA761
-        CAP_VY = 0xA760
-
         def make(n: int, name: str) -> int:
             self.font.createChar(n, name)
             return n
@@ -303,9 +320,6 @@ class Font:
         self.copy("ƿ", MAMEI_CODA)
         self.crop(MAMEI_CODA, 0, 0, 3999, 3999)
 
-        # bubue
-        self.copy("ɔ", BUBUE)
-
         # pipoq
         self.copy("q", PIPOQ)
 
@@ -336,23 +350,23 @@ class Font:
         self.vflip(TITIEQ)
 
         def f(p):
-            if self.inter:
-                pass
-            else:
-                if p.x < 320:
-                    p.x += 30
-                if p.x > 340:
-                    p.x -= 30
+            x0 = self.xmin("U")
+            x1 = self.xmax("U")
+            xw = x1 - x0
+            if p.x < x0 + xw * 0.4:
+                p.x += xw * 0.02
+            elif p.x > x1 - xw * 0.4:
+                p.x -= xw * 0.02
             return p
 
         self.map_points(TITIEQ, f)
         self.get(TITIEQ).transform(translate(0, -self.ymin(TITIEQ)))
-        self.crop(TITIEQ, 0, 300, 9000, 9000, 300, 0)
+        self.crop(TITIEQ, 0, self.yctr("o"), 9000, 9000, 400, 0)
         xo = sorted(
             [
                 p.x
                 for p in self.points("o")
-                if p.on_curve and abs(p.y - self.font.xHeight / 2) < 4 * SW
+                if p.on_curve and abs(p.y - self.yctr("o")) < SW
             ]
         )
         xU = sorted([p.x for p in self.points(TITIEQ) if p.on_curve])
@@ -371,16 +385,40 @@ class Font:
         self.copy("ʝ", Z_TAIL)
         self.get(Z_TAIL).unlinkRef()
         self.get(Z_TAIL).anchorPoints = []
-        self.crop(Z_TAIL, -400, -400, 4000, 50)
-        self.get(Z_TAIL).transform(translate(0, -50))
+        self.get(Z_TAIL).transform(translate(0, -180 if self.inter else -50))
+        self.crop(Z_TAIL, -400, -900, 4000, 0)
         dx = self.be("ɿ") - self.be(Z_TAIL)
         self.get(Z_TAIL).transform(translate(dx, 0))
+
         self.copy("ɿ", ZOZEO)
         self.add(Z_TAIL, ZOZEO)
         self.get(ZOZEO).removeOverlap()
 
         # cecoa
         self.copy("c", CECOA)
+        if self.inter:
+            self.polycrop(
+                CECOA,
+                -50,
+                -50,
+                -50,
+                self.ymax(CECOA),
+                self.xmax(CECOA) * 0.7 + self.xmin(CECOA) * 0.3,
+                self.ymax(CECOA),
+                self.xctr(CECOA),
+                self.yctr(CECOA),
+                self.xmax(CECOA),
+                self.yctr(CECOA),
+                self.xmax(CECOA),
+                self.ymin(CECOA),
+            )
+
+        # bubue
+        if self.inter:
+            self.copy(CECOA, BUBUE)
+            self.scaled(BUBUE, -1, -1)
+        else:
+            self.copy("ɔ", BUBUE)
 
         # saqseoq
         self.copy("o", SAQSEOQ)
@@ -405,9 +443,11 @@ class Font:
         # jujuo
         self.copy("ɷ", JUJUO)
         self.vflip(JUJUO)
-        self.crop(
-            JUJUO, 0, 330 if self.inter else 190, 9000, 9000, self.xctr(JUJUO), -100
-        )
+        c = self.xctr(JUJUO)
+        if self.inter:
+            self.crop(JUJUO, 0, 660, 2000, 2000, c, -100, c + 200, 300)
+        else:
+            self.crop(JUJUO, 0, 190, 2000, 2000, c, -100)
 
         # chichao
         self.copy("s", CHICHAO)
@@ -421,14 +461,17 @@ class Font:
         self.copy("s", WEWA)
 
         # aqaq
-        self.copy("c", AQAQ)
+        self.copy(CECOA, AQAQ)
         self.long_rdesc(AQAQ)
 
         # gugui
         self.copy("ε", GUGUI)
+        if self.inter:
+            self.copy(JUJUO, GUGUI)
+            self.scaled(GUGUI, -1, -1)
 
         # kikue
-        self.copy("c", KIKUE)
+        self.copy(CECOA, KIKUE)
         self.dotbelow(KIKUE)
 
         # oaomo
@@ -453,14 +496,16 @@ class Font:
         self.get(JOLAQTEI).anchorPoints = [
             (a, b, x + 110, y - 70) for (a, b, x, y) in self.get(JOLAQTEI).anchorPoints
         ]
-        for tgt, name in ((IULAI, "iulai"), (AILAI, "ailai")):
+        for tgt in (IULAI, AILAI):
             self.copy(0x035C, tgt)
             glyph = self.get(tgt)
-            # glyph.glyphclass = "mark"
             l = glyph.layers[1]
             l.transform(translate(200, 0))
             glyph.layers[1] = l
-            self.scaled(tgt, 0.7, -0.8)
+            if self.inter:
+                self.scaled(tgt, 0.75, -1.05)
+            else:
+                self.scaled(tgt, 0.70, -0.80)
 
         # PMARK
         self.copy(":", PMARK)
@@ -591,17 +636,11 @@ class Font:
         self.font.save(self.font.fontname + ".sfd")
 
 
-def toaqify(font: Any) -> None:
-    font_obj = Font(font)
-    font_obj.toaqify()
-
-
 def convert(path: str) -> str:
     font = fontforge.open(path)
-    font.fontname = font.fontname.replace("FiraSans", "FiraSansToaq").replace(
-        "Inter", "Iqteo"
-    )
-    toaqify(font)
+    font.fontname = font.fontname.replace("FiraSans", "FiraSansToaq")
+    font.fontname = font.fontname.replace("Inter", "Iqteo")
+    Font(font).toaqify()
     return font.fontname + ".sfd"
 
 
@@ -623,11 +662,10 @@ def patch_font(path: str) -> None:
             name = base + suffix
             ng = find(normal, name)
             ig = find(italic, name)
-            if ng is not None and ig is not None:
-                ng.foreground = ig.foreground
-                ng.transform(skew(-0.14))
-                ng.width -= 60
-                normal.save(normal_path)
+            ng.foreground = ig.foreground
+            ng.transform(skew(-0.14))
+            ng.width -= 60
+            normal.save(normal_path)
 
 
 def export_font(path: str) -> None:
@@ -641,15 +679,14 @@ def is_input_ttf(path: str) -> bool:
     ) and path.endswith(".ttf")
 
 
-def raws() -> List[str]:
+def inputs() -> List[str]:
     return [p for p in os.listdir() if is_input_ttf(p)]
 
 
-paths = raws()
-
-if sys.argv[1:] == ["--compress"]:
+def compress_originals() -> None:
     import zipfile
 
+    paths = inputs()
     # Bundle all the ttf files in "paths" into a zip file and save it as "original.dat".
     with zipfile.ZipFile("original.dat", "w") as zf:
         for path in paths:
@@ -661,22 +698,48 @@ if sys.argv[1:] == ["--compress"]:
     for path in paths:
         os.remove(path)
     print(f"moved {len(paths)} ttf files into original.dat")
-    exit()
 
-if len(sys.argv) > 1:
-    paths = sys.argv[1:]
-elif not paths:
+
+def extract_originals() -> None:
     import zipfile
 
     with zipfile.ZipFile("original.dat") as zf:
         zf.extractall(".")
-    paths = raws()
+    return inputs()
+
 
 if __name__ == "__main__":
+    if not os.path.exists("ttf"):
+        os.makedirs("ttf")
+    os.chdir("ttf")
+    paths = inputs()
+    flags = [x for x in sys.argv[1:] if x.startswith("--")]
+
+    if "--compress" in flags:
+        compress_originals()
+        exit()
+
+    paths = (
+        [x for x in sys.argv[1:] if not x.startswith("--")]
+        or inputs()
+        or extract_originals()
+        or exit("no paths found")
+    )
+
     with Pool(8) as p:
-        print("starting")
         saved = p.map(convert, paths)
         print("patching")
         p.map(patch_font, saved)
         print("exporting")
         p.map(export_font, saved)
+
+    if "--preview" in flags:
+        print("previewing")
+        # Save a sample image to "sample.png"
+        im = Image.new("RGB", (800, 500), "#886688")
+        draw = ImageDraw.Draw(im)
+        iqteo = ImageFont.truetype("Iqteo-Regular.ttf", 100)
+        firasans = ImageFont.truetype("FiraSansToaq-Regular.ttf", 120)
+        draw.text((50, 50), "󱛃󱚲󱛍󱚺󱛂󱚷󱚸󱚶󱚹󱛍󱚲", font=iqteo, fill="white")
+        draw.text((50, 200), "󱛃󱚲󱛍󱚺󱛂󱚷󱚸󱚶󱚹󱛍󱚲", font=firasans, fill="white")
+        im.save("sample.png")
